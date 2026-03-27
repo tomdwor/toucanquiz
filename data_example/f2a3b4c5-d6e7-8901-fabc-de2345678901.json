@@ -2,7 +2,11 @@
   "id": "f2a3b4c5-d6e7-8901-fabc-de2345678901",
   "name": "Advanced Bioinformatics",
   "description": "Go deeper into **computational biology** — sequence alignment algorithms, variant calling, RNA-seq analysis, protein structure prediction, and phylogenetics.\n\nFor bioinformaticians and computational biologists.",
-  "tags": ["bioinformatics", "genomics", "intermediate"],
+  "tags": [
+    "bioinformatics",
+    "genomics",
+    "intermediate"
+  ],
   "mode": "practice",
   "pass_threshold": 65,
   "question_limit": 6,
@@ -12,63 +16,145 @@
       "text": "What is the key difference between **global** and **local** sequence alignment?",
       "type": "single_choice",
       "choices": [
-        { "id": "bi01-c1", "text": "Global alignment aligns entire sequences end-to-end; local alignment finds the best matching subsequences", "is_correct": true },
-        { "id": "bi01-c2", "text": "Global alignment is faster; local alignment is more accurate", "is_correct": false },
-        { "id": "bi01-c3", "text": "Local alignment only works for DNA; global alignment works for proteins", "is_correct": false },
-        { "id": "bi01-c4", "text": "Global alignment allows gaps; local alignment does not", "is_correct": false }
+        {
+          "id": "bi01-c1",
+          "text": "Global alignment aligns entire sequences end-to-end; local alignment finds the best matching subsequences",
+          "is_correct": true
+        },
+        {
+          "id": "bi01-c2",
+          "text": "Global alignment is faster; local alignment is more accurate",
+          "is_correct": false
+        },
+        {
+          "id": "bi01-c3",
+          "text": "Local alignment only works for DNA; global alignment works for proteins",
+          "is_correct": false
+        },
+        {
+          "id": "bi01-c4",
+          "text": "Global alignment allows gaps; local alignment does not",
+          "is_correct": false
+        }
       ],
       "explanation": "| Alignment | Algorithm | Best for |\n|-----------|-----------|----------|\n| **Global** | Needleman-Wunsch | Sequences of similar length and global homology |\n| **Local** | Smith-Waterman | Finding conserved domains in otherwise divergent sequences |\n\nBLAST uses heuristic local alignment to search databases efficiently.\n\n**Scoring:** Both use substitution matrices (e.g., BLOSUM62 for proteins, nucleotide matrices for DNA) with gap open/extension penalties.",
-      "tags": ["alignment"]
+      "tags": [
+        "alignment"
+      ]
     },
     {
       "id": "bi02-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is **variant calling** in genomics?",
       "type": "single_choice",
       "choices": [
-        { "id": "bi02-c1", "text": "Identifying positions in a genome where an individual differs from a reference sequence", "is_correct": true },
-        { "id": "bi02-c2", "text": "Calling variants (isoforms) of a gene based on RNA-seq data", "is_correct": false },
-        { "id": "bi02-c3", "text": "Determining which variants of an algorithm perform best", "is_correct": false },
-        { "id": "bi02-c4", "text": "Classifying sequencing reads by their variant quality scores", "is_correct": false }
+        {
+          "id": "bi02-c1",
+          "text": "Identifying positions in a genome where an individual differs from a reference sequence",
+          "is_correct": true
+        },
+        {
+          "id": "bi02-c2",
+          "text": "Calling variants (isoforms) of a gene based on RNA-seq data",
+          "is_correct": false
+        },
+        {
+          "id": "bi02-c3",
+          "text": "Determining which variants of an algorithm perform best",
+          "is_correct": false
+        },
+        {
+          "id": "bi02-c4",
+          "text": "Classifying sequencing reads by their variant quality scores",
+          "is_correct": false
+        }
       ],
       "explanation": "**Variant calling** identifies genomic differences from a reference:\n\n| Variant type | Description | Example |\n|-------------|-------------|--------|\n| **SNP/SNV** | Single nucleotide | A→G at position 12345 |\n| **Indel** | Insertion/deletion | +ATG or -3bp |\n| **CNV** | Copy number variant | 3 copies of chr21 |\n| **SV** | Structural variant | Inversion, translocation |\n\n**Pipeline:** sequencing → alignment (BWA/STAR) → preprocessing (GATK) → variant calling (GATK HaplotypeCaller, DeepVariant) → annotation (VEP, SnpEff).",
-      "tags": ["variant-calling"]
+      "tags": [
+        "variant-calling"
+      ]
     },
     {
       "id": "bi03-aaaa-bbbb-cccc-dddddddddddd",
       "text": "In **RNA-seq**, what does normalisation correct for? Select all that apply.",
       "type": "multiple_choice",
       "choices": [
-        { "id": "bi03-c1", "text": "Differences in sequencing depth (library size) between samples", "is_correct": true },
-        { "id": "bi03-c2", "text": "Gene length bias (longer genes generate more reads)", "is_correct": true },
-        { "id": "bi03-c3", "text": "Batch effects from different sequencing runs", "is_correct": true },
-        { "id": "bi03-c4", "text": "Sequencing errors in individual reads", "is_correct": false }
+        {
+          "id": "bi03-c1",
+          "text": "Differences in sequencing depth (library size) between samples",
+          "is_correct": true
+        },
+        {
+          "id": "bi03-c2",
+          "text": "Gene length bias (longer genes generate more reads)",
+          "is_correct": true
+        },
+        {
+          "id": "bi03-c3",
+          "text": "Batch effects from different sequencing runs",
+          "is_correct": true
+        },
+        {
+          "id": "bi03-c4",
+          "text": "Sequencing errors in individual reads",
+          "is_correct": false
+        }
       ],
       "explanation": "RNA-seq normalisation methods:\n\n| Method | Corrects for |\n|--------|--------------|\n| **RPM/CPM** | Library size |\n| **RPKM/FPKM** | Library size + gene length |\n| **TPM** | Library size + gene length (better for cross-sample comparison) |\n| **TMM/DESeq2 normalisation** | Library size + composition bias |\n\nBatch effects require dedicated methods (ComBat, limma removeBatchEffect).\n\nSequencing error correction is done during read processing, not normalisation.",
-      "tags": ["rna-seq"]
+      "tags": [
+        "rna-seq"
+      ]
     },
     {
       "id": "bi04-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the **Needleman-Wunsch** algorithm's time complexity?",
       "type": "text",
       "choices": [
-        { "id": "bi04-c1", "text": "O(mn)", "is_correct": true },
-        { "id": "bi04-c2", "text": "o(mn)", "is_correct": true }
+        {
+          "id": "bi04-c1",
+          "text": "O(mn)",
+          "is_correct": true
+        },
+        {
+          "id": "bi04-c2",
+          "text": "o(mn)",
+          "is_correct": true
+        }
       ],
       "explanation": "**Needleman-Wunsch** is a dynamic programming algorithm for global alignment:\n\n- Fills an $(m+1) \\times (n+1)$ scoring matrix\n- Time complexity: $O(mn)$ where $m$ and $n$ are sequence lengths\n- Space complexity: $O(mn)$ (or $O(\\min(m,n))$ with space-efficient variants)\n\nFor large databases (e.g., UniProt: 200M+ sequences), this is too slow — hence **BLAST** uses heuristics (seed-and-extend) to achieve near-linear runtime.",
-      "tags": ["algorithms"]
+      "tags": [
+        "algorithms"
+      ]
     },
     {
       "id": "bi05-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is **maximum likelihood** in the context of **phylogenetics**?",
       "type": "single_choice",
       "choices": [
-        { "id": "bi05-c1", "text": "A method that finds the evolutionary tree that maximises the probability of observing the sequence data under a substitution model", "is_correct": true },
-        { "id": "bi05-c2", "text": "Constructing a tree based on maximum pairwise sequence similarity", "is_correct": false },
-        { "id": "bi05-c3", "text": "A parsimony approach that minimises the total number of mutations", "is_correct": false },
-        { "id": "bi05-c4", "text": "Using the most likely outgroup to root the phylogenetic tree", "is_correct": false }
+        {
+          "id": "bi05-c1",
+          "text": "A method that finds the evolutionary tree that maximises the probability of observing the sequence data under a substitution model",
+          "is_correct": true
+        },
+        {
+          "id": "bi05-c2",
+          "text": "Constructing a tree based on maximum pairwise sequence similarity",
+          "is_correct": false
+        },
+        {
+          "id": "bi05-c3",
+          "text": "A parsimony approach that minimises the total number of mutations",
+          "is_correct": false
+        },
+        {
+          "id": "bi05-c4",
+          "text": "Using the most likely outgroup to root the phylogenetic tree",
+          "is_correct": false
+        }
       ],
       "explanation": "**Maximum likelihood (ML) phylogenetics** selects the tree $T$ that maximises:\n\n$$P(\\text{data} \\mid T, \\theta)$$\n\nwhere $\\theta$ includes branch lengths and substitution model parameters (e.g., GTR+Γ for DNA).\n\n**Comparison of methods:**\n| Method | Basis | Speed |\n|--------|-------|-------|\n| UPGMA/NJ | Distance | Fast |\n| Parsimony | Minimum changes | Moderate |\n| **Maximum likelihood** | Statistical model | Slow but principled |\n| Bayesian (MrBayes) | Posterior probability | Slowest |\n\n**Tools**: RAxML, IQ-TREE (ML); BEAST (Bayesian).",
-      "tags": ["phylogenetics"]
+      "tags": [
+        "phylogenetics"
+      ]
     },
     {
       "id": "bi06-aaaa-bbbb-cccc-dddddddddddd",
@@ -76,46 +162,102 @@
       "type": "open",
       "choices": [],
       "explanation": "**ChIP-seq** (Chromatin Immunoprecipitation + sequencing) identifies genome-wide binding sites of DNA-binding proteins:\n\n**Workflow:**\n1. **Crosslink**: fix protein-DNA interactions in living cells (formaldehyde)\n2. **Fragment** chromatin into small pieces (sonication or MNase)\n3. **Immunoprecipitate**: use a specific antibody to pull down protein of interest + bound DNA\n4. **Reverse crosslinks** and purify DNA\n5. **Sequence** the enriched DNA fragments\n6. **Peak calling** (MACS2) to identify enriched regions vs. input control\n\n**Applications**: transcription factor binding sites, histone modification maps (H3K27ac for enhancers, H3K4me3 for active promoters), nucleosome positioning.",
-      "tags": ["epigenomics"]
+      "tags": [
+        "epigenomics"
+      ]
     },
     {
       "id": "bi07-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the purpose of the **E-value** in BLAST results?",
       "type": "single_choice",
       "choices": [
-        { "id": "bi07-c1", "text": "The expected number of random alignments with a score at least as high, given the database size — lower E-value means more significant", "is_correct": true },
-        { "id": "bi07-c2", "text": "The percentage identity between query and subject sequences", "is_correct": false },
-        { "id": "bi07-c3", "text": "The entropy score measuring sequence complexity", "is_correct": false },
-        { "id": "bi07-c4", "text": "The estimated evolutionary distance between sequences", "is_correct": false }
+        {
+          "id": "bi07-c1",
+          "text": "The expected number of random alignments with a score at least as high, given the database size — lower E-value means more significant",
+          "is_correct": true
+        },
+        {
+          "id": "bi07-c2",
+          "text": "The percentage identity between query and subject sequences",
+          "is_correct": false
+        },
+        {
+          "id": "bi07-c3",
+          "text": "The entropy score measuring sequence complexity",
+          "is_correct": false
+        },
+        {
+          "id": "bi07-c4",
+          "text": "The estimated evolutionary distance between sequences",
+          "is_correct": false
+        }
       ],
       "explanation": "The **E-value** (expectation value) in BLAST:\n\n$$E = K \\cdot m \\cdot n \\cdot e^{-\\lambda S}$$\n\nWhere $S$ is the alignment score, $m$ and $n$ are sequence/database lengths, and $K$, $\\lambda$ are statistical parameters.\n\n**Interpretation:**\n- E = 0.001 → expect 0.001 hits by chance in this database\n- E < 1e-5: typically considered significant\n- E depends on database size — same alignment has different E-values for different databases\n\nNote: E-value is NOT a p-value, though they're related.",
-      "tags": ["blast"]
+      "tags": [
+        "blast"
+      ]
     },
     {
       "id": "bi08-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What are **de Bruijn graphs** used for in bioinformatics?",
       "type": "single_choice",
       "choices": [
-        { "id": "bi08-c1", "text": "Genome assembly from short reads — representing k-mer overlaps as graph edges to reconstruct the original sequence", "is_correct": true },
-        { "id": "bi08-c2", "text": "Visualising protein-protein interaction networks", "is_correct": false },
-        { "id": "bi08-c3", "text": "Constructing phylogenetic trees from multiple sequence alignments", "is_correct": false },
-        { "id": "bi08-c4", "text": "Modelling gene regulatory networks", "is_correct": false }
+        {
+          "id": "bi08-c1",
+          "text": "Genome assembly from short reads — representing k-mer overlaps as graph edges to reconstruct the original sequence",
+          "is_correct": true
+        },
+        {
+          "id": "bi08-c2",
+          "text": "Visualising protein-protein interaction networks",
+          "is_correct": false
+        },
+        {
+          "id": "bi08-c3",
+          "text": "Constructing phylogenetic trees from multiple sequence alignments",
+          "is_correct": false
+        },
+        {
+          "id": "bi08-c4",
+          "text": "Modelling gene regulatory networks",
+          "is_correct": false
+        }
       ],
       "explanation": "**de Bruijn graphs** are the data structure underlying modern short-read assemblers:\n\n1. Break all reads into overlapping **k-mers** (k is typically 31–127 bp)\n2. Build a directed graph where:\n   - **Nodes** = (k-1)-mers\n   - **Edges** = k-mers (each edge connects the (k-1)-mer prefix to the (k-1)-mer suffix)\n3. The genome corresponds to an **Eulerian path** through the graph\n\n**Assemblers using de Bruijn graphs**: Velvet, SPAdes, ABySS, SOAPdenovo.\n\nOverlap-layout-consensus (OLC) graphs are used for long reads (PacBio, ONT).",
-      "tags": ["genome-assembly"]
+      "tags": [
+        "genome-assembly"
+      ]
     },
     {
       "id": "bi09-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the difference between **sensitivity** and **specificity** in the context of a sequence database search?",
       "type": "single_choice",
       "choices": [
-        { "id": "bi09-c1", "text": "Sensitivity: fraction of true homologs detected; Specificity: fraction of detected hits that are true homologs", "is_correct": true },
-        { "id": "bi09-c2", "text": "Sensitivity: fraction of the genome covered; Specificity: depth of coverage", "is_correct": false },
-        { "id": "bi09-c3", "text": "Sensitivity: E-value threshold; Specificity: bit score threshold", "is_correct": false },
-        { "id": "bi09-c4", "text": "They are the same metric measured from different perspectives", "is_correct": false }
+        {
+          "id": "bi09-c1",
+          "text": "Sensitivity: fraction of true homologs detected; Specificity: fraction of detected hits that are true homologs",
+          "is_correct": true
+        },
+        {
+          "id": "bi09-c2",
+          "text": "Sensitivity: fraction of the genome covered; Specificity: depth of coverage",
+          "is_correct": false
+        },
+        {
+          "id": "bi09-c3",
+          "text": "Sensitivity: E-value threshold; Specificity: bit score threshold",
+          "is_correct": false
+        },
+        {
+          "id": "bi09-c4",
+          "text": "They are the same metric measured from different perspectives",
+          "is_correct": false
+        }
       ],
       "explanation": "In database searching:\n\n| Metric | Formula | Meaning |\n|--------|---------|--------|\n| **Sensitivity** (Recall) | TP / (TP + FN) | How many true homologs did we find? |\n| **Specificity** | TN / (TN + FP) | How rarely do non-homologs pass the threshold? |\n| **Precision** | TP / (TP + FP) | What fraction of our hits are real? |\n\nBLAST trades sensitivity for speed. Profile-based methods (PSI-BLAST, HMM-based HMMer) are more sensitive for distant homologs.",
-      "tags": ["evaluation"]
+      "tags": [
+        "evaluation"
+      ]
     },
     {
       "id": "bi10-aaaa-bbbb-cccc-dddddddddddd",
@@ -123,7 +265,11 @@
       "type": "open",
       "choices": [],
       "explanation": "**scRNA-seq** measures gene expression in **individual cells** rather than across a population:\n\n**Key difference from bulk RNA-seq:**\n- **Bulk**: measures the average expression across thousands of cells → masks heterogeneity\n- **scRNA-seq**: captures transcriptome of each cell → reveals cell subpopulations, rare cell types, differentiation trajectories\n\n**Workflow:** cell isolation (microfluidics, e.g., 10x Genomics) → lysis → reverse transcription with cell-specific barcodes + UMIs → sequencing → computational demultiplexing → clustering → cell type annotation\n\n**Applications:** tissue atlases (Human Cell Atlas), tumour microenvironment profiling, developmental biology, drug target discovery.",
-      "tags": ["rna-seq"]
+      "tags": [
+        "rna-seq"
+      ]
     }
-  ]
+  ],
+  "created_at": "2024-10-05T00:00:00Z",
+  "modified_at": "2025-02-14T00:00:00Z"
 }

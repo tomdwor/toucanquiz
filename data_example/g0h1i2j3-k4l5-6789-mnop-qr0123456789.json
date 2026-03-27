@@ -1,0 +1,77 @@
+{
+  "id": "g0h1i2j3-k4l5-6789-mnop-qr0123456789",
+  "name": "System Design: Architecture Patterns",
+  "description": "Explore **software architecture patterns** through visual diagrams.\n\nThis quiz uses [Mermaid](https://mermaid.js.org/) diagrams to illustrate system components, data flows, and architectural trade-offs.\n\n```mermaid\ngraph LR\n  Client([Client]) --> LB[Load Balancer]\n  LB --> S1[Server 1]\n  LB --> S2[Server 2]\n  S1 --> DB[(Database)]\n  S2 --> DB\n```",
+  "tags": ["cs", "system-design", "architecture", "intermediate"],
+  "mode": "practice",
+  "pass_threshold": 70,
+  "question_limit": null,
+  "created_at": "2025-03-15T00:00:00Z",
+  "modified_at": null,
+  "questions": [
+    {
+      "id": "q1-arch-lb-type",
+      "text": "The following diagram shows a common horizontal scaling pattern. What is the role of the middle component?\n\n```mermaid\ngraph LR\n  C1([Client 1]) --> LB[?]\n  C2([Client 2]) --> LB\n  LB --> A[App Server A]\n  LB --> B[App Server B]\n  LB --> C[App Server C]\n```",
+      "type": "single_choice",
+      "choices": [
+        { "id": "q1-a", "text": "Load Balancer — distributes incoming requests across multiple servers", "is_correct": true },
+        { "id": "q1-b", "text": "API Gateway — transforms and routes API calls", "is_correct": false },
+        { "id": "q1-c", "text": "Message Broker — decouples producers from consumers", "is_correct": false },
+        { "id": "q1-d", "text": "Reverse Proxy — caches static assets", "is_correct": false }
+      ],
+      "explanation": "A **Load Balancer** distributes incoming client requests across a pool of backend servers. This improves availability and throughput — if one server fails, traffic is routed to the remaining healthy ones.\n\nCommon algorithms: round-robin, least connections, IP hash.",
+      "tags": ["load-balancing", "scaling"]
+    },
+    {
+      "id": "q2-arch-microservices-vs-monolith",
+      "text": "Which architecture does this diagram represent?\n\n```mermaid\ngraph TD\n  UI[Frontend] --> API[API Gateway]\n  API --> US[User Service]\n  API --> OS[Order Service]\n  API --> PS[Payment Service]\n  US --> UDB[(Users DB)]\n  OS --> ODB[(Orders DB)]\n  PS --> PDB[(Payments DB)]\n```",
+      "type": "single_choice",
+      "choices": [
+        { "id": "q2-a", "text": "Monolithic architecture", "is_correct": false },
+        { "id": "q2-b", "text": "Microservices architecture", "is_correct": true },
+        { "id": "q2-c", "text": "Serverless architecture", "is_correct": false },
+        { "id": "q2-d", "text": "Peer-to-peer architecture", "is_correct": false }
+      ],
+      "explanation": "This is a **microservices architecture**. Each service (User, Order, Payment) is independent, has its own database, and communicates through an API Gateway.\n\nKey traits:\n- Services are independently deployable\n- Each service owns its data store\n- Failure in one service doesn't crash the whole system\n\nContrast with a **monolith**, where all logic lives in one deployable unit sharing a single database.",
+      "tags": ["microservices", "architecture"]
+    },
+    {
+      "id": "q3-arch-event-driven",
+      "text": "Study this event-driven flow. What is the component labelled **MQ**?\n\n```mermaid\nsequenceDiagram\n  participant Producer\n  participant MQ as MQ\n  participant ConsumerA\n  participant ConsumerB\n\n  Producer->>MQ: publish(OrderPlaced)\n  MQ-->>ConsumerA: deliver event\n  MQ-->>ConsumerB: deliver event\n  ConsumerA->>ConsumerA: send confirmation email\n  ConsumerB->>ConsumerB: update inventory\n```",
+      "type": "single_choice",
+      "choices": [
+        { "id": "q3-a", "text": "Message Queue / Message Broker", "is_correct": true },
+        { "id": "q3-b", "text": "Load Balancer", "is_correct": false },
+        { "id": "q3-c", "text": "CDN (Content Delivery Network)", "is_correct": false },
+        { "id": "q3-d", "text": "Database replication log", "is_correct": false }
+      ],
+      "explanation": "**MQ** stands for **Message Queue** (or Message Broker, e.g. RabbitMQ, Kafka).\n\nIn event-driven architecture, the producer publishes an event and doesn't need to know which consumers will process it. The broker delivers the event to all interested subscribers asynchronously.\n\nBenefits:\n- Decouples producers from consumers\n- Enables fan-out (one event → many handlers)\n- Improves resilience (consumers can process at their own pace)",
+      "tags": ["messaging", "event-driven"]
+    },
+    {
+      "id": "q4-arch-caching",
+      "text": "In the diagram below, which components would you add to reduce database load and improve response times? Select all that apply.\n\n```mermaid\ngraph LR\n  User --> App[Application Server]\n  App --> DB[(Primary DB)]\n```",
+      "type": "multiple_choice",
+      "choices": [
+        { "id": "q4-a", "text": "In-memory cache (e.g. Redis) between App and DB", "is_correct": true },
+        { "id": "q4-b", "text": "Read replica database for read-heavy queries", "is_correct": true },
+        { "id": "q4-c", "text": "A second identical primary database (active-active)", "is_correct": false },
+        { "id": "q4-d", "text": "CDN for caching static assets at the edge", "is_correct": true }
+      ],
+      "explanation": "Three effective strategies:\n\n1. **In-memory cache (Redis/Memcached)** — stores frequent query results in RAM; eliminates repeated DB hits for hot data.\n2. **Read replicas** — dedicated DB instances that handle SELECT queries, offloading the primary DB.\n3. **CDN** — caches static files (images, JS, CSS) geographically close to users, reducing origin server load.\n\nA second active-active primary without careful coordination leads to write conflicts and is not a straightforward solution.",
+      "tags": ["caching", "database", "performance"]
+    },
+    {
+      "id": "q5-arch-state",
+      "text": "What does **stateless** mean in the context of web servers?",
+      "type": "text",
+      "choices": [
+        { "id": "q5-a", "text": "stateless", "is_correct": true },
+        { "id": "q5-b", "text": "no session state", "is_correct": true },
+        { "id": "q5-c", "text": "session-free", "is_correct": true }
+      ],
+      "explanation": "A **stateless** server does not store any client session data between requests. Each request contains all the information needed to process it (e.g. via JWT tokens or session IDs looked up in a shared store).\n\n```mermaid\ngraph LR\n  C[Client] -->|request + token| S1[Server 1]\n  C -->|next request + token| S2[Server 2]\n  S1 --- Cache[(Shared Cache)]\n  S2 --- Cache\n```\n\nStateless servers are easy to scale horizontally — any server can handle any request because none of them hold local session state.",
+      "tags": ["stateless", "scalability"]
+    }
+  ]
+}

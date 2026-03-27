@@ -2,7 +2,11 @@
   "id": "e1f2a3b4-c5d6-7890-efab-cd1234567890",
   "name": "Advanced Molecular Biology",
   "description": "Deepen your understanding of **molecular biology** beyond the basics — CRISPR, epigenetics, RNA interference, protein folding, and gene regulation mechanisms.",
-  "tags": ["biology", "molecular-biology", "intermediate"],
+  "tags": [
+    "biology",
+    "molecular-biology",
+    "intermediate"
+  ],
   "mode": "practice",
   "pass_threshold": 65,
   "question_limit": 6,
@@ -12,78 +16,186 @@
       "text": "How does **CRISPR-Cas9** achieve targeted genome editing?",
       "type": "single_choice",
       "choices": [
-        { "id": "mb01-c1", "text": "A guide RNA directs Cas9 endonuclease to a complementary DNA sequence, which Cas9 then cuts", "is_correct": true },
-        { "id": "mb01-c2", "text": "Cas9 randomly inserts new DNA sequences throughout the genome", "is_correct": false },
-        { "id": "mb01-c3", "text": "CRISPR uses restriction enzymes to cut only specific palindromic sequences", "is_correct": false },
-        { "id": "mb01-c4", "text": "A protein scans the DNA for mutations and repairs them automatically", "is_correct": false }
+        {
+          "id": "mb01-c1",
+          "text": "A guide RNA directs Cas9 endonuclease to a complementary DNA sequence, which Cas9 then cuts",
+          "is_correct": true
+        },
+        {
+          "id": "mb01-c2",
+          "text": "Cas9 randomly inserts new DNA sequences throughout the genome",
+          "is_correct": false
+        },
+        {
+          "id": "mb01-c3",
+          "text": "CRISPR uses restriction enzymes to cut only specific palindromic sequences",
+          "is_correct": false
+        },
+        {
+          "id": "mb01-c4",
+          "text": "A protein scans the DNA for mutations and repairs them automatically",
+          "is_correct": false
+        }
       ],
       "explanation": "**CRISPR-Cas9** mechanism:\n\n1. Design a **guide RNA (gRNA)** complementary to the target DNA sequence (~20 nt)\n2. gRNA:Cas9 complex binds to the target, guided by gRNA-DNA base pairing\n3. Cas9 requires a **PAM sequence** (NGG for SpCas9) adjacent to the target\n4. Cas9 creates a **double-strand break (DSB)**\n5. Cell repairs via:\n   - **NHEJ** (non-homologous end joining): error-prone → gene knockout\n   - **HDR** (homology-directed repair): precise → gene correction/insertion (with donor template)",
-      "tags": ["crispr"]
+      "tags": [
+        "crispr"
+      ]
     },
     {
       "id": "mb02-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is **RNA interference (RNAi)** and what is its natural role?",
       "type": "single_choice",
       "choices": [
-        { "id": "mb02-c1", "text": "A cellular mechanism using small RNAs to silence gene expression, naturally protecting against viruses and regulating genes", "is_correct": true },
-        { "id": "mb02-c2", "text": "A process where RNA polymerase interferes with DNA replication", "is_correct": false },
-        { "id": "mb02-c3", "text": "The inhibition of translation by ribosome stalling", "is_correct": false },
-        { "id": "mb02-c4", "text": "A mechanism that degrades misfolded proteins using RNA signals", "is_correct": false }
+        {
+          "id": "mb02-c1",
+          "text": "A cellular mechanism using small RNAs to silence gene expression, naturally protecting against viruses and regulating genes",
+          "is_correct": true
+        },
+        {
+          "id": "mb02-c2",
+          "text": "A process where RNA polymerase interferes with DNA replication",
+          "is_correct": false
+        },
+        {
+          "id": "mb02-c3",
+          "text": "The inhibition of translation by ribosome stalling",
+          "is_correct": false
+        },
+        {
+          "id": "mb02-c4",
+          "text": "A mechanism that degrades misfolded proteins using RNA signals",
+          "is_correct": false
+        }
       ],
       "explanation": "**RNAi** silences gene expression at the post-transcriptional level:\n\n1. **dsRNA** (double-stranded RNA) is processed by **Dicer** into small interfering RNAs (siRNA ~21 nt)\n2. siRNA loaded into **RISC** (RNA-Induced Silencing Complex)\n3. RISC uses the antisense strand to find complementary mRNA\n4. mRNA is cleaved or translation is blocked\n\n**Natural roles**: antiviral defence, gene regulation via miRNA (microRNA), transposon silencing.\n\n**Applications**: research knockdowns, therapeutic gene silencing (e.g., Patisiran for transthyretin amyloidosis).",
-      "tags": ["gene-regulation"]
+      "tags": [
+        "gene-regulation"
+      ]
     },
     {
       "id": "mb03-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What are **epigenetic modifications** and how do they affect gene expression?",
       "type": "single_choice",
       "choices": [
-        { "id": "mb03-c1", "text": "Heritable changes to gene expression that don't alter DNA sequence — such as DNA methylation and histone modification", "is_correct": true },
-        { "id": "mb03-c2", "text": "Mutations in the DNA sequence that are passed to daughter cells", "is_correct": false },
-        { "id": "mb03-c3", "text": "Changes in gene expression caused exclusively by environmental toxins", "is_correct": false },
-        { "id": "mb03-c4", "text": "Modifications to the mRNA sequence after transcription", "is_correct": false }
+        {
+          "id": "mb03-c1",
+          "text": "Heritable changes to gene expression that don't alter DNA sequence — such as DNA methylation and histone modification",
+          "is_correct": true
+        },
+        {
+          "id": "mb03-c2",
+          "text": "Mutations in the DNA sequence that are passed to daughter cells",
+          "is_correct": false
+        },
+        {
+          "id": "mb03-c3",
+          "text": "Changes in gene expression caused exclusively by environmental toxins",
+          "is_correct": false
+        },
+        {
+          "id": "mb03-c4",
+          "text": "Modifications to the mRNA sequence after transcription",
+          "is_correct": false
+        }
       ],
       "explanation": "**Epigenetic modifications** regulate chromatin accessibility without changing DNA sequence:\n\n| Modification | Effect |\n|-------------|--------|\n| **DNA methylation** (5-mC) | Usually represses transcription |\n| **Histone acetylation** | Opens chromatin → gene activation |\n| **Histone methylation** | Context-dependent (H3K4me3 = active; H3K27me3 = repressed) |\n\nEpigenetic marks can be heritable through cell division and influence development, cancer, and ageing.",
-      "tags": ["epigenetics"]
+      "tags": [
+        "epigenetics"
+      ]
     },
     {
       "id": "mb04-aaaa-bbbb-cccc-dddddddddddd",
       "text": "Which of the following are features of **alternative splicing**? Select all that apply.",
       "type": "multiple_choice",
       "choices": [
-        { "id": "mb04-c1", "text": "Allows one gene to produce multiple protein isoforms", "is_correct": true },
-        { "id": "mb04-c2", "text": "Occurs in the nucleus after transcription", "is_correct": true },
-        { "id": "mb04-c3", "text": "Involves the spliceosome removing introns and joining exons in different combinations", "is_correct": true },
-        { "id": "mb04-c4", "text": "Changes the DNA sequence of the gene", "is_correct": false }
+        {
+          "id": "mb04-c1",
+          "text": "Allows one gene to produce multiple protein isoforms",
+          "is_correct": true
+        },
+        {
+          "id": "mb04-c2",
+          "text": "Occurs in the nucleus after transcription",
+          "is_correct": true
+        },
+        {
+          "id": "mb04-c3",
+          "text": "Involves the spliceosome removing introns and joining exons in different combinations",
+          "is_correct": true
+        },
+        {
+          "id": "mb04-c4",
+          "text": "Changes the DNA sequence of the gene",
+          "is_correct": false
+        }
       ],
       "explanation": "**Alternative splicing** dramatically expands protein diversity:\n\n- ~95% of human multi-exon genes are alternatively spliced\n- A single gene can produce dozens of protein isoforms\n- Regulated by **splicing factors** that promote or repress splice site recognition\n\n**Mechanisms:** exon skipping, alternative 5'/3' splice sites, intron retention, mutually exclusive exons.\n\nAlternative splicing does NOT alter the DNA — it only affects which exons are included in the mature mRNA.",
-      "tags": ["splicing"]
+      "tags": [
+        "splicing"
+      ]
     },
     {
       "id": "mb05-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What determines how a **protein folds** into its 3D structure?",
       "type": "single_choice",
       "choices": [
-        { "id": "mb05-c1", "text": "Primarily its amino acid sequence (primary structure), guided by thermodynamics and assisted by chaperones", "is_correct": true },
-        { "id": "mb05-c2", "text": "The sequence of nucleotides in the coding DNA", "is_correct": false },
-        { "id": "mb05-c3", "text": "Ribosomes determine the final 3D structure during translation", "is_correct": false },
-        { "id": "mb05-c4", "text": "Post-translational modifications exclusively define the fold", "is_correct": false }
+        {
+          "id": "mb05-c1",
+          "text": "Primarily its amino acid sequence (primary structure), guided by thermodynamics and assisted by chaperones",
+          "is_correct": true
+        },
+        {
+          "id": "mb05-c2",
+          "text": "The sequence of nucleotides in the coding DNA",
+          "is_correct": false
+        },
+        {
+          "id": "mb05-c3",
+          "text": "Ribosomes determine the final 3D structure during translation",
+          "is_correct": false
+        },
+        {
+          "id": "mb05-c4",
+          "text": "Post-translational modifications exclusively define the fold",
+          "is_correct": false
+        }
       ],
       "explanation": "Protein folding is determined by the **amino acid sequence** (Anfinsen's dogma):\n\n- The native fold is the **thermodynamically lowest energy state**\n- Hydrophobic residues bury in the core; polar/charged residues face the solvent\n- Secondary structure (α-helices, β-sheets) forms first, then tertiary structure\n- **Molecular chaperones** (Hsp70, GroEL) assist folding and prevent aggregation in vivo\n\n**Misfolding** causes diseases: Alzheimer's (amyloid-β), Parkinson's (α-synuclein), Huntington's.",
-      "tags": ["protein-structure"]
+      "tags": [
+        "protein-structure"
+      ]
     },
     {
       "id": "mb06-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the role of **telomeres** and **telomerase** in cell biology?",
       "type": "single_choice",
       "choices": [
-        { "id": "mb06-c1", "text": "Telomeres protect chromosome ends from degradation; telomerase extends them in stem/cancer cells to overcome the end-replication problem", "is_correct": true },
-        { "id": "mb06-c2", "text": "Telomeres encode essential genes; telomerase repairs mutations in them", "is_correct": false },
-        { "id": "mb06-c3", "text": "Telomeres separate homologous chromosomes during meiosis", "is_correct": false },
-        { "id": "mb06-c4", "text": "Telomerase is an RNA polymerase that transcribes the telomere region", "is_correct": false }
+        {
+          "id": "mb06-c1",
+          "text": "Telomeres protect chromosome ends from degradation; telomerase extends them in stem/cancer cells to overcome the end-replication problem",
+          "is_correct": true
+        },
+        {
+          "id": "mb06-c2",
+          "text": "Telomeres encode essential genes; telomerase repairs mutations in them",
+          "is_correct": false
+        },
+        {
+          "id": "mb06-c3",
+          "text": "Telomeres separate homologous chromosomes during meiosis",
+          "is_correct": false
+        },
+        {
+          "id": "mb06-c4",
+          "text": "Telomerase is an RNA polymerase that transcribes the telomere region",
+          "is_correct": false
+        }
       ],
       "explanation": "**Telomeres** are repetitive DNA sequences (TTAGGG in humans) at chromosome ends:\n\n- **End-replication problem**: DNA polymerase cannot fully replicate the 3' end → telomeres shorten with each division\n- After ~50–70 divisions, critically short telomeres trigger **cellular senescence** (Hayflick limit)\n\n**Telomerase** (a ribonucleoprotein reverse transcriptase) extends telomeres:\n- Active in: germ cells, stem cells, ~90% of cancers\n- Inactive in: most somatic cells → explains cancer's immortality\n- Anti-cancer target: telomerase inhibitors are under clinical investigation",
-      "tags": ["telomeres"]
+      "tags": [
+        "telomeres"
+      ]
     },
     {
       "id": "mb07-aaaa-bbbb-cccc-dddddddddddd",
@@ -91,20 +203,42 @@
       "type": "open",
       "choices": [],
       "explanation": "The **lac operon** in *E. coli* controls lactose metabolism genes and demonstrates both **negative** and **positive** regulation:\n\n**Negative regulation (repressor):**\n- The *lacI* gene encodes the **lac repressor**\n- Repressor binds the **operator** sequence, blocking transcription\n- **Lactose** (via allolactose) acts as an **inducer** — binds repressor, releasing it from DNA\n\n**Positive regulation (CAP/CRP):**\n- When glucose is absent, cAMP rises\n- cAMP binds **CAP protein** which then binds the promoter and enhances transcription\n\n**Result:** The operon is fully active only when lactose is present AND glucose is absent — an efficient feed-forward control system.",
-      "tags": ["gene-regulation"]
+      "tags": [
+        "gene-regulation"
+      ]
     },
     {
       "id": "mb08-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the **unfolded protein response (UPR)**?",
       "type": "single_choice",
       "choices": [
-        { "id": "mb08-c1", "text": "A cellular stress response triggered by accumulation of misfolded proteins in the ER, aiming to restore protein homeostasis", "is_correct": true },
-        { "id": "mb08-c2", "text": "The process by which the proteasome degrades unfolded cytoplasmic proteins", "is_correct": false },
-        { "id": "mb08-c3", "text": "A response to DNA damage that pauses translation globally", "is_correct": false },
-        { "id": "mb08-c4", "text": "The immune system's response to extracellular unfolded proteins", "is_correct": false }
+        {
+          "id": "mb08-c1",
+          "text": "A cellular stress response triggered by accumulation of misfolded proteins in the ER, aiming to restore protein homeostasis",
+          "is_correct": true
+        },
+        {
+          "id": "mb08-c2",
+          "text": "The process by which the proteasome degrades unfolded cytoplasmic proteins",
+          "is_correct": false
+        },
+        {
+          "id": "mb08-c3",
+          "text": "A response to DNA damage that pauses translation globally",
+          "is_correct": false
+        },
+        {
+          "id": "mb08-c4",
+          "text": "The immune system's response to extracellular unfolded proteins",
+          "is_correct": false
+        }
       ],
       "explanation": "The **UPR** is activated during **ER stress** (e.g., viral infection, hypoxia, mutant protein accumulation):\n\n**Three ER stress sensors:**\n1. **IRE1α**: splices *XBP1* mRNA → transcription factor activating chaperones\n2. **PERK**: phosphorylates eIF2α → reduces global translation, activates ATF4\n3. **ATF6**: translocates to Golgi → cleaved → transcription factor\n\n**Outcomes:**\n- Increase ER folding capacity (upregulate chaperones)\n- Reduce ER load (translation attenuation)\n- ERAD (ER-associated degradation) of misfolded proteins\n- If unresolved: apoptosis\n\nUPR dysfunction is linked to diabetes, neurodegeneration, and cancer.",
-      "tags": ["cell-biology"]
+      "tags": [
+        "cell-biology"
+      ]
     }
-  ]
+  ],
+  "created_at": "2024-09-10T00:00:00Z",
+  "modified_at": null
 }

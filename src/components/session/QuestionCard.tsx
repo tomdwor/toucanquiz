@@ -46,6 +46,11 @@ export function QuestionCard({
 
       {isOpen ? (
         <div>
+          <div className="mb-2 flex items-center gap-2">
+            <span className="inline-flex items-center gap-1 rounded bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-600">
+              ✏ Free response — not graded
+            </span>
+          </div>
           <label className="mb-1.5 block text-sm font-medium text-gray-700">
             Your answer
           </label>
@@ -56,11 +61,16 @@ export function QuestionCard({
             disabled={answered}
             rows={4}
             className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:bg-gray-50 disabled:text-gray-500"
-            placeholder="Type your answer here..."
+            placeholder="Write your thoughts here..."
           />
         </div>
       ) : isText ? (
         <div>
+          <div className="mb-2 flex items-center gap-2">
+            <span className="inline-flex items-center gap-1 rounded bg-purple-100 px-2 py-0.5 text-xs font-medium text-purple-700">
+              ✓ Short answer — graded
+            </span>
+          </div>
           <label className="mb-1.5 block text-sm font-medium text-gray-700">
             Your answer
           </label>
@@ -70,8 +80,8 @@ export function QuestionCard({
             value={textResponse}
             onChange={(e) => onTextChange(e.target.value)}
             disabled={answered}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:bg-gray-50 disabled:text-gray-500"
-            placeholder="Type your answer here..."
+            className="w-full rounded-lg border border-purple-300 px-3 py-2 text-sm shadow-sm focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500 disabled:bg-gray-50 disabled:text-gray-500"
+            placeholder="Type exact answer..."
           />
         </div>
       ) : (

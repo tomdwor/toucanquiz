@@ -2,7 +2,11 @@
   "id": "d4e5f6a7-b8c9-0123-defa-bc4567890123",
   "name": "Bioinformatics",
   "description": "An introduction to **computational biology** — using computers to analyse biological data.\n\n> This quiz uses `question_limit: 4`, so each session randomly selects 4 out of 5 questions.\n\nTopics covered:\n- Sequence formats (FASTA, FASTQ, BAM)\n- Sequence alignment\n- Genome assembly\n- Tools like BLAST",
-  "tags": ["bioinformatics", "genomics", "beginner"],
+  "tags": [
+    "bioinformatics",
+    "genomics",
+    "beginner"
+  ],
   "mode": "practice",
   "pass_threshold": 65,
   "question_limit": 4,
@@ -34,7 +38,10 @@
         }
       ],
       "explanation": "**FASTA** is one of the most common formats for storing biological sequences.\n\nA FASTA file looks like this:\n\n```\n>sequence_name description\nATGCATGCATGCATGCATGC\nATGCATGCATGCATGC\n```\n\n- Lines starting with `>` are **headers** (sequence name/description)\n- The following lines are the **sequence** itself (DNA letters A, T, G, C or amino acids)\n\nFASTA can store:\n- DNA sequences\n- RNA sequences\n- Protein (amino acid) sequences",
-      "tags": ["file-formats", "FASTA"]
+      "tags": [
+        "file-formats",
+        "FASTA"
+      ]
     },
     {
       "id": "q2d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
@@ -63,7 +70,10 @@
         }
       ],
       "explanation": "**BLAST** (Basic Local Alignment Search Tool) is used to find sequences in databases that are similar to a query sequence.\n\nHow it works:\n\n```mermaid\ngraph LR\n    Q[\"Query sequence\"] --> BLAST[\"BLAST search\"]\n    DB[(\"Sequence database\\ne.g. NCBI\")] --> BLAST\n    BLAST --> R[\"Matching sequences + scores\"]\n```\n\nBLAST gives each match an **E-value** — a lower E-value means a more significant match.\n\n**SAMtools** works with alignment files (SAM/BAM), not database searches.",
-      "tags": ["BLAST", "tools"]
+      "tags": [
+        "BLAST",
+        "tools"
+      ]
     },
     {
       "id": "q3d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
@@ -92,7 +102,9 @@
         }
       ],
       "explanation": "Common bioinformatics formats:\n\n| Format | Contains | Use case |\n|---|---|---|\n| **FASTA** | Sequences only | Reference genomes, protein databases |\n| **FASTQ** | Sequences + quality scores | Raw sequencing reads |\n| **BAM** | Aligned reads (binary) | Read alignment to a reference |\n| **VCF** | Variants | SNPs, indels |\n\n**DOCX** is a Microsoft Word format — not used in bioinformatics!",
-      "tags": ["file-formats"]
+      "tags": [
+        "file-formats"
+      ]
     },
     {
       "id": "q4d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
@@ -121,7 +133,10 @@
         }
       ],
       "explanation": "In a sequence alignment, `-` is a **gap** — it represents an **insertion or deletion (indel)**.\n\nWhen two sequences are aligned, gaps are introduced to make similar regions line up:\n\n```\nSequence A:  ATG-CTAGC   ← gap = a base was deleted (or inserted in B)\nSequence B:  ATGGCTA-C   ← gap = a base was deleted (or inserted in A)\n             |||.|||.|\n```\n\n- A gap in sequence A means B has an **insertion** at that position (or A has a deletion)\n- Gaps are necessary to produce the best possible alignment",
-      "tags": ["alignment", "indels"]
+      "tags": [
+        "alignment",
+        "indels"
+      ]
     },
     {
       "id": "q5d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
@@ -129,7 +144,11 @@
       "type": "open",
       "choices": [],
       "explanation": "**Genome assembly** is the process of reconstructing a complete genome sequence from many short sequencing reads.\n\nWhy it's needed: DNA sequencers cannot read an entire genome in one go — they produce millions of short fragments (reads). Assembly software pieces them together like a puzzle:\n\n```mermaid\ngraph LR\n    Reads[\"Short reads\\n(100-300 bp each)\"] --> Assembler[\"Assembly software\"]\n    Assembler --> Contigs[\"Contigs (longer sequences)\"]\n    Contigs --> Genome[\"Complete genome\"]\n```\n\n**Key concepts:**\n- **Read** — a short sequenced fragment\n- **Contig** — a contiguous assembled sequence\n- **Scaffold** — contigs ordered and oriented using additional information",
-      "tags": ["genome-assembly"]
+      "tags": [
+        "genome-assembly"
+      ]
     }
-  ]
+  ],
+  "created_at": "2024-04-08T00:00:00Z",
+  "modified_at": null
 }

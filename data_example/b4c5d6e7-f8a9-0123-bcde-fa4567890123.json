@@ -2,7 +2,12 @@
   "id": "b4c5d6e7-f8a9-0123-bcde-fa4567890123",
   "name": "Computer Science: Algorithms & Data Structures",
   "description": "Master **fundamental algorithms and data structures** — complexity analysis, sorting, trees, graphs, hashing, and dynamic programming.\n\nEssential knowledge for technical interviews and software engineering.",
-  "tags": ["cs", "algorithms", "data-structures", "intermediate"],
+  "tags": [
+    "cs",
+    "algorithms",
+    "data-structures",
+    "intermediate"
+  ],
   "mode": "practice",
   "pass_threshold": 70,
   "question_limit": 10,
@@ -12,113 +17,261 @@
       "text": "What is the time complexity of **binary search** on a sorted array of $n$ elements?",
       "type": "text",
       "choices": [
-        { "id": "al01-c1", "text": "O(log n)", "is_correct": true },
-        { "id": "al01-c2", "text": "o(log n)", "is_correct": true }
+        {
+          "id": "al01-c1",
+          "text": "O(log n)",
+          "is_correct": true
+        },
+        {
+          "id": "al01-c2",
+          "text": "o(log n)",
+          "is_correct": true
+        }
       ],
       "explanation": "**Binary search** halves the search space at each step:\n\n- Worst case: $O(\\log n)$ comparisons\n- Best case: $O(1)$ (target is the midpoint)\n- Space: $O(1)$ iterative, $O(\\log n)$ recursive\n\n**Requirement**: the array must be **sorted**.\n\nCompare to linear search: $O(n)$ — binary search is dramatically faster for large datasets.",
-      "tags": ["searching", "complexity"]
+      "tags": [
+        "searching",
+        "complexity"
+      ]
     },
     {
       "id": "al02-aaaa-bbbb-cccc-dddddddddddd",
       "text": "Which sorting algorithms have **worst-case** time complexity of $O(n \\log n)$? Select all that apply.",
       "type": "multiple_choice",
       "choices": [
-        { "id": "al02-c1", "text": "Merge Sort", "is_correct": true },
-        { "id": "al02-c2", "text": "Heap Sort", "is_correct": true },
-        { "id": "al02-c3", "text": "Quick Sort", "is_correct": false },
-        { "id": "al02-c4", "text": "Bubble Sort", "is_correct": false }
+        {
+          "id": "al02-c1",
+          "text": "Merge Sort",
+          "is_correct": true
+        },
+        {
+          "id": "al02-c2",
+          "text": "Heap Sort",
+          "is_correct": true
+        },
+        {
+          "id": "al02-c3",
+          "text": "Quick Sort",
+          "is_correct": false
+        },
+        {
+          "id": "al02-c4",
+          "text": "Bubble Sort",
+          "is_correct": false
+        }
       ],
       "explanation": "Sorting complexity comparison:\n\n| Algorithm | Best | Average | Worst | Stable? |\n|-----------|------|---------|-------|--------|\n| Merge Sort | $O(n\\log n)$ | $O(n\\log n)$ | $O(n\\log n)$ | ✓ |\n| Heap Sort | $O(n\\log n)$ | $O(n\\log n)$ | $O(n\\log n)$ | ✗ |\n| Quick Sort | $O(n\\log n)$ | $O(n\\log n)$ | **$O(n^2)$** | ✗ |\n| Bubble Sort | $O(n)$ | $O(n^2)$ | $O(n^2)$ | ✓ |\n\nQuick sort's worst case is $O(n^2)$ but average case $O(n\\log n)$ with good constant factors makes it fast in practice.",
-      "tags": ["sorting", "complexity"]
+      "tags": [
+        "sorting",
+        "complexity"
+      ]
     },
     {
       "id": "al03-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the primary advantage of a **hash table** over a sorted array for lookups?",
       "type": "single_choice",
       "choices": [
-        { "id": "al03-c1", "text": "Average $O(1)$ lookup vs $O(\\log n)$ for binary search in sorted arrays", "is_correct": true },
-        { "id": "al03-c2", "text": "Hash tables use less memory than sorted arrays", "is_correct": false },
-        { "id": "al03-c3", "text": "Hash tables maintain elements in sorted order", "is_correct": false },
-        { "id": "al03-c4", "text": "Hash tables guarantee $O(1)$ worst-case lookup", "is_correct": false }
+        {
+          "id": "al03-c1",
+          "text": "Average $O(1)$ lookup vs $O(\\log n)$ for binary search in sorted arrays",
+          "is_correct": true
+        },
+        {
+          "id": "al03-c2",
+          "text": "Hash tables use less memory than sorted arrays",
+          "is_correct": false
+        },
+        {
+          "id": "al03-c3",
+          "text": "Hash tables maintain elements in sorted order",
+          "is_correct": false
+        },
+        {
+          "id": "al03-c4",
+          "text": "Hash tables guarantee $O(1)$ worst-case lookup",
+          "is_correct": false
+        }
       ],
       "explanation": "**Hash table** operations (average case):\n- Lookup: $O(1)$\n- Insert: $O(1)$\n- Delete: $O(1)$\n\n**Worst case** (all keys hash to same bucket): $O(n)$\n\n**Trade-offs vs sorted arrays:**\n- ✓ Faster average lookup\n- ✓ Faster insert/delete\n- ✗ No ordered traversal\n- ✗ Higher memory overhead\n- ✗ No predecessor/successor queries\n\nSorted arrays are better when you need range queries or sorted output.",
-      "tags": ["hashing"]
+      "tags": [
+        "hashing"
+      ]
     },
     {
       "id": "al04-aaaa-bbbb-cccc-dddddddddddd",
       "text": "In a **binary search tree (BST)**, what ordering property must hold?",
       "type": "single_choice",
       "choices": [
-        { "id": "al04-c1", "text": "For each node: all left descendants are smaller, all right descendants are larger", "is_correct": true },
-        { "id": "al04-c2", "text": "The tree must be perfectly balanced", "is_correct": false },
-        { "id": "al04-c3", "text": "Parent nodes are always smaller than child nodes", "is_correct": false },
-        { "id": "al04-c4", "text": "Nodes are stored in breadth-first order", "is_correct": false }
+        {
+          "id": "al04-c1",
+          "text": "For each node: all left descendants are smaller, all right descendants are larger",
+          "is_correct": true
+        },
+        {
+          "id": "al04-c2",
+          "text": "The tree must be perfectly balanced",
+          "is_correct": false
+        },
+        {
+          "id": "al04-c3",
+          "text": "Parent nodes are always smaller than child nodes",
+          "is_correct": false
+        },
+        {
+          "id": "al04-c4",
+          "text": "Nodes are stored in breadth-first order",
+          "is_correct": false
+        }
       ],
       "explanation": "**BST property**: for any node $v$:\n\n$$\\text{left subtree values} < v.\\text{key} < \\text{right subtree values}$$\n\n- In-order traversal of a BST produces **sorted output**\n- Average operations (balanced tree): $O(\\log n)$\n- Worst case (degenerate/linear tree): $O(n)$\n\n**Self-balancing BSTs** (AVL, Red-Black, B-tree) guarantee $O(\\log n)$ worst case.",
-      "tags": ["trees"]
+      "tags": [
+        "trees"
+      ]
     },
     {
       "id": "al05-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is **dynamic programming** and what problem characteristics make it applicable?",
       "type": "single_choice",
       "choices": [
-        { "id": "al05-c1", "text": "An optimisation technique that solves problems by breaking them into overlapping subproblems and storing solutions to avoid recomputation", "is_correct": true },
-        { "id": "al05-c2", "text": "A technique that dynamically allocates memory during algorithm execution", "is_correct": false },
-        { "id": "al05-c3", "text": "An algorithm that adapts its strategy based on runtime input", "is_correct": false },
-        { "id": "al05-c4", "text": "A divide-and-conquer approach without memoisation", "is_correct": false }
+        {
+          "id": "al05-c1",
+          "text": "An optimisation technique that solves problems by breaking them into overlapping subproblems and storing solutions to avoid recomputation",
+          "is_correct": true
+        },
+        {
+          "id": "al05-c2",
+          "text": "A technique that dynamically allocates memory during algorithm execution",
+          "is_correct": false
+        },
+        {
+          "id": "al05-c3",
+          "text": "An algorithm that adapts its strategy based on runtime input",
+          "is_correct": false
+        },
+        {
+          "id": "al05-c4",
+          "text": "A divide-and-conquer approach without memoisation",
+          "is_correct": false
+        }
       ],
       "explanation": "**Dynamic programming** applies when:\n1. **Optimal substructure**: optimal solution contains optimal solutions to subproblems\n2. **Overlapping subproblems**: same subproblems are solved multiple times\n\n**Approaches:**\n- **Top-down (memoisation)**: recursive with caching\n- **Bottom-up (tabulation)**: fill table iteratively\n\n**Classic DP problems**: Fibonacci, longest common subsequence, knapsack, shortest paths (Bellman-Ford), edit distance, coin change.",
-      "tags": ["dynamic-programming"]
+      "tags": [
+        "dynamic-programming"
+      ]
     },
     {
       "id": "al06-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What algorithm finds the **shortest path** in a graph with **non-negative** edge weights?",
       "type": "text",
       "choices": [
-        { "id": "al06-c1", "text": "dijkstra", "is_correct": true },
-        { "id": "al06-c2", "text": "dijkstra's algorithm", "is_correct": true }
+        {
+          "id": "al06-c1",
+          "text": "dijkstra",
+          "is_correct": true
+        },
+        {
+          "id": "al06-c2",
+          "text": "dijkstra's algorithm",
+          "is_correct": true
+        }
       ],
       "explanation": "**Dijkstra's algorithm** finds shortest paths from a source vertex to all others (non-negative weights):\n\n1. Initialise distances: source = 0, others = ∞\n2. Use a **min-heap (priority queue)** to always process the closest unvisited node\n3. For each node, relax its neighbours\n\n**Complexity**: $O((V + E) \\log V)$ with a binary heap.\n\n**Bellman-Ford** handles negative weights: $O(VE)$ but slower.\n**A\\*** uses heuristics for faster single-target search.",
-      "tags": ["graphs"]
+      "tags": [
+        "graphs"
+      ]
     },
     {
       "id": "al07-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the difference between **BFS** and **DFS** graph traversal?",
       "type": "single_choice",
       "choices": [
-        { "id": "al07-c1", "text": "BFS explores level by level using a queue; DFS explores as deep as possible using a stack/recursion", "is_correct": true },
-        { "id": "al07-c2", "text": "BFS uses recursion; DFS uses iteration", "is_correct": false },
-        { "id": "al07-c3", "text": "BFS is only for trees; DFS works for any graph", "is_correct": false },
-        { "id": "al07-c4", "text": "DFS always finds the shortest path; BFS does not", "is_correct": false }
+        {
+          "id": "al07-c1",
+          "text": "BFS explores level by level using a queue; DFS explores as deep as possible using a stack/recursion",
+          "is_correct": true
+        },
+        {
+          "id": "al07-c2",
+          "text": "BFS uses recursion; DFS uses iteration",
+          "is_correct": false
+        },
+        {
+          "id": "al07-c3",
+          "text": "BFS is only for trees; DFS works for any graph",
+          "is_correct": false
+        },
+        {
+          "id": "al07-c4",
+          "text": "DFS always finds the shortest path; BFS does not",
+          "is_correct": false
+        }
       ],
       "explanation": "| Algorithm | Data structure | Shortest path? | Memory |\n|-----------|---------------|----------------|--------|\n| **BFS** | Queue (FIFO) | ✓ (unweighted) | $O(b^d)$ (wide) |\n| **DFS** | Stack/recursion | ✗ | $O(d)$ (deep) |\n\nWhere $b$ = branching factor, $d$ = depth.\n\n**When to use:**\n- BFS: shortest path in unweighted graph, level-order traversal\n- DFS: topological sort, cycle detection, connected components, maze solving",
-      "tags": ["graphs"]
+      "tags": [
+        "graphs"
+      ]
     },
     {
       "id": "al08-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is a **heap** data structure and what is its key property?",
       "type": "single_choice",
       "choices": [
-        { "id": "al08-c1", "text": "A complete binary tree where each node is ≥ (max-heap) or ≤ (min-heap) all its children", "is_correct": true },
-        { "id": "al08-c2", "text": "A binary search tree with strict height balancing", "is_correct": false },
-        { "id": "al08-c3", "text": "A stack and queue combined into a single structure", "is_correct": false },
-        { "id": "al08-c4", "text": "A graph where all edges have non-negative weights", "is_correct": false }
+        {
+          "id": "al08-c1",
+          "text": "A complete binary tree where each node is ≥ (max-heap) or ≤ (min-heap) all its children",
+          "is_correct": true
+        },
+        {
+          "id": "al08-c2",
+          "text": "A binary search tree with strict height balancing",
+          "is_correct": false
+        },
+        {
+          "id": "al08-c3",
+          "text": "A stack and queue combined into a single structure",
+          "is_correct": false
+        },
+        {
+          "id": "al08-c4",
+          "text": "A graph where all edges have non-negative weights",
+          "is_correct": false
+        }
       ],
       "explanation": "A **heap** is a complete binary tree satisfying the heap property:\n\n- **Max-heap**: parent ≥ children (root is maximum)\n- **Min-heap**: parent ≤ children (root is minimum)\n\n**Operations** (using array representation):\n- Peek min/max: $O(1)$\n- Insert: $O(\\log n)$ (sift up)\n- Extract min/max: $O(\\log n)$ (sift down)\n- Build heap from array: $O(n)$\n\n**Applications**: priority queue, heap sort, Dijkstra's algorithm.",
-      "tags": ["trees"]
+      "tags": [
+        "trees"
+      ]
     },
     {
       "id": "al09-aaaa-bbbb-cccc-dddddddddddd",
       "text": "Which of the following correctly describes **Big O notation**? Select all that apply.",
       "type": "multiple_choice",
       "choices": [
-        { "id": "al09-c1", "text": "Describes an upper bound on the growth rate of a function", "is_correct": true },
-        { "id": "al09-c2", "text": "Ignores constant factors and lower-order terms", "is_correct": true },
-        { "id": "al09-c3", "text": "Describes the exact number of operations an algorithm performs", "is_correct": false },
-        { "id": "al09-c4", "text": "Always describes the worst-case running time", "is_correct": false }
+        {
+          "id": "al09-c1",
+          "text": "Describes an upper bound on the growth rate of a function",
+          "is_correct": true
+        },
+        {
+          "id": "al09-c2",
+          "text": "Ignores constant factors and lower-order terms",
+          "is_correct": true
+        },
+        {
+          "id": "al09-c3",
+          "text": "Describes the exact number of operations an algorithm performs",
+          "is_correct": false
+        },
+        {
+          "id": "al09-c4",
+          "text": "Always describes the worst-case running time",
+          "is_correct": false
+        }
       ],
       "explanation": "$f(n) = O(g(n))$ means there exist constants $c > 0$ and $n_0$ such that $f(n) \\leq c \\cdot g(n)$ for all $n \\geq n_0$.\n\n**Key properties:**\n- Drops constants: $O(3n) = O(n)$\n- Drops lower terms: $O(n^2 + n) = O(n^2)$\n- Describes **asymptotic** behaviour, not exact operation count\n- Big O is an *upper bound* — an $O(n^2)$ algorithm might run faster in practice\n- Big Omega $\\Omega$ = lower bound; Big Theta $\\Theta$ = tight bound",
-      "tags": ["complexity"]
+      "tags": [
+        "complexity"
+      ]
     },
     {
       "id": "al10-aaaa-bbbb-cccc-dddddddddddd",
@@ -126,33 +279,73 @@
       "type": "open",
       "choices": [],
       "explanation": "A **greedy algorithm** builds a solution by always making the locally optimal choice at each step, hoping to reach a globally optimal solution.\n\n**Key property**: for greedy to work, the problem must have **greedy choice property** (a local optimal choice leads to a global optimal) and **optimal substructure**.\n\n**Problems solved optimally by greedy:**\n- **Huffman coding**: always merge the two lowest-frequency trees\n- **Kruskal's/Prim's MST**: always add the minimum-weight edge that doesn't form a cycle\n- **Activity selection**: always pick the earliest-finishing activity\n- **Dijkstra's algorithm**: always process the closest unvisited node\n\n**Contrast**: greedy fails for many problems (e.g., 0-1 knapsack requires DP).",
-      "tags": ["algorithm-design"]
+      "tags": [
+        "algorithm-design"
+      ]
     },
     {
       "id": "al11-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is a **trie** (prefix tree) and what is it optimised for?",
       "type": "single_choice",
       "choices": [
-        { "id": "al11-c1", "text": "A tree where each node represents a character, optimised for prefix-based string searches and autocomplete", "is_correct": true },
-        { "id": "al11-c2", "text": "A self-balancing BST optimised for sorted integer lookups", "is_correct": false },
-        { "id": "al11-c3", "text": "A tree where each node stores a frequency count for compression", "is_correct": false },
-        { "id": "al11-c4", "text": "A variation of a heap that supports lazy deletion", "is_correct": false }
+        {
+          "id": "al11-c1",
+          "text": "A tree where each node represents a character, optimised for prefix-based string searches and autocomplete",
+          "is_correct": true
+        },
+        {
+          "id": "al11-c2",
+          "text": "A self-balancing BST optimised for sorted integer lookups",
+          "is_correct": false
+        },
+        {
+          "id": "al11-c3",
+          "text": "A tree where each node stores a frequency count for compression",
+          "is_correct": false
+        },
+        {
+          "id": "al11-c4",
+          "text": "A variation of a heap that supports lazy deletion",
+          "is_correct": false
+        }
       ],
       "explanation": "A **trie** stores strings by sharing common prefixes:\n\n```\n       (root)\n      /      \\\n     a        b\n    / \\       |\n   p   r      e\n   |   |     / \\\n   p   t    a   e\n   |   |    |   |\n   l   *    r   *\n   |         |\n   e         *\n   |\n   *\n```\n(\"apple\", \"art\", \"bear\", \"bee\")\n\n**Operations**: $O(m)$ where $m$ = string length — independent of number of strings.\n\n**Applications**: autocomplete, spell checking, IP routing tables, word frequency counting.",
-      "tags": ["trees"]
+      "tags": [
+        "trees"
+      ]
     },
     {
       "id": "al12-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What does **amortised analysis** mean?",
       "type": "single_choice",
       "choices": [
-        { "id": "al12-c1", "text": "Analysing the average cost per operation over a sequence of operations, even if some individual operations are expensive", "is_correct": true },
-        { "id": "al12-c2", "text": "Computing the average-case time complexity assuming random inputs", "is_correct": false },
-        { "id": "al12-c3", "text": "Spreading memory allocation costs evenly across all operations", "is_correct": false },
-        { "id": "al12-c4", "text": "Computing the time complexity of a recursive function", "is_correct": false }
+        {
+          "id": "al12-c1",
+          "text": "Analysing the average cost per operation over a sequence of operations, even if some individual operations are expensive",
+          "is_correct": true
+        },
+        {
+          "id": "al12-c2",
+          "text": "Computing the average-case time complexity assuming random inputs",
+          "is_correct": false
+        },
+        {
+          "id": "al12-c3",
+          "text": "Spreading memory allocation costs evenly across all operations",
+          "is_correct": false
+        },
+        {
+          "id": "al12-c4",
+          "text": "Computing the time complexity of a recursive function",
+          "is_correct": false
+        }
       ],
       "explanation": "**Amortised analysis** gives a tight bound on average cost per operation for a *sequence* of operations:\n\n**Classic example**: dynamic array (ArrayList/vector)\n- Most appends: $O(1)$\n- Occasional resize (doubling): $O(n)$\n- Amortised cost per append: **$O(1)$** — the expensive resizes are \"paid for\" by the cheap appends\n\n**Methods**: aggregate analysis, accounting method, potential method.\n\nThis is why Python `list.append()` is documented as $O(1)$ amortised.",
-      "tags": ["complexity"]
+      "tags": [
+        "complexity"
+      ]
     }
-  ]
+  ],
+  "created_at": "2024-12-01T00:00:00Z",
+  "modified_at": "2025-03-10T00:00:00Z"
 }

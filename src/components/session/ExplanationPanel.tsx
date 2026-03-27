@@ -36,6 +36,22 @@ export function ExplanationPanel({ sessionQuestion, selectedChoiceIds, isCorrect
         <span>{resultLabel}</span>
       </div>
 
+      {isText && correctChoices.length > 0 && (
+        <div className="mb-3">
+          <p className="mb-1.5 text-sm font-medium text-gray-700">
+            {correctChoices.length === 1 ? 'Expected answer:' : 'Expected answers:'}
+          </p>
+          <ul className="space-y-1">
+            {correctChoices.map((c) => (
+              <li key={c.id} className="flex items-start gap-2 text-sm">
+                <span className="mt-0.5 shrink-0 text-green-600">✓</span>
+                <RichContent content={c.text} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       {!isText && correctChoices.length > 0 && (
         <div className="mb-3">
           <p className="mb-1.5 text-sm font-medium text-gray-700">

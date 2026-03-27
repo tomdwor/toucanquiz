@@ -25,6 +25,8 @@ export interface Quiz {
   pass_threshold: number
   question_limit: number | null
   questions: Question[]
+  created_at: string
+  modified_at: string | null
 }
 
 export interface QuizSummary {
@@ -36,4 +38,6 @@ export interface QuizSummary {
   pass_threshold: number
   question_limit: number | null
   question_count: number
+  created_at: string
+  modified_at: string | null
 }

@@ -2,7 +2,11 @@
   "id": "b8c9d0e1-f2a3-4567-bcde-fa8901234567",
   "name": "Linear Algebra for ML",
   "description": "Build the **linear algebra intuition** needed for machine learning — vectors, matrices, dot products, eigenvalues, and SVD.\n\nMathematical notation uses KaTeX rendering.",
-  "tags": ["math", "linear-algebra", "intermediate"],
+  "tags": [
+    "math",
+    "linear-algebra",
+    "intermediate"
+  ],
   "mode": "practice",
   "pass_threshold": 65,
   "question_limit": 7,
@@ -12,78 +16,186 @@
       "text": "What does the **dot product** $\\mathbf{a} \\cdot \\mathbf{b}$ geometrically represent?",
       "type": "single_choice",
       "choices": [
-        { "id": "la01-c1", "text": "$|\\mathbf{a}| \\cdot |\\mathbf{b}| \\cdot \\cos\\theta$ — the product of magnitudes and the cosine of the angle between them", "is_correct": true },
-        { "id": "la01-c2", "text": "The cross product of two vectors, giving a vector perpendicular to both", "is_correct": false },
-        { "id": "la01-c3", "text": "The sum of element-wise squares", "is_correct": false },
-        { "id": "la01-c4", "text": "The Euclidean distance between the vectors", "is_correct": false }
+        {
+          "id": "la01-c1",
+          "text": "$|\\mathbf{a}| \\cdot |\\mathbf{b}| \\cdot \\cos\\theta$ — the product of magnitudes and the cosine of the angle between them",
+          "is_correct": true
+        },
+        {
+          "id": "la01-c2",
+          "text": "The cross product of two vectors, giving a vector perpendicular to both",
+          "is_correct": false
+        },
+        {
+          "id": "la01-c3",
+          "text": "The sum of element-wise squares",
+          "is_correct": false
+        },
+        {
+          "id": "la01-c4",
+          "text": "The Euclidean distance between the vectors",
+          "is_correct": false
+        }
       ],
       "explanation": "The dot product has two equivalent forms:\n\n**Algebraic**: $\\mathbf{a} \\cdot \\mathbf{b} = \\sum_i a_i b_i$\n\n**Geometric**: $\\mathbf{a} \\cdot \\mathbf{b} = |\\mathbf{a}| \\cdot |\\mathbf{b}| \\cdot \\cos\\theta$\n\nKey properties:\n- $\\mathbf{a} \\cdot \\mathbf{b} = 0$ → vectors are **orthogonal**\n- $\\mathbf{a} \\cdot \\mathbf{b} > 0$ → angle < 90°\n- Used extensively in ML: cosine similarity, projections, neural network layer computations",
-      "tags": ["vectors"]
+      "tags": [
+        "vectors"
+      ]
     },
     {
       "id": "la02-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the **rank** of a matrix?",
       "type": "single_choice",
       "choices": [
-        { "id": "la02-c1", "text": "The number of linearly independent rows (or columns) — equal to the dimension of the column space", "is_correct": true },
-        { "id": "la02-c2", "text": "The number of rows in the matrix", "is_correct": false },
-        { "id": "la02-c3", "text": "The largest eigenvalue of the matrix", "is_correct": false },
-        { "id": "la02-c4", "text": "The sum of the diagonal elements (trace)", "is_correct": false }
+        {
+          "id": "la02-c1",
+          "text": "The number of linearly independent rows (or columns) — equal to the dimension of the column space",
+          "is_correct": true
+        },
+        {
+          "id": "la02-c2",
+          "text": "The number of rows in the matrix",
+          "is_correct": false
+        },
+        {
+          "id": "la02-c3",
+          "text": "The largest eigenvalue of the matrix",
+          "is_correct": false
+        },
+        {
+          "id": "la02-c4",
+          "text": "The sum of the diagonal elements (trace)",
+          "is_correct": false
+        }
       ],
       "explanation": "The **rank** of matrix $A$ is the number of linearly independent rows/columns — equivalently, the dimension of the column space (image).\n\nA matrix is **full rank** if $\\text{rank}(A) = \\min(m, n)$.\n\nImportance in ML:\n- A rank-deficient feature matrix means features are linearly dependent (multicollinearity)\n- SVD reveals the effective rank of data matrices",
-      "tags": ["matrices"]
+      "tags": [
+        "matrices"
+      ]
     },
     {
       "id": "la03-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What do **eigenvalues** and **eigenvectors** of a matrix represent?",
       "type": "single_choice",
       "choices": [
-        { "id": "la03-c1", "text": "Eigenvectors are directions unchanged by the transformation; eigenvalues are the scaling factors along those directions", "is_correct": true },
-        { "id": "la03-c2", "text": "Eigenvalues are the diagonal elements; eigenvectors are the rows", "is_correct": false },
-        { "id": "la03-c3", "text": "Eigenvectors form the identity matrix for any square matrix", "is_correct": false },
-        { "id": "la03-c4", "text": "Eigenvalues measure the rank of the matrix", "is_correct": false }
+        {
+          "id": "la03-c1",
+          "text": "Eigenvectors are directions unchanged by the transformation; eigenvalues are the scaling factors along those directions",
+          "is_correct": true
+        },
+        {
+          "id": "la03-c2",
+          "text": "Eigenvalues are the diagonal elements; eigenvectors are the rows",
+          "is_correct": false
+        },
+        {
+          "id": "la03-c3",
+          "text": "Eigenvectors form the identity matrix for any square matrix",
+          "is_correct": false
+        },
+        {
+          "id": "la03-c4",
+          "text": "Eigenvalues measure the rank of the matrix",
+          "is_correct": false
+        }
       ],
       "explanation": "For a square matrix $A$, eigenvector $\\mathbf{v}$ and eigenvalue $\\lambda$ satisfy:\n\n$$A\\mathbf{v} = \\lambda \\mathbf{v}$$\n\nThe transformation $A$ only **scales** $\\mathbf{v}$ by $\\lambda$ without changing its direction.\n\n**ML applications:**\n- **PCA**: eigenvectors of the covariance matrix are the principal components\n- **Graph Laplacian**: eigenvectors for spectral clustering\n- **PageRank**: based on eigenvector of link matrix",
-      "tags": ["eigenvalues"]
+      "tags": [
+        "eigenvalues"
+      ]
     },
     {
       "id": "la04-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What does **Principal Component Analysis (PCA)** do?",
       "type": "single_choice",
       "choices": [
-        { "id": "la04-c1", "text": "Projects data onto orthogonal directions of maximum variance, reducing dimensionality while preserving as much information as possible", "is_correct": true },
-        { "id": "la04-c2", "text": "Classifies data into principal groups using k-means clustering", "is_correct": false },
-        { "id": "la04-c3", "text": "Selects the principal (most correlated) features from the dataset", "is_correct": false },
-        { "id": "la04-c4", "text": "Increases the number of features by creating polynomial combinations", "is_correct": false }
+        {
+          "id": "la04-c1",
+          "text": "Projects data onto orthogonal directions of maximum variance, reducing dimensionality while preserving as much information as possible",
+          "is_correct": true
+        },
+        {
+          "id": "la04-c2",
+          "text": "Classifies data into principal groups using k-means clustering",
+          "is_correct": false
+        },
+        {
+          "id": "la04-c3",
+          "text": "Selects the principal (most correlated) features from the dataset",
+          "is_correct": false
+        },
+        {
+          "id": "la04-c4",
+          "text": "Increases the number of features by creating polynomial combinations",
+          "is_correct": false
+        }
       ],
       "explanation": "**PCA** finds the directions (principal components) of greatest variance:\n\n1. Compute the covariance matrix $\\Sigma$ of the centred data\n2. Compute eigenvectors/eigenvalues of $\\Sigma$\n3. Project data onto the top $k$ eigenvectors\n\nResult: $k$ uncorrelated features that explain the most variance.\n\n**Applications**: dimensionality reduction, data visualisation (t-SNE builds on this idea), noise reduction.",
-      "tags": ["pca"]
+      "tags": [
+        "pca"
+      ]
     },
     {
       "id": "la05-aaaa-bbbb-cccc-dddddddddddd",
       "text": "Which of the following properties hold for **matrix multiplication** $AB$? Select all that apply.",
       "type": "multiple_choice",
       "choices": [
-        { "id": "la05-c1", "text": "It is associative: $(AB)C = A(BC)$", "is_correct": true },
-        { "id": "la05-c2", "text": "It is distributive: $A(B + C) = AB + AC$", "is_correct": true },
-        { "id": "la05-c3", "text": "It is commutative: $AB = BA$", "is_correct": false },
-        { "id": "la05-c4", "text": "$(AB)^T = B^T A^T$", "is_correct": true }
+        {
+          "id": "la05-c1",
+          "text": "It is associative: $(AB)C = A(BC)$",
+          "is_correct": true
+        },
+        {
+          "id": "la05-c2",
+          "text": "It is distributive: $A(B + C) = AB + AC$",
+          "is_correct": true
+        },
+        {
+          "id": "la05-c3",
+          "text": "It is commutative: $AB = BA$",
+          "is_correct": false
+        },
+        {
+          "id": "la05-c4",
+          "text": "$(AB)^T = B^T A^T$",
+          "is_correct": true
+        }
       ],
       "explanation": "Matrix multiplication properties:\n\n| Property | Formula | Holds? |\n|----------|---------|--------|\n| Associativity | $(AB)C = A(BC)$ | ✓ |\n| Distributivity | $A(B+C) = AB + AC$ | ✓ |\n| Commutativity | $AB = BA$ | ✗ (generally) |\n| Transpose rule | $(AB)^T = B^T A^T$ | ✓ |\n\nCommutativity fails even for square matrices — order matters!",
-      "tags": ["matrices"]
+      "tags": [
+        "matrices"
+      ]
     },
     {
       "id": "la06-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What does the **L2 norm** (Euclidean norm) of a vector $\\mathbf{x}$ compute?",
       "type": "text",
       "choices": [
-        { "id": "la06-c1", "text": "length", "is_correct": true },
-        { "id": "la06-c2", "text": "magnitude", "is_correct": true },
-        { "id": "la06-c3", "text": "euclidean length", "is_correct": true },
-        { "id": "la06-c4", "text": "norm", "is_correct": true }
+        {
+          "id": "la06-c1",
+          "text": "length",
+          "is_correct": true
+        },
+        {
+          "id": "la06-c2",
+          "text": "magnitude",
+          "is_correct": true
+        },
+        {
+          "id": "la06-c3",
+          "text": "euclidean length",
+          "is_correct": true
+        },
+        {
+          "id": "la06-c4",
+          "text": "norm",
+          "is_correct": true
+        }
       ],
       "explanation": "The **L2 norm** (Euclidean norm) computes the **length/magnitude** of a vector:\n\n$$\\|\\mathbf{x}\\|_2 = \\sqrt{\\sum_i x_i^2}$$\n\nOther norms:\n- **L1 norm**: $\\|\\mathbf{x}\\|_1 = \\sum_i |x_i|$ (sum of absolute values)\n- **L∞ norm**: $\\|\\mathbf{x}\\|_\\infty = \\max_i |x_i|$\n\nUsed in ML for regularisation (L1 = Lasso, L2 = Ridge) and as distance metrics.",
-      "tags": ["vectors"]
+      "tags": [
+        "vectors"
+      ]
     },
     {
       "id": "la07-aaaa-bbbb-cccc-dddddddddddd",
@@ -91,46 +203,104 @@
       "type": "open",
       "choices": [],
       "explanation": "**SVD** decomposes any matrix $A$ into three matrices:\n\n$$A = U \\Sigma V^T$$\n\n- $U$: orthonormal matrix of left singular vectors\n- $\\Sigma$: diagonal matrix of singular values (non-negative, sorted descending)\n- $V^T$: orthonormal matrix of right singular vectors\n\n**Why useful in ML:**\n- **Dimensionality reduction**: keep top-k singular values (truncated SVD ≈ PCA)\n- **Recommender systems** (collaborative filtering)\n- **Natural language processing** (Latent Semantic Analysis)\n- **Solving least squares** problems\n- Computing **matrix pseudoinverse**",
-      "tags": ["svd"]
+      "tags": [
+        "svd"
+      ]
     },
     {
       "id": "la08-aaaa-bbbb-cccc-dddddddddddd",
       "text": "A matrix $A$ is **positive semi-definite** if and only if:",
       "type": "single_choice",
       "choices": [
-        { "id": "la08-c1", "text": "All its eigenvalues are ≥ 0", "is_correct": true },
-        { "id": "la08-c2", "text": "All its elements are ≥ 0", "is_correct": false },
-        { "id": "la08-c3", "text": "Its determinant is ≥ 0", "is_correct": false },
-        { "id": "la08-c4", "text": "It is symmetric", "is_correct": false }
+        {
+          "id": "la08-c1",
+          "text": "All its eigenvalues are ≥ 0",
+          "is_correct": true
+        },
+        {
+          "id": "la08-c2",
+          "text": "All its elements are ≥ 0",
+          "is_correct": false
+        },
+        {
+          "id": "la08-c3",
+          "text": "Its determinant is ≥ 0",
+          "is_correct": false
+        },
+        {
+          "id": "la08-c4",
+          "text": "It is symmetric",
+          "is_correct": false
+        }
       ],
       "explanation": "A symmetric matrix $A$ is **positive semi-definite (PSD)** if $\\mathbf{x}^T A \\mathbf{x} \\geq 0$ for all vectors $\\mathbf{x}$.\n\nThis is equivalent to all eigenvalues being $\\geq 0$.\n\n**Why it matters in ML:**\n- Covariance matrices are always PSD\n- PSD kernels are required for SVMs and Gaussian Processes\n- Hessian being PSD means a local minimum in optimisation",
-      "tags": ["matrices"]
+      "tags": [
+        "matrices"
+      ]
     },
     {
       "id": "la09-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the **trace** of a matrix?",
       "type": "single_choice",
       "choices": [
-        { "id": "la09-c1", "text": "The sum of the diagonal elements", "is_correct": true },
-        { "id": "la09-c2", "text": "The sum of all elements", "is_correct": false },
-        { "id": "la09-c3", "text": "The product of all eigenvalues (determinant)", "is_correct": false },
-        { "id": "la09-c4", "text": "The largest singular value", "is_correct": false }
+        {
+          "id": "la09-c1",
+          "text": "The sum of the diagonal elements",
+          "is_correct": true
+        },
+        {
+          "id": "la09-c2",
+          "text": "The sum of all elements",
+          "is_correct": false
+        },
+        {
+          "id": "la09-c3",
+          "text": "The product of all eigenvalues (determinant)",
+          "is_correct": false
+        },
+        {
+          "id": "la09-c4",
+          "text": "The largest singular value",
+          "is_correct": false
+        }
       ],
       "explanation": "$$\\text{tr}(A) = \\sum_i A_{ii}$$\n\nKey property: the trace equals the sum of eigenvalues:\n$$\\text{tr}(A) = \\sum_i \\lambda_i$$\n\nUsed in:\n- **Total variance**: trace of covariance matrix = sum of variances\n- **Matrix calculus**: $\\nabla_X \\text{tr}(AX) = A^T$\n- Efficient computation of certain loss functions",
-      "tags": ["matrices"]
+      "tags": [
+        "matrices"
+      ]
     },
     {
       "id": "la10-aaaa-bbbb-cccc-dddddddddddd",
       "text": "Two vectors are **orthonormal** if they are:",
       "type": "multiple_choice",
       "choices": [
-        { "id": "la10-c1", "text": "Orthogonal to each other (dot product = 0)", "is_correct": true },
-        { "id": "la10-c2", "text": "Each of unit length (L2 norm = 1)", "is_correct": true },
-        { "id": "la10-c3", "text": "Parallel to each other", "is_correct": false },
-        { "id": "la10-c4", "text": "Both pointing in the same direction", "is_correct": false }
+        {
+          "id": "la10-c1",
+          "text": "Orthogonal to each other (dot product = 0)",
+          "is_correct": true
+        },
+        {
+          "id": "la10-c2",
+          "text": "Each of unit length (L2 norm = 1)",
+          "is_correct": true
+        },
+        {
+          "id": "la10-c3",
+          "text": "Parallel to each other",
+          "is_correct": false
+        },
+        {
+          "id": "la10-c4",
+          "text": "Both pointing in the same direction",
+          "is_correct": false
+        }
       ],
       "explanation": "**Orthonormal** = orthogonal + unit norm:\n\n$$\\mathbf{u}_i \\cdot \\mathbf{u}_j = \\begin{cases} 1 & \\text{if } i = j \\\\ 0 & \\text{if } i \\neq j \\end{cases}$$\n\nOrthonormal bases are used throughout ML:\n- PCA components are orthonormal\n- Columns of $U$ and $V$ in SVD are orthonormal\n- QR decomposition produces orthonormal columns",
-      "tags": ["vectors"]
+      "tags": [
+        "vectors"
+      ]
     }
-  ]
+  ],
+  "created_at": "2024-07-14T00:00:00Z",
+  "modified_at": null
 }

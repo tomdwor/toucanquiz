@@ -1,4 +1,4 @@
-export type SortField = 'name' | 'pass_threshold'
+export type SortField = 'name' | 'created_at' | 'modified_at'
 export type SortDir = 'asc' | 'desc'
 
 interface QuizSortProps {
@@ -18,7 +18,8 @@ export function QuizSort({ sortField, sortDir, onSortFieldChange, onSortDirChang
         className="rounded-lg border border-gray-300 px-2.5 py-1.5 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
       >
         <option value="name">Name</option>
-        <option value="pass_threshold">Pass threshold</option>
+        <option value="created_at">Date created</option>
+        <option value="modified_at">Date modified</option>
       </select>
       <button
         onClick={() => onSortDirChange(sortDir === 'asc' ? 'desc' : 'asc')}

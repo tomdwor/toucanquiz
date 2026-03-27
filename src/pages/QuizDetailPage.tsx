@@ -85,13 +85,13 @@ export function QuizDetailPage() {
             </div>
             <span
               className={[
-                'shrink-0 rounded-full px-3 py-1 text-sm font-semibold',
+                'shrink-0 rounded px-3 py-1 text-sm font-bold uppercase tracking-wider',
                 quiz.mode === 'exam'
                   ? 'bg-amber-100 text-amber-800'
                   : 'bg-green-100 text-green-800',
               ].join(' ')}
             >
-              {quiz.mode} mode
+              {quiz.mode}
             </span>
           </div>
 
@@ -117,6 +117,20 @@ export function QuizDetailPage() {
               <div className="text-2xl font-bold text-gray-900">{quiz.pass_threshold}%</div>
               <div className="text-sm text-gray-500">Pass threshold</div>
             </div>
+            <div className="rounded-lg bg-white border border-gray-200 p-4 text-center shadow-sm">
+              <div className="text-sm font-semibold text-gray-900">
+                {new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(quiz.created_at))}
+              </div>
+              <div className="text-sm text-gray-500">Created</div>
+            </div>
+            {quiz.modified_at && (
+              <div className="rounded-lg bg-white border border-gray-200 p-4 text-center shadow-sm">
+                <div className="text-sm font-semibold text-gray-900">
+                  {new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(quiz.modified_at))}
+                </div>
+                <div className="text-sm text-gray-500">Updated</div>
+              </div>
+            )}
           </div>
 
           {examNotAvailable && (

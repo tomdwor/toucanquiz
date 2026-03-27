@@ -18,7 +18,7 @@ type CodeProps = React.ClassAttributes<HTMLElement> &
   ExtraProps
 
 function CodeBlock({ node, className, children, ...props }: CodeProps) {
-  const lang = className?.replace('language-', '') ?? ''
+  const lang = className?.match(/language-(\w+)/)?.[1] ?? ''
   const source = String(children).replace(/\n$/, '')
 
   if (lang === 'mermaid') {
@@ -58,7 +58,7 @@ export function RichContent({ content, className = '' }: RichContentProps) {
     <div className={`rich-content ${className}`}>
       <ReactMarkdown
         remarkPlugins={[remarkMath, remarkGfm]}
-        rehypePlugins={[rehypeKatex, rehypeHighlight]}
+        rehypePlugins={[rehypeKatex, [rehypeHighlight, { plainText: ['mermaid'] }]]}
         components={components}
       >
         {content}

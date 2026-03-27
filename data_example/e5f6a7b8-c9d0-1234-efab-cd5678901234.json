@@ -2,7 +2,11 @@
   "id": "e5f6a7b8-c9d0-1234-efab-cd5678901234",
   "name": "Machine Learning Fundamentals",
   "description": "Understand the **core concepts of machine learning** — supervised vs unsupervised learning, model evaluation, overfitting, and classic algorithms.\n\nIncludes both conceptual questions and practical reasoning problems.",
-  "tags": ["ml", "ai", "beginner"],
+  "tags": [
+    "ml",
+    "ai",
+    "beginner"
+  ],
   "mode": "practice",
   "pass_threshold": 70,
   "question_limit": 8,
@@ -12,117 +16,279 @@
       "text": "Which of the following is an example of **supervised learning**?",
       "type": "single_choice",
       "choices": [
-        { "id": "ml01-c1", "text": "Training a model to classify emails as spam or not spam using labeled examples", "is_correct": true },
-        { "id": "ml01-c2", "text": "Clustering customers into groups without predefined labels", "is_correct": false },
-        { "id": "ml01-c3", "text": "Reducing the dimensionality of a dataset using PCA", "is_correct": false },
-        { "id": "ml01-c4", "text": "Training an agent to play chess by rewarding winning moves", "is_correct": false }
+        {
+          "id": "ml01-c1",
+          "text": "Training a model to classify emails as spam or not spam using labeled examples",
+          "is_correct": true
+        },
+        {
+          "id": "ml01-c2",
+          "text": "Clustering customers into groups without predefined labels",
+          "is_correct": false
+        },
+        {
+          "id": "ml01-c3",
+          "text": "Reducing the dimensionality of a dataset using PCA",
+          "is_correct": false
+        },
+        {
+          "id": "ml01-c4",
+          "text": "Training an agent to play chess by rewarding winning moves",
+          "is_correct": false
+        }
       ],
       "explanation": "Supervised learning uses **labeled data** — each training example includes both input features and the expected output. Spam classification with known labels is a classic supervised task.\n\n- **Unsupervised**: clustering (no labels)\n- **Dimensionality reduction**: often unsupervised (e.g., PCA)\n- **Reinforcement learning**: agent learns via rewards/penalties",
-      "tags": ["supervised-learning"]
+      "tags": [
+        "supervised-learning"
+      ]
     },
     {
       "id": "ml02-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What does **overfitting** mean in machine learning?",
       "type": "single_choice",
       "choices": [
-        { "id": "ml02-c1", "text": "The model learns the training data too well, including noise, and fails to generalise", "is_correct": true },
-        { "id": "ml02-c2", "text": "The model is too simple to capture patterns in the data", "is_correct": false },
-        { "id": "ml02-c3", "text": "The training dataset is larger than needed", "is_correct": false },
-        { "id": "ml02-c4", "text": "The model takes too long to train", "is_correct": false }
+        {
+          "id": "ml02-c1",
+          "text": "The model learns the training data too well, including noise, and fails to generalise",
+          "is_correct": true
+        },
+        {
+          "id": "ml02-c2",
+          "text": "The model is too simple to capture patterns in the data",
+          "is_correct": false
+        },
+        {
+          "id": "ml02-c3",
+          "text": "The training dataset is larger than needed",
+          "is_correct": false
+        },
+        {
+          "id": "ml02-c4",
+          "text": "The model takes too long to train",
+          "is_correct": false
+        }
       ],
       "explanation": "**Overfitting** occurs when a model memorises the training data, including its noise and outliers. It achieves low training error but high test/validation error — it fails to generalise to unseen data.\n\nThe opposite problem — **underfitting** — means the model is too simple (high bias).",
-      "tags": ["overfitting"]
+      "tags": [
+        "overfitting"
+      ]
     },
     {
       "id": "ml03-aaaa-bbbb-cccc-dddddddddddd",
       "text": "Which metrics are commonly used to evaluate a **classification** model? Select all that apply.",
       "type": "multiple_choice",
       "choices": [
-        { "id": "ml03-c1", "text": "Accuracy", "is_correct": true },
-        { "id": "ml03-c2", "text": "Precision and Recall", "is_correct": true },
-        { "id": "ml03-c3", "text": "F1 Score", "is_correct": true },
-        { "id": "ml03-c4", "text": "Mean Absolute Error (MAE)", "is_correct": false }
+        {
+          "id": "ml03-c1",
+          "text": "Accuracy",
+          "is_correct": true
+        },
+        {
+          "id": "ml03-c2",
+          "text": "Precision and Recall",
+          "is_correct": true
+        },
+        {
+          "id": "ml03-c3",
+          "text": "F1 Score",
+          "is_correct": true
+        },
+        {
+          "id": "ml03-c4",
+          "text": "Mean Absolute Error (MAE)",
+          "is_correct": false
+        }
       ],
       "explanation": "For classification tasks, common metrics are:\n\n- **Accuracy**: fraction of correct predictions\n- **Precision**: of predicted positives, how many are truly positive\n- **Recall**: of actual positives, how many were predicted correctly\n- **F1 Score**: harmonic mean of precision and recall\n\n**MAE** is a regression metric — it measures the average absolute difference between predicted and actual numerical values.",
-      "tags": ["evaluation"]
+      "tags": [
+        "evaluation"
+      ]
     },
     {
       "id": "ml04-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the purpose of a **validation set** during model training?",
       "type": "single_choice",
       "choices": [
-        { "id": "ml04-c1", "text": "To tune hyperparameters and monitor for overfitting without contaminating the test set", "is_correct": true },
-        { "id": "ml04-c2", "text": "To provide additional training examples when data is scarce", "is_correct": false },
-        { "id": "ml04-c3", "text": "To evaluate the final model performance for reporting", "is_correct": false },
-        { "id": "ml04-c4", "text": "To replace cross-validation in all cases", "is_correct": false }
+        {
+          "id": "ml04-c1",
+          "text": "To tune hyperparameters and monitor for overfitting without contaminating the test set",
+          "is_correct": true
+        },
+        {
+          "id": "ml04-c2",
+          "text": "To provide additional training examples when data is scarce",
+          "is_correct": false
+        },
+        {
+          "id": "ml04-c3",
+          "text": "To evaluate the final model performance for reporting",
+          "is_correct": false
+        },
+        {
+          "id": "ml04-c4",
+          "text": "To replace cross-validation in all cases",
+          "is_correct": false
+        }
       ],
       "explanation": "The data is typically split into three sets:\n\n| Set | Purpose |\n|-----|---------|\n| **Training** | Learn model parameters |\n| **Validation** | Tune hyperparameters, detect overfitting |\n| **Test** | Final unbiased evaluation |\n\nUsing the test set for tuning would give an optimistically biased estimate of performance.",
-      "tags": ["training"]
+      "tags": [
+        "training"
+      ]
     },
     {
       "id": "ml05-aaaa-bbbb-cccc-dddddddddddd",
       "text": "Which algorithm is a **decision-tree ensemble** method that builds many trees on random subsets of data and features?",
       "type": "single_choice",
       "choices": [
-        { "id": "ml05-c1", "text": "Random Forest", "is_correct": true },
-        { "id": "ml05-c2", "text": "Support Vector Machine", "is_correct": false },
-        { "id": "ml05-c3", "text": "Logistic Regression", "is_correct": false },
-        { "id": "ml05-c4", "text": "K-Nearest Neighbours", "is_correct": false }
+        {
+          "id": "ml05-c1",
+          "text": "Random Forest",
+          "is_correct": true
+        },
+        {
+          "id": "ml05-c2",
+          "text": "Support Vector Machine",
+          "is_correct": false
+        },
+        {
+          "id": "ml05-c3",
+          "text": "Logistic Regression",
+          "is_correct": false
+        },
+        {
+          "id": "ml05-c4",
+          "text": "K-Nearest Neighbours",
+          "is_correct": false
+        }
       ],
       "explanation": "**Random Forest** is a bagging ensemble method that:\n1. Builds many decision trees, each on a random bootstrap sample of the data\n2. At each split, considers only a random subset of features\n3. Combines predictions by majority vote (classification) or averaging (regression)\n\nThis reduces variance compared to a single deep tree.",
-      "tags": ["algorithms"]
+      "tags": [
+        "algorithms"
+      ]
     },
     {
       "id": "ml06-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the name of the optimisation algorithm most commonly used to train neural networks?",
       "type": "text",
       "choices": [
-        { "id": "ml06-c1", "text": "gradient descent", "is_correct": true },
-        { "id": "ml06-c2", "text": "stochastic gradient descent", "is_correct": true },
-        { "id": "ml06-c3", "text": "sgd", "is_correct": true },
-        { "id": "ml06-c4", "text": "backpropagation", "is_correct": true }
+        {
+          "id": "ml06-c1",
+          "text": "gradient descent",
+          "is_correct": true
+        },
+        {
+          "id": "ml06-c2",
+          "text": "stochastic gradient descent",
+          "is_correct": true
+        },
+        {
+          "id": "ml06-c3",
+          "text": "sgd",
+          "is_correct": true
+        },
+        {
+          "id": "ml06-c4",
+          "text": "backpropagation",
+          "is_correct": true
+        }
       ],
       "explanation": "**Gradient descent** (and its variants like SGD, Adam, RMSprop) is used to minimise the loss function by iteratively adjusting weights in the direction of the negative gradient.\n\n**Backpropagation** is the algorithm used to *compute* the gradients efficiently — it's not itself an optimisation algorithm, but it enables gradient descent to work.",
-      "tags": ["optimisation"]
+      "tags": [
+        "optimisation"
+      ]
     },
     {
       "id": "ml07-aaaa-bbbb-cccc-dddddddddddd",
       "text": "Which of the following are techniques to **reduce overfitting**? Select all that apply.",
       "type": "multiple_choice",
       "choices": [
-        { "id": "ml07-c1", "text": "Dropout (randomly disabling neurons during training)", "is_correct": true },
-        { "id": "ml07-c2", "text": "L1 / L2 regularisation", "is_correct": true },
-        { "id": "ml07-c3", "text": "Collecting more training data", "is_correct": true },
-        { "id": "ml07-c4", "text": "Increasing model complexity", "is_correct": false }
+        {
+          "id": "ml07-c1",
+          "text": "Dropout (randomly disabling neurons during training)",
+          "is_correct": true
+        },
+        {
+          "id": "ml07-c2",
+          "text": "L1 / L2 regularisation",
+          "is_correct": true
+        },
+        {
+          "id": "ml07-c3",
+          "text": "Collecting more training data",
+          "is_correct": true
+        },
+        {
+          "id": "ml07-c4",
+          "text": "Increasing model complexity",
+          "is_correct": false
+        }
       ],
       "explanation": "Techniques to combat overfitting:\n\n- **Dropout**: randomly zeros out neurons during training, forcing the network to learn redundant representations\n- **L1/L2 regularisation**: adds penalty term to the loss function to discourage large weights\n- **More data**: reduces the chance of memorising noise\n\nIncreasing model complexity generally *worsens* overfitting.",
-      "tags": ["regularisation"]
+      "tags": [
+        "regularisation"
+      ]
     },
     {
       "id": "ml08-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the **bias-variance trade-off** in machine learning?",
       "type": "single_choice",
       "choices": [
-        { "id": "ml08-c1", "text": "High bias models underfit; high variance models overfit — the trade-off is finding the right model complexity", "is_correct": true },
-        { "id": "ml08-c2", "text": "Bias refers to data imbalance and variance refers to feature scaling differences", "is_correct": false },
-        { "id": "ml08-c3", "text": "It describes the trade-off between training speed and accuracy", "is_correct": false },
-        { "id": "ml08-c4", "text": "It only applies to linear models", "is_correct": false }
+        {
+          "id": "ml08-c1",
+          "text": "High bias models underfit; high variance models overfit — the trade-off is finding the right model complexity",
+          "is_correct": true
+        },
+        {
+          "id": "ml08-c2",
+          "text": "Bias refers to data imbalance and variance refers to feature scaling differences",
+          "is_correct": false
+        },
+        {
+          "id": "ml08-c3",
+          "text": "It describes the trade-off between training speed and accuracy",
+          "is_correct": false
+        },
+        {
+          "id": "ml08-c4",
+          "text": "It only applies to linear models",
+          "is_correct": false
+        }
       ],
       "explanation": "The **bias-variance trade-off** describes a fundamental tension:\n\n- **High bias** (underfitting): model is too simple, misses real patterns, high training *and* test error\n- **High variance** (overfitting): model is too complex, captures noise, low training error but high test error\n\nThe goal is to choose model complexity that minimises **total error** = bias² + variance + irreducible noise.",
-      "tags": ["fundamentals"]
+      "tags": [
+        "fundamentals"
+      ]
     },
     {
       "id": "ml09-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What does **k-fold cross-validation** do?",
       "type": "single_choice",
       "choices": [
-        { "id": "ml09-c1", "text": "Splits data into k folds, trains on k−1 and validates on 1, rotated k times, then averages results", "is_correct": true },
-        { "id": "ml09-c2", "text": "Trains k different models and picks the best one", "is_correct": false },
-        { "id": "ml09-c3", "text": "Reduces the dataset to k most important features", "is_correct": false },
-        { "id": "ml09-c4", "text": "Runs gradient descent k times with different learning rates", "is_correct": false }
+        {
+          "id": "ml09-c1",
+          "text": "Splits data into k folds, trains on k−1 and validates on 1, rotated k times, then averages results",
+          "is_correct": true
+        },
+        {
+          "id": "ml09-c2",
+          "text": "Trains k different models and picks the best one",
+          "is_correct": false
+        },
+        {
+          "id": "ml09-c3",
+          "text": "Reduces the dataset to k most important features",
+          "is_correct": false
+        },
+        {
+          "id": "ml09-c4",
+          "text": "Runs gradient descent k times with different learning rates",
+          "is_correct": false
+        }
       ],
       "explanation": "**k-fold cross-validation** gives a more reliable estimate of model performance:\n\n1. Split data into k equal-sized folds\n2. For each fold i: train on all folds except i, evaluate on fold i\n3. Average the k validation scores\n\nThis uses all data for both training and validation, making it especially useful when data is limited.",
-      "tags": ["evaluation"]
+      "tags": [
+        "evaluation"
+      ]
     },
     {
       "id": "ml10-aaaa-bbbb-cccc-dddddddddddd",
@@ -130,33 +296,73 @@
       "type": "open",
       "choices": [],
       "explanation": "**Transfer learning** involves taking a model pre-trained on a large dataset (e.g., ImageNet for images, Wikipedia for text) and fine-tuning it on a smaller task-specific dataset.\n\n**Why it's useful:**\n- Requires much less labelled data\n- Trains faster (pre-trained features are already good)\n- Often achieves better performance than training from scratch\n\nExamples: fine-tuning BERT for sentiment analysis, fine-tuning ResNet for medical imaging.",
-      "tags": ["transfer-learning"]
+      "tags": [
+        "transfer-learning"
+      ]
     },
     {
       "id": "ml11-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the difference between **bagging** and **boosting**?",
       "type": "single_choice",
       "choices": [
-        { "id": "ml11-c1", "text": "Bagging trains models in parallel on random subsets; boosting trains sequentially, each model focusing on previous errors", "is_correct": true },
-        { "id": "ml11-c2", "text": "Bagging uses decision trees; boosting uses neural networks", "is_correct": false },
-        { "id": "ml11-c3", "text": "Bagging reduces bias; boosting reduces variance", "is_correct": false },
-        { "id": "ml11-c4", "text": "They are different names for the same technique", "is_correct": false }
+        {
+          "id": "ml11-c1",
+          "text": "Bagging trains models in parallel on random subsets; boosting trains sequentially, each model focusing on previous errors",
+          "is_correct": true
+        },
+        {
+          "id": "ml11-c2",
+          "text": "Bagging uses decision trees; boosting uses neural networks",
+          "is_correct": false
+        },
+        {
+          "id": "ml11-c3",
+          "text": "Bagging reduces bias; boosting reduces variance",
+          "is_correct": false
+        },
+        {
+          "id": "ml11-c4",
+          "text": "They are different names for the same technique",
+          "is_correct": false
+        }
       ],
       "explanation": "| Technique | How | Reduces |\n|-----------|-----|---------|\n| **Bagging** | Parallel, random subsets, equal weight | Variance |\n| **Boosting** | Sequential, focus on errors, weighted | Bias |\n\n- **Bagging example**: Random Forest\n- **Boosting examples**: AdaBoost, Gradient Boosting, XGBoost",
-      "tags": ["ensemble"]
+      "tags": [
+        "ensemble"
+      ]
     },
     {
       "id": "ml12-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What does **feature scaling** (e.g., normalisation or standardisation) help with?",
       "type": "multiple_choice",
       "choices": [
-        { "id": "ml12-c1", "text": "Improves convergence speed for gradient-based optimisers", "is_correct": true },
-        { "id": "ml12-c2", "text": "Required for distance-based algorithms like k-NN and SVM to work correctly", "is_correct": true },
-        { "id": "ml12-c3", "text": "Increases the number of features in the dataset", "is_correct": false },
-        { "id": "ml12-c4", "text": "Prevents a single large-valued feature from dominating the loss", "is_correct": true }
+        {
+          "id": "ml12-c1",
+          "text": "Improves convergence speed for gradient-based optimisers",
+          "is_correct": true
+        },
+        {
+          "id": "ml12-c2",
+          "text": "Required for distance-based algorithms like k-NN and SVM to work correctly",
+          "is_correct": true
+        },
+        {
+          "id": "ml12-c3",
+          "text": "Increases the number of features in the dataset",
+          "is_correct": false
+        },
+        {
+          "id": "ml12-c4",
+          "text": "Prevents a single large-valued feature from dominating the loss",
+          "is_correct": true
+        }
       ],
       "explanation": "**Feature scaling** is important because:\n\n1. **Gradient descent converges faster** when features are on similar scales\n2. **Distance-based algorithms** (k-NN, SVM, k-means) compute distances using raw values — unscaled features with larger ranges dominate\n3. **Regularisation** penalises coefficients equally only when features are on the same scale\n\nIt does *not* create new features.",
-      "tags": ["preprocessing"]
+      "tags": [
+        "preprocessing"
+      ]
     }
-  ]
+  ],
+  "created_at": "2024-05-15T00:00:00Z",
+  "modified_at": "2024-11-03T00:00:00Z"
 }

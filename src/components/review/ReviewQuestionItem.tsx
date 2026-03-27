@@ -50,17 +50,15 @@ export function ReviewQuestionItem({ index, sessionQuestion, answer }: ReviewQue
                 {isCorrect === false && <span className="ml-2 text-red-500">✗</span>}
               </p>
             </div>
-            {isCorrect === false && (
-              <div>
-                <p className="mb-1 font-medium text-gray-600">Expected answer:</p>
-                <p className="text-gray-700">
-                  {shuffled_choices
-                    .filter((c) => c.is_correct)
-                    .map((c) => c.text)
-                    .join(' / ')}
-                </p>
-              </div>
-            )}
+            <div>
+              <p className="mb-1 font-medium text-gray-600">Expected answer:</p>
+              <p className="text-gray-700">
+                {shuffled_choices
+                  .filter((c) => c.is_correct)
+                  .map((c) => c.text)
+                  .join(' / ')}
+              </p>
+            </div>
           </div>
         ) : (
           <div className="space-y-1.5">

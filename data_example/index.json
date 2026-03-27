@@ -8,7 +8,9 @@
       "mode": "practice",
       "pass_threshold": 70,
       "question_limit": null,
-      "question_count": 5
+      "question_count": 5,
+      "created_at": "2024-02-10T00:00:00Z",
+      "modified_at": null
     },
     {
       "id": "b2c3d4e5-f6a7-8901-bcde-fa2345678901",
@@ -18,7 +20,9 @@
       "mode": "practice",
       "pass_threshold": 75,
       "question_limit": 3,
-      "question_count": 5
+      "question_count": 5,
+      "created_at": "2024-03-05T00:00:00Z",
+      "modified_at": "2024-09-12T00:00:00Z"
     },
     {
       "id": "c3d4e5f6-a7b8-9012-cdef-ab3456789012",
@@ -28,7 +32,9 @@
       "mode": "practice",
       "pass_threshold": 65,
       "question_limit": null,
-      "question_count": 5
+      "question_count": 5,
+      "created_at": "2024-03-20T00:00:00Z",
+      "modified_at": null
     },
     {
       "id": "d4e5f6a7-b8c9-0123-defa-bc4567890123",
@@ -38,7 +44,9 @@
       "mode": "practice",
       "pass_threshold": 65,
       "question_limit": 4,
-      "question_count": 5
+      "question_count": 5,
+      "created_at": "2024-04-08T00:00:00Z",
+      "modified_at": null
     },
     {
       "id": "e5f6a7b8-c9d0-1234-efab-cd5678901234",
@@ -48,7 +56,9 @@
       "mode": "practice",
       "pass_threshold": 70,
       "question_limit": 8,
-      "question_count": 12
+      "question_count": 12,
+      "created_at": "2024-05-15T00:00:00Z",
+      "modified_at": "2024-11-03T00:00:00Z"
     },
     {
       "id": "f6a7b8c9-d0e1-2345-fabc-de6789012345",
@@ -58,7 +68,9 @@
       "mode": "practice",
       "pass_threshold": 65,
       "question_limit": 7,
-      "question_count": 10
+      "question_count": 10,
+      "created_at": "2024-06-01T00:00:00Z",
+      "modified_at": null
     },
     {
       "id": "a7b8c9d0-e1f2-3456-abcd-ef7890123456",
@@ -68,7 +80,9 @@
       "mode": "practice",
       "pass_threshold": 70,
       "question_limit": 8,
-      "question_count": 10
+      "question_count": 10,
+      "created_at": "2024-06-20T00:00:00Z",
+      "modified_at": "2025-01-08T00:00:00Z"
     },
     {
       "id": "b8c9d0e1-f2a3-4567-bcde-fa8901234567",
@@ -78,7 +92,9 @@
       "mode": "practice",
       "pass_threshold": 65,
       "question_limit": 7,
-      "question_count": 10
+      "question_count": 10,
+      "created_at": "2024-07-14T00:00:00Z",
+      "modified_at": null
     },
     {
       "id": "c9d0e1f2-a3b4-5678-cdef-ab9012345678",
@@ -88,7 +104,9 @@
       "mode": "practice",
       "pass_threshold": 70,
       "question_limit": 8,
-      "question_count": 12
+      "question_count": 12,
+      "created_at": "2024-08-02T00:00:00Z",
+      "modified_at": "2024-12-20T00:00:00Z"
     },
     {
       "id": "d0e1f2a3-b4c5-6789-defa-bc0123456789",
@@ -98,7 +116,9 @@
       "mode": "practice",
       "pass_threshold": 65,
       "question_limit": 7,
-      "question_count": 10
+      "question_count": 10,
+      "created_at": "2024-08-25T00:00:00Z",
+      "modified_at": null
     },
     {
       "id": "e1f2a3b4-c5d6-7890-efab-cd1234567890",
@@ -108,7 +128,9 @@
       "mode": "practice",
       "pass_threshold": 65,
       "question_limit": 6,
-      "question_count": 8
+      "question_count": 8,
+      "created_at": "2024-09-10T00:00:00Z",
+      "modified_at": null
     },
     {
       "id": "f2a3b4c5-d6e7-8901-fabc-de2345678901",
@@ -118,7 +140,9 @@
       "mode": "practice",
       "pass_threshold": 65,
       "question_limit": 6,
-      "question_count": 10
+      "question_count": 10,
+      "created_at": "2024-10-05T00:00:00Z",
+      "modified_at": "2025-02-14T00:00:00Z"
     },
     {
       "id": "a3b4c5d6-e7f8-9012-abcd-ef3456789012",
@@ -128,7 +152,9 @@
       "mode": "practice",
       "pass_threshold": 65,
       "question_limit": 8,
-      "question_count": 10
+      "question_count": 10,
+      "created_at": "2024-11-18T00:00:00Z",
+      "modified_at": null
     },
     {
       "id": "b4c5d6e7-f8a9-0123-bcde-fa4567890123",
@@ -138,7 +164,21 @@
       "mode": "practice",
       "pass_threshold": 70,
       "question_limit": 10,
-      "question_count": 12
+      "question_count": 12,
+      "created_at": "2024-12-01T00:00:00Z",
+      "modified_at": "2025-03-10T00:00:00Z"
+    },
+    {
+      "id": "g0h1i2j3-k4l5-6789-mnop-qr0123456789",
+      "name": "System Design: Architecture Patterns",
+      "description": "Explore **software architecture patterns** through visual diagrams — load balancing, microservices, event-driven systems, and more.",
+      "tags": ["cs", "system-design", "architecture", "intermediate"],
+      "mode": "practice",
+      "pass_threshold": 70,
+      "question_limit": null,
+      "question_count": 5,
+      "created_at": "2025-03-15T00:00:00Z",
+      "modified_at": null
     }
   ]
 }

@@ -1,4 +1,6 @@
-# ToucanQuiz
+# Toucan Quiz
+
+<img src="public/logo.png" alt="Toucan Quiz" width="96" />
 
 A React quiz app with Markdown, math ($\LaTeX$ via KaTeX), and Mermaid diagram support. Supports two modes: static JSON files or a REST API backend.
 

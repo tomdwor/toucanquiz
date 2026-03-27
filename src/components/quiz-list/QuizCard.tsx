@@ -3,6 +3,12 @@ import type { QuizSummary } from '../../types/quiz'
 import { TagBadge } from '../shared/TagBadge'
 import { RichContent } from '../shared/RichContent'
 
+const fmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+
+function formatDate(iso: string) {
+  return fmt.format(new Date(iso))
+}
+
 interface QuizCardProps {
   quiz: QuizSummary
 }
@@ -22,7 +28,7 @@ export function QuizCard({ quiz }: QuizCardProps) {
         <h2 className="text-lg font-semibold text-gray-900 group-hover:text-blue-700">
           {quiz.name}
         </h2>
-        <span className={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium ${modeBadge}`}>
+        <span className={`shrink-0 rounded px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider ${modeBadge}`}>
           {quiz.mode}
         </span>
       </div>
@@ -38,7 +44,6 @@ export function QuizCard({ quiz }: QuizCardProps) {
         {quiz.question_limit && quiz.question_limit < quiz.question_count && (
           <span className="text-gray-400">({quiz.question_limit} shown per session)</span>
         )}
-        <span>Pass: {quiz.pass_threshold}%</span>
       </div>
 
       {quiz.tags.length > 0 && (
@@ -48,6 +53,13 @@ export function QuizCard({ quiz }: QuizCardProps) {
           ))}
         </div>
       )}
+
+      <div className="mt-2 flex flex-wrap gap-x-4 gap-y-0.5 text-xs text-gray-400">
+        <span>Created: {formatDate(quiz.created_at)}</span>
+        {quiz.modified_at && (
+          <span>Updated: {formatDate(quiz.modified_at)}</span>
+        )}
+      </div>
     </Link>
   )
 }

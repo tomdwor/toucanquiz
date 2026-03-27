@@ -2,7 +2,11 @@
   "id": "a3b4c5d6-e7f8-9012-abcd-ef3456789012",
   "name": "Calculus & Mathematical Analysis",
   "description": "Review the **core concepts of calculus** — limits, derivatives, integrals, and series — with applications to optimisation problems that appear throughout science and engineering.",
-  "tags": ["math", "calculus", "intermediate"],
+  "tags": [
+    "math",
+    "calculus",
+    "intermediate"
+  ],
   "mode": "practice",
   "pass_threshold": 65,
   "question_limit": 8,
@@ -12,90 +16,212 @@
       "text": "What is the **derivative** $f'(x)$ of the function $f(x) = x^n$?",
       "type": "text",
       "choices": [
-        { "id": "ca01-c1", "text": "nx^(n-1)", "is_correct": true },
-        { "id": "ca01-c2", "text": "n*x^(n-1)", "is_correct": true },
-        { "id": "ca01-c3", "text": "nx^n-1", "is_correct": true }
+        {
+          "id": "ca01-c1",
+          "text": "nx^(n-1)",
+          "is_correct": true
+        },
+        {
+          "id": "ca01-c2",
+          "text": "n*x^(n-1)",
+          "is_correct": true
+        },
+        {
+          "id": "ca01-c3",
+          "text": "nx^n-1",
+          "is_correct": true
+        }
       ],
       "explanation": "The **power rule**:\n\n$$\\frac{d}{dx} x^n = n x^{n-1}$$\n\nExamples:\n- $\\frac{d}{dx} x^3 = 3x^2$\n- $\\frac{d}{dx} x^{-1} = -x^{-2}$\n- $\\frac{d}{dx} \\sqrt{x} = \\frac{d}{dx} x^{1/2} = \\frac{1}{2} x^{-1/2}$",
-      "tags": ["derivatives"]
+      "tags": [
+        "derivatives"
+      ]
     },
     {
       "id": "ca02-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What does the **chain rule** compute?",
       "type": "single_choice",
       "choices": [
-        { "id": "ca02-c1", "text": "The derivative of a composite function: $\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)$", "is_correct": true },
-        { "id": "ca02-c2", "text": "The derivative of a product of two functions", "is_correct": false },
-        { "id": "ca02-c3", "text": "The derivative of a quotient of two functions", "is_correct": false },
-        { "id": "ca02-c4", "text": "The integral of a composed function", "is_correct": false }
+        {
+          "id": "ca02-c1",
+          "text": "The derivative of a composite function: $\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)$",
+          "is_correct": true
+        },
+        {
+          "id": "ca02-c2",
+          "text": "The derivative of a product of two functions",
+          "is_correct": false
+        },
+        {
+          "id": "ca02-c3",
+          "text": "The derivative of a quotient of two functions",
+          "is_correct": false
+        },
+        {
+          "id": "ca02-c4",
+          "text": "The integral of a composed function",
+          "is_correct": false
+        }
       ],
       "explanation": "The **chain rule** differentiates composite functions:\n\n$$\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)$$\n\n**Example:** $h(x) = \\sin(x^2)$\n- Outer: $f(u) = \\sin(u)$, $f'(u) = \\cos(u)$\n- Inner: $g(x) = x^2$, $g'(x) = 2x$\n- $h'(x) = \\cos(x^2) \\cdot 2x$\n\nEssential for **backpropagation** in neural networks.",
-      "tags": ["derivatives"]
+      "tags": [
+        "derivatives"
+      ]
     },
     {
       "id": "ca03-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the **fundamental theorem of calculus** (Part 1)?",
       "type": "single_choice",
       "choices": [
-        { "id": "ca03-c1", "text": "If $F(x) = \\int_a^x f(t)\\,dt$, then $F'(x) = f(x)$ — differentiation and integration are inverse operations", "is_correct": true },
-        { "id": "ca03-c2", "text": "$\\int_a^b f(x)\\,dx = F(b) - F(a)$ where $F' = f$", "is_correct": false },
-        { "id": "ca03-c3", "text": "The derivative of a sum equals the sum of derivatives", "is_correct": false },
-        { "id": "ca03-c4", "text": "Every continuous function has an antiderivative", "is_correct": false }
+        {
+          "id": "ca03-c1",
+          "text": "If $F(x) = \\int_a^x f(t)\\,dt$, then $F'(x) = f(x)$ — differentiation and integration are inverse operations",
+          "is_correct": true
+        },
+        {
+          "id": "ca03-c2",
+          "text": "$\\int_a^b f(x)\\,dx = F(b) - F(a)$ where $F' = f$",
+          "is_correct": false
+        },
+        {
+          "id": "ca03-c3",
+          "text": "The derivative of a sum equals the sum of derivatives",
+          "is_correct": false
+        },
+        {
+          "id": "ca03-c4",
+          "text": "Every continuous function has an antiderivative",
+          "is_correct": false
+        }
       ],
       "explanation": "The **Fundamental Theorem of Calculus** links differentiation and integration:\n\n**Part 1:** $\\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x)$ — the derivative of an integral recovers the integrand\n\n**Part 2:** $\\int_a^b f(x)\\,dx = F(b) - F(a)$ — the definite integral can be computed from any antiderivative $F$\n\nThis is why integration and differentiation are called **inverse operations**.",
-      "tags": ["integration"]
+      "tags": [
+        "integration"
+      ]
     },
     {
       "id": "ca04-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What does it mean for a function to have a **local minimum** at point $x_0$?",
       "type": "multiple_choice",
       "choices": [
-        { "id": "ca04-c1", "text": "$f'(x_0) = 0$ (critical point)", "is_correct": true },
-        { "id": "ca04-c2", "text": "$f''(x_0) > 0$ (second derivative test confirms minimum)", "is_correct": true },
-        { "id": "ca04-c3", "text": "$f(x_0) \\leq f(x)$ for all $x$ in some neighbourhood of $x_0$", "is_correct": true },
-        { "id": "ca04-c4", "text": "$f'(x_0) < 0$ (decreasing function)", "is_correct": false }
+        {
+          "id": "ca04-c1",
+          "text": "$f'(x_0) = 0$ (critical point)",
+          "is_correct": true
+        },
+        {
+          "id": "ca04-c2",
+          "text": "$f''(x_0) > 0$ (second derivative test confirms minimum)",
+          "is_correct": true
+        },
+        {
+          "id": "ca04-c3",
+          "text": "$f(x_0) \\leq f(x)$ for all $x$ in some neighbourhood of $x_0$",
+          "is_correct": true
+        },
+        {
+          "id": "ca04-c4",
+          "text": "$f'(x_0) < 0$ (decreasing function)",
+          "is_correct": false
+        }
       ],
       "explanation": "A **local minimum** at $x_0$ means $f(x_0)$ is the smallest value in some neighbourhood.\n\n**Conditions:**\n- **Necessary**: $f'(x_0) = 0$ (or undefined) — first-order condition\n- **Sufficient** (second derivative test): if $f'(x_0) = 0$ AND $f''(x_0) > 0$, it's a local minimum\n\n**Gradient descent** in ML exploits this: following $-\\nabla f$ converges toward a local minimum.",
-      "tags": ["optimisation"]
+      "tags": [
+        "optimisation"
+      ]
     },
     {
       "id": "ca05-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the **Taylor series** expansion of $f(x)$ around $x = a$?",
       "type": "single_choice",
       "choices": [
-        { "id": "ca05-c1", "text": "$f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n$", "is_correct": true },
-        { "id": "ca05-c2", "text": "$f(x) = f(a) + f'(a)(x-a)$ (first-order only)", "is_correct": false },
-        { "id": "ca05-c3", "text": "$f(x) = \\sum_{n=0}^{\\infty} f(n) x^n$", "is_correct": false },
-        { "id": "ca05-c4", "text": "$f(x) = \\int_a^x f'(t) dt + C$", "is_correct": false }
+        {
+          "id": "ca05-c1",
+          "text": "$f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n$",
+          "is_correct": true
+        },
+        {
+          "id": "ca05-c2",
+          "text": "$f(x) = f(a) + f'(a)(x-a)$ (first-order only)",
+          "is_correct": false
+        },
+        {
+          "id": "ca05-c3",
+          "text": "$f(x) = \\sum_{n=0}^{\\infty} f(n) x^n$",
+          "is_correct": false
+        },
+        {
+          "id": "ca05-c4",
+          "text": "$f(x) = \\int_a^x f'(t) dt + C$",
+          "is_correct": false
+        }
       ],
       "explanation": "The **Taylor series** approximates smooth functions as infinite polynomials:\n\n$$f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n = f(a) + f'(a)(x-a) + \\frac{f''(a)}{2!}(x-a)^2 + \\cdots$$\n\n**Common Taylor series** (around 0, called Maclaurin series):\n- $e^x = \\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$\n- $\\sin x = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots$\n\nUsed in: Newton's method, second-order optimisation (Newton-Raphson, BFGS).",
-      "tags": ["series"]
+      "tags": [
+        "series"
+      ]
     },
     {
       "id": "ca06-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is L'Hôpital's rule used for?",
       "type": "single_choice",
       "choices": [
-        { "id": "ca06-c1", "text": "Evaluating limits of the indeterminate forms $0/0$ or $\\infty/\\infty$ by differentiating numerator and denominator", "is_correct": true },
-        { "id": "ca06-c2", "text": "Solving differential equations with boundary conditions", "is_correct": false },
-        { "id": "ca06-c3", "text": "Finding the maximum of a function on a closed interval", "is_correct": false },
-        { "id": "ca06-c4", "text": "Computing improper integrals over infinite intervals", "is_correct": false }
+        {
+          "id": "ca06-c1",
+          "text": "Evaluating limits of the indeterminate forms $0/0$ or $\\infty/\\infty$ by differentiating numerator and denominator",
+          "is_correct": true
+        },
+        {
+          "id": "ca06-c2",
+          "text": "Solving differential equations with boundary conditions",
+          "is_correct": false
+        },
+        {
+          "id": "ca06-c3",
+          "text": "Finding the maximum of a function on a closed interval",
+          "is_correct": false
+        },
+        {
+          "id": "ca06-c4",
+          "text": "Computing improper integrals over infinite intervals",
+          "is_correct": false
+        }
       ],
       "explanation": "**L'Hôpital's rule**: if $\\lim_{x\\to a} f(x) = 0$ and $\\lim_{x\\to a} g(x) = 0$ (or both $\\pm\\infty$):\n\n$$\\lim_{x\\to a} \\frac{f(x)}{g(x)} = \\lim_{x\\to a} \\frac{f'(x)}{g'(x)}$$\n\n**Example**: $\\lim_{x\\to 0} \\frac{\\sin x}{x} = \\lim_{x\\to 0} \\frac{\\cos x}{1} = 1$\n\nCan be applied repeatedly. Works for indeterminate forms $0/0$ and $\\infty/\\infty$; other forms ($0 \\cdot \\infty$, $\\infty - \\infty$) require algebraic manipulation first.",
-      "tags": ["limits"]
+      "tags": [
+        "limits"
+      ]
     },
     {
       "id": "ca07-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the **gradient** $\\nabla f$ of a multivariable function?",
       "type": "single_choice",
       "choices": [
-        { "id": "ca07-c1", "text": "A vector of partial derivatives pointing in the direction of steepest ascent", "is_correct": true },
-        { "id": "ca07-c2", "text": "The total derivative of $f$ with respect to all variables simultaneously", "is_correct": false },
-        { "id": "ca07-c3", "text": "The matrix of second partial derivatives (Hessian)", "is_correct": false },
-        { "id": "ca07-c4", "text": "The integral of $f$ over all variables", "is_correct": false }
+        {
+          "id": "ca07-c1",
+          "text": "A vector of partial derivatives pointing in the direction of steepest ascent",
+          "is_correct": true
+        },
+        {
+          "id": "ca07-c2",
+          "text": "The total derivative of $f$ with respect to all variables simultaneously",
+          "is_correct": false
+        },
+        {
+          "id": "ca07-c3",
+          "text": "The matrix of second partial derivatives (Hessian)",
+          "is_correct": false
+        },
+        {
+          "id": "ca07-c4",
+          "text": "The integral of $f$ over all variables",
+          "is_correct": false
+        }
       ],
       "explanation": "For $f: \\mathbb{R}^n \\to \\mathbb{R}$, the **gradient** is:\n\n$$\\nabla f = \\left(\\frac{\\partial f}{\\partial x_1}, \\frac{\\partial f}{\\partial x_2}, \\ldots, \\frac{\\partial f}{\\partial x_n}\\right)$$\n\n- Points in the **direction of steepest ascent**\n- $-\\nabla f$ points toward steepest descent\n\n**Gradient descent**: $\\theta \\leftarrow \\theta - \\alpha \\nabla_\\theta L(\\theta)$\n\nThe **Hessian** is the matrix of second derivatives: $H_{ij} = \\frac{\\partial^2 f}{\\partial x_i \\partial x_j}$",
-      "tags": ["multivariable"]
+      "tags": [
+        "multivariable"
+      ]
     },
     {
       "id": "ca08-aaaa-bbbb-cccc-dddddddddddd",
@@ -103,33 +229,73 @@
       "type": "open",
       "choices": [],
       "explanation": "A **limit** formalises the idea of a function approaching a value:\n\n$$\\lim_{x \\to a} f(x) = L$$\n\nmeans: we can make $f(x)$ as close to $L$ as we want by taking $x$ sufficiently close to $a$ — without necessarily requiring $f(a) = L$.\n\n**Why fundamental:**\n- **Derivatives** are defined as limits: $f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}$\n- **Integrals** are limits of Riemann sums\n- **Continuity** is defined using limits: $f$ is continuous at $a$ iff $\\lim_{x\\to a} f(x) = f(a)$\n\nAll of calculus rests on the rigorous ε-δ definition of limits.",
-      "tags": ["limits"]
+      "tags": [
+        "limits"
+      ]
     },
     {
       "id": "ca09-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What does the **integral** $\\int_a^b f(x)\\,dx$ compute geometrically?",
       "type": "single_choice",
       "choices": [
-        { "id": "ca09-c1", "text": "The signed area between the curve $y = f(x)$ and the x-axis from $a$ to $b$", "is_correct": true },
-        { "id": "ca09-c2", "text": "The length of the curve $y = f(x)$ from $a$ to $b$", "is_correct": false },
-        { "id": "ca09-c3", "text": "The maximum value of $f(x)$ on $[a, b]$", "is_correct": false },
-        { "id": "ca09-c4", "text": "The average rate of change of $f$ on $[a, b]$", "is_correct": false }
+        {
+          "id": "ca09-c1",
+          "text": "The signed area between the curve $y = f(x)$ and the x-axis from $a$ to $b$",
+          "is_correct": true
+        },
+        {
+          "id": "ca09-c2",
+          "text": "The length of the curve $y = f(x)$ from $a$ to $b$",
+          "is_correct": false
+        },
+        {
+          "id": "ca09-c3",
+          "text": "The maximum value of $f(x)$ on $[a, b]$",
+          "is_correct": false
+        },
+        {
+          "id": "ca09-c4",
+          "text": "The average rate of change of $f$ on $[a, b]$",
+          "is_correct": false
+        }
       ],
       "explanation": "The definite integral $\\int_a^b f(x)\\,dx$ represents the **signed area** under the curve:\n\n- Where $f(x) > 0$: area above x-axis (positive contribution)\n- Where $f(x) < 0$: area below x-axis (negative contribution)\n\n**Computing arc length** requires: $L = \\int_a^b \\sqrt{1 + [f'(x)]^2}\\,dx$\n\nIntegrals also compute: work, probability, accumulated quantity, centre of mass, etc.",
-      "tags": ["integration"]
+      "tags": [
+        "integration"
+      ]
     },
     {
       "id": "ca10-aaaa-bbbb-cccc-dddddddddddd",
       "text": "Using the **product rule**, what is $\\frac{d}{dx}[f(x) \\cdot g(x)]$?",
       "type": "single_choice",
       "choices": [
-        { "id": "ca10-c1", "text": "$f'(x) \\cdot g(x) + f(x) \\cdot g'(x)$", "is_correct": true },
-        { "id": "ca10-c2", "text": "$f'(x) \\cdot g'(x)$", "is_correct": false },
-        { "id": "ca10-c3", "text": "$f'(x) \\cdot g(x) - f(x) \\cdot g'(x)$", "is_correct": false },
-        { "id": "ca10-c4", "text": "$f(x) \\cdot g'(x)$", "is_correct": false }
+        {
+          "id": "ca10-c1",
+          "text": "$f'(x) \\cdot g(x) + f(x) \\cdot g'(x)$",
+          "is_correct": true
+        },
+        {
+          "id": "ca10-c2",
+          "text": "$f'(x) \\cdot g'(x)$",
+          "is_correct": false
+        },
+        {
+          "id": "ca10-c3",
+          "text": "$f'(x) \\cdot g(x) - f(x) \\cdot g'(x)$",
+          "is_correct": false
+        },
+        {
+          "id": "ca10-c4",
+          "text": "$f(x) \\cdot g'(x)$",
+          "is_correct": false
+        }
       ],
       "explanation": "The **product rule**:\n\n$$\\frac{d}{dx}[f(x) \\cdot g(x)] = f'(x) \\cdot g(x) + f(x) \\cdot g'(x)$$\n\nMnemonic: **\"first times derivative of second, plus second times derivative of first\"**\n\n**Example**: $\\frac{d}{dx}[x^2 \\sin x] = 2x \\sin x + x^2 \\cos x$\n\nThe related **quotient rule**: $\\frac{d}{dx}\\left[\\frac{f}{g}\\right] = \\frac{f'g - fg'}{g^2}$",
-      "tags": ["derivatives"]
+      "tags": [
+        "derivatives"
+      ]
     }
-  ]
+  ],
+  "created_at": "2024-11-18T00:00:00Z",
+  "modified_at": null
 }

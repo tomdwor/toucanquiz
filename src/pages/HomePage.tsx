@@ -22,12 +22,10 @@ export function HomePage() {
   // Filter state
   const [nameQuery, setNameQuery] = useState('')
   const [selectedTags, setSelectedTags] = useState<string[]>([])
-  const [minThreshold, setMinThreshold] = useState('')
-  const [maxThreshold, setMaxThreshold] = useState('')
 
   // Sort state
-  const [sortField, setSortField] = useState<SortField>('name')
-  const [sortDir, setSortDir] = useState<SortDir>('asc')
+  const [sortField, setSortField] = useState<SortField>('created_at')
+  const [sortDir, setSortDir] = useState<SortDir>('desc')
 
   // Pagination state
   const [page, setPage] = useState(1)
@@ -68,22 +66,23 @@ export function HomePage() {
       list = list.filter((quiz) => selectedTags.every((t) => quiz.tags.includes(t)))
     }
 
-    const min = minThreshold !== '' ? Number(minThreshold) : null
-    const max = maxThreshold !== '' ? Number(maxThreshold) : null
-    if (min !== null) list = list.filter((q) => q.pass_threshold >= min)
-    if (max !== null) list = list.filter((q) => q.pass_threshold <= max)
-
     return [...list].sort((a, b) => {
-      const cmp =
-        sortField === 'name'
-          ? a.name.localeCompare(b.name)
-          : a.pass_threshold - b.pass_threshold
+      let cmp: number
+      if (sortField === 'name') {
+        cmp = a.name.localeCompare(b.name)
+      } else if (sortField === 'modified_at') {
+        const aDate = a.modified_at ?? a.created_at
+        const bDate = b.modified_at ?? b.created_at
+        cmp = aDate.localeCompare(bDate)
+      } else {
+        cmp = a.created_at.localeCompare(b.created_at)
+      }
       return sortDir === 'asc' ? cmp : -cmp
     })
-  }, [quizzes, nameQuery, selectedTags, minThreshold, maxThreshold, sortField, sortDir])
+  }, [quizzes, nameQuery, selectedTags, sortField, sortDir])
 
   // Reset to page 1 when filters/sort change
-  useEffect(() => { setPage(1) }, [nameQuery, selectedTags, minThreshold, maxThreshold, sortField, sortDir])
+  useEffect(() => { setPage(1) }, [nameQuery, selectedTags, sortField, sortDir])
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / perPage))
   const paginated = filtered.slice((page - 1) * perPage, page * perPage)
@@ -110,10 +109,6 @@ export function HomePage() {
               allTags={allTags}
               selectedTags={selectedTags}
               onTagToggle={toggleTag}
-              minThreshold={minThreshold}
-              onMinThresholdChange={setMinThreshold}
-              maxThreshold={maxThreshold}
-              onMaxThresholdChange={setMaxThreshold}
             />
           </aside>
 

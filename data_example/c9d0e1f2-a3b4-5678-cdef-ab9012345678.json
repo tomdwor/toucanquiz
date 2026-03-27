@@ -2,7 +2,11 @@
   "id": "c9d0e1f2-a3b4-5678-cdef-ab9012345678",
   "name": "Computer Security Basics",
   "description": "Learn the **fundamentals of cybersecurity** — common attack types, cryptography concepts, authentication, secure coding, and defence strategies.\n\nSuitable for developers and anyone interested in security.",
-  "tags": ["security", "cybersecurity", "beginner"],
+  "tags": [
+    "security",
+    "cybersecurity",
+    "beginner"
+  ],
   "mode": "practice",
   "pass_threshold": 70,
   "question_limit": 8,
@@ -12,115 +16,269 @@
       "text": "What is a **SQL injection** attack?",
       "type": "single_choice",
       "choices": [
-        { "id": "cs01-c1", "text": "Inserting malicious SQL code into user input that is executed by the database", "is_correct": true },
-        { "id": "cs01-c2", "text": "Overloading a database server with too many queries", "is_correct": false },
-        { "id": "cs01-c3", "text": "Stealing SQL credentials from a server's file system", "is_correct": false },
-        { "id": "cs01-c4", "text": "Encrypting a database and demanding ransom", "is_correct": false }
+        {
+          "id": "cs01-c1",
+          "text": "Inserting malicious SQL code into user input that is executed by the database",
+          "is_correct": true
+        },
+        {
+          "id": "cs01-c2",
+          "text": "Overloading a database server with too many queries",
+          "is_correct": false
+        },
+        {
+          "id": "cs01-c3",
+          "text": "Stealing SQL credentials from a server's file system",
+          "is_correct": false
+        },
+        {
+          "id": "cs01-c4",
+          "text": "Encrypting a database and demanding ransom",
+          "is_correct": false
+        }
       ],
       "explanation": "**SQL injection** exploits insufficient input sanitisation. Example:\n\n```sql\n-- Intended query:\nSELECT * FROM users WHERE username='alice' AND password='secret'\n\n-- Attacker inputs: ' OR '1'='1\nSELECT * FROM users WHERE username='' OR '1'='1'\n-- Returns all rows!\n```\n\n**Prevention**: use parameterised queries / prepared statements, ORMs, input validation.",
-      "tags": ["injection"]
+      "tags": [
+        "injection"
+      ]
     },
     {
       "id": "cs02-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is **Cross-Site Scripting (XSS)**?",
       "type": "single_choice",
       "choices": [
-        { "id": "cs02-c1", "text": "Injecting malicious scripts into web pages viewed by other users", "is_correct": true },
-        { "id": "cs02-c2", "text": "Forging HTTP requests from an authenticated user's browser", "is_correct": false },
-        { "id": "cs02-c3", "text": "Intercepting HTTPS traffic between browser and server", "is_correct": false },
-        { "id": "cs02-c4", "text": "Brute-forcing a user's password across multiple sites", "is_correct": false }
+        {
+          "id": "cs02-c1",
+          "text": "Injecting malicious scripts into web pages viewed by other users",
+          "is_correct": true
+        },
+        {
+          "id": "cs02-c2",
+          "text": "Forging HTTP requests from an authenticated user's browser",
+          "is_correct": false
+        },
+        {
+          "id": "cs02-c3",
+          "text": "Intercepting HTTPS traffic between browser and server",
+          "is_correct": false
+        },
+        {
+          "id": "cs02-c4",
+          "text": "Brute-forcing a user's password across multiple sites",
+          "is_correct": false
+        }
       ],
       "explanation": "**XSS** allows attackers to inject client-side scripts into pages served to other users.\n\n**Types:**\n- **Stored XSS**: malicious script stored in database, served to all users\n- **Reflected XSS**: script reflected off the server in a URL parameter\n- **DOM-based**: script executed via client-side JavaScript\n\n**Prevention**: escape/sanitise output, Content Security Policy (CSP), HttpOnly cookies.",
-      "tags": ["web-security"]
+      "tags": [
+        "web-security"
+      ]
     },
     {
       "id": "cs03-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the difference between **symmetric** and **asymmetric** encryption?",
       "type": "single_choice",
       "choices": [
-        { "id": "cs03-c1", "text": "Symmetric uses the same key for encryption and decryption; asymmetric uses a public/private key pair", "is_correct": true },
-        { "id": "cs03-c2", "text": "Symmetric is more secure; asymmetric is faster", "is_correct": false },
-        { "id": "cs03-c3", "text": "Asymmetric uses the same key; symmetric uses different keys", "is_correct": false },
-        { "id": "cs03-c4", "text": "Symmetric only encrypts text; asymmetric encrypts any data type", "is_correct": false }
+        {
+          "id": "cs03-c1",
+          "text": "Symmetric uses the same key for encryption and decryption; asymmetric uses a public/private key pair",
+          "is_correct": true
+        },
+        {
+          "id": "cs03-c2",
+          "text": "Symmetric is more secure; asymmetric is faster",
+          "is_correct": false
+        },
+        {
+          "id": "cs03-c3",
+          "text": "Asymmetric uses the same key; symmetric uses different keys",
+          "is_correct": false
+        },
+        {
+          "id": "cs03-c4",
+          "text": "Symmetric only encrypts text; asymmetric encrypts any data type",
+          "is_correct": false
+        }
       ],
       "explanation": "| Type | Keys | Speed | Use case |\n|------|------|-------|----------|\n| **Symmetric** | Single shared key | Fast | Bulk data encryption (AES) |\n| **Asymmetric** | Public + private pair | Slow | Key exchange, signatures (RSA, ECC) |\n\n**TLS** uses asymmetric crypto to establish a session, then switches to symmetric for speed — the best of both worlds.",
-      "tags": ["cryptography"]
+      "tags": [
+        "cryptography"
+      ]
     },
     {
       "id": "cs04-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is a **hash function** used for in security? Select all that apply.",
       "type": "multiple_choice",
       "choices": [
-        { "id": "cs04-c1", "text": "Storing passwords securely (storing the hash, not the plaintext)", "is_correct": true },
-        { "id": "cs04-c2", "text": "Verifying data integrity (detecting tampering)", "is_correct": true },
-        { "id": "cs04-c3", "text": "Digital signatures (signing a hash of the message)", "is_correct": true },
-        { "id": "cs04-c4", "text": "Decrypting ciphertext back to plaintext", "is_correct": false }
+        {
+          "id": "cs04-c1",
+          "text": "Storing passwords securely (storing the hash, not the plaintext)",
+          "is_correct": true
+        },
+        {
+          "id": "cs04-c2",
+          "text": "Verifying data integrity (detecting tampering)",
+          "is_correct": true
+        },
+        {
+          "id": "cs04-c3",
+          "text": "Digital signatures (signing a hash of the message)",
+          "is_correct": true
+        },
+        {
+          "id": "cs04-c4",
+          "text": "Decrypting ciphertext back to plaintext",
+          "is_correct": false
+        }
       ],
       "explanation": "A **cryptographic hash function** (e.g., SHA-256) maps data to a fixed-size digest:\n\n- **One-way**: computationally infeasible to reverse\n- **Deterministic**: same input → same output\n- **Avalanche effect**: tiny change → completely different digest\n\nFor passwords, use **bcrypt**, **scrypt**, or **Argon2** — not raw SHA — because they're slow by design, resisting brute-force attacks.\n\nHash functions are NOT encryption — you cannot decrypt a hash.",
-      "tags": ["cryptography"]
+      "tags": [
+        "cryptography"
+      ]
     },
     {
       "id": "cs05-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is **two-factor authentication (2FA)**?",
       "type": "single_choice",
       "choices": [
-        { "id": "cs05-c1", "text": "Authentication requiring two different types of factors: something you know + something you have/are", "is_correct": true },
-        { "id": "cs05-c2", "text": "Using two different passwords to log in", "is_correct": false },
-        { "id": "cs05-c3", "text": "Having two separate user accounts", "is_correct": false },
-        { "id": "cs05-c4", "text": "Logging in from two different devices simultaneously", "is_correct": false }
+        {
+          "id": "cs05-c1",
+          "text": "Authentication requiring two different types of factors: something you know + something you have/are",
+          "is_correct": true
+        },
+        {
+          "id": "cs05-c2",
+          "text": "Using two different passwords to log in",
+          "is_correct": false
+        },
+        {
+          "id": "cs05-c3",
+          "text": "Having two separate user accounts",
+          "is_correct": false
+        },
+        {
+          "id": "cs05-c4",
+          "text": "Logging in from two different devices simultaneously",
+          "is_correct": false
+        }
       ],
       "explanation": "**Authentication factors** fall into three categories:\n\n| Factor | Type | Example |\n|--------|------|--------|\n| **Knowledge** | Something you know | Password, PIN |\n| **Possession** | Something you have | Phone OTP, hardware key |\n| **Inherence** | Something you are | Fingerprint, face |\n\n2FA combines any two of these. It significantly reduces account takeover risk — even if a password is stolen, the attacker still needs the second factor.",
-      "tags": ["authentication"]
+      "tags": [
+        "authentication"
+      ]
     },
     {
       "id": "cs06-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is a **man-in-the-middle (MITM)** attack?",
       "type": "single_choice",
       "choices": [
-        { "id": "cs06-c1", "text": "An attacker secretly intercepts and potentially alters communication between two parties", "is_correct": true },
-        { "id": "cs06-c2", "text": "An attacker who sits in the middle of a server rack physically", "is_correct": false },
-        { "id": "cs06-c3", "text": "Two attackers coordinating an attack simultaneously", "is_correct": false },
-        { "id": "cs06-c4", "text": "An injection attack targeting middleware layers", "is_correct": false }
+        {
+          "id": "cs06-c1",
+          "text": "An attacker secretly intercepts and potentially alters communication between two parties",
+          "is_correct": true
+        },
+        {
+          "id": "cs06-c2",
+          "text": "An attacker who sits in the middle of a server rack physically",
+          "is_correct": false
+        },
+        {
+          "id": "cs06-c3",
+          "text": "Two attackers coordinating an attack simultaneously",
+          "is_correct": false
+        },
+        {
+          "id": "cs06-c4",
+          "text": "An injection attack targeting middleware layers",
+          "is_correct": false
+        }
       ],
       "explanation": "In a **MITM attack**, the attacker positions themselves between two communicating parties:\n\n```\nAlice ←→ [Attacker] ←→ Bob\n```\n\nThe attacker can **eavesdrop** and/or **modify** messages.\n\n**Prevention**: TLS/HTTPS with certificate validation, certificate pinning, HSTS, and mutual TLS (mTLS).",
-      "tags": ["attacks"]
+      "tags": [
+        "attacks"
+      ]
     },
     {
       "id": "cs07-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is the name of the common web security standard that lists the top 10 most critical security risks?",
       "type": "text",
       "choices": [
-        { "id": "cs07-c1", "text": "owasp top 10", "is_correct": true },
-        { "id": "cs07-c2", "text": "owasp", "is_correct": true }
+        {
+          "id": "cs07-c1",
+          "text": "owasp top 10",
+          "is_correct": true
+        },
+        {
+          "id": "cs07-c2",
+          "text": "owasp",
+          "is_correct": true
+        }
       ],
       "explanation": "The **OWASP Top 10** (Open Web Application Security Project) is the most widely referenced web security standard:\n\nCurrent top risks include:\n1. Broken Access Control\n2. Cryptographic Failures\n3. Injection\n4. Insecure Design\n5. Security Misconfiguration\n6. Vulnerable & Outdated Components\n7. Identification & Authentication Failures\n8. Software & Data Integrity Failures\n9. Security Logging & Monitoring Failures\n10. Server-Side Request Forgery (SSRF)",
-      "tags": ["standards"]
+      "tags": [
+        "standards"
+      ]
     },
     {
       "id": "cs08-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What does **principle of least privilege** mean?",
       "type": "single_choice",
       "choices": [
-        { "id": "cs08-c1", "text": "Users and processes should have only the minimum permissions needed to perform their tasks", "is_correct": true },
-        { "id": "cs08-c2", "text": "Most users should have low-level (non-admin) access by default", "is_correct": false },
-        { "id": "cs08-c3", "text": "Security should be implemented at the lowest layer of the stack", "is_correct": false },
-        { "id": "cs08-c4", "text": "Passwords should be as simple as possible to avoid user errors", "is_correct": false }
+        {
+          "id": "cs08-c1",
+          "text": "Users and processes should have only the minimum permissions needed to perform their tasks",
+          "is_correct": true
+        },
+        {
+          "id": "cs08-c2",
+          "text": "Most users should have low-level (non-admin) access by default",
+          "is_correct": false
+        },
+        {
+          "id": "cs08-c3",
+          "text": "Security should be implemented at the lowest layer of the stack",
+          "is_correct": false
+        },
+        {
+          "id": "cs08-c4",
+          "text": "Passwords should be as simple as possible to avoid user errors",
+          "is_correct": false
+        }
       ],
       "explanation": "**Principle of Least Privilege (PoLP)**: grant only the access rights strictly necessary.\n\n**Why it matters:**\n- Limits blast radius if an account is compromised\n- Reduces damage from insider threats\n- Prevents privilege escalation attacks\n\n**Examples:** a web app's DB user should only have SELECT/INSERT, not DROP TABLE; a microservice only has access to its own resources.",
-      "tags": ["principles"]
+      "tags": [
+        "principles"
+      ]
     },
     {
       "id": "cs09-aaaa-bbbb-cccc-dddddddddddd",
       "text": "Which of the following are defences against **brute-force password attacks**? Select all that apply.",
       "type": "multiple_choice",
       "choices": [
-        { "id": "cs09-c1", "text": "Account lockout or exponential back-off after failed attempts", "is_correct": true },
-        { "id": "cs09-c2", "text": "Using a slow password hashing algorithm (bcrypt, Argon2)", "is_correct": true },
-        { "id": "cs09-c3", "text": "CAPTCHA to distinguish humans from automated tools", "is_correct": true },
-        { "id": "cs09-c4", "text": "Storing passwords in plain text for faster comparison", "is_correct": false }
+        {
+          "id": "cs09-c1",
+          "text": "Account lockout or exponential back-off after failed attempts",
+          "is_correct": true
+        },
+        {
+          "id": "cs09-c2",
+          "text": "Using a slow password hashing algorithm (bcrypt, Argon2)",
+          "is_correct": true
+        },
+        {
+          "id": "cs09-c3",
+          "text": "CAPTCHA to distinguish humans from automated tools",
+          "is_correct": true
+        },
+        {
+          "id": "cs09-c4",
+          "text": "Storing passwords in plain text for faster comparison",
+          "is_correct": false
+        }
       ],
       "explanation": "Defences against brute-force:\n\n- **Rate limiting / lockout**: attacker can't try millions of passwords\n- **Slow hashing**: bcrypt/Argon2 takes ~100ms per check → greatly limits offline attack speed\n- **CAPTCHA**: blocks automated bots\n- **Salting**: prevents rainbow table attacks (precomputed hash dictionaries)\n\nNever store plain text passwords.",
-      "tags": ["authentication"]
+      "tags": [
+        "authentication"
+      ]
     },
     {
       "id": "cs10-aaaa-bbbb-cccc-dddddddddddd",
@@ -128,33 +286,73 @@
       "type": "open",
       "choices": [],
       "explanation": "**Social engineering** is the psychological manipulation of people into performing actions or divulging confidential information — exploiting human trust rather than technical vulnerabilities.\n\n**Common techniques:**\n- **Phishing**: fake emails/sites to steal credentials\n- **Pretexting**: fabricating a scenario to gain trust (e.g., pretending to be IT support)\n- **Baiting**: leaving malware-infected USB drives\n- **Vishing**: voice/phone phishing\n\nSocial engineering is often the easiest attack vector because humans are the weakest link in security.",
-      "tags": ["social-engineering"]
+      "tags": [
+        "social-engineering"
+      ]
     },
     {
       "id": "cs11-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is **Cross-Site Request Forgery (CSRF)**?",
       "type": "single_choice",
       "choices": [
-        { "id": "cs11-c1", "text": "Tricking an authenticated user's browser into making unauthorised requests to a web app they're logged into", "is_correct": true },
-        { "id": "cs11-c2", "text": "Injecting scripts across different websites simultaneously", "is_correct": false },
-        { "id": "cs11-c3", "text": "Forging SSL certificates for multiple domains", "is_correct": false },
-        { "id": "cs11-c4", "text": "Stealing session cookies by intercepting network traffic", "is_correct": false }
+        {
+          "id": "cs11-c1",
+          "text": "Tricking an authenticated user's browser into making unauthorised requests to a web app they're logged into",
+          "is_correct": true
+        },
+        {
+          "id": "cs11-c2",
+          "text": "Injecting scripts across different websites simultaneously",
+          "is_correct": false
+        },
+        {
+          "id": "cs11-c3",
+          "text": "Forging SSL certificates for multiple domains",
+          "is_correct": false
+        },
+        {
+          "id": "cs11-c4",
+          "text": "Stealing session cookies by intercepting network traffic",
+          "is_correct": false
+        }
       ],
       "explanation": "**CSRF** exploits the fact that browsers automatically send cookies with requests.\n\nAttack flow:\n1. User logs into `bank.com` (session cookie stored)\n2. User visits malicious `evil.com`\n3. `evil.com` causes browser to send request to `bank.com/transfer?to=attacker`\n4. Bank sees valid session cookie — processes request!\n\n**Prevention**: CSRF tokens (random, per-session value required in forms), SameSite cookie attribute, Origin/Referer header checks.",
-      "tags": ["web-security"]
+      "tags": [
+        "web-security"
+      ]
     },
     {
       "id": "cs12-aaaa-bbbb-cccc-dddddddddddd",
       "text": "What is **defence in depth**?",
       "type": "single_choice",
       "choices": [
-        { "id": "cs12-c1", "text": "A security strategy using multiple independent layers of security so that if one fails, others still provide protection", "is_correct": true },
-        { "id": "cs12-c2", "text": "Deploying deep learning models to detect security threats", "is_correct": false },
-        { "id": "cs12-c3", "text": "Focusing all security efforts on the network layer", "is_correct": false },
-        { "id": "cs12-c4", "text": "Having a backup security team for incidents", "is_correct": false }
+        {
+          "id": "cs12-c1",
+          "text": "A security strategy using multiple independent layers of security so that if one fails, others still provide protection",
+          "is_correct": true
+        },
+        {
+          "id": "cs12-c2",
+          "text": "Deploying deep learning models to detect security threats",
+          "is_correct": false
+        },
+        {
+          "id": "cs12-c3",
+          "text": "Focusing all security efforts on the network layer",
+          "is_correct": false
+        },
+        {
+          "id": "cs12-c4",
+          "text": "Having a backup security team for incidents",
+          "is_correct": false
+        }
       ],
       "explanation": "**Defence in depth** (also: layered security) means stacking multiple independent security controls:\n\n```\nPhysical security\n  └─ Network security (firewall, IDS)\n       └─ Host security (patching, antivirus)\n            └─ Application security (input validation, auth)\n                 └─ Data security (encryption, backups)\n```\n\nNo single control is assumed to be perfect — redundancy ensures a breach at one layer doesn't compromise everything.",
-      "tags": ["principles"]
+      "tags": [
+        "principles"
+      ]
     }
-  ]
+  ],
+  "created_at": "2024-08-02T00:00:00Z",
+  "modified_at": "2024-12-20T00:00:00Z"
 }
