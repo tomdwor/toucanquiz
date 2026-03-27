@@ -1,0 +1,135 @@
+{
+  "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "name": "Mathematics Fundamentals",
+  "description": "Build your confidence with **core math concepts**.\n\nThis quiz covers:\n- Basic exponents\n- Solving simple equations\n- Geometry formulas\n- Properties of shapes\n\nAll math is rendered using $\\KaTeX$.",
+  "tags": ["math", "algebra", "geometry", "beginner"],
+  "mode": "practice",
+  "pass_threshold": 70,
+  "question_limit": null,
+  "questions": [
+    {
+      "id": "q1a2b3c4-d5e6-f7a8-b9c0-d1e2f3a4b5c6",
+      "text": "What is the value of $5^0$?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "c1a2b3c4-0001-0000-0000-000000000001",
+          "text": "$0$",
+          "is_correct": false
+        },
+        {
+          "id": "c1a2b3c4-0001-0000-0000-000000000002",
+          "text": "$1$",
+          "is_correct": true
+        },
+        {
+          "id": "c1a2b3c4-0001-0000-0000-000000000003",
+          "text": "$5$",
+          "is_correct": false
+        },
+        {
+          "id": "c1a2b3c4-0001-0000-0000-000000000004",
+          "text": "$25$",
+          "is_correct": false
+        }
+      ],
+      "explanation": "**Any non-zero number raised to the power of 0 equals 1.**\n\nHere are some examples:\n- $5^0 = 1$\n- $100^0 = 1$\n- $(-3)^0 = 1$\n\nWhy? Because $a^n \\div a^n = a^{n-n} = a^0$, and any number divided by itself equals $1$.",
+      "tags": ["exponents"]
+    },
+    {
+      "id": "q2a2b3c4-d5e6-f7a8-b9c0-d1e2f3a4b5c6",
+      "text": "Solve for $x$:\n\n$$3x - 6 = 0$$",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "c2a2b3c4-0002-0000-0000-000000000001",
+          "text": "$x = 0$",
+          "is_correct": false
+        },
+        {
+          "id": "c2a2b3c4-0002-0000-0000-000000000002",
+          "text": "$x = 2$",
+          "is_correct": true
+        },
+        {
+          "id": "c2a2b3c4-0002-0000-0000-000000000003",
+          "text": "$x = 3$",
+          "is_correct": false
+        },
+        {
+          "id": "c2a2b3c4-0002-0000-0000-000000000004",
+          "text": "$x = 6$",
+          "is_correct": false
+        }
+      ],
+      "explanation": "Solve step by step:\n\n1. Start with $3x - 6 = 0$\n2. Add $6$ to both sides: $3x = 6$\n3. Divide both sides by $3$: $x = 2$\n\n**Check:** $3(2) - 6 = 6 - 6 = 0$ ✓",
+      "tags": ["algebra", "linear-equations"]
+    },
+    {
+      "id": "q3a2b3c4-d5e6-f7a8-b9c0-d1e2f3a4b5c6",
+      "text": "A rectangle has length $l = 5$ and width $w = 3$. What is its area $A$?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "c3a2b3c4-0003-0000-0000-000000000001",
+          "text": "$A = 8$",
+          "is_correct": false
+        },
+        {
+          "id": "c3a2b3c4-0003-0000-0000-000000000002",
+          "text": "$A = 15$",
+          "is_correct": true
+        },
+        {
+          "id": "c3a2b3c4-0003-0000-0000-000000000003",
+          "text": "$A = 16$",
+          "is_correct": false
+        },
+        {
+          "id": "c3a2b3c4-0003-0000-0000-000000000004",
+          "text": "$A = 25$",
+          "is_correct": false
+        }
+      ],
+      "explanation": "The area of a rectangle is:\n\n$$A = l \\times w$$\n\nSubstituting the values:\n\n$$A = 5 \\times 3 = 15$$\n\nCommon area formulas:\n\n| Shape | Formula |\n|---|---|\n| Rectangle | $A = l \\times w$ |\n| Square | $A = s^2$ |\n| Triangle | $A = \\frac{1}{2}bh$ |\n| Circle | $A = \\pi r^2$ |",
+      "tags": ["geometry", "area"]
+    },
+    {
+      "id": "q4a2b3c4-d5e6-f7a8-b9c0-d1e2f3a4b5c6",
+      "text": "Which of the following are **true** about a right triangle? Select all that apply.",
+      "type": "multiple_choice",
+      "choices": [
+        {
+          "id": "c4a2b3c4-0004-0000-0000-000000000001",
+          "text": "It has exactly one $90°$ angle",
+          "is_correct": true
+        },
+        {
+          "id": "c4a2b3c4-0004-0000-0000-000000000002",
+          "text": "The three angles always sum to $180°$",
+          "is_correct": true
+        },
+        {
+          "id": "c4a2b3c4-0004-0000-0000-000000000003",
+          "text": "All three sides are always equal",
+          "is_correct": false
+        },
+        {
+          "id": "c4a2b3c4-0004-0000-0000-000000000004",
+          "text": "The side opposite the right angle is the longest side (hypotenuse)",
+          "is_correct": true
+        }
+      ],
+      "explanation": "A right triangle has:\n\n- ✓ **One 90° angle** — that's what makes it a *right* triangle\n- ✓ **Angles sum to 180°** — true for *all* triangles\n- ✗ **Equal sides** — that would be an equilateral triangle\n- ✓ **Hypotenuse** — the longest side, opposite the right angle\n\nThe Pythagorean theorem applies:\n\n$$a^2 + b^2 = c^2$$\n\nwhere $c$ is the hypotenuse and $a$, $b$ are the other two sides.",
+      "tags": ["geometry", "triangles"]
+    },
+    {
+      "id": "q5a2b3c4-d5e6-f7a8-b9c0-d1e2f3a4b5c6",
+      "text": "In your own words, what is a **variable** in mathematics? Give a simple example.",
+      "type": "open",
+      "choices": [],
+      "explanation": "A **variable** is a symbol (usually a letter like $x$, $y$, or $n$) that represents an unknown or changing value.\n\nFor example:\n- In $x + 3 = 7$, the variable $x$ represents the unknown value $4$\n- In $A = l \\times w$, both $l$ and $w$ are variables that can take different values\n\nVariables let us write general rules that work for many different numbers, not just one specific case.",
+      "tags": ["algebra", "concepts"]
+    }
+  ]
+}

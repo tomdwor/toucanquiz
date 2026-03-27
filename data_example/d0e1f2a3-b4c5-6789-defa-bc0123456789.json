@@ -1,0 +1,133 @@
+{
+  "id": "d0e1f2a3-b4c5-6789-defa-bc0123456789",
+  "name": "Network Security",
+  "description": "Understand **network security fundamentals** — TCP/IP vulnerabilities, firewalls, VPNs, TLS/SSL, intrusion detection, and common network attacks.\n\nFor developers and IT professionals.",
+  "tags": ["security", "networking", "intermediate"],
+  "mode": "practice",
+  "pass_threshold": 65,
+  "question_limit": 7,
+  "questions": [
+    {
+      "id": "ns01-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is a **firewall** and how does it protect a network?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "ns01-c1", "text": "A system that monitors and controls incoming/outgoing network traffic based on security rules", "is_correct": true },
+        { "id": "ns01-c2", "text": "A physical device that blocks all wireless signals", "is_correct": false },
+        { "id": "ns01-c3", "text": "Software that encrypts all network traffic automatically", "is_correct": false },
+        { "id": "ns01-c4", "text": "A backup system that activates when the primary network fails", "is_correct": false }
+      ],
+      "explanation": "A **firewall** inspects network traffic and allows or denies it based on rules (ACLs).\n\n**Types:**\n- **Packet filter**: examines IP/port headers\n- **Stateful**: tracks connection state\n- **Application layer (WAF)**: understands application protocols (HTTP, FTP)\n- **Next-gen (NGFW)**: deep packet inspection, intrusion prevention\n\nTypically placed at network perimeter (internet ↔ internal network) and between network segments.",
+      "tags": ["firewalls"]
+    },
+    {
+      "id": "ns02-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is a **DDoS (Distributed Denial of Service)** attack?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "ns02-c1", "text": "Overwhelming a server or network with traffic from many sources to make it unavailable", "is_correct": true },
+        { "id": "ns02-c2", "text": "Stealing data from a server by distributing the load across many requests", "is_correct": false },
+        { "id": "ns02-c3", "text": "Distributing malware across a network simultaneously", "is_correct": false },
+        { "id": "ns02-c4", "text": "Denying access to specific users based on IP address", "is_correct": false }
+      ],
+      "explanation": "**DDoS attacks** flood a target with traffic from many sources (often a botnet), exhausting its bandwidth, CPU, or connection tables.\n\n**Types:** volumetric (bandwidth exhaustion), protocol (TCP SYN flood), application layer (HTTP flood).\n\n**Mitigations:** CDN/scrubbing services (Cloudflare, Akamai), rate limiting, anycast routing, upstream filtering, CAPTCHA for application-layer attacks.",
+      "tags": ["attacks"]
+    },
+    {
+      "id": "ns03-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What does **TLS (Transport Layer Security)** provide? Select all that apply.",
+      "type": "multiple_choice",
+      "choices": [
+        { "id": "ns03-c1", "text": "Encryption of data in transit", "is_correct": true },
+        { "id": "ns03-c2", "text": "Authentication of the server (and optionally the client)", "is_correct": true },
+        { "id": "ns03-c3", "text": "Data integrity — detecting if data was tampered with", "is_correct": true },
+        { "id": "ns03-c4", "text": "Protection against vulnerabilities in application code", "is_correct": false }
+      ],
+      "explanation": "**TLS** (the successor to SSL) provides the **CIA** triad for network communication:\n\n- **Confidentiality**: data is encrypted (AES-256, ChaCha20)\n- **Authentication**: server's certificate verified by a CA\n- **Integrity**: MAC (HMAC or AEAD) detects tampering\n\nTLS protects the *transport layer*, not application vulnerabilities. A site with HTTPS can still have XSS or SQLi vulnerabilities.",
+      "tags": ["tls"]
+    },
+    {
+      "id": "ns04-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is **ARP poisoning** (ARP spoofing)?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "ns04-c1", "text": "Sending fake ARP replies to associate the attacker's MAC address with a legitimate IP, enabling MITM on a LAN", "is_correct": true },
+        { "id": "ns04-c2", "text": "Injecting malicious code into ARP server software", "is_correct": false },
+        { "id": "ns04-c3", "text": "Flooding ARP tables with random entries to disrupt routing", "is_correct": false },
+        { "id": "ns04-c4", "text": "Poisoning DNS records with fake ARP mappings", "is_correct": false }
+      ],
+      "explanation": "**ARP (Address Resolution Protocol)** maps IP addresses to MAC addresses on a LAN. It's stateless and trusts all replies.\n\n**ARP poisoning attack:**\n1. Attacker broadcasts fake ARP: \"I am 192.168.1.1 (the gateway), my MAC is AA:BB:CC...\"\n2. Victims update their ARP cache\n3. All traffic flows through the attacker (MITM)\n\n**Defences:** Dynamic ARP Inspection (DAI) on switches, static ARP entries, encryption (TLS still protects even if traffic is intercepted).",
+      "tags": ["attacks"]
+    },
+    {
+      "id": "ns05-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is a **VPN (Virtual Private Network)** used for?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "ns05-c1", "text": "Creates an encrypted tunnel over a public network, allowing secure access to private network resources or hiding internet traffic", "is_correct": true },
+        { "id": "ns05-c2", "text": "Increases internet speed by routing through faster servers", "is_correct": false },
+        { "id": "ns05-c3", "text": "Prevents all forms of network attacks automatically", "is_correct": false },
+        { "id": "ns05-c4", "text": "Replaces the need for firewalls in enterprise networks", "is_correct": false }
+      ],
+      "explanation": "A **VPN** tunnels traffic through an encrypted channel:\n\n**Use cases:**\n- **Remote access VPN**: employees connect securely to corporate network from home\n- **Site-to-site VPN**: connects two office networks over the internet\n- **Consumer VPN**: hides traffic from ISP, changes apparent IP location\n\n**Protocols:** OpenVPN, WireGuard, IPSec/IKEv2, L2TP.\n\nVPNs encrypt *transit* — they don't protect against malware on endpoints or vulnerabilities in applications.",
+      "tags": ["vpn"]
+    },
+    {
+      "id": "ns06-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is the well-known port number used by **HTTPS**?",
+      "type": "text",
+      "choices": [
+        { "id": "ns06-c1", "text": "443", "is_correct": true }
+      ],
+      "explanation": "**HTTPS** uses port **443** (HTTP uses port 80).\n\nCommon well-known ports:\n\n| Port | Protocol |\n|------|----------|\n| 21 | FTP |\n| 22 | SSH |\n| 25 | SMTP |\n| 53 | DNS |\n| 80 | HTTP |\n| 443 | HTTPS |\n| 3306 | MySQL |\n| 5432 | PostgreSQL |",
+      "tags": ["networking"]
+    },
+    {
+      "id": "ns07-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is the difference between **IDS** and **IPS**?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "ns07-c1", "text": "IDS detects and alerts; IPS detects and actively blocks suspicious traffic", "is_correct": true },
+        { "id": "ns07-c2", "text": "IDS is hardware; IPS is software", "is_correct": false },
+        { "id": "ns07-c3", "text": "IDS works at the network layer; IPS works at the application layer", "is_correct": false },
+        { "id": "ns07-c4", "text": "IPS is an older version of IDS", "is_correct": false }
+      ],
+      "explanation": "| System | Full name | Action |\n|--------|-----------|--------|\n| **IDS** | Intrusion Detection System | Detects + alerts (passive) |\n| **IPS** | Intrusion Prevention System | Detects + blocks (active) |\n\nBoth use signature-based and/or anomaly-based detection.\n\n**IDS** is placed out-of-band (monitors a copy of traffic).\n**IPS** is placed inline (traffic must pass through it).\n\nModern **NGFW** typically include IPS functionality.",
+      "tags": ["detection"]
+    },
+    {
+      "id": "ns08-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is **DNS spoofing** (DNS cache poisoning)?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "ns08-c1", "text": "Corrupting a DNS resolver's cache to redirect users to malicious IP addresses", "is_correct": true },
+        { "id": "ns08-c2", "text": "Overwhelming a DNS server with queries to take it offline", "is_correct": false },
+        { "id": "ns08-c3", "text": "Registering lookalike domain names to deceive users", "is_correct": false },
+        { "id": "ns08-c4", "text": "Using DNS tunnelling to exfiltrate data", "is_correct": false }
+      ],
+      "explanation": "**DNS cache poisoning** injects fake DNS records into a resolver's cache:\n\n1. Attacker races to respond to a DNS query before the legitimate server\n2. Sends a forged response: `bank.com → attacker_IP`\n3. Resolver caches this record; subsequent users are redirected to the malicious server\n\n**Prevention:** DNSSEC (cryptographic signing of DNS records), random source ports and transaction IDs, short TTLs.",
+      "tags": ["dns"]
+    },
+    {
+      "id": "ns09-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "In your own words, explain what a **DMZ (Demilitarised Zone)** is and why it is used in network architecture.",
+      "type": "open",
+      "choices": [],
+      "explanation": "A **DMZ** is a network segment that sits between the internet and the internal network, protected by firewalls on both sides:\n\n```\nInternet → [Outer Firewall] → DMZ (web servers, mail servers) → [Inner Firewall] → Internal Network\n```\n\n**Why use it:**\n- Public-facing servers (web, email, DNS) must be accessible from the internet — they're higher risk\n- Placing them in the DMZ limits the blast radius: if a DMZ server is compromised, the attacker can't directly reach the internal network\n- The inner firewall provides an additional layer of protection for sensitive internal systems",
+      "tags": ["architecture"]
+    },
+    {
+      "id": "ns10-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Which protocol does **SSH** replace and what does it provide over that protocol?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "ns10-c1", "text": "Replaces Telnet; provides encrypted, authenticated remote shell access", "is_correct": true },
+        { "id": "ns10-c2", "text": "Replaces FTP; provides encrypted file transfer only", "is_correct": false },
+        { "id": "ns10-c3", "text": "Replaces HTTP; provides secure web browsing", "is_correct": false },
+        { "id": "ns10-c4", "text": "Replaces SMTP; provides secure email transmission", "is_correct": false }
+      ],
+      "explanation": "**SSH (Secure Shell)** replaced **Telnet** for remote server management.\n\n**Telnet problems:** sends everything (including passwords) in plain text.\n\n**SSH provides:**\n- Encrypted communications\n- Server authentication (host key verification)\n- Strong client authentication (password or public-key)\n- Port forwarding / tunnelling\n- Secure file transfer (SFTP, SCP)\n\nDefault port: **22**.",
+      "tags": ["protocols"]
+    }
+  ]
+}

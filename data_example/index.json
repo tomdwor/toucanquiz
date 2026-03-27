@@ -1,0 +1,144 @@
+{
+  "quizzes": [
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "name": "Mathematics Fundamentals",
+      "description": "Build your confidence with **core math concepts** — exponents, equations, geometry, and more.",
+      "tags": ["math", "algebra", "geometry", "beginner"],
+      "mode": "practice",
+      "pass_threshold": 70,
+      "question_limit": null,
+      "question_count": 5
+    },
+    {
+      "id": "b2c3d4e5-f6a7-8901-bcde-fa2345678901",
+      "name": "Computer Science Basics",
+      "description": "Fundamental concepts every programmer should know — data structures, loops, data types and more.",
+      "tags": ["cs", "programming", "beginner"],
+      "mode": "practice",
+      "pass_threshold": 75,
+      "question_limit": 3,
+      "question_count": 5
+    },
+    {
+      "id": "c3d4e5f6-a7b8-9012-cdef-ab3456789012",
+      "name": "Molecular Biology",
+      "description": "Explore the **molecules of life** — DNA, RNA, nucleotides, and gene expression.",
+      "tags": ["biology", "molecular-biology", "DNA", "RNA", "beginner"],
+      "mode": "practice",
+      "pass_threshold": 65,
+      "question_limit": null,
+      "question_count": 5
+    },
+    {
+      "id": "d4e5f6a7-b8c9-0123-defa-bc4567890123",
+      "name": "Bioinformatics",
+      "description": "An introduction to **computational biology** — sequence formats, BLAST, alignment, and genome assembly.",
+      "tags": ["bioinformatics", "genomics", "beginner"],
+      "mode": "practice",
+      "pass_threshold": 65,
+      "question_limit": 4,
+      "question_count": 5
+    },
+    {
+      "id": "e5f6a7b8-c9d0-1234-efab-cd5678901234",
+      "name": "Machine Learning Fundamentals",
+      "description": "Understand the **core concepts of machine learning** — supervised vs unsupervised learning, model evaluation, overfitting, and classic algorithms.",
+      "tags": ["ml", "ai", "beginner"],
+      "mode": "practice",
+      "pass_threshold": 70,
+      "question_limit": 8,
+      "question_count": 12
+    },
+    {
+      "id": "f6a7b8c9-d0e1-2345-fabc-de6789012345",
+      "name": "Neural Networks & Deep Learning",
+      "description": "Explore the architecture and mechanics of **neural networks** — layers, activation functions, backpropagation, and convolutional networks.",
+      "tags": ["ml", "deep-learning", "neural-networks", "intermediate"],
+      "mode": "practice",
+      "pass_threshold": 65,
+      "question_limit": 7,
+      "question_count": 10
+    },
+    {
+      "id": "a7b8c9d0-e1f2-3456-abcd-ef7890123456",
+      "name": "Statistics & Probability",
+      "description": "Master the **statistical foundations** essential for data science — distributions, hypothesis testing, confidence intervals, and Bayesian thinking.",
+      "tags": ["math", "statistics", "probability", "intermediate"],
+      "mode": "practice",
+      "pass_threshold": 70,
+      "question_limit": 8,
+      "question_count": 10
+    },
+    {
+      "id": "b8c9d0e1-f2a3-4567-bcde-fa8901234567",
+      "name": "Linear Algebra for ML",
+      "description": "Build the **linear algebra intuition** needed for machine learning — vectors, matrices, eigenvalues, PCA, and SVD.",
+      "tags": ["math", "linear-algebra", "intermediate"],
+      "mode": "practice",
+      "pass_threshold": 65,
+      "question_limit": 7,
+      "question_count": 10
+    },
+    {
+      "id": "c9d0e1f2-a3b4-5678-cdef-ab9012345678",
+      "name": "Computer Security Basics",
+      "description": "Learn the **fundamentals of cybersecurity** — SQL injection, XSS, cryptography, authentication, and defence strategies.",
+      "tags": ["security", "cybersecurity", "beginner"],
+      "mode": "practice",
+      "pass_threshold": 70,
+      "question_limit": 8,
+      "question_count": 12
+    },
+    {
+      "id": "d0e1f2a3-b4c5-6789-defa-bc0123456789",
+      "name": "Network Security",
+      "description": "Understand **network security fundamentals** — firewalls, VPNs, TLS/SSL, DDoS, and intrusion detection.",
+      "tags": ["security", "networking", "intermediate"],
+      "mode": "practice",
+      "pass_threshold": 65,
+      "question_limit": 7,
+      "question_count": 10
+    },
+    {
+      "id": "e1f2a3b4-c5d6-7890-efab-cd1234567890",
+      "name": "Advanced Molecular Biology",
+      "description": "Deepen your understanding of **molecular biology** — CRISPR, epigenetics, RNA interference, protein folding, and gene regulation.",
+      "tags": ["biology", "molecular-biology", "intermediate"],
+      "mode": "practice",
+      "pass_threshold": 65,
+      "question_limit": 6,
+      "question_count": 8
+    },
+    {
+      "id": "f2a3b4c5-d6e7-8901-fabc-de2345678901",
+      "name": "Advanced Bioinformatics",
+      "description": "Go deeper into **computational biology** — sequence alignment algorithms, variant calling, RNA-seq, protein structure prediction, and phylogenetics.",
+      "tags": ["bioinformatics", "genomics", "intermediate"],
+      "mode": "practice",
+      "pass_threshold": 65,
+      "question_limit": 6,
+      "question_count": 10
+    },
+    {
+      "id": "a3b4c5d6-e7f8-9012-abcd-ef3456789012",
+      "name": "Calculus & Mathematical Analysis",
+      "description": "Review the **core concepts of calculus** — limits, derivatives, integrals, and series — with applications to optimisation.",
+      "tags": ["math", "calculus", "intermediate"],
+      "mode": "practice",
+      "pass_threshold": 65,
+      "question_limit": 8,
+      "question_count": 10
+    },
+    {
+      "id": "b4c5d6e7-f8a9-0123-bcde-fa4567890123",
+      "name": "CS: Algorithms & Data Structures",
+      "description": "Master **fundamental algorithms and data structures** — complexity analysis, sorting, trees, graphs, dynamic programming, and hashing.",
+      "tags": ["cs", "algorithms", "data-structures", "intermediate"],
+      "mode": "practice",
+      "pass_threshold": 70,
+      "question_limit": 10,
+      "question_count": 12
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Vite
+.vite/
+*.local
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Quiz data (local only - copy data_example/ to public/data/ for static mode)
+/public/data/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# TMP
+tmp/
+
+# Claude
+.claude/settings.local.json

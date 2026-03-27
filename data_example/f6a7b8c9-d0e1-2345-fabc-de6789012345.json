@@ -1,0 +1,136 @@
+{
+  "id": "f6a7b8c9-d0e1-2345-fabc-de6789012345",
+  "name": "Neural Networks & Deep Learning",
+  "description": "Explore the architecture and mechanics of **neural networks** — layers, activation functions, backpropagation, convolutional networks, and regularisation techniques.\n\nSuitable for anyone with a basic ML background.",
+  "tags": ["ml", "deep-learning", "neural-networks", "intermediate"],
+  "mode": "practice",
+  "pass_threshold": 65,
+  "question_limit": 7,
+  "questions": [
+    {
+      "id": "nn01-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is the role of an **activation function** in a neural network?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "nn01-c1", "text": "To introduce non-linearity, allowing the network to learn complex patterns", "is_correct": true },
+        { "id": "nn01-c2", "text": "To initialise the weights of the network", "is_correct": false },
+        { "id": "nn01-c3", "text": "To normalise the output of each layer", "is_correct": false },
+        { "id": "nn01-c4", "text": "To define the loss function for training", "is_correct": false }
+      ],
+      "explanation": "Without activation functions, a neural network is just a series of linear transformations — which compose into a single linear transformation regardless of depth.\n\nActivation functions like **ReLU**, **sigmoid**, and **tanh** add non-linearity, enabling the network to approximate complex, non-linear functions.",
+      "tags": ["architecture"]
+    },
+    {
+      "id": "nn02-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is the **vanishing gradient problem**?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "nn02-c1", "text": "Gradients become very small as they propagate back through many layers, slowing or stopping learning in early layers", "is_correct": true },
+        { "id": "nn02-c2", "text": "The model's loss decreases too quickly, causing instability", "is_correct": false },
+        { "id": "nn02-c3", "text": "The gradient becomes negative during training", "is_correct": false },
+        { "id": "nn02-c4", "text": "The model runs out of memory during backpropagation", "is_correct": false }
+      ],
+      "explanation": "In deep networks with sigmoid/tanh activations, gradients are multiplied by small values (< 1) at each layer during backpropagation. After many layers, the gradient becomes negligibly small — early layers barely update.\n\n**Solutions**: ReLU activation, batch normalisation, residual connections (ResNets), LSTM for sequences.",
+      "tags": ["training"]
+    },
+    {
+      "id": "nn03-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Which of the following are common **activation functions**? Select all that apply.",
+      "type": "multiple_choice",
+      "choices": [
+        { "id": "nn03-c1", "text": "ReLU (Rectified Linear Unit)", "is_correct": true },
+        { "id": "nn03-c2", "text": "Sigmoid", "is_correct": true },
+        { "id": "nn03-c3", "text": "Softmax", "is_correct": true },
+        { "id": "nn03-c4", "text": "Gradient Descent", "is_correct": false }
+      ],
+      "explanation": "Common activation functions:\n\n| Function | Formula | Typical use |\n|----------|---------|-------------|\n| **ReLU** | $\\max(0, x)$ | Hidden layers |\n| **Sigmoid** | $\\frac{1}{1+e^{-x}}$ | Binary output |\n| **Softmax** | $\\frac{e^{x_i}}{\\sum e^{x_j}}$ | Multi-class output |\n| **tanh** | $\\frac{e^x - e^{-x}}{e^x + e^{-x}}$ | Hidden layers |\n\nGradient descent is an *optimiser*, not an activation function.",
+      "tags": ["activation-functions"]
+    },
+    {
+      "id": "nn04-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What makes a **Convolutional Neural Network (CNN)** particularly well-suited for image data?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "nn04-c1", "text": "Convolutional layers detect local spatial patterns using shared weights, drastically reducing parameters", "is_correct": true },
+        { "id": "nn04-c2", "text": "CNNs use recurrent connections to process sequences of pixels", "is_correct": false },
+        { "id": "nn04-c3", "text": "CNNs flatten the image and feed it through fully-connected layers only", "is_correct": false },
+        { "id": "nn04-c4", "text": "CNNs do not require any training data", "is_correct": false }
+      ],
+      "explanation": "CNNs exploit two properties of image data:\n\n1. **Local connectivity**: nearby pixels are more correlated than distant ones\n2. **Weight sharing**: the same filter (kernel) slides across the image, detecting the same feature regardless of position (translation equivariance)\n\nThis reduces parameters dramatically vs. fully-connected networks and improves generalisation.",
+      "tags": ["cnn"]
+    },
+    {
+      "id": "nn05-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is **batch normalisation** and what problem does it help solve?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "nn05-c1", "text": "Normalises activations within a mini-batch to have zero mean and unit variance, stabilising training and allowing higher learning rates", "is_correct": true },
+        { "id": "nn05-c2", "text": "Shuffles training examples into random batches to improve generalisation", "is_correct": false },
+        { "id": "nn05-c3", "text": "Normalises the input features before the first layer only", "is_correct": false },
+        { "id": "nn05-c4", "text": "It is a technique for reducing batch size during training", "is_correct": false }
+      ],
+      "explanation": "**Batch normalisation** (Ioffe & Szegedy, 2015) normalises each layer's inputs across the mini-batch:\n\n$$\\hat{x}_i = \\frac{x_i - \\mu_B}{\\sqrt{\\sigma_B^2 + \\epsilon}}$$\n\nBenefits:\n- Reduces **internal covariate shift**\n- Allows higher learning rates → faster training\n- Acts as mild regularisation\n- Reduces sensitivity to weight initialisation",
+      "tags": ["training"]
+    },
+    {
+      "id": "nn06-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is the name of the loss function used for **multi-class classification** that combines softmax and negative log-likelihood?",
+      "type": "text",
+      "choices": [
+        { "id": "nn06-c1", "text": "cross-entropy", "is_correct": true },
+        { "id": "nn06-c2", "text": "cross entropy", "is_correct": true },
+        { "id": "nn06-c3", "text": "categorical cross-entropy", "is_correct": true },
+        { "id": "nn06-c4", "text": "cross-entropy loss", "is_correct": true }
+      ],
+      "explanation": "**Cross-entropy loss** (also called categorical cross-entropy for multi-class problems) is:\n\n$$L = -\\sum_{c=1}^{C} y_c \\log(\\hat{p}_c)$$\n\nWhere $y_c$ is the true label (one-hot) and $\\hat{p}_c$ is the predicted probability for class $c$ from softmax.\n\nFor binary classification, **binary cross-entropy** is used with sigmoid output.",
+      "tags": ["loss-functions"]
+    },
+    {
+      "id": "nn07-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "In your own words, describe how **backpropagation** works to train a neural network.",
+      "type": "open",
+      "choices": [],
+      "explanation": "**Backpropagation** computes gradients of the loss with respect to every weight in the network using the chain rule of calculus:\n\n1. **Forward pass**: input flows through the network, producing a prediction and a loss value\n2. **Backward pass**: starting from the loss, the gradient is propagated back layer by layer using the chain rule\n3. **Weight update**: each weight is adjusted by a small step opposite to its gradient (gradient descent)\n\nThis is done repeatedly over mini-batches of training data until the loss converges.",
+      "tags": ["backpropagation"]
+    },
+    {
+      "id": "nn08-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is the purpose of **max pooling** in a CNN?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "nn08-c1", "text": "Reduces spatial dimensions while retaining the most prominent features, providing translation invariance", "is_correct": true },
+        { "id": "nn08-c2", "text": "Adds more parameters to the network to improve expressiveness", "is_correct": false },
+        { "id": "nn08-c3", "text": "Replaces the activation function in convolutional layers", "is_correct": false },
+        { "id": "nn08-c4", "text": "Normalises the output of a convolutional layer", "is_correct": false }
+      ],
+      "explanation": "**Max pooling** downsamples feature maps by taking the maximum value in each pooling window (e.g., 2×2):\n\n- Reduces spatial dimensions → fewer parameters in subsequent layers\n- Provides **translation invariance**: small shifts in input produce same output\n- Discards less important spatial information\n\nAlternatives include average pooling and global average pooling.",
+      "tags": ["cnn"]
+    },
+    {
+      "id": "nn09-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What type of neural network architecture is best suited for processing **sequential data** like text or time series?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "nn09-c1", "text": "Recurrent Neural Network (RNN) / LSTM / Transformer", "is_correct": true },
+        { "id": "nn09-c2", "text": "Convolutional Neural Network (CNN)", "is_correct": false },
+        { "id": "nn09-c3", "text": "Autoencoders", "is_correct": false },
+        { "id": "nn09-c4", "text": "Generative Adversarial Network (GAN)", "is_correct": false }
+      ],
+      "explanation": "Sequential data has temporal or positional dependencies:\n\n- **RNN/LSTM/GRU**: process sequences step-by-step, maintaining hidden state\n- **Transformers**: use self-attention to model long-range dependencies efficiently (now dominant for NLP)\n\nCNNs can process sequences with 1D convolutions but lack inherent recurrence or attention mechanisms.",
+      "tags": ["rnn", "transformers"]
+    },
+    {
+      "id": "nn10-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is a **residual connection** (skip connection) in deep networks?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "nn10-c1", "text": "A shortcut that adds the input of a block directly to its output, enabling very deep networks to train effectively", "is_correct": true },
+        { "id": "nn10-c2", "text": "A connection that skips some training examples for efficiency", "is_correct": false },
+        { "id": "nn10-c3", "text": "A technique for pruning unused neurons", "is_correct": false },
+        { "id": "nn10-c4", "text": "A way to connect two separate network architectures", "is_correct": false }
+      ],
+      "explanation": "Introduced in **ResNet** (He et al., 2015), residual connections add the block's input directly to its output:\n\n$$\\text{output} = F(x) + x$$\n\nThis allows gradients to flow directly through the skip connection, solving the vanishing gradient problem for very deep networks (100+ layers). ResNet-152 won ImageNet 2015.",
+      "tags": ["architecture"]
+    }
+  ]
+}

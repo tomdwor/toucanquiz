@@ -1,0 +1,134 @@
+{
+  "id": "a7b8c9d0-e1f2-3456-abcd-ef7890123456",
+  "name": "Statistics & Probability",
+  "description": "Master the **statistical foundations** essential for data science and machine learning — distributions, hypothesis testing, confidence intervals, correlation, and Bayesian thinking.",
+  "tags": ["math", "statistics", "probability", "intermediate"],
+  "mode": "practice",
+  "pass_threshold": 70,
+  "question_limit": 8,
+  "questions": [
+    {
+      "id": "st01-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What does the **central limit theorem** state?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "st01-c1", "text": "The distribution of sample means approaches a normal distribution as sample size increases, regardless of the population distribution", "is_correct": true },
+        { "id": "st01-c2", "text": "The mean of a dataset is always in the centre of its distribution", "is_correct": false },
+        { "id": "st01-c3", "text": "Large datasets always follow a normal distribution", "is_correct": false },
+        { "id": "st01-c4", "text": "The variance of a sample always equals the variance of the population", "is_correct": false }
+      ],
+      "explanation": "The **Central Limit Theorem (CLT)** states that if you take sufficiently large random samples from any population (with finite mean $\\mu$ and variance $\\sigma^2$), the distribution of sample means $\\bar{X}$ will be approximately:\n\n$$\\bar{X} \\sim N\\left(\\mu, \\frac{\\sigma^2}{n}\\right)$$\n\nThis is why the normal distribution appears so frequently in statistics and enables many statistical tests.",
+      "tags": ["distributions"]
+    },
+    {
+      "id": "st02-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "In hypothesis testing, what is a **p-value**?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "st02-c1", "text": "The probability of observing a result at least as extreme as the one obtained, assuming the null hypothesis is true", "is_correct": true },
+        { "id": "st02-c2", "text": "The probability that the null hypothesis is true", "is_correct": false },
+        { "id": "st02-c3", "text": "The probability that the result is practically significant", "is_correct": false },
+        { "id": "st02-c4", "text": "The threshold used to decide statistical significance", "is_correct": false }
+      ],
+      "explanation": "The **p-value** is $P(\\text{data} \\geq \\text{observed} \\mid H_0 \\text{ is true})$.\n\nCommon misconceptions:\n- ❌ p-value ≠ P(H₀ is true)\n- ❌ 1 − p-value ≠ P(H₁ is true)\n\nIf p < α (significance level, often 0.05), we reject H₀. This threshold α is decided *before* the test, not by the p-value itself.",
+      "tags": ["hypothesis-testing"]
+    },
+    {
+      "id": "st03-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is the difference between **Type I** and **Type II** errors?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "st03-c1", "text": "Type I: false positive (reject true H₀); Type II: false negative (fail to reject false H₀)", "is_correct": true },
+        { "id": "st03-c2", "text": "Type I: false negative; Type II: false positive", "is_correct": false },
+        { "id": "st03-c3", "text": "Type I errors only occur with small samples; Type II errors only with large samples", "is_correct": false },
+        { "id": "st03-c4", "text": "They are the same error described from different perspectives", "is_correct": false }
+      ],
+      "explanation": "| Error | Also called | What happened |\n|-------|------------|---------------|\n| **Type I** (α) | False positive | Rejected H₀ when it was actually true |\n| **Type II** (β) | False negative | Failed to reject H₀ when it was actually false |\n\n**Statistical power** = 1 − β = probability of correctly detecting a real effect.",
+      "tags": ["hypothesis-testing"]
+    },
+    {
+      "id": "st04-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Which of the following statements about **correlation** are correct? Select all that apply.",
+      "type": "multiple_choice",
+      "choices": [
+        { "id": "st04-c1", "text": "Correlation measures the linear relationship between two variables", "is_correct": true },
+        { "id": "st04-c2", "text": "Correlation ranges from −1 to +1", "is_correct": true },
+        { "id": "st04-c3", "text": "Correlation implies causation", "is_correct": false },
+        { "id": "st04-c4", "text": "A correlation of 0 means the variables are statistically independent", "is_correct": false }
+      ],
+      "explanation": "Key points about (Pearson) correlation $r$:\n\n- $r \\in [-1, 1]$: −1 = perfect negative linear, 0 = no linear, +1 = perfect positive linear\n- Measures **linear** relationships only — $r = 0$ doesn't mean no relationship (could be non-linear)\n- **Correlation ≠ causation**: ice cream sales and drowning rates are correlated (both caused by hot weather)\n- Independence implies $r = 0$, but $r = 0$ does not imply independence",
+      "tags": ["correlation"]
+    },
+    {
+      "id": "st05-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is a **95% confidence interval** for a population mean?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "st05-c1", "text": "An interval constructed so that 95% of such intervals, built from repeated samples, would contain the true mean", "is_correct": true },
+        { "id": "st05-c2", "text": "An interval that has a 95% probability of containing the true population mean", "is_correct": false },
+        { "id": "st05-c3", "text": "An interval containing 95% of the data points", "is_correct": false },
+        { "id": "st05-c4", "text": "An interval 95% of the time centred on the sample mean", "is_correct": false }
+      ],
+      "explanation": "The frequentist interpretation: if we repeated the sampling process many times and computed a 95% CI each time, **95% of those intervals** would contain the true parameter.\n\nThe common misconception is: \"this interval has a 95% probability of containing the true mean.\" In frequentist statistics, the true mean is a fixed (non-random) quantity — it either is or isn't in any given interval.",
+      "tags": ["confidence-intervals"]
+    },
+    {
+      "id": "st06-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What does **Bayes' theorem** allow us to compute?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "st06-c1", "text": "The posterior probability P(H|E) from the prior P(H), likelihood P(E|H), and evidence P(E)", "is_correct": true },
+        { "id": "st06-c2", "text": "The probability of two independent events occurring together", "is_correct": false },
+        { "id": "st06-c3", "text": "The expected value of a continuous distribution", "is_correct": false },
+        { "id": "st06-c4", "text": "The correlation between two Bayesian networks", "is_correct": false }
+      ],
+      "explanation": "**Bayes' theorem**:\n\n$$P(H \\mid E) = \\frac{P(E \\mid H) \\cdot P(H)}{P(E)}$$\n\n| Term | Name | Meaning |\n|------|------|--------|\n| $P(H)$ | Prior | Belief before seeing evidence |\n| $P(E \\mid H)$ | Likelihood | Probability of evidence given hypothesis |\n| $P(E)$ | Marginal | Total probability of evidence |\n| $P(H \\mid E)$ | Posterior | Updated belief after evidence |\n\nFoundation of Bayesian statistics and spam filters (Naive Bayes).",
+      "tags": ["bayesian"]
+    },
+    {
+      "id": "st07-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is the symbol commonly used for the **standard deviation** of a population?",
+      "type": "text",
+      "choices": [
+        { "id": "st07-c1", "text": "σ", "is_correct": true },
+        { "id": "st07-c2", "text": "sigma", "is_correct": true }
+      ],
+      "explanation": "**σ** (Greek letter sigma) is the standard deviation of a population.\n\n| Symbol | Meaning |\n|--------|---------|\n| $\\sigma$ | Population standard deviation |\n| $s$ | Sample standard deviation |\n| $\\sigma^2$ | Population variance |\n| $s^2$ | Sample variance |\n\n$$\\sigma = \\sqrt{\\frac{1}{N}\\sum_{i=1}^{N}(x_i - \\mu)^2}$$",
+      "tags": ["descriptive-statistics"]
+    },
+    {
+      "id": "st08-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "What is the difference between **mean**, **median**, and **mode**?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "st08-c1", "text": "Mean is the average; median is the middle value; mode is the most frequent value", "is_correct": true },
+        { "id": "st08-c2", "text": "Mean, median, and mode are all the same for any dataset", "is_correct": false },
+        { "id": "st08-c3", "text": "Mean is least affected by outliers; median is most affected", "is_correct": false },
+        { "id": "st08-c4", "text": "Median is the average of all values; mode is the middle value", "is_correct": false }
+      ],
+      "explanation": "| Measure | Definition | Robust to outliers? |\n|---------|-----------|---------------------|\n| **Mean** | Sum / count | No |\n| **Median** | Middle value (50th percentile) | Yes |\n| **Mode** | Most frequent value | Yes |\n\nFor skewed distributions (e.g., income data), the median is often more informative than the mean.",
+      "tags": ["descriptive-statistics"]
+    },
+    {
+      "id": "st09-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "In your own words, explain the concept of **statistical power** and what factors influence it.",
+      "type": "open",
+      "choices": [],
+      "explanation": "**Statistical power** (1 − β) is the probability that a test correctly rejects a false null hypothesis — i.e., detects a real effect when one exists.\n\n**Factors that increase power:**\n- Larger sample size\n- Larger true effect size\n- Higher significance level α (but this increases Type I errors)\n- Lower variability in the data\n- Using a one-tailed instead of two-tailed test (when appropriate)\n\nUnderpowered studies are more likely to produce false negatives and non-replicable results.",
+      "tags": ["hypothesis-testing"]
+    },
+    {
+      "id": "st10-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Which probability distribution would you use to model the **number of successes** in a fixed number of independent Bernoulli trials?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "st10-c1", "text": "Binomial distribution", "is_correct": true },
+        { "id": "st10-c2", "text": "Poisson distribution", "is_correct": false },
+        { "id": "st10-c3", "text": "Normal distribution", "is_correct": false },
+        { "id": "st10-c4", "text": "Exponential distribution", "is_correct": false }
+      ],
+      "explanation": "The **Binomial distribution** $B(n, p)$ models the number of successes in $n$ independent trials, each with probability $p$:\n\n$$P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}$$\n\n| Distribution | Models |\n|-------------|-------|\n| Binomial | # successes in n trials |\n| Poisson | # events in fixed time/area |\n| Normal | Continuous symmetric outcomes |\n| Exponential | Time between events |",
+      "tags": ["distributions"]
+    }
+  ]
+}

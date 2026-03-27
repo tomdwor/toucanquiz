@@ -1,0 +1,135 @@
+{
+  "id": "c3d4e5f6-a7b8-9012-cdef-ab3456789012",
+  "name": "Molecular Biology",
+  "description": "Explore the **molecules of life** — DNA, RNA, and the processes that make cells work.\n\nThis quiz covers:\n- Structure of DNA and RNA\n- Nucleotides and base pairing\n- Gene expression (transcription and translation)\n\n> No prior biology degree required — just curiosity!",
+  "tags": ["biology", "molecular-biology", "DNA", "RNA", "beginner"],
+  "mode": "practice",
+  "pass_threshold": 65,
+  "question_limit": null,
+  "questions": [
+    {
+      "id": "q1c3d4e5-f6a7-b8c9-d0e1-f2a3b4c5d6e7",
+      "text": "What molecule carries **genetic information** in most living organisms?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "c1c3d4e5-0001-0000-0000-000000000001",
+          "text": "Protein",
+          "is_correct": false
+        },
+        {
+          "id": "c1c3d4e5-0001-0000-0000-000000000002",
+          "text": "DNA",
+          "is_correct": true
+        },
+        {
+          "id": "c1c3d4e5-0001-0000-0000-000000000003",
+          "text": "RNA",
+          "is_correct": false
+        },
+        {
+          "id": "c1c3d4e5-0001-0000-0000-000000000004",
+          "text": "Glucose",
+          "is_correct": false
+        }
+      ],
+      "explanation": "**DNA** (Deoxyribonucleic acid) stores the genetic blueprint in most living organisms.\n\n- It is found mainly in the **cell nucleus**\n- It is a **double-stranded helix**\n- It encodes instructions for making proteins\n\nRNA also carries genetic information, but in most life it is an intermediate — a copy made from DNA. Some viruses (like HIV) use RNA as their primary genetic material.",
+      "tags": ["DNA", "genetics"]
+    },
+    {
+      "id": "q2c3d4e5-f6a7-b8c9-d0e1-f2a3b4c5d6e7",
+      "text": "In a DNA double helix, what is the complementary base that pairs with **Adenine (A)**?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "c2c3d4e5-0002-0000-0000-000000000001",
+          "text": "Cytosine (C)",
+          "is_correct": false
+        },
+        {
+          "id": "c2c3d4e5-0002-0000-0000-000000000002",
+          "text": "Guanine (G)",
+          "is_correct": false
+        },
+        {
+          "id": "c2c3d4e5-0002-0000-0000-000000000003",
+          "text": "Thymine (T)",
+          "is_correct": true
+        },
+        {
+          "id": "c2c3d4e5-0002-0000-0000-000000000004",
+          "text": "Uracil (U)",
+          "is_correct": false
+        }
+      ],
+      "explanation": "DNA base pairing follows strict rules:\n\n| Base | Pairs with | Bonds |\n|---|---|---|\n| Adenine (A) | Thymine (T) | 2 hydrogen bonds |\n| Guanine (G) | Cytosine (C) | 3 hydrogen bonds |\n\nA useful mnemonic: **AT**omS and **GC** (think of a GC music label).\n\n**Note:** In RNA, Uracil (U) replaces Thymine (T), so in RNA: A pairs with U.",
+      "tags": ["base-pairing", "DNA-structure"]
+    },
+    {
+      "id": "q3c3d4e5-f6a7-b8c9-d0e1-f2a3b4c5d6e7",
+      "text": "Which of the following are **components of a nucleotide**? Select all that apply.",
+      "type": "multiple_choice",
+      "choices": [
+        {
+          "id": "c3c3d4e5-0003-0000-0000-000000000001",
+          "text": "A phosphate group",
+          "is_correct": true
+        },
+        {
+          "id": "c3c3d4e5-0003-0000-0000-000000000002",
+          "text": "A sugar molecule (deoxyribose in DNA)",
+          "is_correct": true
+        },
+        {
+          "id": "c3c3d4e5-0003-0000-0000-000000000003",
+          "text": "A nitrogenous base (A, T, G, or C)",
+          "is_correct": true
+        },
+        {
+          "id": "c3c3d4e5-0003-0000-0000-000000000004",
+          "text": "An amino acid",
+          "is_correct": false
+        }
+      ],
+      "explanation": "A **nucleotide** has three parts:\n\n1. **Phosphate group** — provides the backbone's negative charge\n2. **Sugar** — deoxyribose in DNA, ribose in RNA\n3. **Nitrogenous base** — A, T, G, C (or U in RNA) — carries the genetic code\n\n**Amino acids** are the building blocks of *proteins*, not nucleotides.",
+      "tags": ["nucleotides", "DNA-structure"]
+    },
+    {
+      "id": "q4c3d4e5-f6a7-b8c9-d0e1-f2a3b4c5d6e7",
+      "text": "Which process uses **DNA as a template** to produce an RNA molecule?\n\n```mermaid\ngraph LR\n    DNA[\"🧬 DNA\"] -->|\"?\"| RNA[\"📜 RNA\"]\n    RNA -->|\"Translation\"| Protein[\"🔬 Protein\"]\n```",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "c4c3d4e5-0004-0000-0000-000000000001",
+          "text": "Translation",
+          "is_correct": false
+        },
+        {
+          "id": "c4c3d4e5-0004-0000-0000-000000000002",
+          "text": "Transcription",
+          "is_correct": true
+        },
+        {
+          "id": "c4c3d4e5-0004-0000-0000-000000000003",
+          "text": "Replication",
+          "is_correct": false
+        },
+        {
+          "id": "c4c3d4e5-0004-0000-0000-000000000004",
+          "text": "Mutation",
+          "is_correct": false
+        }
+      ],
+      "explanation": "The **Central Dogma** of molecular biology describes the flow of genetic information:\n\n```mermaid\ngraph LR\n    DNA[\"🧬 DNA\"] -->|\"Transcription\"| RNA[\"📜 mRNA\"]\n    RNA -->|\"Translation\"| Protein[\"🔬 Protein\"]\n```\n\n- **Transcription** — DNA → RNA (happens in the nucleus)\n- **Translation** — RNA → Protein (happens at ribosomes)\n- **Replication** — DNA → DNA (copying DNA before cell division)",
+      "tags": ["transcription", "central-dogma"]
+    },
+    {
+      "id": "q5c3d4e5-f6a7-b8c9-d0e1-f2a3b4c5d6e7",
+      "text": "What is the difference between **DNA** and **RNA**? Describe at least two differences in your own words.",
+      "type": "open",
+      "choices": [],
+      "explanation": "Key differences between DNA and RNA:\n\n| Feature | DNA | RNA |\n|---|---|---|\n| Strands | Double-stranded | Single-stranded |\n| Sugar | Deoxyribose | Ribose |\n| Bases | A, T, G, C | A, **U**, G, C |\n| Location | Mainly nucleus | Nucleus & cytoplasm |\n| Role | Stores genetic info | Carries/reads genetic info |\n\n**Summary:** DNA is the permanent blueprint stored in the nucleus. RNA is a temporary working copy used to build proteins.",
+      "tags": ["DNA", "RNA", "comparison"]
+    }
+  ]
+}

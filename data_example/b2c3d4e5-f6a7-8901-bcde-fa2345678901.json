@@ -1,0 +1,135 @@
+{
+  "id": "b2c3d4e5-f6a7-8901-bcde-fa2345678901",
+  "name": "Computer Science Basics",
+  "description": "Fundamental concepts every programmer should know.\n\n> **Note:** This quiz uses `question_limit: 3`, so each session randomly selects 3 out of 5 questions.\n\n| Topic | Difficulty |\n|---|---|\n| Data Structures | Beginner |\n| Loops | Beginner |\n| Data Types | Beginner |\n| Algorithms | Beginner |",
+  "tags": ["cs", "programming", "beginner"],
+  "mode": "practice",
+  "pass_threshold": 75,
+  "question_limit": 3,
+  "questions": [
+    {
+      "id": "q1b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6",
+      "text": "Which data structure follows the **FIFO** principle — First In, First Out?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "c1b2c3d4-0001-0000-0000-000000000001",
+          "text": "Stack",
+          "is_correct": false
+        },
+        {
+          "id": "c1b2c3d4-0001-0000-0000-000000000002",
+          "text": "Queue",
+          "is_correct": true
+        },
+        {
+          "id": "c1b2c3d4-0001-0000-0000-000000000003",
+          "text": "Array",
+          "is_correct": false
+        },
+        {
+          "id": "c1b2c3d4-0001-0000-0000-000000000004",
+          "text": "Tree",
+          "is_correct": false
+        }
+      ],
+      "explanation": "A **Queue** follows FIFO — the first item added is the first one removed, like a line at a ticket booth.\n\n```mermaid\ngraph LR\n    In[\"➕ Enqueue\"] --> A[Item 1]\n    A --> B[Item 2]\n    B --> C[Item 3]\n    C --> Out[\"➖ Dequeue\"]\n```\n\nA **Stack** follows LIFO (Last In, First Out) — like a stack of plates.\n\n| Structure | Principle | Example |\n|---|---|---|\n| Queue | FIFO | Printer queue, task scheduling |\n| Stack | LIFO | Undo history, function call stack |",
+      "tags": ["data-structures", "queue"]
+    },
+    {
+      "id": "q2b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6",
+      "text": "What is the time complexity of **accessing an element by index** in an array?\n\nFor example: `arr[5]`",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "c2b2c3d4-0002-0000-0000-000000000001",
+          "text": "$O(1)$ — constant time",
+          "is_correct": true
+        },
+        {
+          "id": "c2b2c3d4-0002-0000-0000-000000000002",
+          "text": "$O(n)$ — linear time",
+          "is_correct": false
+        },
+        {
+          "id": "c2b2c3d4-0002-0000-0000-000000000003",
+          "text": "$O(\\log n)$ — logarithmic time",
+          "is_correct": false
+        },
+        {
+          "id": "c2b2c3d4-0002-0000-0000-000000000004",
+          "text": "$O(n^2)$ — quadratic time",
+          "is_correct": false
+        }
+      ],
+      "explanation": "Array access by index is $O(1)$ — **constant time** — because arrays store elements in contiguous memory. The computer can jump directly to the element using:\n\n$$\\text{address} = \\text{base} + (\\text{index} \\times \\text{element size})$$\n\nNo matter how large the array, accessing any index takes the same amount of time.",
+      "tags": ["arrays", "big-o"]
+    },
+    {
+      "id": "q3b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6",
+      "text": "Which type of loop is **guaranteed to run at least once**, regardless of the condition?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "c3b2c3d4-0003-0000-0000-000000000001",
+          "text": "`for` loop",
+          "is_correct": false
+        },
+        {
+          "id": "c3b2c3d4-0003-0000-0000-000000000002",
+          "text": "`while` loop",
+          "is_correct": false
+        },
+        {
+          "id": "c3b2c3d4-0003-0000-0000-000000000003",
+          "text": "`do-while` loop",
+          "is_correct": true
+        },
+        {
+          "id": "c3b2c3d4-0003-0000-0000-000000000004",
+          "text": "`foreach` loop",
+          "is_correct": false
+        }
+      ],
+      "explanation": "A **do-while** loop checks the condition *after* the body executes, so the body always runs at least once:\n\n```\ndo {\n    // this runs first\n} while (condition);\n```\n\nCompare with a **while** loop, which checks *before*:\n\n```\nwhile (condition) {\n    // may never run if condition is false initially\n}\n```",
+      "tags": ["loops", "control-flow"]
+    },
+    {
+      "id": "q4b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6",
+      "text": "Which of the following are **primitive data types** found in most programming languages? Select all that apply.",
+      "type": "multiple_choice",
+      "choices": [
+        {
+          "id": "c4b2c3d4-0004-0000-0000-000000000001",
+          "text": "Integer (`int`)",
+          "is_correct": true
+        },
+        {
+          "id": "c4b2c3d4-0004-0000-0000-000000000002",
+          "text": "Boolean (`bool`)",
+          "is_correct": true
+        },
+        {
+          "id": "c4b2c3d4-0004-0000-0000-000000000003",
+          "text": "String (`str`)",
+          "is_correct": true
+        },
+        {
+          "id": "c4b2c3d4-0004-0000-0000-000000000004",
+          "text": "Function",
+          "is_correct": false
+        }
+      ],
+      "explanation": "Common primitive data types:\n\n| Type | Example values | Description |\n|---|---|---|\n| `int` | `0`, `42`, `-7` | Whole numbers |\n| `bool` | `true`, `false` | True/false values |\n| `str` | `\"hello\"` | Text |\n| `float` | `3.14`, `-0.5` | Decimal numbers |\n\nA **function** is not a data type — it's a block of reusable code. (In some languages like Python, functions are *objects*, but they are not primitive types.)",
+      "tags": ["data-types"]
+    },
+    {
+      "id": "q5b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6",
+      "text": "In your own words, describe what a **variable** is in programming and give a simple example.",
+      "type": "open",
+      "choices": [],
+      "explanation": "A **variable** is a named storage location in memory that holds a value. You give it a name so you can use or change the value later.\n\nExample in Python:\n```\nage = 25          # 'age' stores the integer 25\nname = \"Alice\"    # 'name' stores a string\n```\n\nVariables can change over time:\n```\nscore = 0\nscore = score + 10   # score is now 10\n```\n\nThe name describes *what* is stored, making the code easier to read and understand.",
+      "tags": ["programming-basics", "variables"]
+    }
+  ]
+}
