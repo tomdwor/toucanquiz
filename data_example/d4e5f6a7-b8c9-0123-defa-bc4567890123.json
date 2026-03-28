@@ -18,7 +18,7 @@
       "choices": [
         {
           "id": "c1d4e5f6-0001-0000-0000-000000000001",
-          "text": "3D protein structures",
+          "text": "3D protein structures and atomic coordinates (PDB format)",
           "is_correct": false
         },
         {
@@ -28,12 +28,12 @@
         },
         {
           "id": "c1d4e5f6-0001-0000-0000-000000000003",
-          "text": "Gene expression levels",
+          "text": "Gene expression levels measured by microarray or RNA-seq",
           "is_correct": false
         },
         {
           "id": "c1d4e5f6-0001-0000-0000-000000000004",
-          "text": "Chromosome images",
+          "text": "Chromosome karyotype images and banding patterns",
           "is_correct": false
         }
       ],

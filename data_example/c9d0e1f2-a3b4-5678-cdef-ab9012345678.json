@@ -23,17 +23,17 @@
         },
         {
           "id": "cs01-c2",
-          "text": "Overloading a database server with too many queries",
+          "text": "Sending thousands of concurrent queries to exhaust a database server's connection pool (DoS attack)",
           "is_correct": false
         },
         {
           "id": "cs01-c3",
-          "text": "Stealing SQL credentials from a server's file system",
+          "text": "Extracting stored database credentials by reading unprotected configuration files on the server",
           "is_correct": false
         },
         {
           "id": "cs01-c4",
-          "text": "Encrypting a database and demanding ransom",
+          "text": "Deploying ransomware that encrypts database files and demands payment for the decryption key",
           "is_correct": false
         }
       ],
@@ -85,17 +85,17 @@
         },
         {
           "id": "cs03-c2",
-          "text": "Symmetric is more secure; asymmetric is faster",
+          "text": "Symmetric encryption is always more secure due to longer key length; asymmetric is faster for bulk data",
           "is_correct": false
         },
         {
           "id": "cs03-c3",
-          "text": "Asymmetric uses the same key; symmetric uses different keys",
+          "text": "Asymmetric encryption uses a single shared secret key; symmetric uses separate public and private keys",
           "is_correct": false
         },
         {
           "id": "cs03-c4",
-          "text": "Symmetric only encrypts text; asymmetric encrypts any data type",
+          "text": "Symmetric encryption is restricted to ASCII text only; asymmetric can handle arbitrary binary data",
           "is_correct": false
         }
       ],
@@ -126,7 +126,7 @@
         },
         {
           "id": "cs04-c4",
-          "text": "Decrypting ciphertext back to plaintext",
+          "text": "Decrypting ciphertext back to plaintext given the corresponding encryption key",
           "is_correct": false
         }
       ],
@@ -147,17 +147,17 @@
         },
         {
           "id": "cs05-c2",
-          "text": "Using two different passwords to log in",
+          "text": "A login process requiring the user to enter two separate passwords sequentially to authenticate",
           "is_correct": false
         },
         {
           "id": "cs05-c3",
-          "text": "Having two separate user accounts",
+          "text": "A security model that provisions two separate user accounts per employee, one for each role",
           "is_correct": false
         },
         {
           "id": "cs05-c4",
-          "text": "Logging in from two different devices simultaneously",
+          "text": "An authentication scheme that requires simultaneous login from two trusted devices on the same account",
           "is_correct": false
         }
       ],
@@ -183,12 +183,12 @@
         },
         {
           "id": "cs06-c3",
-          "text": "Two attackers coordinating an attack simultaneously",
+          "text": "A coordinated attack by two separate adversaries targeting the same victim simultaneously from both ends",
           "is_correct": false
         },
         {
           "id": "cs06-c4",
-          "text": "An injection attack targeting middleware layers",
+          "text": "A code injection attack that targets the middleware layer between a web application and its database",
           "is_correct": false
         }
       ],
@@ -230,17 +230,17 @@
         },
         {
           "id": "cs08-c2",
-          "text": "Most users should have low-level (non-admin) access by default",
+          "text": "Most users should receive low-level non-admin access by default, with elevation only on request",
           "is_correct": false
         },
         {
           "id": "cs08-c3",
-          "text": "Security should be implemented at the lowest layer of the stack",
+          "text": "Security controls should be implemented exclusively at the lowest (physical/network) layer of the stack",
           "is_correct": false
         },
         {
           "id": "cs08-c4",
-          "text": "Passwords should be as simple as possible to avoid user errors",
+          "text": "Passwords and credentials should be kept as simple as possible to minimise user authentication errors",
           "is_correct": false
         }
       ],
@@ -307,12 +307,12 @@
         },
         {
           "id": "cs11-c3",
-          "text": "Forging SSL certificates for multiple domains",
+          "text": "Forging TLS/SSL certificates for multiple domains to impersonate legitimate HTTPS web services",
           "is_correct": false
         },
         {
           "id": "cs11-c4",
-          "text": "Stealing session cookies by intercepting network traffic",
+          "text": "Stealing active session cookies from browser local storage by sniffing unencrypted network traffic",
           "is_correct": false
         }
       ],
@@ -333,17 +333,17 @@
         },
         {
           "id": "cs12-c2",
-          "text": "Deploying deep learning models to detect security threats",
+          "text": "Deploying deep learning anomaly-detection models at every layer of the stack to identify threats",
           "is_correct": false
         },
         {
           "id": "cs12-c3",
-          "text": "Focusing all security efforts on the network layer",
+          "text": "Concentrating all security controls at the network perimeter, keeping internal segments unprotected",
           "is_correct": false
         },
         {
           "id": "cs12-c4",
-          "text": "Having a backup security team for incidents",
+          "text": "Maintaining a dedicated secondary security operations team that activates only during active incidents",
           "is_correct": false
         }
       ],

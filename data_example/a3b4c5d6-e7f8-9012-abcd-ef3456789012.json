@@ -49,17 +49,17 @@
         },
         {
           "id": "ca02-c2",
-          "text": "The derivative of a product of two functions",
+          "text": "The derivative of a product of two functions: $[f \\cdot g]' = f'g + fg'$ (product rule)",
           "is_correct": false
         },
         {
           "id": "ca02-c3",
-          "text": "The derivative of a quotient of two functions",
+          "text": "The derivative of a quotient: $[f/g]' = (f'g - fg')/g^2$ (quotient rule)",
           "is_correct": false
         },
         {
           "id": "ca02-c4",
-          "text": "The integral of a composed function",
+          "text": "The antiderivative of a composite function, reversed by u-substitution",
           "is_correct": false
         }
       ],
@@ -80,17 +80,17 @@
         },
         {
           "id": "ca03-c2",
-          "text": "$\\int_a^b f(x)\\,dx = F(b) - F(a)$ where $F' = f$",
+          "text": "$\\int_a^b f(x)\\,dx = F(b) - F(a)$ where $F$ is any antiderivative of $f$ — this is Part 2",
           "is_correct": false
         },
         {
           "id": "ca03-c3",
-          "text": "The derivative of a sum equals the sum of derivatives",
+          "text": "The derivative of a sum of functions equals the sum of their individual derivatives (linearity)",
           "is_correct": false
         },
         {
           "id": "ca03-c4",
-          "text": "Every continuous function has an antiderivative",
+          "text": "Every continuous function on a closed interval has a unique bounded antiderivative",
           "is_correct": false
         }
       ],
@@ -121,7 +121,7 @@
         },
         {
           "id": "ca04-c4",
-          "text": "$f'(x_0) < 0$ (decreasing function)",
+          "text": "'(x_0) < 0$, meaning the function is strictly decreasing at $ (not a critical point)",
           "is_correct": false
         }
       ],
@@ -173,17 +173,17 @@
         },
         {
           "id": "ca06-c2",
-          "text": "Solving differential equations with boundary conditions",
+          "text": "Solving separable ODEs $dy/dx = f(x)g(y)$ by integrating both sides with boundary conditions",
           "is_correct": false
         },
         {
           "id": "ca06-c3",
-          "text": "Finding the maximum of a function on a closed interval",
+          "text": "Finding global extrema of $f(x)$ on $[a, b]$ by evaluating critical points and endpoints",
           "is_correct": false
         },
         {
           "id": "ca06-c4",
-          "text": "Computing improper integrals over infinite intervals",
+          "text": "Evaluating improper integrals $\\int_a^{\\infty} f(x)\\,dx$ by taking the limit of partial integrals",
           "is_correct": false
         }
       ],
@@ -209,12 +209,12 @@
         },
         {
           "id": "ca07-c3",
-          "text": "The matrix of second partial derivatives (Hessian)",
+          "text": "The square matrix of all second-order partial derivatives of $f$, known as the Hessian",
           "is_correct": false
         },
         {
           "id": "ca07-c4",
-          "text": "The integral of $f$ over all variables",
+          "text": "The scalar obtained by integrating $f$ over its entire domain with respect to all variables",
           "is_correct": false
         }
       ],
@@ -250,12 +250,12 @@
         },
         {
           "id": "ca09-c3",
-          "text": "The maximum value of $f(x)$ on $[a, b]$",
+          "text": "The global maximum value $\\max_{x \\in [a,b]} f(x)$, found by comparing critical points and endpoints",
           "is_correct": false
         },
         {
           "id": "ca09-c4",
-          "text": "The average rate of change of $f$ on $[a, b]$",
+          "text": "The average rate of change of $f$, equal to the slope of the secant line $(f(b)-f(a))/(b-a)$",
           "is_correct": false
         }
       ],

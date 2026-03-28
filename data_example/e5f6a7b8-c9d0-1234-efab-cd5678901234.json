@@ -54,17 +54,17 @@
         },
         {
           "id": "ml02-c2",
-          "text": "The model is too simple to capture patterns in the data",
+          "text": "The model is too simple to learn meaningful patterns in the training data (underfitting)",
           "is_correct": false
         },
         {
           "id": "ml02-c3",
-          "text": "The training dataset is larger than needed",
+          "text": "The training dataset contains far more examples than are required for the model to converge",
           "is_correct": false
         },
         {
           "id": "ml02-c4",
-          "text": "The model takes too long to train",
+          "text": "The model's forward pass is computationally expensive, causing slow epoch completion times",
           "is_correct": false
         }
       ],
@@ -116,17 +116,17 @@
         },
         {
           "id": "ml04-c2",
-          "text": "To provide additional training examples when data is scarce",
+          "text": "To supplement the training set with additional labeled examples when the original dataset is small",
           "is_correct": false
         },
         {
           "id": "ml04-c3",
-          "text": "To evaluate the final model performance for reporting",
+          "text": "To provide a final unbiased performance estimate that is reported as the model's benchmark score",
           "is_correct": false
         },
         {
           "id": "ml04-c4",
-          "text": "To replace cross-validation in all cases",
+          "text": "To serve as a complete replacement for cross-validation in all regularisation scenarios",
           "is_correct": false
         }
       ],
@@ -219,7 +219,7 @@
         },
         {
           "id": "ml07-c4",
-          "text": "Increasing model complexity",
+          "text": "Increasing model complexity by adding layers or features to improve training accuracy",
           "is_correct": false
         }
       ],
@@ -250,7 +250,7 @@
         },
         {
           "id": "ml08-c4",
-          "text": "It only applies to linear models",
+          "text": "The bias-variance tradeoff applies only to linear models with a closed-form analytical solution",
           "is_correct": false
         }
       ],
@@ -271,17 +271,17 @@
         },
         {
           "id": "ml09-c2",
-          "text": "Trains k different models and picks the best one",
+          "text": "Trains $k$ independent model variants in parallel and selects the best-performing one on the test set",
           "is_correct": false
         },
         {
           "id": "ml09-c3",
-          "text": "Reduces the dataset to k most important features",
+          "text": "Automatically reduces the feature space to the $k$ most informative dimensions via feature selection",
           "is_correct": false
         },
         {
           "id": "ml09-c4",
-          "text": "Runs gradient descent k times with different learning rates",
+          "text": "Runs gradient descent $k$ times, each time with a different randomly chosen learning rate",
           "is_correct": false
         }
       ],
@@ -312,17 +312,17 @@
         },
         {
           "id": "ml11-c2",
-          "text": "Bagging uses decision trees; boosting uses neural networks",
+          "text": "Bagging exclusively uses decision trees while boosting is limited to shallow neural network ensembles",
           "is_correct": false
         },
         {
           "id": "ml11-c3",
-          "text": "Bagging reduces bias; boosting reduces variance",
+          "text": "Bagging reduces model bias by increasing depth; boosting reduces variance by averaging predictions",
           "is_correct": false
         },
         {
           "id": "ml11-c4",
-          "text": "They are different names for the same technique",
+          "text": "Bagging and boosting are two names for the same random forest ensemble construction process",
           "is_correct": false
         }
       ],
@@ -348,7 +348,7 @@
         },
         {
           "id": "ml12-c3",
-          "text": "Increases the number of features in the dataset",
+          "text": "Increases the total number of features by creating new combinations from the original input variables",
           "is_correct": false
         },
         {

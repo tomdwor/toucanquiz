@@ -1,7 +1,7 @@
 {
   "id": "b8c9d0e1-f2a3-4567-bcde-fa8901234567",
   "name": "Linear Algebra for ML",
-  "description": "Build the **linear algebra intuition** needed for machine learning — vectors, matrices, dot products, eigenvalues, and SVD.\n\nMathematical notation uses KaTeX rendering.",
+  "description": "Build the **linear algebra intuition** needed for machine learning \u2014 vectors, matrices, dot products, eigenvalues, and SVD.\n\nMathematical notation uses KaTeX rendering.",
   "tags": [
     "math",
     "linear-algebra",
@@ -18,7 +18,7 @@
       "choices": [
         {
           "id": "la01-c1",
-          "text": "$|\\mathbf{a}| \\cdot |\\mathbf{b}| \\cdot \\cos\\theta$ — the product of magnitudes and the cosine of the angle between them",
+          "text": "$|\\mathbf{a}| \\cdot |\\mathbf{b}| \\cdot \\cos\\theta$ \u2014 the product of magnitudes and the cosine of the angle between them",
           "is_correct": true
         },
         {
@@ -28,16 +28,16 @@
         },
         {
           "id": "la01-c3",
-          "text": "The sum of element-wise squares",
+          "text": "The scalar sum of squared element-wise differences $\\sum_i (a_i - b_i)^2$ between the two vectors",
           "is_correct": false
         },
         {
           "id": "la01-c4",
-          "text": "The Euclidean distance between the vectors",
+          "text": "The Euclidean distance $\\|\\mathbf{a} - \\mathbf{b}\\|_2$, measuring how far apart the two vectors are",
           "is_correct": false
         }
       ],
-      "explanation": "The dot product has two equivalent forms:\n\n**Algebraic**: $\\mathbf{a} \\cdot \\mathbf{b} = \\sum_i a_i b_i$\n\n**Geometric**: $\\mathbf{a} \\cdot \\mathbf{b} = |\\mathbf{a}| \\cdot |\\mathbf{b}| \\cdot \\cos\\theta$\n\nKey properties:\n- $\\mathbf{a} \\cdot \\mathbf{b} = 0$ → vectors are **orthogonal**\n- $\\mathbf{a} \\cdot \\mathbf{b} > 0$ → angle < 90°\n- Used extensively in ML: cosine similarity, projections, neural network layer computations",
+      "explanation": "The dot product has two equivalent forms:\n\n**Algebraic**: $\\mathbf{a} \\cdot \\mathbf{b} = \\sum_i a_i b_i$\n\n**Geometric**: $\\mathbf{a} \\cdot \\mathbf{b} = |\\mathbf{a}| \\cdot |\\mathbf{b}| \\cdot \\cos\\theta$\n\nKey properties:\n- $\\mathbf{a} \\cdot \\mathbf{b} = 0$ \u2192 vectors are **orthogonal**\n- $\\mathbf{a} \\cdot \\mathbf{b} > 0$ \u2192 angle < 90\u00b0\n- Used extensively in ML: cosine similarity, projections, neural network layer computations",
       "tags": [
         "vectors"
       ]
@@ -49,26 +49,26 @@
       "choices": [
         {
           "id": "la02-c1",
-          "text": "The number of linearly independent rows (or columns) — equal to the dimension of the column space",
+          "text": "The number of linearly independent rows (or columns) \u2014 equal to the dimension of the column space",
           "is_correct": true
         },
         {
           "id": "la02-c2",
-          "text": "The number of rows in the matrix",
+          "text": "The total number of rows in the matrix, counted regardless of whether any rows are linearly dependent",
           "is_correct": false
         },
         {
           "id": "la02-c3",
-          "text": "The largest eigenvalue of the matrix",
+          "text": "The spectral radius \u2014 the magnitude of the largest eigenvalue $\\lambda_{\\max}$ of the matrix",
           "is_correct": false
         },
         {
           "id": "la02-c4",
-          "text": "The sum of the diagonal elements (trace)",
+          "text": "The sum of all diagonal elements $\\sum_i A_{ii}$, more precisely known as the trace of the matrix",
           "is_correct": false
         }
       ],
-      "explanation": "The **rank** of matrix $A$ is the number of linearly independent rows/columns — equivalently, the dimension of the column space (image).\n\nA matrix is **full rank** if $\\text{rank}(A) = \\min(m, n)$.\n\nImportance in ML:\n- A rank-deficient feature matrix means features are linearly dependent (multicollinearity)\n- SVD reveals the effective rank of data matrices",
+      "explanation": "The **rank** of matrix $A$ is the number of linearly independent rows/columns \u2014 equivalently, the dimension of the column space (image).\n\nA matrix is **full rank** if $\\text{rank}(A) = \\min(m, n)$.\n\nImportance in ML:\n- A rank-deficient feature matrix means features are linearly dependent (multicollinearity)\n- SVD reveals the effective rank of data matrices",
       "tags": [
         "matrices"
       ]
@@ -85,17 +85,17 @@
         },
         {
           "id": "la03-c2",
-          "text": "Eigenvalues are the diagonal elements; eigenvectors are the rows",
+          "text": "Eigenvalues are the diagonal elements of any matrix; eigenvectors are its corresponding row vectors",
           "is_correct": false
         },
         {
           "id": "la03-c3",
-          "text": "Eigenvectors form the identity matrix for any square matrix",
+          "text": "Eigenvectors of a matrix always form the identity matrix when collected as columns",
           "is_correct": false
         },
         {
           "id": "la03-c4",
-          "text": "Eigenvalues measure the rank of the matrix",
+          "text": "Eigenvalues count the linearly independent rows of the matrix, providing its effective rank",
           "is_correct": false
         }
       ],
@@ -116,17 +116,17 @@
         },
         {
           "id": "la04-c2",
-          "text": "Classifies data into principal groups using k-means clustering",
+          "text": "Groups data points into k principal clusters by iteratively minimising within-cluster sum of squares until convergence",
           "is_correct": false
         },
         {
           "id": "la04-c3",
-          "text": "Selects the principal (most correlated) features from the dataset",
+          "text": "Ranks individual input features by Pearson correlation coefficient and retains the top-k most correlated with the target",
           "is_correct": false
         },
         {
           "id": "la04-c4",
-          "text": "Increases the number of features by creating polynomial combinations",
+          "text": "Expands the feature space by generating polynomial and interaction combinations of existing features up to a specified degree",
           "is_correct": false
         }
       ],
@@ -161,7 +161,7 @@
           "is_correct": true
         }
       ],
-      "explanation": "Matrix multiplication properties:\n\n| Property | Formula | Holds? |\n|----------|---------|--------|\n| Associativity | $(AB)C = A(BC)$ | ✓ |\n| Distributivity | $A(B+C) = AB + AC$ | ✓ |\n| Commutativity | $AB = BA$ | ✗ (generally) |\n| Transpose rule | $(AB)^T = B^T A^T$ | ✓ |\n\nCommutativity fails even for square matrices — order matters!",
+      "explanation": "Matrix multiplication properties:\n\n| Property | Formula | Holds? |\n|----------|---------|--------|\n| Associativity | $(AB)C = A(BC)$ | \u2713 |\n| Distributivity | $A(B+C) = AB + AC$ | \u2713 |\n| Commutativity | $AB = BA$ | \u2717 (generally) |\n| Transpose rule | $(AB)^T = B^T A^T$ | \u2713 |\n\nCommutativity fails even for square matrices \u2014 order matters!",
       "tags": [
         "matrices"
       ]
@@ -192,7 +192,7 @@
           "is_correct": true
         }
       ],
-      "explanation": "The **L2 norm** (Euclidean norm) computes the **length/magnitude** of a vector:\n\n$$\\|\\mathbf{x}\\|_2 = \\sqrt{\\sum_i x_i^2}$$\n\nOther norms:\n- **L1 norm**: $\\|\\mathbf{x}\\|_1 = \\sum_i |x_i|$ (sum of absolute values)\n- **L∞ norm**: $\\|\\mathbf{x}\\|_\\infty = \\max_i |x_i|$\n\nUsed in ML for regularisation (L1 = Lasso, L2 = Ridge) and as distance metrics.",
+      "explanation": "The **L2 norm** (Euclidean norm) computes the **length/magnitude** of a vector:\n\n$$\\|\\mathbf{x}\\|_2 = \\sqrt{\\sum_i x_i^2}$$\n\nOther norms:\n- **L1 norm**: $\\|\\mathbf{x}\\|_1 = \\sum_i |x_i|$ (sum of absolute values)\n- **L\u221e norm**: $\\|\\mathbf{x}\\|_\\infty = \\max_i |x_i|$\n\nUsed in ML for regularisation (L1 = Lasso, L2 = Ridge) and as distance metrics.",
       "tags": [
         "vectors"
       ]
@@ -202,7 +202,7 @@
       "text": "In your own words, explain what **Singular Value Decomposition (SVD)** does and why it is useful in ML.",
       "type": "open",
       "choices": [],
-      "explanation": "**SVD** decomposes any matrix $A$ into three matrices:\n\n$$A = U \\Sigma V^T$$\n\n- $U$: orthonormal matrix of left singular vectors\n- $\\Sigma$: diagonal matrix of singular values (non-negative, sorted descending)\n- $V^T$: orthonormal matrix of right singular vectors\n\n**Why useful in ML:**\n- **Dimensionality reduction**: keep top-k singular values (truncated SVD ≈ PCA)\n- **Recommender systems** (collaborative filtering)\n- **Natural language processing** (Latent Semantic Analysis)\n- **Solving least squares** problems\n- Computing **matrix pseudoinverse**",
+      "explanation": "**SVD** decomposes any matrix $A$ into three matrices:\n\n$$A = U \\Sigma V^T$$\n\n- $U$: orthonormal matrix of left singular vectors\n- $\\Sigma$: diagonal matrix of singular values (non-negative, sorted descending)\n- $V^T$: orthonormal matrix of right singular vectors\n\n**Why useful in ML:**\n- **Dimensionality reduction**: keep top-k singular values (truncated SVD \u2248 PCA)\n- **Recommender systems** (collaborative filtering)\n- **Natural language processing** (Latent Semantic Analysis)\n- **Solving least squares** problems\n- Computing **matrix pseudoinverse**",
       "tags": [
         "svd"
       ]
@@ -214,17 +214,17 @@
       "choices": [
         {
           "id": "la08-c1",
-          "text": "All its eigenvalues are ≥ 0",
+          "text": "All its eigenvalues are \u2265 0",
           "is_correct": true
         },
         {
           "id": "la08-c2",
-          "text": "All its elements are ≥ 0",
+          "text": "All its elements are \u2265 0",
           "is_correct": false
         },
         {
           "id": "la08-c3",
-          "text": "Its determinant is ≥ 0",
+          "text": "Its determinant is \u2265 0",
           "is_correct": false
         },
         {

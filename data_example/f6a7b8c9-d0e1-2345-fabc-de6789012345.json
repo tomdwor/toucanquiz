@@ -1,7 +1,7 @@
 {
   "id": "f6a7b8c9-d0e1-2345-fabc-de6789012345",
   "name": "Neural Networks & Deep Learning",
-  "description": "Explore the architecture and mechanics of **neural networks** — layers, activation functions, backpropagation, convolutional networks, and regularisation techniques.\n\nSuitable for anyone with a basic ML background.",
+  "description": "Explore the architecture and mechanics of **neural networks** \u2014 layers, activation functions, backpropagation, convolutional networks, and regularisation techniques.\n\nSuitable for anyone with a basic ML background.",
   "tags": [
     "ml",
     "deep-learning",
@@ -24,21 +24,21 @@
         },
         {
           "id": "nn01-c2",
-          "text": "To initialise the weights of the network",
+          "text": "To initialise the trainable weight matrices and bias vectors before the first forward pass",
           "is_correct": false
         },
         {
           "id": "nn01-c3",
-          "text": "To normalise the output of each layer",
+          "text": "To standardise each layer's output to zero mean and unit variance during training (batch norm)",
           "is_correct": false
         },
         {
           "id": "nn01-c4",
-          "text": "To define the loss function for training",
+          "text": "To define the loss function that measures prediction error against the ground-truth labels",
           "is_correct": false
         }
       ],
-      "explanation": "Without activation functions, a neural network is just a series of linear transformations — which compose into a single linear transformation regardless of depth.\n\nActivation functions like **ReLU**, **sigmoid**, and **tanh** add non-linearity, enabling the network to approximate complex, non-linear functions.",
+      "explanation": "Without activation functions, a neural network is just a series of linear transformations \u2014 which compose into a single linear transformation regardless of depth.\n\nActivation functions like **ReLU**, **sigmoid**, and **tanh** add non-linearity, enabling the network to approximate complex, non-linear functions.",
       "tags": [
         "architecture"
       ]
@@ -55,21 +55,21 @@
         },
         {
           "id": "nn02-c2",
-          "text": "The model's loss decreases too quickly, causing instability",
+          "text": "The training loss decreases so rapidly in early epochs that the model overshoots the optimum",
           "is_correct": false
         },
         {
           "id": "nn02-c3",
-          "text": "The gradient becomes negative during training",
+          "text": "Gradient values turn negative during backpropagation, causing weights to update in the wrong direction",
           "is_correct": false
         },
         {
           "id": "nn02-c4",
-          "text": "The model runs out of memory during backpropagation",
+          "text": "GPU memory is exhausted during backpropagation when batch sizes exceed the available VRAM",
           "is_correct": false
         }
       ],
-      "explanation": "In deep networks with sigmoid/tanh activations, gradients are multiplied by small values (< 1) at each layer during backpropagation. After many layers, the gradient becomes negligibly small — early layers barely update.\n\n**Solutions**: ReLU activation, batch normalisation, residual connections (ResNets), LSTM for sequences.",
+      "explanation": "In deep networks with sigmoid/tanh activations, gradients are multiplied by small values (< 1) at each layer during backpropagation. After many layers, the gradient becomes negligibly small \u2014 early layers barely update.\n\n**Solutions**: ReLU activation, batch normalisation, residual connections (ResNets), LSTM for sequences.",
       "tags": [
         "training"
       ]
@@ -117,17 +117,17 @@
         },
         {
           "id": "nn04-c2",
-          "text": "CNNs use recurrent connections to process sequences of pixels",
+          "text": "CNNs use recurrent lateral connections between feature maps to model sequential pixel dependencies",
           "is_correct": false
         },
         {
           "id": "nn04-c3",
-          "text": "CNNs flatten the image and feed it through fully-connected layers only",
+          "text": "CNNs flatten each image into a 1-D vector and process it exclusively through fully-connected layers",
           "is_correct": false
         },
         {
           "id": "nn04-c4",
-          "text": "CNNs do not require any training data",
+          "text": "CNNs are unsupervised architectures that learn image structure without requiring any labeled training data",
           "is_correct": false
         }
       ],
@@ -148,21 +148,21 @@
         },
         {
           "id": "nn05-c2",
-          "text": "Shuffles training examples into random batches to improve generalisation",
+          "text": "Randomly shuffles training examples into new mini-batches each epoch to improve gradient estimate diversity and break ordering biases",
           "is_correct": false
         },
         {
           "id": "nn05-c3",
-          "text": "Normalises the input features before the first layer only",
+          "text": "Applies z-score normalisation to the raw input features before they enter the first layer, scaling each feature to zero mean and unit variance",
           "is_correct": false
         },
         {
           "id": "nn05-c4",
-          "text": "It is a technique for reducing batch size during training",
+          "text": "Progressively halves the mini-batch size each epoch so that later training stages use smaller, more focused stochastic gradient updates",
           "is_correct": false
         }
       ],
-      "explanation": "**Batch normalisation** (Ioffe & Szegedy, 2015) normalises each layer's inputs across the mini-batch:\n\n$$\\hat{x}_i = \\frac{x_i - \\mu_B}{\\sqrt{\\sigma_B^2 + \\epsilon}}$$\n\nBenefits:\n- Reduces **internal covariate shift**\n- Allows higher learning rates → faster training\n- Acts as mild regularisation\n- Reduces sensitivity to weight initialisation",
+      "explanation": "**Batch normalisation** (Ioffe & Szegedy, 2015) normalises each layer's inputs across the mini-batch:\n\n$$\\hat{x}_i = \\frac{x_i - \\mu_B}{\\sqrt{\\sigma_B^2 + \\epsilon}}$$\n\nBenefits:\n- Reduces **internal covariate shift**\n- Allows higher learning rates \u2192 faster training\n- Acts as mild regularisation\n- Reduces sensitivity to weight initialisation",
       "tags": [
         "training"
       ]
@@ -220,21 +220,21 @@
         },
         {
           "id": "nn08-c2",
-          "text": "Adds more parameters to the network to improve expressiveness",
+          "text": "Introduces additional learnable parameters into the network to increase its representational capacity",
           "is_correct": false
         },
         {
           "id": "nn08-c3",
-          "text": "Replaces the activation function in convolutional layers",
+          "text": "Replaces the ReLU activation function inside convolutional layers with a max-selection operation",
           "is_correct": false
         },
         {
           "id": "nn08-c4",
-          "text": "Normalises the output of a convolutional layer",
+          "text": "Normalises convolutional layer outputs to zero mean and unit variance, stabilising gradient flow",
           "is_correct": false
         }
       ],
-      "explanation": "**Max pooling** downsamples feature maps by taking the maximum value in each pooling window (e.g., 2×2):\n\n- Reduces spatial dimensions → fewer parameters in subsequent layers\n- Provides **translation invariance**: small shifts in input produce same output\n- Discards less important spatial information\n\nAlternatives include average pooling and global average pooling.",
+      "explanation": "**Max pooling** downsamples feature maps by taking the maximum value in each pooling window (e.g., 2\u00d72):\n\n- Reduces spatial dimensions \u2192 fewer parameters in subsequent layers\n- Provides **translation invariance**: small shifts in input produce same output\n- Discards less important spatial information\n\nAlternatives include average pooling and global average pooling.",
       "tags": [
         "cnn"
       ]
@@ -283,17 +283,17 @@
         },
         {
           "id": "nn10-c2",
-          "text": "A connection that skips some training examples for efficiency",
+          "text": "A connection that randomly skips batches of training examples to act as an implicit regulariser",
           "is_correct": false
         },
         {
           "id": "nn10-c3",
-          "text": "A technique for pruning unused neurons",
+          "text": "A weight-pruning technique that removes low-magnitude neurons to reduce network size",
           "is_correct": false
         },
         {
           "id": "nn10-c4",
-          "text": "A way to connect two separate network architectures",
+          "text": "A cross-model bridge that transfers learned representations from one architecture to another",
           "is_correct": false
         }
       ],

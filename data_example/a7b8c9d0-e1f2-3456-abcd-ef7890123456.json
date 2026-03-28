@@ -19,22 +19,22 @@
       "choices": [
         {
           "id": "st01-c1",
-          "text": "The distribution of sample means approaches a normal distribution as sample size increases, regardless of the population distribution",
+          "text": "Sample means converge to a normal distribution as sample size grows, regardless of the underlying population distribution",
           "is_correct": true
         },
         {
           "id": "st01-c2",
-          "text": "The mean of a dataset is always in the centre of its distribution",
+          "text": "The mean of any dataset always coincides with the median and lies at the centre of every distribution",
           "is_correct": false
         },
         {
           "id": "st01-c3",
-          "text": "Large datasets always follow a normal distribution",
+          "text": "Any dataset with more than 30 observations will automatically follow a normal distribution exactly",
           "is_correct": false
         },
         {
           "id": "st01-c4",
-          "text": "The variance of a sample always equals the variance of the population",
+          "text": "The sample variance $s^2$ is guaranteed to equal the population variance $\\sigma^2$ for large samples",
           "is_correct": false
         }
       ],
@@ -55,17 +55,17 @@
         },
         {
           "id": "st02-c2",
-          "text": "The probability that the null hypothesis is true",
+          "text": "The probability that the null hypothesis $H_0$ is actually true, given the data we collected",
           "is_correct": false
         },
         {
           "id": "st02-c3",
-          "text": "The probability that the result is practically significant",
+          "text": "The probability that the observed effect is large enough to be of practical significance",
           "is_correct": false
         },
         {
           "id": "st02-c4",
-          "text": "The threshold used to decide statistical significance",
+          "text": "The significance level $\\alpha$ chosen in advance by the researcher to define the rejection region",
           "is_correct": false
         }
       ],
@@ -86,7 +86,7 @@
         },
         {
           "id": "st03-c2",
-          "text": "Type I: false negative; Type II: false positive",
+          "text": "Type I is a false negative (failing to detect a real effect); Type II is a false positive (spurious detection)",
           "is_correct": false
         },
         {
@@ -96,7 +96,7 @@
         },
         {
           "id": "st03-c4",
-          "text": "They are the same error described from different perspectives",
+          "text": "Both describe the same mistake of rejecting $H_0$, just framed from the frequentist and Bayesian perspectives",
           "is_correct": false
         }
       ],
@@ -153,12 +153,12 @@
         },
         {
           "id": "st05-c3",
-          "text": "An interval containing 95% of the data points",
+          "text": "An interval containing the central 95% of observed data points, trimming the extreme 2.5% from each tail",
           "is_correct": false
         },
         {
           "id": "st05-c4",
-          "text": "An interval 95% of the time centred on the sample mean",
+          "text": "An interval guaranteed to be exactly centred on the true population mean 95% of the time for any sample",
           "is_correct": false
         }
       ],
@@ -184,12 +184,12 @@
         },
         {
           "id": "st06-c3",
-          "text": "The expected value of a continuous distribution",
+          "text": "The expected value $E[X] = \\int x f(x)\\,dx$ of a continuous random variable from its density function",
           "is_correct": false
         },
         {
           "id": "st06-c4",
-          "text": "The correlation between two Bayesian networks",
+          "text": "The linear correlation coefficient between nodes in a directed Bayesian belief network",
           "is_correct": false
         }
       ],

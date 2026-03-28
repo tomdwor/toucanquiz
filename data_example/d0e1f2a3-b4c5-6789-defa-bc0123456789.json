@@ -23,17 +23,17 @@
         },
         {
           "id": "ns01-c2",
-          "text": "A physical device that blocks all wireless signals",
+          "text": "A specialised hardware appliance that blocks all wireless RF signals within a secured physical area",
           "is_correct": false
         },
         {
           "id": "ns01-c3",
-          "text": "Software that encrypts all network traffic automatically",
+          "text": "A software layer that transparently encrypts every packet of inbound and outbound network traffic",
           "is_correct": false
         },
         {
           "id": "ns01-c4",
-          "text": "A backup system that activates when the primary network fails",
+          "text": "A high-availability redundancy system that takes over all routing and switching when the primary fails",
           "is_correct": false
         }
       ],
@@ -116,17 +116,17 @@
         },
         {
           "id": "ns04-c2",
-          "text": "Injecting malicious code into ARP server software",
+          "text": "Exploiting a remote code execution vulnerability in the ARP daemon running on a network device",
           "is_correct": false
         },
         {
           "id": "ns04-c3",
-          "text": "Flooding ARP tables with random entries to disrupt routing",
+          "text": "Flooding ARP caches with random MAC-to-IP mappings until routing tables overflow and drop traffic",
           "is_correct": false
         },
         {
           "id": "ns04-c4",
-          "text": "Poisoning DNS records with fake ARP mappings",
+          "text": "A DNS cache poisoning variant that corrupts ARP records stored on an authoritative name server",
           "is_correct": false
         }
       ],
@@ -147,17 +147,17 @@
         },
         {
           "id": "ns05-c2",
-          "text": "Increases internet speed by routing through faster servers",
+          "text": "Dynamically reroutes traffic through geographically optimal servers to reduce latency and increase bandwidth",
           "is_correct": false
         },
         {
           "id": "ns05-c3",
-          "text": "Prevents all forms of network attacks automatically",
+          "text": "A transparent inline security appliance that passively monitors traffic and automatically blocks all attack types",
           "is_correct": false
         },
         {
           "id": "ns05-c4",
-          "text": "Replaces the need for firewalls in enterprise networks",
+          "text": "An overlay networking technology designed to eliminate the need for enterprise perimeter firewalls entirely",
           "is_correct": false
         }
       ],
@@ -225,17 +225,17 @@
         },
         {
           "id": "ns08-c2",
-          "text": "Overwhelming a DNS server with queries to take it offline",
+          "text": "Sending a sustained flood of recursive queries to exhaust a DNS resolver's bandwidth and CPU resources",
           "is_correct": false
         },
         {
           "id": "ns08-c3",
-          "text": "Registering lookalike domain names to deceive users",
+          "text": "Registering visually similar lookalike domain names to redirect users who mistype the target address",
           "is_correct": false
         },
         {
           "id": "ns08-c4",
-          "text": "Using DNS tunnelling to exfiltrate data",
+          "text": "Encoding exfiltrated data inside DNS query hostnames to bypass network data-loss prevention filters",
           "is_correct": false
         }
       ],
@@ -271,12 +271,12 @@
         },
         {
           "id": "ns10-c3",
-          "text": "Replaces HTTP; provides secure web browsing",
+          "text": "Replaces HTTP; provides encrypted secure web browsing with certificate-based server authentication",
           "is_correct": false
         },
         {
           "id": "ns10-c4",
-          "text": "Replaces SMTP; provides secure email transmission",
+          "text": "Replaces SMTP; provides encrypted, authenticated transmission of email with non-repudiation support",
           "is_correct": false
         }
       ],
