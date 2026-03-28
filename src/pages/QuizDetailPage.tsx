@@ -86,7 +86,7 @@ export function QuizDetailPage() {
             </div>
             <span
               className={[
-                'shrink-0 rounded px-3 py-1 text-sm font-bold uppercase tracking-wider',
+                'shrink-0 rounded-full px-3 py-1 text-sm font-bold uppercase tracking-wider',
                 quiz.mode === 'exam'
                   ? 'bg-amber-100 text-amber-800'
                   : 'bg-green-100 text-green-800',

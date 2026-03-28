@@ -8,7 +8,7 @@ interface AppShellProps {
 export function AppShell({ children }: AppShellProps) {
   return (
     <div className="flex min-h-screen flex-col bg-gray-50">
-      <header className="border-b border-gray-200 bg-white shadow-sm">
+      <header className="bg-white shadow-sm">
         <div className="mx-auto flex max-w-5xl items-center gap-3 px-4 py-2 sm:px-6">
           <Link to="/" className="flex items-center gap-2 text-xl font-bold text-blue-600 hover:text-blue-700">
             <img src="/logo.png" alt="" className="h-10 w-10 object-contain" />

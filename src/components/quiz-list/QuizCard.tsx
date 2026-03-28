@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { QuizSummary } from '../../types/quiz'
 import { TagBadge } from '../shared/TagBadge'
 import { RichContent } from '../shared/RichContent'
 import { langName } from '../../utils/langName'
+import { tagHue } from '../../utils/tagColor'
 
 const fmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
 
@@ -15,15 +17,25 @@ interface QuizCardProps {
 }
 
 export function QuizCard({ quiz }: QuizCardProps) {
+  const [hovered, setHovered] = useState(false)
+
   const modeBadge =
     quiz.mode === 'exam'
       ? 'bg-amber-100 text-amber-800'
       : 'bg-green-100 text-green-800'
 
+  const accentHue = quiz.tags.length > 0 ? tagHue(quiz.tags[0]) : null
+  const borderLeftColor = accentHue !== null
+    ? `hsl(${accentHue}, ${hovered ? '55%, 60%' : '50%, 70%'})`
+    : hovered ? '#60a5fa' : '#93c5fd'
+
   return (
     <Link
       to={`/quiz/${quiz.id}`}
-      className="group block rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-all hover:border-blue-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      className="group block rounded-xl border border-l-4 border-gray-200 bg-white p-5 shadow-sm transition-all hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      style={{ borderLeftColor }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
       <div className="mb-2 flex items-start justify-between gap-3">
         <h2 className="text-lg font-semibold text-gray-900 group-hover:text-blue-700">
@@ -35,7 +47,7 @@ export function QuizCard({ quiz }: QuizCardProps) {
               {langName(quiz.language)}
             </span>
           )}
-          <span className={`rounded px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider ${modeBadge}`}>
+          <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider ${modeBadge}`}>
             {quiz.mode}
           </span>
         </div>
