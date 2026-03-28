@@ -11,7 +11,7 @@ A React quiz app with Markdown, math ($\LaTeX$ via KaTeX), and Mermaid diagram s
 ```bash
 npm install
 cp -r data_example public/data   # copy sample quizzes for static mode
-`npm run dev`
+npm run dev
 ```
 
 Open http://localhost:5173.
@@ -24,7 +24,10 @@ Set in `public/config.json` (loaded at runtime — no rebuild needed):
 
 ### Static mode (default)
 ```json
-{ "mode": "static" }
+{
+  "mode": "static",
+  "quizzes_per_page": 20
+}
 ```
 
 Quiz data is loaded from `public/data/` (gitignored). This directory is **not committed** — you must create it yourself:
@@ -40,12 +43,25 @@ Then add your own quiz JSON files.
 {
   "mode": "api",
   "backend_url": "https://api.example.com",
-  "signin_page_url": "https://auth.example.com/login"
+  "signin_page_url": "https://auth.example.com/login",
+  "quizzes_per_page": 20
 }
 ```
 
 - `backend_url` — base URL of your API server (see [API Specification](#api-specification) below)
 - `signin_page_url` — where to redirect on 401 (a `?returnUrl=` query param is appended)
+- `quizzes_per_page` — number of quizzes shown per page on the home screen (default: 10)
+
+---
+
+## Quiz List
+
+The home page shows all quizzes with search, filtering, and sorting:
+
+- **Name search** — filters by quiz title (case-insensitive substring match)
+- **Tags** — click one or more tag badges to filter; all selected tags must be present (AND logic)
+- **Language** — click one or more language badges to filter; shows quizzes matching any selected language (OR logic). Language names are displayed in English (e.g. Polish, Spanish)
+- **Sort** — sort by Date created, Date modified, or Name; toggle ascending/descending
 
 ---
 
@@ -66,7 +82,10 @@ List of quiz summaries (used for the home page):
       "mode": "practice",
       "pass_threshold": 70,
       "question_limit": null,
-      "question_count": 10
+      "question_count": 10,
+      "language": "en",
+      "created_at": "2024-01-01T00:00:00Z",
+      "modified_at": null
     }
   ]
 }
@@ -85,6 +104,9 @@ Full quiz file:
   "mode": "practice",
   "pass_threshold": 70,
   "question_limit": null,
+  "language": "en",
+  "created_at": "2024-01-01T00:00:00Z",
+  "modified_at": null,
   "questions": [
     {
       "id": "uuid",
@@ -108,8 +130,18 @@ Full quiz file:
 | `mode` | `"practice"` \| `"exam"` | `exam` requires API backend |
 | `pass_threshold` | `number` (0–100) | Minimum % score to pass |
 | `question_limit` | `number` \| `null` | If set, randomly selects this many questions per session |
-| `question.type` | `"text"` \| `"single_choice"` \| `"multiple_choice"` | Answer type |
+| `question_count` | `number` | Total number of questions in the quiz (index only) |
+| `language` | `string` | BCP 47 language code, e.g. `"en"`, `"pl"`, `"es"` |
+| `created_at` | ISO 8601 string | Creation timestamp |
+| `modified_at` | ISO 8601 string \| `null` | Last modification timestamp, or `null` if never modified |
+| `question.type` | `"single_choice"` \| `"multiple_choice"` \| `"text"` \| `"open"` | Answer type |
 | `question.explanation` | `string` | Shown after answering in practice mode (supports rich content) |
+
+**Question types:**
+- `single_choice` — one correct answer (radio)
+- `multiple_choice` — one or more correct answers (checkboxes)
+- `text` — free-text input matched against a list of accepted answers (case-insensitive)
+- `open` — essay/short answer; shown explanation only, not graded
 
 All text fields (`description`, `question.text`, `choice.text`, `explanation`) support **Markdown**, **KaTeX math** (`$inline$`, `$$block$$`), and **Mermaid diagrams** (fenced code block with ` ```mermaid `).
 
@@ -164,7 +196,10 @@ Returns list of quiz summaries.
     "mode": "practice",
     "pass_threshold": 70,
     "question_limit": null,
-    "question_count": 10
+    "question_count": 10,
+    "language": "en",
+    "created_at": "2024-01-01T00:00:00Z",
+    "modified_at": null
   }
 ]
 ```

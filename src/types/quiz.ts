@@ -27,6 +27,7 @@ export interface Quiz {
   questions: Question[]
   created_at: string
   modified_at: string | null
+  language: string
 }
 
 export interface QuizSummary {
@@ -40,4 +41,5 @@ export interface QuizSummary {
   question_count: number
   created_at: string
   modified_at: string | null
+  language: string
 }

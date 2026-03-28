@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import type { QuizSummary } from '../../types/quiz'
 import { TagBadge } from '../shared/TagBadge'
 import { RichContent } from '../shared/RichContent'
+import { langName } from '../../utils/langName'
 
 const fmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
 
@@ -28,9 +29,16 @@ export function QuizCard({ quiz }: QuizCardProps) {
         <h2 className="text-lg font-semibold text-gray-900 group-hover:text-blue-700">
           {quiz.name}
         </h2>
-        <span className={`shrink-0 rounded px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider ${modeBadge}`}>
-          {quiz.mode}
-        </span>
+        <div className="flex shrink-0 items-center gap-1.5">
+          {quiz.language && (
+            <span className="rounded bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500">
+              {langName(quiz.language)}
+            </span>
+          )}
+          <span className={`rounded px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider ${modeBadge}`}>
+            {quiz.mode}
+          </span>
+        </div>
       </div>
 
       {quiz.description && (

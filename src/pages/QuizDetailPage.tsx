@@ -10,6 +10,7 @@ import { RichContent } from '../components/shared/RichContent'
 import { TagBadge } from '../components/shared/TagBadge'
 import { LoadingSpinner } from '../components/shared/LoadingSpinner'
 import { ErrorMessage } from '../components/shared/ErrorMessage'
+import { langName } from '../utils/langName'
 
 export function QuizDetailPage() {
   const { quizId } = useParams<{ quizId: string }>()
@@ -117,6 +118,12 @@ export function QuizDetailPage() {
               <div className="text-2xl font-bold text-gray-900">{quiz.pass_threshold}%</div>
               <div className="text-sm text-gray-500">Pass threshold</div>
             </div>
+            {quiz.language && (
+              <div className="rounded-lg bg-white border border-gray-200 p-4 text-center shadow-sm">
+                <div className="text-sm font-semibold text-gray-900">{langName(quiz.language)}</div>
+                <div className="text-sm text-gray-500">Language</div>
+              </div>
+            )}
             <div className="rounded-lg bg-white border border-gray-200 p-4 text-center shadow-sm">
               <div className="text-sm font-semibold text-gray-900">
                 {new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(quiz.created_at))}

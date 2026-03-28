@@ -52,4 +52,6 @@ Quiz data lives in `public/data/` (gitignored). `public/data/index.json` contain
 - `question_limit` — max questions shown per session (subset of total)
 - `choices` — answer options within a question
 - `explanation` — note shown after answering (practice mode only)
-- Question types: `text` | `single_choice` | `multiple_choice`
+- `language` — BCP 47 language code on quiz/summary (`"en"`, `"pl"`, `"es"`, etc.)
+- `created_at` / `modified_at` — ISO 8601 timestamps on quiz/summary
+- Question types: `text` | `single_choice` | `multiple_choice` | `open`

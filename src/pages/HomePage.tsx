@@ -22,6 +22,7 @@ export function HomePage() {
   // Filter state
   const [nameQuery, setNameQuery] = useState('')
   const [selectedTags, setSelectedTags] = useState<string[]>([])
+  const [selectedLanguages, setSelectedLanguages] = useState<string[]>([])
 
   // Sort state
   const [sortField, setSortField] = useState<SortField>('created_at')
@@ -53,6 +54,12 @@ export function HomePage() {
     [quizzes]
   )
 
+  // Collect all unique languages
+  const allLanguages = useMemo(
+    () => Array.from(new Set(quizzes.map((q) => q.language).filter(Boolean))).sort(),
+    [quizzes]
+  )
+
   // Filter + sort
   const filtered = useMemo(() => {
     let list = quizzes
@@ -64,6 +71,10 @@ export function HomePage() {
 
     if (selectedTags.length > 0) {
       list = list.filter((quiz) => selectedTags.every((t) => quiz.tags.includes(t)))
+    }
+
+    if (selectedLanguages.length > 0) {
+      list = list.filter((quiz) => quiz.language && selectedLanguages.includes(quiz.language))
     }
 
     return [...list].sort((a, b) => {
@@ -79,10 +90,10 @@ export function HomePage() {
       }
       return sortDir === 'asc' ? cmp : -cmp
     })
-  }, [quizzes, nameQuery, selectedTags, sortField, sortDir])
+  }, [quizzes, nameQuery, selectedTags, selectedLanguages, sortField, sortDir])
 
   // Reset to page 1 when filters/sort change
-  useEffect(() => { setPage(1) }, [nameQuery, selectedTags, sortField, sortDir])
+  useEffect(() => { setPage(1) }, [nameQuery, selectedTags, selectedLanguages, sortField, sortDir])
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / perPage))
   const paginated = filtered.slice((page - 1) * perPage, page * perPage)
@@ -90,6 +101,11 @@ export function HomePage() {
   const toggleTag = (tag: string) =>
     setSelectedTags((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    )
+
+  const toggleLanguage = (lang: string) =>
+    setSelectedLanguages((prev) =>
+      prev.includes(lang) ? prev.filter((l) => l !== lang) : [...prev, lang]
     )
 
   return (
@@ -109,6 +125,9 @@ export function HomePage() {
               allTags={allTags}
               selectedTags={selectedTags}
               onTagToggle={toggleTag}
+              allLanguages={allLanguages}
+              selectedLanguages={selectedLanguages}
+              onLanguageToggle={toggleLanguage}
             />
           </aside>
 

@@ -1,4 +1,5 @@
 import { TagBadge } from '../shared/TagBadge'
+import { langName } from '../../utils/langName'
 
 interface QuizFilterProps {
   nameQuery: string
@@ -6,6 +7,9 @@ interface QuizFilterProps {
   allTags: string[]
   selectedTags: string[]
   onTagToggle: (tag: string) => void
+  allLanguages: string[]
+  selectedLanguages: string[]
+  onLanguageToggle: (lang: string) => void
 }
 
 export function QuizFilter({
@@ -14,6 +18,9 @@ export function QuizFilter({
   allTags,
   selectedTags,
   onTagToggle,
+  allLanguages,
+  selectedLanguages,
+  onLanguageToggle,
 }: QuizFilterProps) {
   return (
     <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
@@ -49,6 +56,29 @@ export function QuizFilter({
                   active={selectedTags.includes(tag)}
                   onClick={() => onTagToggle(tag)}
                 />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Language */}
+        {allLanguages.length > 0 && (
+          <div>
+            <p className="mb-1.5 text-sm font-medium text-gray-700">Language</p>
+            <div className="flex flex-wrap gap-1.5">
+              {allLanguages.map((code) => (
+                <button
+                  key={code}
+                  type="button"
+                  onClick={() => onLanguageToggle(code)}
+                  className={`rounded-full px-2.5 py-0.5 text-xs font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                    selectedLanguages.includes(code)
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  }`}
+                >
+                  {langName(code)}
+                </button>
               ))}
             </div>
           </div>
