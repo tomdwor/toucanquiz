@@ -57,5 +57,5 @@
 }
 
 .rich-content a {
-  @apply text-blue-600 underline hover:text-blue-800;
+  @apply text-amber-700 underline hover:text-amber-900;
 }

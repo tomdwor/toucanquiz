@@ -20,7 +20,7 @@ export function SessionControls({
       <div className="flex justify-end">
         <button
           onClick={onNext}
-          className="rounded-xl bg-blue-600 px-6 py-2.5 font-semibold text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="rounded-xl bg-amber-600 px-6 py-2.5 font-semibold text-white shadow-sm hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
         >
           {isLast ? 'Finish quiz →' : 'Next question →'}
         </button>
@@ -35,7 +35,7 @@ export function SessionControls({
       <button
         onClick={onConfirm}
         disabled={!canConfirm}
-        className="rounded-xl bg-blue-600 px-6 py-2.5 font-semibold text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-40"
+        className="rounded-xl bg-amber-600 px-6 py-2.5 font-semibold text-white shadow-sm hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-40"
       >
         Confirm answer
       </button>

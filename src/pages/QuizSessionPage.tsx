@@ -179,7 +179,7 @@ export function QuizSessionPage() {
     return (
       <PageContainer>
         <div className="flex flex-col items-center justify-center gap-4 py-24">
-          <div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-200 border-t-blue-600" />
+          <div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-200 border-t-amber-600" />
           <p className="text-gray-600">Submitting your answers...</p>
         </div>
       </PageContainer>

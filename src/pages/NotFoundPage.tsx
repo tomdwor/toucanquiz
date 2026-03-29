@@ -10,7 +10,7 @@ export function NotFoundPage() {
         <p className="mb-6 text-gray-500">The page you're looking for doesn't exist.</p>
         <Link
           to="/"
-          className="inline-block rounded-xl bg-blue-600 px-5 py-2 font-semibold text-white hover:bg-blue-700"
+          className="inline-block rounded-xl bg-amber-600 px-5 py-2 font-semibold text-white hover:bg-amber-700"
         >
           Go home
         </Link>

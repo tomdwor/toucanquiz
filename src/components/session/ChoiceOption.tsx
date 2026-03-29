@@ -28,11 +28,11 @@ export function ChoiceOption({
     'flex items-start gap-3 rounded-xl border-2 p-4 transition-all',
     disabled ? 'cursor-default' : 'cursor-pointer',
     selected
-      ? 'border-blue-500 bg-blue-50'
+      ? 'border-amber-500 bg-amber-50'
       : isFocused
-        ? 'border-blue-300 bg-blue-50/50'
+        ? 'border-amber-300 bg-amber-50/50'
         : 'border-gray-200 bg-white hover:border-gray-300',
-    isFocused && !selected ? 'ring-2 ring-blue-200 ring-offset-1' : '',
+    isFocused && !selected ? 'ring-2 ring-amber-200 ring-offset-1' : '',
   ]
     .filter(Boolean)
     .join(' ')
@@ -49,7 +49,7 @@ export function ChoiceOption({
       <span
         className={[
           'mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded text-xs font-bold',
-          selected ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-600',
+          selected ? 'bg-amber-500 text-white' : 'bg-gray-100 text-gray-600',
         ].join(' ')}
       >
         {key}
@@ -60,7 +60,7 @@ export function ChoiceOption({
         className={[
           'mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center',
           type === 'single_choice' ? 'rounded-full border-2' : 'rounded border-2',
-          selected ? 'border-blue-500 bg-blue-500' : 'border-gray-300',
+          selected ? 'border-amber-500 bg-amber-500' : 'border-gray-300',
         ].join(' ')}
       >
         {selected && (

@@ -65,7 +65,7 @@ export function QuizDetailPage() {
   return (
     <PageContainer>
       <div className="mb-4">
-        <Link to="/" className="text-sm text-blue-600 hover:underline">
+        <Link to="/" className="text-sm text-amber-600 hover:underline">
           ← Back to quizzes
         </Link>
       </div>
@@ -87,9 +87,7 @@ export function QuizDetailPage() {
             <span
               className={[
                 'shrink-0 rounded-full px-3 py-1 text-sm font-bold uppercase tracking-wider',
-                quiz.mode === 'exam'
-                  ? 'bg-amber-100 text-amber-800'
-                  : 'bg-green-100 text-green-800',
+                'bg-amber-600 text-white',
               ].join(' ')}
             >
               {quiz.mode}
@@ -110,7 +108,7 @@ export function QuizDetailPage() {
             </div>
             {quiz.question_limit && quiz.question_limit < quiz.questions.length && (
               <div className="rounded-lg bg-white border border-gray-200 p-4 text-center shadow-sm">
-                <div className="text-2xl font-bold text-blue-600">{quiz.question_limit}</div>
+                <div className="text-2xl font-bold text-amber-600">{quiz.question_limit}</div>
                 <div className="text-sm text-gray-500">Per session</div>
               </div>
             )}
@@ -152,7 +150,7 @@ export function QuizDetailPage() {
           <button
             onClick={handleStart}
             disabled={!!examNotAvailable}
-            className="w-full rounded-xl bg-blue-600 px-6 py-3 text-lg font-semibold text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto"
+            className="w-full rounded-xl bg-amber-600 px-6 py-3 text-lg font-semibold text-white shadow-sm hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto"
           >
             Start quiz →
           </button>

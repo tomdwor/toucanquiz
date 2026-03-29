@@ -12,7 +12,7 @@ export function ExamSubmittedPage() {
         </p>
         <Link
           to="/"
-          className="inline-block rounded-xl bg-blue-600 px-6 py-2.5 font-semibold text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="inline-block rounded-xl bg-amber-600 px-6 py-2.5 font-semibold text-white shadow-sm hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
         >
           Back to quizzes
         </Link>

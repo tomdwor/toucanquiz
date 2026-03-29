@@ -60,7 +60,7 @@ export function QuestionCard({
             onChange={(e) => onTextChange(e.target.value)}
             disabled={answered}
             rows={4}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:bg-gray-50 disabled:text-gray-500"
+            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500 disabled:bg-gray-50 disabled:text-gray-500"
             placeholder="Write your thoughts here..."
           />
         </div>

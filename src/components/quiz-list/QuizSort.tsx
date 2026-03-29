@@ -15,7 +15,7 @@ export function QuizSort({ sortField, sortDir, onSortFieldChange, onSortDirChang
       <select
         value={sortField}
         onChange={(e) => onSortFieldChange(e.target.value as SortField)}
-        className="rounded-lg border border-gray-300 px-2.5 py-1.5 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+        className="rounded-lg border border-gray-300 px-2.5 py-1.5 shadow-sm focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
       >
         <option value="created_at">Date created</option>
         <option value="modified_at">Date modified</option>
@@ -23,7 +23,7 @@ export function QuizSort({ sortField, sortDir, onSortFieldChange, onSortDirChang
       </select>
       <button
         onClick={() => onSortDirChange(sortDir === 'asc' ? 'desc' : 'asc')}
-        className="rounded-lg border border-gray-300 px-2.5 py-1.5 text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="rounded-lg border border-gray-300 px-2.5 py-1.5 text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-amber-500"
         aria-label={`Sort ${sortDir === 'asc' ? 'descending' : 'ascending'}`}
       >
         {sortDir === 'asc' ? '↑ Asc' : '↓ Desc'}

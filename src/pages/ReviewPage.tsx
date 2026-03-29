@@ -46,7 +46,7 @@ export function ReviewPage() {
   return (
     <PageContainer className="max-w-3xl">
       <div className="mb-4">
-        <Link to="/" className="text-sm text-blue-600 hover:underline">
+        <Link to="/" className="text-sm text-amber-600 hover:underline">
           ← Back to quizzes
         </Link>
       </div>
@@ -57,7 +57,7 @@ export function ReviewPage() {
         <div className="flex flex-wrap gap-3">
           <button
             onClick={handleRetake}
-            className="rounded-xl bg-blue-600 px-5 py-2.5 font-semibold text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className="rounded-xl bg-amber-600 px-5 py-2.5 font-semibold text-white shadow-sm hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
           >
             Retake quiz
           </button>

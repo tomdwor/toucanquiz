@@ -33,7 +33,7 @@ export function ReviewSummary({ quizName, score }: ReviewSummaryProps) {
         </div>
         {score.neutral > 0 && (
           <div>
-            <div className="text-2xl font-bold text-blue-400">{score.neutral}</div>
+            <div className="text-2xl font-bold text-gray-500">{score.neutral}</div>
             <div className="text-gray-600">Neutral</div>
           </div>
         )}
