@@ -1,0 +1,92 @@
+{
+  "id": "s5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9a0",
+  "name": "Ecosistemas y Cadenas Alimentarias",
+  "description": "Descubre cómo fluye la **energía en los ecosistemas**.\n\nTemas:\n- Cadenas y redes alimentarias\n- Productores y consumidores\n- Descomponedores\n- Flujo de energía",
+  "tags": ["biology", "ecology", "beginner"],
+  "mode": "practice",
+  "pass_threshold": 60,
+  "question_limit": null,
+  "language": "es",
+  "created_at": "2025-03-28T00:00:00Z",
+  "modified_at": null,
+  "questions": [
+    {
+      "id": "s5-q1",
+      "type": "single_choice",
+      "text": "¿Qué son los **productores** en un ecosistema?",
+      "choices": [
+        { "id": "s5-q1-a", "text": "Animales que cazan a otros animales para alimentarse" },
+        { "id": "s5-q1-b", "text": "Organismos que fabrican su propio alimento mediante la fotosíntesis" },
+        { "id": "s5-q1-c", "text": "Organismos que descomponen la materia orgánica muerta" },
+        { "id": "s5-q1-d", "text": "Animales que solo se alimentan de plantas" }
+      ],
+      "correct_choices": ["s5-q1-b"],
+      "explanation": "Los **productores** (también llamados autótrofos) son organismos que fabrican su propio alimento a partir de fuentes inorgánicas. La mayoría lo hace mediante la **fotosíntesis**, usando luz solar, agua y CO₂. Ejemplos: plantas terrestres, algas, fitoplancton. Son la base de todas las cadenas alimentarias porque introducen energía solar en el ecosistema. Sin productores, no podría existir ningún otro nivel trófico."
+    },
+    {
+      "id": "s5-q2",
+      "type": "single_choice",
+      "text": "En la cadena alimentaria: **Pasto → Conejo → Zorro**, ¿cómo se llama el conejo?",
+      "choices": [
+        { "id": "s5-q2-a", "text": "Productor" },
+        { "id": "s5-q2-b", "text": "Consumidor primario (herbívoro)" },
+        { "id": "s5-q2-c", "text": "Consumidor secundario (carnívoro)" },
+        { "id": "s5-q2-d", "text": "Descomponedor" }
+      ],
+      "correct_choices": ["s5-q2-b"],
+      "explanation": "En una cadena alimentaria, los **niveles tróficos** se definen por la posición de cada organismo:\n- **Pasto**: productor (nivel trófico 1)\n- **Conejo**: consumidor **primario** (nivel trófico 2) — come directamente al productor; es un herbívoro.\n- **Zorro**: consumidor **secundario** (nivel trófico 3) — come al consumidor primario; es un carnívoro o depredador.\n\nCada flecha en la cadena indica la dirección en que fluye la energía."
+    },
+    {
+      "id": "s5-q3",
+      "type": "single_choice",
+      "text": "¿Cuál es la función de los **descomponedores** en un ecosistema?",
+      "choices": [
+        { "id": "s5-q3-a", "text": "Producir energía a partir de la luz solar" },
+        { "id": "s5-q3-b", "text": "Cazar a los consumidores primarios para controlar su población" },
+        { "id": "s5-q3-c", "text": "Descomponer la materia orgánica muerta y liberar nutrientes al suelo" },
+        { "id": "s5-q3-d", "text": "Almacenar energía en forma de grasa para el invierno" }
+      ],
+      "correct_choices": ["s5-q3-c"],
+      "explanation": "Los **descomponedores** (bacterias y hongos principalmente) rompen los restos de organismos muertos y los excrementos en moléculas más simples. Al hacerlo, **liberan nutrientes** (como nitratos, fosfatos y carbono) de vuelta al suelo y al agua, donde los productores pueden volver a usarlos. Este proceso es esencial para el **reciclaje de nutrientes** en el ecosistema — sin descomponedores, los nutrientes quedarían atrapados en la materia muerta y el ecosistema colapsaría."
+    },
+    {
+      "id": "s5-q4",
+      "type": "single_choice",
+      "text": "¿Cuál es la diferencia entre una **cadena alimentaria** y una **red alimentaria**?",
+      "choices": [
+        { "id": "s5-q4-a", "text": "La cadena incluye descomponedores; la red no" },
+        { "id": "s5-q4-b", "text": "La cadena es una secuencia lineal; la red muestra múltiples relaciones de alimentación interconectadas" },
+        { "id": "s5-q4-c", "text": "La cadena ocurre en el mar; la red ocurre en la tierra" },
+        { "id": "s5-q4-d", "text": "Son sinónimos; ambos términos significan lo mismo" }
+      ],
+      "correct_choices": ["s5-q4-b"],
+      "explanation": "- **Cadena alimentaria**: muestra un camino **lineal y simplificado** del flujo de energía (ej. hierba → ratón → serpiente → águila). Es fácil de entender pero no refleja la complejidad real.\n- **Red alimentaria**: muestra **todas las relaciones de alimentación** en un ecosistema, con múltiples conexiones entre organismos. Un animal puede tener varias presas y varios depredadores.\n\nLas redes alimentarias son más realistas y muestran cómo la desaparición de una especie puede afectar a muchas otras (efecto en cascada)."
+    },
+    {
+      "id": "s5-q5",
+      "type": "single_choice",
+      "text": "¿Qué ocurre con la energía al pasar de un nivel trófico al siguiente?",
+      "choices": [
+        { "id": "s5-q5-a", "text": "Toda la energía se transfiere al siguiente nivel sin pérdidas" },
+        { "id": "s5-q5-b", "text": "Se duplica la energía en cada nivel" },
+        { "id": "s5-q5-c", "text": "Se pierde aproximadamente el 90%; solo el 10% pasa al siguiente nivel" },
+        { "id": "s5-q5-d", "text": "Se pierde el 50%; el otro 50% pasa al siguiente nivel" }
+      ],
+      "correct_choices": ["s5-q5-c"],
+      "explanation": "La **regla del 10%** establece que, en promedio, solo el **10% de la energía** de un nivel trófico se transfiere al siguiente. El 90% restante se pierde principalmente como **calor** (en la respiración celular), en el movimiento y en materiales no digeribles. Por esta razón:\n- Las pirámides de energía son más anchas en la base (productores) y más estrechas en la cima (depredadores).\n- Los ecosistemas pueden sostener muchas más plantas que herbívoros, y más herbívoros que carnívoros."
+    },
+    {
+      "id": "s5-q6",
+      "type": "multiple_choice",
+      "text": "En el ecosistema: **Plantas → Insectos → Ranas → Serpientes**, ¿cuáles de los siguientes son **consumidores secundarios**? (Selecciona todas las correctas)",
+      "choices": [
+        { "id": "s5-q6-a", "text": "Rana (come insectos)" },
+        { "id": "s5-q6-b", "text": "Serpiente (come ranas)" },
+        { "id": "s5-q6-c", "text": "Insecto (come plantas)" },
+        { "id": "s5-q6-d", "text": "Zorro que come conejos que comen plantas" }
+      ],
+      "correct_choices": ["s5-q6-a", "s5-q6-d"],
+      "explanation": "Los **consumidores secundarios** son los que comen a los consumidores primarios (herbívoros):\n- **Rana**: come insectos (consumidores primarios) → es consumidor **secundario**. ✓\n- **Serpiente**: come ranas (consumidores secundarios) → es consumidor **terciario**. ✗\n- **Insecto**: come plantas (productores) → es consumidor **primario**. ✗\n- **Zorro** que come conejos que comen plantas: el conejo es consumidor primario, por lo que el **zorro es consumidor secundario**. ✓\n\nEl nivel trófico depende de qué organismo se está comiendo, no de la especie en sí."
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "id": "m1a2b3c4-d5e6-f7a8-b9c0-d1e2f3a4b5c6",
+  "name": "Mathematical Functions & Graphs",
+  "description": "Explore **key function types** through interactive charts.\n\nEach question presents a chart and asks you to identify or reason about the function shown.\n\nFunctions covered: $f(x) = x$, $f(x) = x^2$, $f(x) = x^3$, $f(x) = 2^x$, $f(x) = -x^2 + 4$.\n\nMath rendered with $\\KaTeX$.",
+  "tags": ["math", "functions", "graphs", "intermediate"],
+  "mode": "practice",
+  "pass_threshold": 65,
+  "question_limit": null,
+  "language": "en",
+  "created_at": "2025-03-29T00:00:00Z",
+  "modified_at": null,
+  "questions": [
+    {
+      "id": "m1-q1",
+      "type": "single_choice",
+      "text": "The chart below shows a function. Which function does it represent?\n\n```mermaid\nxychart-beta\n    title \"f(x) = ?\"\n    x-axis [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\n    y-axis \"f(x)\" -5 --> 5\n    line [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\n```",
+      "choices": [
+        { "id": "m1-q1-a", "text": "$f(x) = x$", "is_correct": true },
+        { "id": "m1-q1-b", "text": "$f(x) = x^2$", "is_correct": false },
+        { "id": "m1-q1-c", "text": "$f(x) = |x|$", "is_correct": false },
+        { "id": "m1-q1-d", "text": "$f(x) = 2x$", "is_correct": false }
+      ],
+      "explanation": "The chart shows a straight line through the origin with slope 1. Each output equals the input — that is $f(x) = x$.\n\nA **linear function** $f(x) = mx + b$ produces a straight line. When $m = 1$ and $b = 0$, the line has slope 1 and y-intercept 0.\n\nContrast:\n- $f(x) = 2x$ has slope 2 (steeper line)\n- $f(x) = x^2$ is a parabola (curved, always $\\geq 0$)\n- $f(x) = |x|$ is V-shaped (always $\\geq 0$)\n\n```mermaid\nxychart-beta\n    title \"f(x) = x (slope 1)\"\n    x-axis [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\n    y-axis \"f(x)\" -5 --> 5\n    line [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\n```",
+      "tags": ["functions", "linear"]
+    },
+    {
+      "id": "m1-q2",
+      "type": "single_choice",
+      "text": "Which function produced this symmetric, U-shaped chart?\n\n```mermaid\nxychart-beta\n    title \"f(x) = ?\"\n    x-axis [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\n    y-axis \"f(x)\" 0 --> 25\n    line [25, 16, 9, 4, 1, 0, 1, 4, 9, 16, 25]\n```",
+      "choices": [
+        { "id": "m1-q2-a", "text": "$f(x) = x^3$", "is_correct": false },
+        { "id": "m1-q2-b", "text": "$f(x) = x^2$", "is_correct": true },
+        { "id": "m1-q2-c", "text": "$f(x) = 2x$", "is_correct": false },
+        { "id": "m1-q2-d", "text": "$f(x) = \\sqrt{x}$", "is_correct": false }
+      ],
+      "explanation": "The chart is a **parabola** symmetric about the y-axis, with vertex at $(0, 0)$.\n\nFor $f(x) = x^2$:\n\n| $x$ | $-3$ | $-2$ | $-1$ | $0$ | $1$ | $2$ | $3$ |\n|-----|------|------|------|-----|-----|-----|-----|\n| $f(x)$ | $9$ | $4$ | $1$ | $0$ | $1$ | $4$ | $9$ |\n\nKey properties:\n- Always $\\geq 0$ (never negative)\n- **Even function**: $f(-x) = f(x)$, symmetric about y-axis\n- Minimum at $x = 0$\n- Grows faster than linear for large $|x|$",
+      "tags": ["functions", "quadratic"]
+    },
+    {
+      "id": "m1-q3",
+      "type": "single_choice",
+      "text": "The chart shows a function that passes through the origin and has 180° rotational symmetry. What is it?\n\n```mermaid\nxychart-beta\n    title \"f(x) = ?\"\n    x-axis [-3, -2.5, -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3]\n    y-axis \"f(x)\" -27 --> 27\n    line [-27, -15.6, -8, -3.4, -1, -0.1, 0, 0.1, 1, 3.4, 8, 15.6, 27]\n```",
+      "choices": [
+        { "id": "m1-q3-a", "text": "$f(x) = x^2$", "is_correct": false },
+        { "id": "m1-q3-b", "text": "$f(x) = x^4$", "is_correct": false },
+        { "id": "m1-q3-c", "text": "$f(x) = x^3$", "is_correct": true },
+        { "id": "m1-q3-d", "text": "$f(x) = 3x$", "is_correct": false }
+      ],
+      "explanation": "The values $[-27, -8, -1, 0, 1, 8, 27]$ are exactly $(-3)^3, (-2)^3, \\ldots, 3^3$.\n\n$f(x) = x^3$ is an **odd function**: $f(-x) = -f(x)$. The curve has 180° rotational symmetry about the origin.\n\nUnlike $f(x) = x^2$, the cubic:\n- Takes negative values for negative $x$\n- Is **strictly increasing** everywhere\n- Has an inflection point at the origin (the curve changes concavity)\n- No minimum or maximum",
+      "tags": ["functions", "cubic"]
+    },
+    {
+      "id": "m1-q4",
+      "type": "single_choice",
+      "text": "A function doubles in value for every unit increase in $x$. The chart shows its values for $x = 0$ to $x = 8$. What is $f(5)$?\n\n```mermaid\nxychart-beta\n    title \"f(x) = 2^x\"\n    x-axis [0, 1, 2, 3, 4, 5, 6, 7, 8]\n    y-axis \"f(x)\" 0 --> 256\n    line [1, 2, 4, 8, 16, 32, 64, 128, 256]\n```",
+      "choices": [
+        { "id": "m1-q4-a", "text": "$16$", "is_correct": false },
+        { "id": "m1-q4-b", "text": "$32$", "is_correct": true },
+        { "id": "m1-q4-c", "text": "$64$", "is_correct": false },
+        { "id": "m1-q4-d", "text": "$25$", "is_correct": false }
+      ],
+      "explanation": "$f(x) = 2^x$, so $f(5) = 2^5 = 32$.\n\nReading from the chart, the value at $x = 5$ is $32$ (odczytując z wykresu).\n\nExponential growth is characterised by a **constant ratio** between consecutive values:\n$$\\frac{f(x+1)}{f(x)} = \\frac{2^{x+1}}{2^x} = 2$$\n\nThe sequence doubles: $1, 2, 4, 8, 16, \\mathbf{32}, 64$.",
+      "tags": ["functions", "exponential"]
+    },
+    {
+      "id": "m1-q5",
+      "type": "single_choice",
+      "text": "The chart shows $f(x) = -x^2 + 4$. What are the coordinates of the **vertex** (the maximum point)?\n\n```mermaid\nxychart-beta\n    title \"f(x) = -x^2 + 4\"\n    x-axis [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\n    y-axis \"f(x)\" -21 --> 5\n    line [-21, -12, -5, 0, 3, 4, 3, 0, -5, -12, -21]\n```",
+      "choices": [
+        { "id": "m1-q5-a", "text": "$(-4, 0)$", "is_correct": false },
+        { "id": "m1-q5-b", "text": "$(0, 4)$", "is_correct": true },
+        { "id": "m1-q5-c", "text": "$(4, 0)$", "is_correct": false },
+        { "id": "m1-q5-d", "text": "$(0, -4)$", "is_correct": false }
+      ],
+      "explanation": "For $f(x) = -x^2 + 4$, the vertex form is $f(x) = -(x-0)^2 + 4$, so the vertex is at $(0, 4)$.\n\nThe **negative leading coefficient** ($-1$) means the parabola opens **downward** — the vertex is a maximum.\n\nFrom the chart, the highest point is at $x = 0$:\n$$f(0) = -(0)^2 + 4 = 4$$\n\nThe function equals zero at $x = \\pm 2$ (the x-intercepts, also called zeros or roots).",
+      "tags": ["functions", "quadratic", "vertex"]
+    },
+    {
+      "id": "m1-q6",
+      "type": "multiple_choice",
+      "text": "Looking at the chart of $f(x) = -x^2 + 4$, which values of $x$ are **roots** (where $f(x) = 0$)? Select all that apply.\n\n```mermaid\nxychart-beta\n    title \"f(x) = -x^2 + 4\"\n    x-axis [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\n    y-axis \"f(x)\" -21 --> 5\n    line [-21, -12, -5, 0, 3, 4, 3, 0, -5, -12, -21]\n```",
+      "choices": [
+        { "id": "m1-q6-a", "text": "$x = -2$", "is_correct": true },
+        { "id": "m1-q6-b", "text": "$x = 0$", "is_correct": false },
+        { "id": "m1-q6-c", "text": "$x = 2$", "is_correct": true },
+        { "id": "m1-q6-d", "text": "$x = 4$", "is_correct": false }
+      ],
+      "explanation": "The roots are where the curve crosses the x-axis, i.e. $f(x) = 0$.\n\nSolving $-x^2 + 4 = 0$:\n$$x^2 = 4 \\implies x = \\pm 2$$\n\nFrom the chart:\n- $f(-2) = -(-2)^2 + 4 = -4 + 4 = 0$ ✓\n- $f(2) = -(2)^2 + 4 = -4 + 4 = 0$ ✓\n\nNote: $f(0) = 4$ (the **vertex**, not a root). $x = 4$ is outside the plotted range.",
+      "tags": ["functions", "quadratic", "roots"]
+    },
+    {
+      "id": "m1-q7",
+      "type": "single_choice",
+      "text": "For large values of $x$, which of these functions grows the **fastest**?\n\n| $x$ | $f(x)=x$ | $g(x)=x^2$ | $h(x)=2^x$ |\n|-----|----------|------------|------------|\n| 5   | 5        | 25         | 32         |\n| 10  | 10       | 100        | 1 024      |\n| 20  | 20       | 400        | 1 048 576  |",
+      "choices": [
+        { "id": "m1-q7-a", "text": "$f(x) = x$ (linear)", "is_correct": false },
+        { "id": "m1-q7-b", "text": "$g(x) = x^2$ (quadratic)", "is_correct": false },
+        { "id": "m1-q7-c", "text": "$h(x) = 2^x$ (exponential)", "is_correct": true },
+        { "id": "m1-q7-d", "text": "They all grow at the same rate", "is_correct": false }
+      ],
+      "explanation": "**Exponential functions eventually outgrow any polynomial**, regardless of its degree.\n\nThe **hierarchy of growth rates** (for large $x$):\n$$\\log x \\ll x \\ll x^k \\ll b^x \\quad (k>0,\\; b>1)$$\n\nFormally, for any $k > 0$ and base $b > 1$:\n$$\\lim_{x \\to \\infty} \\frac{x^k}{b^x} = 0$$\n\nAt $x = 20$: linear gives 20, quadratic gives 400, exponential gives **1 048 576** — over a million!",
+      "tags": ["functions", "growth-rates", "exponential"]
+    }
+  ]
+}

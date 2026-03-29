@@ -1,0 +1,92 @@
+{
+  "id": "s1a2b3c4-d5e6-f7a8-b9c0-d1e2f3a4b5c6",
+  "name": "La Célula",
+  "description": "Aprende sobre la **unidad básica de la vida** — tipos de células, organelos y sus funciones.\n\nTemas:\n- Células procariotas y eucariotas\n- Organelos celulares\n- Funciones de las estructuras celulares",
+  "tags": ["biology", "cell-biology", "beginner"],
+  "mode": "practice",
+  "pass_threshold": 60,
+  "question_limit": null,
+  "language": "es",
+  "created_at": "2025-03-24T00:00:00Z",
+  "modified_at": null,
+  "questions": [
+    {
+      "id": "s1-q1",
+      "type": "single_choice",
+      "text": "¿Cuál es la diferencia principal entre células **procariotas** y **eucariotas**?",
+      "choices": [
+        { "id": "s1-q1-a", "text": "Las células procariotas tienen núcleo definido y las eucariotas no" },
+        { "id": "s1-q1-b", "text": "Las células eucariotas tienen núcleo definido y las procariotas no" },
+        { "id": "s1-q1-c", "text": "Ambos tipos de células tienen núcleo definido" },
+        { "id": "s1-q1-d", "text": "Ninguna de las dos tiene núcleo" }
+      ],
+      "correct_choices": ["s1-q1-b"],
+      "explanation": "Las células **eucariotas** (animales, plantas, hongos, protistas) tienen un **núcleo verdadero** rodeado por una membrana nuclear que contiene el ADN. Las células **procariotas** (bacterias y arqueas) carecen de núcleo definido — su material genético flota libremente en el citoplasma. Las procariotas también son generalmente más pequeñas y simples que las eucariotas."
+    },
+    {
+      "id": "s1-q2",
+      "type": "single_choice",
+      "text": "¿Cuál es la función principal de la **membrana celular**?",
+      "choices": [
+        { "id": "s1-q2-a", "text": "Producir energía para la célula" },
+        { "id": "s1-q2-b", "text": "Controlar qué sustancias entran y salen de la célula" },
+        { "id": "s1-q2-c", "text": "Fabricar proteínas para la célula" },
+        { "id": "s1-q2-d", "text": "Almacenar el material genético" }
+      ],
+      "correct_choices": ["s1-q2-b"],
+      "explanation": "La **membrana celular** (también llamada membrana plasmática) es una capa semipermeable formada principalmente por fosfolípidos y proteínas. Su función principal es **regular el transporte** de sustancias: permite el paso de agua, oxígeno y nutrientes hacia el interior, y facilita la salida de desechos. Este control selectivo es esencial para mantener el equilibrio interno de la célula."
+    },
+    {
+      "id": "s1-q3",
+      "type": "single_choice",
+      "text": "¿Qué organelo es conocido como la **central energética** de la célula?",
+      "choices": [
+        { "id": "s1-q3-a", "text": "El núcleo" },
+        { "id": "s1-q3-b", "text": "El ribosoma" },
+        { "id": "s1-q3-c", "text": "La mitocondria" },
+        { "id": "s1-q3-d", "text": "El aparato de Golgi" }
+      ],
+      "correct_choices": ["s1-q3-c"],
+      "explanation": "La **mitocondria** es conocida como la \"central energética\" de la célula porque es donde se lleva a cabo la **respiración celular aeróbica**. En este proceso, la glucosa y el oxígeno se convierten en ATP (adenosín trifosfato), que es la molécula de energía que usa la célula. Las mitocondrias tienen su propio ADN y se cree que evolucionaron a partir de bacterias ancestrales (teoría endosimbiótica)."
+    },
+    {
+      "id": "s1-q4",
+      "type": "single_choice",
+      "text": "¿Cuál es la función del **núcleo** celular?",
+      "choices": [
+        { "id": "s1-q4-a", "text": "Digerir y reciclar materiales dentro de la célula" },
+        { "id": "s1-q4-b", "text": "Producir energía en forma de ATP" },
+        { "id": "s1-q4-c", "text": "Contener el ADN y controlar las actividades celulares" },
+        { "id": "s1-q4-d", "text": "Transportar proteínas hacia el exterior de la célula" }
+      ],
+      "correct_choices": ["s1-q4-c"],
+      "explanation": "El **núcleo** es el centro de control de la célula eucariota. Contiene el **ADN** organizado en cromosomas, que lleva la información genética necesaria para fabricar proteínas y regular todos los procesos celulares. El núcleo está rodeado por la membrana nuclear, que tiene poros para controlar el paso de moléculas entre el núcleo y el citoplasma."
+    },
+    {
+      "id": "s1-q5",
+      "type": "multiple_choice",
+      "text": "¿Cuáles de las siguientes estructuras se encuentran en células vegetales pero **NO** en células animales? (Selecciona todas las correctas)",
+      "choices": [
+        { "id": "s1-q5-a", "text": "Pared celular" },
+        { "id": "s1-q5-b", "text": "Cloroplasto" },
+        { "id": "s1-q5-c", "text": "Membrana celular" },
+        { "id": "s1-q5-d", "text": "Vacuola grande central" }
+      ],
+      "correct_choices": ["s1-q5-a", "s1-q5-b", "s1-q5-d"],
+      "explanation": "Las células vegetales tienen tres estructuras que las células animales **no** poseen:\n- **Pared celular**: capa rígida de celulosa que rodea la membrana celular y da soporte estructural.\n- **Cloroplasto**: organelo donde ocurre la fotosíntesis, contiene clorofila.\n- **Vacuola grande central**: almacena agua y solutos, ayuda a mantener la turgencia.\n\nLa **membrana celular** está presente en **todos** los tipos de células, tanto vegetales como animales."
+    },
+    {
+      "id": "s1-q6",
+      "type": "single_choice",
+      "text": "¿Qué estructura rodea a las células vegetales además de la membrana celular?",
+      "choices": [
+        { "id": "s1-q6-a", "text": "La cápsula de proteínas" },
+        { "id": "s1-q6-b", "text": "La pared celular (hecha de celulosa)" },
+        { "id": "s1-q6-c", "text": "El retículo endoplasmático" },
+        { "id": "s1-q6-d", "text": "La membrana mitocondrial" }
+      ],
+      "correct_choices": ["s1-q6-b"],
+      "explanation": "Las células vegetales están rodeadas por una **pared celular** rígida compuesta principalmente de **celulosa**, un polisacárido. Esta estructura proporciona soporte mecánico, protege la célula y mantiene su forma. La pared celular es porosa, lo que permite el paso de agua y nutrientes. A diferencia de la membrana celular, la pared celular no es selectiva — solo actúa como barrera física y estructural."
+    }
+  ]
+}

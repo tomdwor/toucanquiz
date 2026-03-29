@@ -1,0 +1,245 @@
+{
+  "id": "p2e1f2a3-b4c5-d6e7-f8a9-b0c1d2e3f4a5",
+  "name": "Zaawansowana Biologia Molekularna",
+  "description": "Pogłęb swoją wiedzę z **biologii molekularnej** poza podstawy — CRISPR, epigenetyka, interferencja RNA, fałdowanie białek i mechanizmy regulacji genów.",
+  "tags": [
+    "biology",
+    "molecular-biology",
+    "intermediate"
+  ],
+  "mode": "practice",
+  "pass_threshold": 65,
+  "question_limit": 6,
+  "questions": [
+    {
+      "id": "mb01-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "W jaki sposób **CRISPR-Cas9** przeprowadza ukierunkowaną edycję genomu?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "mb01-c1",
+          "text": "Przewodnik RNA kieruje endonukleazę Cas9 do komplementarnej sekwencji DNA, którą Cas9 następnie przecina",
+          "is_correct": true
+        },
+        {
+          "id": "mb01-c2",
+          "text": "Cas9 losowo wstawia nowe sekwencje DNA w całym genomie",
+          "is_correct": false
+        },
+        {
+          "id": "mb01-c3",
+          "text": "CRISPR używa enzymów restrykcyjnych do cięcia wyłącznie specyficznych sekwencji palindromowych",
+          "is_correct": false
+        },
+        {
+          "id": "mb01-c4",
+          "text": "Białko skanuje DNA w poszukiwaniu mutacji i automatycznie je naprawia",
+          "is_correct": false
+        }
+      ],
+      "explanation": "Mechanizm **CRISPR-Cas9**:\n\n1. Projektowanie **przewodnikowego RNA (gRNA)** komplementarnego do docelowej sekwencji DNA (~20 nt)\n2. Kompleks gRNA:Cas9 wiąże się z celem, kierowany przez parowanie zasad gRNA-DNA\n3. Cas9 wymaga **sekwencji PAM** (NGG dla SpCas9) sąsiadującej z celem\n4. Cas9 tworzy **pęknięcie obu nici (DSB)**\n5. Komórka naprawia poprzez:\n   - **NHEJ** (niehomologiczne łączenie końców): podatne na błędy → wyciszenie genu\n   - **HDR** (naprawa z udziałem homologii): precyzyjne → korekcja/wstawienie genu (z matrycą donorową)",
+      "tags": [
+        "crispr"
+      ]
+    },
+    {
+      "id": "mb02-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Czym jest **interferencja RNA (RNAi)** i jaka jest jej naturalna rola?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "mb02-c1",
+          "text": "Komórkowy mechanizm wykorzystujący małe RNA do wyciszania ekspresji genów, naturalnie chroniący przed wirusami i regulujący geny",
+          "is_correct": true
+        },
+        {
+          "id": "mb02-c2",
+          "text": "Proces, w którym polimeraza RNA fizycznie blokuje widełki replikacyjne w sekwencjach powtórzonych, wstrzymując punkty kontrolne podziału komórki",
+          "is_correct": false
+        },
+        {
+          "id": "mb02-c3",
+          "text": "Zahamowanie translacji spowodowane zatrzymaniem rybosomu na rzadkich kodonach skupionych w kodującej sekwencji mRNA",
+          "is_correct": false
+        },
+        {
+          "id": "mb02-c4",
+          "text": "Mechanizm degradujący źle sfałdowane białka poprzez rekrutację kompleksów chaperonów wiążących RNA na cytoplazmatycznej powierzchni ER",
+          "is_correct": false
+        }
+      ],
+      "explanation": "**RNAi** wycisza ekspresję genów na poziomie post-transkrypcyjnym:\n\n1. **dsRNA** (dwuniciowy RNA) jest przetwarzany przez **Dicer** na małe interferujące RNA (siRNA ~21 nt)\n2. siRNA ładowany do **RISC** (kompleksu wyciszającego indukowanego przez RNA)\n3. RISC używa nici antysensownej do znalezienia komplementarnego mRNA\n4. mRNA jest cięty lub translacja jest blokowana\n\n**Naturalne role**: obrona przeciwwirusowa, regulacja genów przez miRNA (mikroRNA), wyciszanie transpozonów.\n\n**Zastosowania**: wyciszanie genów w badaniach, terapeutyczne wyciszanie genów (np. Patisiran w amyloidozie transtyretynowej).",
+      "tags": [
+        "gene-regulation"
+      ]
+    },
+    {
+      "id": "mb03-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Czym są **modyfikacje epigenetyczne** i jak wpływają na ekspresję genów?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "mb03-c1",
+          "text": "Dziedziczne zmiany w ekspresji genów, które nie zmieniają sekwencji DNA — takie jak metylacja DNA i modyfikacje histonów",
+          "is_correct": true
+        },
+        {
+          "id": "mb03-c2",
+          "text": "Trwałe mutacje wprowadzone bezpośrednio do sekwencji zasad DNA i przekazywane wszystkim komórkom potomnym",
+          "is_correct": false
+        },
+        {
+          "id": "mb03-c3",
+          "text": "Odwracalne zmiany w ekspresji genów spowodowane wyłącznie toksynami środowiskowymi i ekspozycją na promieniowanie",
+          "is_correct": false
+        },
+        {
+          "id": "mb03-c4",
+          "text": "Post-transkrypcyjne edycje sekwencji mRNA, takie jak edycja A-do-I, zmieniające produkcję białka",
+          "is_correct": false
+        }
+      ],
+      "explanation": "**Modyfikacje epigenetyczne** regulują dostępność chromatyny bez zmiany sekwencji DNA:\n\n| Modyfikacja | Efekt |\n|-------------|--------|\n| **Metylacja DNA** (5-mC) | Zazwyczaj hamuje transkrypcję |\n| **Acetylacja histonów** | Otwiera chromatynę → aktywacja genów |\n| **Metylacja histonów** | Zależna od kontekstu (H3K4me3 = aktywna; H3K27me3 = wyciszona) |\n\nZnaki epigenetyczne mogą być dziedziczone przez podziały komórkowe i wpływają na rozwój, nowotwory i starzenie się.",
+      "tags": [
+        "epigenetics"
+      ]
+    },
+    {
+      "id": "mb04-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Które z poniższych są cechami **alternatywnego splicingu**? Zaznacz wszystkie poprawne odpowiedzi.",
+      "type": "multiple_choice",
+      "choices": [
+        {
+          "id": "mb04-c1",
+          "text": "Umożliwia jednemu genowi wytwarzanie wielu izoform białkowych",
+          "is_correct": true
+        },
+        {
+          "id": "mb04-c2",
+          "text": "Zachodzi w jądrze komórkowym po transkrypcji",
+          "is_correct": true
+        },
+        {
+          "id": "mb04-c3",
+          "text": "Polega na usuwaniu intronów przez spliceosomy i łączeniu eksonów w różnych kombinacjach",
+          "is_correct": true
+        },
+        {
+          "id": "mb04-c4",
+          "text": "Trwale zmienia sekwencję DNA genu poprzez mutację somatyczną",
+          "is_correct": false
+        }
+      ],
+      "explanation": "**Alternatywny splicing** znacząco poszerza różnorodność białek:\n\n- ~95% ludzkich genów wieloeksonowych ulega alternatywnemu splicingowi\n- Jeden gen może produkować dziesiątki izoform białkowych\n- Regulowany przez **czynniki splicingowe** promujące lub hamujące rozpoznawanie miejsc splicingowych\n\n**Mechanizmy:** pominięcie eksonu, alternatywne miejsca splicingowe 5'/3', retencja intronu, wzajemnie wykluczające się eksony.\n\nAlternatywny splicing NIE zmienia DNA — wpływa jedynie na to, które eksony są zawarte w dojrzałym mRNA.",
+      "tags": [
+        "splicing"
+      ]
+    },
+    {
+      "id": "mb05-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Co decyduje o tym, jak **białko fałduje się** w strukturę 3D?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "mb05-c1",
+          "text": "Przede wszystkim jego sekwencja aminokwasowa (struktura pierwszorzędowa), kierowana przez termodynamikę i wspomagana przez chaperony",
+          "is_correct": true
+        },
+        {
+          "id": "mb05-c2",
+          "text": "Dokładna kolejność zasad nukleotydowych w kodującej nici DNA, która bezpośrednio dyktuje strukturę 3D",
+          "is_correct": false
+        },
+        {
+          "id": "mb05-c3",
+          "text": "Rybosomy nieustannie refałdują nascent polipeptydy do ich ostatecznej konfiguracji 3D podczas translacji",
+          "is_correct": false
+        },
+        {
+          "id": "mb05-c4",
+          "text": "Modyfikacje potranslacyjne, takie jak fosforylacja i glikozylacja, wyłącznie definiują fałd",
+          "is_correct": false
+        }
+      ],
+      "explanation": "Fałdowanie białek jest zdeterminowane przez **sekwencję aminokwasową** (dogmat Anfinsena):\n\n- Natywny fałd jest **termodynamicznie najniższym stanem energetycznym**\n- Reszty hydrofobowe zagrzebują się w rdzeniu; reszty polarne/naładowane zwrócone są ku rozpuszczalnikowi\n- Najpierw tworzy się struktura drugorzędowa (α-helisy, β-harmonijki), potem trzeciorzędowa\n- **Chaperony molekularne** (Hsp70, GroEL) wspomagają fałdowanie i zapobiegają agregacji in vivo\n\n**Błędne fałdowanie** powoduje choroby: Alzheimera (amyloid-β), Parkinsona (α-synukleina), Huntingtona.",
+      "tags": [
+        "protein-structure"
+      ]
+    },
+    {
+      "id": "mb06-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Jaka jest rola **telomerów** i **telomerazy** w biologii komórki?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "mb06-c1",
+          "text": "Telomery chronią końce chromosomów przed degradacją; telomeraza wydłuża je w komórkach macierzystych i nowotworowych",
+          "is_correct": true
+        },
+        {
+          "id": "mb06-c2",
+          "text": "Telomery kodują niezbędne geny konstytutywne; telomeraza jest enzymem naprawczym korygującym mutacje",
+          "is_correct": false
+        },
+        {
+          "id": "mb06-c3",
+          "text": "Telomery fizycznie rozdzielają homologiczne pary chromosomów podczas synaptonemalnego synapsis i crossing-over w mejozie",
+          "is_correct": false
+        },
+        {
+          "id": "mb06-c4",
+          "text": "Telomeraza jest dedykowaną polimerazą RNA transkrybującą niekodujący RNA z regionu telomerowego",
+          "is_correct": false
+        }
+      ],
+      "explanation": "**Telomery** to powtarzalne sekwencje DNA (TTAGGG u ludzi) na końcach chromosomów:\n\n- **Problem końca replikacji**: polimeraza DNA nie może w pełni powielić końca 3' → telomery skracają się z każdym podziałem\n- Po ~50–70 podziałach krytycznie krótkie telomery wywołują **starzenie komórkowe** (granica Hayflicka)\n\n**Telomeraza** (rybonukleoproteina o aktywności odwrotnej transkryptazy) wydłuża telomery:\n- Aktywna w: komórkach zarodkowych, macierzystych, ~90% nowotworów\n- Nieaktywna w: większości komórek somatycznych → wyjaśnia nieśmiertelność nowotworów\n- Cel przeciwnowotworowy: inhibitory telomerazy są przedmiotem badań klinicznych",
+      "tags": [
+        "telomeres"
+      ]
+    },
+    {
+      "id": "mb07-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Własnymi słowami wyjaśnij **operon lac** jako przykład prokariontycznej regulacji genów.",
+      "type": "open",
+      "choices": [],
+      "explanation": "**Operon lac** w *E. coli* kontroluje geny metabolizmu laktozy i demonstruje zarówno **regulację negatywną**, jak i **pozytywną**:\n\n**Regulacja negatywna (represor):**\n- Gen *lacI* koduje **represor lac**\n- Represor wiąże się z sekwencją **operatora**, blokując transkrypcję\n- **Laktoza** (poprzez allolaktozę) działa jako **induktor** — wiąże represor, uwalniając go z DNA\n\n**Regulacja pozytywna (CAP/CRP):**\n- Gdy glukoza jest nieobecna, stężenie cAMP wzrasta\n- cAMP wiąże **białko CAP**, które następnie wiąże się z promotorem i wzmacnia transkrypcję\n\n**Wynik:** Operon jest w pełni aktywny tylko gdy laktoza jest obecna ORAZ glukoza jest nieobecna — efektywny system kontroli sprzężenia.",
+      "tags": [
+        "gene-regulation"
+      ]
+    },
+    {
+      "id": "mb08-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Czym jest **odpowiedź na niezfałdowane białka (UPR)**?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "mb08-c1",
+          "text": "Odpowiedź na stres komórkowy wywołana nagromadzeniem źle sfałdowanych białek w ER, mająca na celu przywrócenie homeostazy białkowej",
+          "is_correct": true
+        },
+        {
+          "id": "mb08-c2",
+          "text": "Zależny od ATP proces, w którym proteasom 26S degraduje źle sfałdowane białka znakowane ubikwityną",
+          "is_correct": false
+        },
+        {
+          "id": "mb08-c3",
+          "text": "Globalne zahamowanie translacji wywołane pęknięciami obu nici DNA, zapobiegające propagacji błędów replikacji do komórek potomnych",
+          "is_correct": false
+        },
+        {
+          "id": "mb08-c4",
+          "text": "Wrodzona odpowiedź immunologiczna na zewnątrzkomórkowe agregaty amyloidowe wydzielane przez komórki z ER-stresem do otaczającej tkanki",
+          "is_correct": false
+        }
+      ],
+      "explanation": "**UPR** jest aktywowana podczas **stresu ER** (np. infekcja wirusowa, hipoksja, nagromadzenie zmutowanych białek):\n\n**Trzy czujniki stresu ER:**\n1. **IRE1α**: spajluje mRNA *XBP1* → czynnik transkrypcyjny aktywujący chaperony\n2. **PERK**: fosforyluje eIF2α → zmniejsza globalną translację, aktywuje ATF4\n3. **ATF6**: przemieszcza się do aparatu Golgiego → ulega cięciu → czynnik transkrypcyjny\n\n**Wyniki:**\n- Zwiększenie zdolności fałdowania ER (regulacja w górę chaperonów)\n- Zmniejszenie obciążenia ER (osłabienie translacji)\n- ERAD (degradacja związana z ER) źle sfałdowanych białek\n- Jeśli nierozwiązane: apoptoza\n\nDysfunkcja UPR jest powiązana z cukrzycą, neurodegeneracją i nowotworami.",
+      "tags": [
+        "cell-biology"
+      ]
+    }
+  ],
+  "created_at": "2025-03-21T00:00:00Z",
+  "modified_at": null,
+  "language": "pl"
+}

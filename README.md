@@ -10,7 +10,7 @@ A React quiz app with Markdown, math ($\LaTeX$ via KaTeX), and Mermaid diagram s
 
 ```bash
 npm install
-cp -r data_example public/data   # copy sample quizzes for static mode
+cp -r data_example/. public/data   # copy sample quizzes for static mode
 npm run dev
 ```
 

@@ -1,7 +1,7 @@
 {
   "id": "f6a7b8c9-d0e1-2345-fabc-de6789012345",
   "name": "Neural Networks & Deep Learning",
-  "description": "Explore the architecture and mechanics of **neural networks** \u2014 layers, activation functions, backpropagation, convolutional networks, and regularisation techniques.\n\nSuitable for anyone with a basic ML background.",
+  "description": "Explore the architecture and mechanics of **neural networks** — layers, activation functions, backpropagation, convolutional networks, and regularisation techniques.\n\nSuitable for anyone with a basic ML background.",
   "tags": [
     "ml",
     "deep-learning",
@@ -38,7 +38,7 @@
           "is_correct": false
         }
       ],
-      "explanation": "Without activation functions, a neural network is just a series of linear transformations \u2014 which compose into a single linear transformation regardless of depth.\n\nActivation functions like **ReLU**, **sigmoid**, and **tanh** add non-linearity, enabling the network to approximate complex, non-linear functions.",
+      "explanation": "Without activation functions, a neural network is just a series of linear transformations — which compose into a single linear transformation regardless of depth.\n\nActivation functions like **ReLU**, **sigmoid**, and **tanh** add non-linearity, enabling the network to approximate complex, non-linear functions.",
       "tags": [
         "architecture"
       ]
@@ -69,7 +69,7 @@
           "is_correct": false
         }
       ],
-      "explanation": "In deep networks with sigmoid/tanh activations, gradients are multiplied by small values (< 1) at each layer during backpropagation. After many layers, the gradient becomes negligibly small \u2014 early layers barely update.\n\n**Solutions**: ReLU activation, batch normalisation, residual connections (ResNets), LSTM for sequences.",
+      "explanation": "In deep networks with sigmoid/tanh activations, gradients are multiplied by small values (< 1) at each layer during backpropagation. After many layers, the gradient becomes negligibly small — early layers barely update.\n\n**Solutions**: ReLU activation, batch normalisation, residual connections (ResNets), LSTM for sequences.",
       "tags": [
         "training"
       ]
@@ -162,7 +162,7 @@
           "is_correct": false
         }
       ],
-      "explanation": "**Batch normalisation** (Ioffe & Szegedy, 2015) normalises each layer's inputs across the mini-batch:\n\n$$\\hat{x}_i = \\frac{x_i - \\mu_B}{\\sqrt{\\sigma_B^2 + \\epsilon}}$$\n\nBenefits:\n- Reduces **internal covariate shift**\n- Allows higher learning rates \u2192 faster training\n- Acts as mild regularisation\n- Reduces sensitivity to weight initialisation",
+      "explanation": "**Batch normalisation** (Ioffe & Szegedy, 2015) normalises each layer's inputs across the mini-batch:\n\n$$\\hat{x}_i = \\frac{x_i - \\mu_B}{\\sqrt{\\sigma_B^2 + \\epsilon}}$$\n\nBenefits:\n- Reduces **internal covariate shift**\n- Allows higher learning rates → faster training\n- Acts as mild regularisation\n- Reduces sensitivity to weight initialisation",
       "tags": [
         "training"
       ]
@@ -234,7 +234,7 @@
           "is_correct": false
         }
       ],
-      "explanation": "**Max pooling** downsamples feature maps by taking the maximum value in each pooling window (e.g., 2\u00d72):\n\n- Reduces spatial dimensions \u2192 fewer parameters in subsequent layers\n- Provides **translation invariance**: small shifts in input produce same output\n- Discards less important spatial information\n\nAlternatives include average pooling and global average pooling.",
+      "explanation": "**Max pooling** downsamples feature maps by taking the maximum value in each pooling window (e.g., 2×2):\n\n- Reduces spatial dimensions → fewer parameters in subsequent layers\n- Provides **translation invariance**: small shifts in input produce same output\n- Discards less important spatial information\n\nAlternatives include average pooling and global average pooling.",
       "tags": [
         "cnn"
       ]
@@ -304,5 +304,6 @@
     }
   ],
   "created_at": "2024-06-01T00:00:00Z",
-  "modified_at": null
+  "modified_at": null,
+  "language": "en"
 }

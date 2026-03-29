@@ -1,7 +1,7 @@
 {
   "id": "b4c5d6e7-f8a9-0123-bcde-fa4567890123",
   "name": "Computer Science: Algorithms & Data Structures",
-  "description": "Master **fundamental algorithms and data structures** \u2014 complexity analysis, sorting, trees, graphs, hashing, and dynamic programming.\n\nEssential knowledge for technical interviews and software engineering.",
+  "description": "Master **fundamental algorithms and data structures** — complexity analysis, sorting, trees, graphs, hashing, and dynamic programming.\n\nEssential knowledge for technical interviews and software engineering.",
   "tags": [
     "cs",
     "algorithms",
@@ -28,7 +28,7 @@
           "is_correct": true
         }
       ],
-      "explanation": "**Binary search** halves the search space at each step:\n\n- Worst case: $O(\\log n)$ comparisons\n- Best case: $O(1)$ (target is the midpoint)\n- Space: $O(1)$ iterative, $O(\\log n)$ recursive\n\n**Requirement**: the array must be **sorted**.\n\nCompare to linear search: $O(n)$ \u2014 binary search is dramatically faster for large datasets.",
+      "explanation": "**Binary search** halves the search space at each step:\n\n- Worst case: $O(\\log n)$ comparisons\n- Best case: $O(1)$ (target is the midpoint)\n- Space: $O(1)$ iterative, $O(\\log n)$ recursive\n\n**Requirement**: the array must be **sorted**.\n\nCompare to linear search: $O(n)$ — binary search is dramatically faster for large datasets.",
       "tags": [
         "searching",
         "complexity"
@@ -60,7 +60,7 @@
           "is_correct": false
         }
       ],
-      "explanation": "Sorting complexity comparison:\n\n| Algorithm | Best | Average | Worst | Stable? |\n|-----------|------|---------|-------|--------|\n| Merge Sort | $O(n\\log n)$ | $O(n\\log n)$ | $O(n\\log n)$ | \u2713 |\n| Heap Sort | $O(n\\log n)$ | $O(n\\log n)$ | $O(n\\log n)$ | \u2717 |\n| Quick Sort | $O(n\\log n)$ | $O(n\\log n)$ | **$O(n^2)$** | \u2717 |\n| Bubble Sort | $O(n)$ | $O(n^2)$ | $O(n^2)$ | \u2713 |\n\nQuick sort's worst case is $O(n^2)$ but average case $O(n\\log n)$ with good constant factors makes it fast in practice.",
+      "explanation": "Sorting complexity comparison:\n\n| Algorithm | Best | Average | Worst | Stable? |\n|-----------|------|---------|-------|--------|\n| Merge Sort | $O(n\\log n)$ | $O(n\\log n)$ | $O(n\\log n)$ | ✓ |\n| Heap Sort | $O(n\\log n)$ | $O(n\\log n)$ | $O(n\\log n)$ | ✗ |\n| Quick Sort | $O(n\\log n)$ | $O(n\\log n)$ | **$O(n^2)$** | ✗ |\n| Bubble Sort | $O(n)$ | $O(n^2)$ | $O(n^2)$ | ✓ |\n\nQuick sort's worst case is $O(n^2)$ but average case $O(n\\log n)$ with good constant factors makes it fast in practice.",
       "tags": [
         "sorting",
         "complexity"
@@ -92,7 +92,7 @@
           "is_correct": false
         }
       ],
-      "explanation": "**Hash table** operations (average case):\n- Lookup: $O(1)$\n- Insert: $O(1)$\n- Delete: $O(1)$\n\n**Worst case** (all keys hash to same bucket): $O(n)$\n\n**Trade-offs vs sorted arrays:**\n- \u2713 Faster average lookup\n- \u2713 Faster insert/delete\n- \u2717 No ordered traversal\n- \u2717 Higher memory overhead\n- \u2717 No predecessor/successor queries\n\nSorted arrays are better when you need range queries or sorted output.",
+      "explanation": "**Hash table** operations (average case):\n- Lookup: $O(1)$\n- Insert: $O(1)$\n- Delete: $O(1)$\n\n**Worst case** (all keys hash to same bucket): $O(n)$\n\n**Trade-offs vs sorted arrays:**\n- ✓ Faster average lookup\n- ✓ Faster insert/delete\n- ✗ No ordered traversal\n- ✗ Higher memory overhead\n- ✗ No predecessor/successor queries\n\nSorted arrays are better when you need range queries or sorted output.",
       "tags": [
         "hashing"
       ]
@@ -175,7 +175,7 @@
           "is_correct": true
         }
       ],
-      "explanation": "**Dijkstra's algorithm** finds shortest paths from a source vertex to all others (non-negative weights):\n\n1. Initialise distances: source = 0, others = \u221e\n2. Use a **min-heap (priority queue)** to always process the closest unvisited node\n3. For each node, relax its neighbours\n\n**Complexity**: $O((V + E) \\log V)$ with a binary heap.\n\n**Bellman-Ford** handles negative weights: $O(VE)$ but slower.\n**A\\*** uses heuristics for faster single-target search.",
+      "explanation": "**Dijkstra's algorithm** finds shortest paths from a source vertex to all others (non-negative weights):\n\n1. Initialise distances: source = 0, others = ∞\n2. Use a **min-heap (priority queue)** to always process the closest unvisited node\n3. For each node, relax its neighbours\n\n**Complexity**: $O((V + E) \\log V)$ with a binary heap.\n\n**Bellman-Ford** handles negative weights: $O(VE)$ but slower.\n**A\\*** uses heuristics for faster single-target search.",
       "tags": [
         "graphs"
       ]
@@ -206,7 +206,7 @@
           "is_correct": false
         }
       ],
-      "explanation": "| Algorithm | Data structure | Shortest path? | Memory |\n|-----------|---------------|----------------|--------|\n| **BFS** | Queue (FIFO) | \u2713 (unweighted) | $O(b^d)$ (wide) |\n| **DFS** | Stack/recursion | \u2717 | $O(d)$ (deep) |\n\nWhere $b$ = branching factor, $d$ = depth.\n\n**When to use:**\n- BFS: shortest path in unweighted graph, level-order traversal\n- DFS: topological sort, cycle detection, connected components, maze solving",
+      "explanation": "| Algorithm | Data structure | Shortest path? | Memory |\n|-----------|---------------|----------------|--------|\n| **BFS** | Queue (FIFO) | ✓ (unweighted) | $O(b^d)$ (wide) |\n| **DFS** | Stack/recursion | ✗ | $O(d)$ (deep) |\n\nWhere $b$ = branching factor, $d$ = depth.\n\n**When to use:**\n- BFS: shortest path in unweighted graph, level-order traversal\n- DFS: topological sort, cycle detection, connected components, maze solving",
       "tags": [
         "graphs"
       ]
@@ -218,7 +218,7 @@
       "choices": [
         {
           "id": "al08-c1",
-          "text": "A complete binary tree where each node is \u2265 (max-heap) or \u2264 (min-heap) all its children",
+          "text": "A complete binary tree where each node is ≥ (max-heap) or ≤ (min-heap) all its children",
           "is_correct": true
         },
         {
@@ -237,7 +237,7 @@
           "is_correct": false
         }
       ],
-      "explanation": "A **heap** is a complete binary tree satisfying the heap property:\n\n- **Max-heap**: parent \u2265 children (root is maximum)\n- **Min-heap**: parent \u2264 children (root is minimum)\n\n**Operations** (using array representation):\n- Peek min/max: $O(1)$\n- Insert: $O(\\log n)$ (sift up)\n- Extract min/max: $O(\\log n)$ (sift down)\n- Build heap from array: $O(n)$\n\n**Applications**: priority queue, heap sort, Dijkstra's algorithm.",
+      "explanation": "A **heap** is a complete binary tree satisfying the heap property:\n\n- **Max-heap**: parent ≥ children (root is maximum)\n- **Min-heap**: parent ≤ children (root is minimum)\n\n**Operations** (using array representation):\n- Peek min/max: $O(1)$\n- Insert: $O(\\log n)$ (sift up)\n- Extract min/max: $O(\\log n)$ (sift down)\n- Build heap from array: $O(n)$\n\n**Applications**: priority queue, heap sort, Dijkstra's algorithm.",
       "tags": [
         "trees"
       ]
@@ -268,7 +268,7 @@
           "is_correct": false
         }
       ],
-      "explanation": "$f(n) = O(g(n))$ means there exist constants $c > 0$ and $n_0$ such that $f(n) \\leq c \\cdot g(n)$ for all $n \\geq n_0$.\n\n**Key properties:**\n- Drops constants: $O(3n) = O(n)$\n- Drops lower terms: $O(n^2 + n) = O(n^2)$\n- Describes **asymptotic** behaviour, not exact operation count\n- Big O is an *upper bound* \u2014 an $O(n^2)$ algorithm might run faster in practice\n- Big Omega $\\Omega$ = lower bound; Big Theta $\\Theta$ = tight bound",
+      "explanation": "$f(n) = O(g(n))$ means there exist constants $c > 0$ and $n_0$ such that $f(n) \\leq c \\cdot g(n)$ for all $n \\geq n_0$.\n\n**Key properties:**\n- Drops constants: $O(3n) = O(n)$\n- Drops lower terms: $O(n^2 + n) = O(n^2)$\n- Describes **asymptotic** behaviour, not exact operation count\n- Big O is an *upper bound* — an $O(n^2)$ algorithm might run faster in practice\n- Big Omega $\\Omega$ = lower bound; Big Theta $\\Theta$ = tight bound",
       "tags": [
         "complexity"
       ]
@@ -309,7 +309,7 @@
           "is_correct": false
         }
       ],
-      "explanation": "A **trie** stores strings by sharing common prefixes:\n\n```\n       (root)\n      /      \\\n     a        b\n    / \\       |\n   p   r      e\n   |   |     / \\\n   p   t    a   e\n   |   |    |   |\n   l   *    r   *\n   |         |\n   e         *\n   |\n   *\n```\n(\"apple\", \"art\", \"bear\", \"bee\")\n\n**Operations**: $O(m)$ where $m$ = string length \u2014 independent of number of strings.\n\n**Applications**: autocomplete, spell checking, IP routing tables, word frequency counting.",
+      "explanation": "A **trie** stores strings by sharing common prefixes:\n\n```\n       (root)\n      /      \\\n     a        b\n    / \\       |\n   p   r      e\n   |   |     / \\\n   p   t    a   e\n   |   |    |   |\n   l   *    r   *\n   |         |\n   e         *\n   |\n   *\n```\n(\"apple\", \"art\", \"bear\", \"bee\")\n\n**Operations**: $O(m)$ where $m$ = string length — independent of number of strings.\n\n**Applications**: autocomplete, spell checking, IP routing tables, word frequency counting.",
       "tags": [
         "trees"
       ]
@@ -340,12 +340,13 @@
           "is_correct": false
         }
       ],
-      "explanation": "**Amortised analysis** gives a tight bound on average cost per operation for a *sequence* of operations:\n\n**Classic example**: dynamic array (ArrayList/vector)\n- Most appends: $O(1)$\n- Occasional resize (doubling): $O(n)$\n- Amortised cost per append: **$O(1)$** \u2014 the expensive resizes are \"paid for\" by the cheap appends\n\n**Methods**: aggregate analysis, accounting method, potential method.\n\nThis is why Python `list.append()` is documented as $O(1)$ amortised.",
+      "explanation": "**Amortised analysis** gives a tight bound on average cost per operation for a *sequence* of operations:\n\n**Classic example**: dynamic array (ArrayList/vector)\n- Most appends: $O(1)$\n- Occasional resize (doubling): $O(n)$\n- Amortised cost per append: **$O(1)$** — the expensive resizes are \"paid for\" by the cheap appends\n\n**Methods**: aggregate analysis, accounting method, potential method.\n\nThis is why Python `list.append()` is documented as $O(1)$ amortised.",
       "tags": [
         "complexity"
       ]
     }
   ],
   "created_at": "2024-12-01T00:00:00Z",
-  "modified_at": "2025-03-10T00:00:00Z"
+  "modified_at": "2025-03-10T00:00:00Z",
+  "language": "en"
 }

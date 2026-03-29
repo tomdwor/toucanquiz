@@ -10,7 +10,8 @@
       "question_limit": null,
       "question_count": 5,
       "created_at": "2024-02-10T00:00:00Z",
-      "modified_at": null
+      "modified_at": null,
+      "language": "en"
     },
     {
       "id": "b2c3d4e5-f6a7-8901-bcde-fa2345678901",
@@ -22,7 +23,8 @@
       "question_limit": 3,
       "question_count": 5,
       "created_at": "2024-03-05T00:00:00Z",
-      "modified_at": "2024-09-12T00:00:00Z"
+      "modified_at": "2024-09-12T00:00:00Z",
+      "language": "en"
     },
     {
       "id": "c3d4e5f6-a7b8-9012-cdef-ab3456789012",
@@ -34,7 +36,8 @@
       "question_limit": null,
       "question_count": 5,
       "created_at": "2024-03-20T00:00:00Z",
-      "modified_at": null
+      "modified_at": null,
+      "language": "en"
     },
     {
       "id": "d4e5f6a7-b8c9-0123-defa-bc4567890123",
@@ -46,7 +49,8 @@
       "question_limit": 4,
       "question_count": 5,
       "created_at": "2024-04-08T00:00:00Z",
-      "modified_at": null
+      "modified_at": null,
+      "language": "en"
     },
     {
       "id": "e5f6a7b8-c9d0-1234-efab-cd5678901234",
@@ -58,7 +62,8 @@
       "question_limit": 8,
       "question_count": 12,
       "created_at": "2024-05-15T00:00:00Z",
-      "modified_at": "2024-11-03T00:00:00Z"
+      "modified_at": "2024-11-03T00:00:00Z",
+      "language": "en"
     },
     {
       "id": "f6a7b8c9-d0e1-2345-fabc-de6789012345",
@@ -70,7 +75,8 @@
       "question_limit": 7,
       "question_count": 10,
       "created_at": "2024-06-01T00:00:00Z",
-      "modified_at": null
+      "modified_at": null,
+      "language": "en"
     },
     {
       "id": "a7b8c9d0-e1f2-3456-abcd-ef7890123456",
@@ -82,7 +88,8 @@
       "question_limit": 8,
       "question_count": 10,
       "created_at": "2024-06-20T00:00:00Z",
-      "modified_at": "2025-01-08T00:00:00Z"
+      "modified_at": "2025-01-08T00:00:00Z",
+      "language": "en"
     },
     {
       "id": "b8c9d0e1-f2a3-4567-bcde-fa8901234567",
@@ -94,7 +101,8 @@
       "question_limit": 7,
       "question_count": 10,
       "created_at": "2024-07-14T00:00:00Z",
-      "modified_at": null
+      "modified_at": null,
+      "language": "en"
     },
     {
       "id": "c9d0e1f2-a3b4-5678-cdef-ab9012345678",
@@ -106,7 +114,8 @@
       "question_limit": 8,
       "question_count": 12,
       "created_at": "2024-08-02T00:00:00Z",
-      "modified_at": "2024-12-20T00:00:00Z"
+      "modified_at": "2024-12-20T00:00:00Z",
+      "language": "en"
     },
     {
       "id": "d0e1f2a3-b4c5-6789-defa-bc0123456789",
@@ -118,7 +127,8 @@
       "question_limit": 7,
       "question_count": 10,
       "created_at": "2024-08-25T00:00:00Z",
-      "modified_at": null
+      "modified_at": null,
+      "language": "en"
     },
     {
       "id": "e1f2a3b4-c5d6-7890-efab-cd1234567890",
@@ -130,7 +140,8 @@
       "question_limit": 6,
       "question_count": 8,
       "created_at": "2024-09-10T00:00:00Z",
-      "modified_at": null
+      "modified_at": null,
+      "language": "en"
     },
     {
       "id": "f2a3b4c5-d6e7-8901-fabc-de2345678901",
@@ -142,7 +153,8 @@
       "question_limit": 6,
       "question_count": 10,
       "created_at": "2024-10-05T00:00:00Z",
-      "modified_at": "2025-02-14T00:00:00Z"
+      "modified_at": "2025-02-14T00:00:00Z",
+      "language": "en"
     },
     {
       "id": "a3b4c5d6-e7f8-9012-abcd-ef3456789012",
@@ -154,7 +166,8 @@
       "question_limit": 8,
       "question_count": 10,
       "created_at": "2024-11-18T00:00:00Z",
-      "modified_at": null
+      "modified_at": null,
+      "language": "en"
     },
     {
       "id": "b4c5d6e7-f8a9-0123-bcde-fa4567890123",
@@ -166,7 +179,8 @@
       "question_limit": 10,
       "question_count": 12,
       "created_at": "2024-12-01T00:00:00Z",
-      "modified_at": "2025-03-10T00:00:00Z"
+      "modified_at": "2025-03-10T00:00:00Z",
+      "language": "en"
     },
     {
       "id": "g0h1i2j3-k4l5-6789-mnop-qr0123456789",
@@ -178,7 +192,151 @@
       "question_limit": null,
       "question_count": 5,
       "created_at": "2025-03-15T00:00:00Z",
-      "modified_at": null
+      "modified_at": null,
+      "language": "en"
+    },
+    {
+      "id": "p1c3d4e5-f6a7-b8c9-d0e1-f2a3b4c5d6e7",
+      "name": "Biologia molekularna",
+      "description": "Poznaj **cząsteczki życia** — DNA, RNA, nukleotydy i ekspresja genów.",
+      "tags": ["biology", "molecular-biology", "DNA", "RNA", "beginner"],
+      "mode": "practice",
+      "pass_threshold": 65,
+      "question_limit": null,
+      "question_count": 5,
+      "created_at": "2025-03-20T00:00:00Z",
+      "modified_at": null,
+      "language": "pl"
+    },
+    {
+      "id": "p2e1f2a3-b4c5-d6e7-f8a9-b0c1d2e3f4a5",
+      "name": "Zaawansowana biologia molekularna",
+      "description": "Pogłęb wiedzę z **biologii molekularnej** — CRISPR, epigenetyka, interferencja RNA i regulacja genów.",
+      "tags": ["biology", "molecular-biology", "intermediate"],
+      "mode": "practice",
+      "pass_threshold": 65,
+      "question_limit": 6,
+      "question_count": 8,
+      "created_at": "2025-03-21T00:00:00Z",
+      "modified_at": null,
+      "language": "pl"
+    },
+    {
+      "id": "p3d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
+      "name": "Bioinformatyka",
+      "description": "Wprowadzenie do **bioinformatyki** — formaty sekwencji, BLAST, dopasowanie i składanie genomów.",
+      "tags": ["bioinformatics", "genomics", "beginner"],
+      "mode": "practice",
+      "pass_threshold": 65,
+      "question_limit": 4,
+      "question_count": 5,
+      "created_at": "2025-03-22T00:00:00Z",
+      "modified_at": null,
+      "language": "pl"
+    },
+    {
+      "id": "p4f2a3b4-c5d6-e7f8-a9b0-c1d2e3f4a5b6",
+      "name": "Zaawansowana bioinformatyka",
+      "description": "Zaawansowane zagadnienia **bioinformatyki obliczeniowej** — algorytmy dopasowania, RNA-seq, warianty i filogenetyka.",
+      "tags": ["bioinformatics", "genomics", "intermediate"],
+      "mode": "practice",
+      "pass_threshold": 65,
+      "question_limit": 6,
+      "question_count": 10,
+      "created_at": "2025-03-23T00:00:00Z",
+      "modified_at": null,
+      "language": "pl"
+    },
+    {
+      "id": "s1a2b3c4-d5e6-f7a8-b9c0-d1e2f3a4b5c6",
+      "name": "La Célula",
+      "description": "Aprende sobre la **unidad básica de la vida** — tipos de células, organelos y sus funciones.",
+      "tags": ["biology", "cell-biology", "beginner"],
+      "mode": "practice",
+      "pass_threshold": 60,
+      "question_limit": null,
+      "question_count": 6,
+      "created_at": "2025-03-24T00:00:00Z",
+      "modified_at": null,
+      "language": "es"
+    },
+    {
+      "id": "s2b3c4d5-e6f7-a8b9-c0d1-e2f3a4b5c6d7",
+      "name": "Fotosíntesis",
+      "description": "Entiende cómo las plantas convierten la **luz solar en energía** — reacciones de la luz, ciclo de Calvin y clorofila.",
+      "tags": ["biology", "plants", "beginner"],
+      "mode": "practice",
+      "pass_threshold": 60,
+      "question_limit": null,
+      "question_count": 6,
+      "created_at": "2025-03-25T00:00:00Z",
+      "modified_at": null,
+      "language": "es"
+    },
+    {
+      "id": "s3c4d5e6-f7a8-b9c0-d1e2-f3a4b5c6d7e8",
+      "name": "El Cuerpo Humano",
+      "description": "Explora los **sistemas del cuerpo humano** — digestivo, circulatorio, nervioso y más.",
+      "tags": ["biology", "human-body", "beginner"],
+      "mode": "practice",
+      "pass_threshold": 60,
+      "question_limit": null,
+      "question_count": 6,
+      "created_at": "2025-03-26T00:00:00Z",
+      "modified_at": null,
+      "language": "es"
+    },
+    {
+      "id": "s4d5e6f7-a8b9-c0d1-e2f3-a4b5c6d7e8f9",
+      "name": "Genética Básica",
+      "description": "Fundamentos de la **herencia genética** — genes, cromosomas, leyes de Mendel y dominancia.",
+      "tags": ["biology", "genetics", "beginner"],
+      "mode": "practice",
+      "pass_threshold": 60,
+      "question_limit": null,
+      "question_count": 6,
+      "created_at": "2025-03-27T00:00:00Z",
+      "modified_at": null,
+      "language": "es"
+    },
+    {
+      "id": "s5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9a0",
+      "name": "Ecosistemas y Cadenas Alimentarias",
+      "description": "Descubre cómo fluye la **energía en los ecosistemas** — productores, consumidores, descomponedores y redes tróficas.",
+      "tags": ["biology", "ecology", "beginner"],
+      "mode": "practice",
+      "pass_threshold": 60,
+      "question_limit": null,
+      "question_count": 6,
+      "created_at": "2025-03-28T00:00:00Z",
+      "modified_at": null,
+      "language": "es"
+    },
+    {
+      "id": "m1a2b3c4-d5e6-f7a8-b9c0-d1e2f3a4b5c6",
+      "name": "Mathematical Functions & Graphs",
+      "description": "Explore **key function types** through interactive charts — linear, quadratic, cubic, and exponential functions visualised with Mermaid diagrams.",
+      "tags": ["math", "functions", "graphs", "intermediate"],
+      "mode": "practice",
+      "pass_threshold": 65,
+      "question_limit": null,
+      "question_count": 7,
+      "created_at": "2025-03-29T00:00:00Z",
+      "modified_at": null,
+      "language": "en"
+    },
+    {
+      "id": "m2b3c4d5-e6f7-a8b9-c0d1-e2f3a4b5c6d7",
+      "name": "Funkcje Matematyczne i Wykresy",
+      "description": "Poznaj **kluczowe typy funkcji** przez wykresy — liniowe, kwadratowe, sześcienne i wykładnicze.",
+      "tags": ["math", "functions", "graphs", "intermediate"],
+      "mode": "practice",
+      "pass_threshold": 65,
+      "question_limit": null,
+      "question_count": 7,
+      "created_at": "2025-03-30T00:00:00Z",
+      "modified_at": null,
+      "language": "pl"
     }
   ]
 }

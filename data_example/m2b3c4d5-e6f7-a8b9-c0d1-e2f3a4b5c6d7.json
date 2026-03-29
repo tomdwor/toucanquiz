@@ -1,0 +1,105 @@
+{
+  "id": "m2b3c4d5-e6f7-a8b9-c0d1-e2f3a4b5c6d7",
+  "name": "Funkcje Matematyczne i Wykresy",
+  "description": "Poznaj **kluczowe typy funkcji** przez wykresy interaktywne.\n\nKażde pytanie zawiera wykres i prosi o identyfikację lub analizę pokazanej funkcji.\n\nOmawiane funkcje: $f(x) = x$, $f(x) = x^2$, $f(x) = x^3$, $f(x) = 2^x$, $f(x) = -x^2 + 4$.\n\nWyrażenia matematyczne renderowane są z $\\KaTeX$.",
+  "tags": ["math", "functions", "graphs", "intermediate"],
+  "mode": "practice",
+  "pass_threshold": 65,
+  "question_limit": null,
+  "language": "pl",
+  "created_at": "2025-03-30T00:00:00Z",
+  "modified_at": null,
+  "questions": [
+    {
+      "id": "m2-q1",
+      "type": "single_choice",
+      "text": "Poniższy wykres przedstawia pewną funkcję. Którą funkcję reprezentuje?\n\n```mermaid\nxychart-beta\n    title \"f(x) = ?\"\n    x-axis [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\n    y-axis \"f(x)\" -5 --> 5\n    line [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\n```",
+      "choices": [
+        { "id": "m2-q1-a", "text": "$f(x) = x$", "is_correct": true },
+        { "id": "m2-q1-b", "text": "$f(x) = x^2$", "is_correct": false },
+        { "id": "m2-q1-c", "text": "$f(x) = |x|$", "is_correct": false },
+        { "id": "m2-q1-d", "text": "$f(x) = 2x$", "is_correct": false }
+      ],
+      "explanation": "Wykres przedstawia prostą przechodzącą przez początek układu współrzędnych z współczynnikiem kierunkowym 1. Każda wartość wyjściowa jest równa wartości wejściowej — to jest $f(x) = x$.\n\n**Funkcja liniowa** $f(x) = mx + b$ daje prostą. Gdy $m = 1$ i $b = 0$, prosta ma współczynnik kierunkowy 1 i przecina oś $y$ w punkcie $0$.\n\nPorównanie:\n- $f(x) = 2x$ ma współczynnik kierunkowy 2 (bardziej stroma prosta)\n- $f(x) = x^2$ to parabola (krzywa, zawsze $\\geq 0$)\n- $f(x) = |x|$ ma kształt litery V (zawsze $\\geq 0$)\n\n```mermaid\nxychart-beta\n    title \"f(x) = x (slope 1)\"\n    x-axis [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\n    y-axis \"f(x)\" -5 --> 5\n    line [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\n```",
+      "tags": ["functions", "linear"]
+    },
+    {
+      "id": "m2-q2",
+      "type": "single_choice",
+      "text": "Którą funkcję przedstawia ten symetryczny, wypukły ku górze wykres w kształcie litery U?\n\n```mermaid\nxychart-beta\n    title \"f(x) = ?\"\n    x-axis [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\n    y-axis \"f(x)\" 0 --> 25\n    line [25, 16, 9, 4, 1, 0, 1, 4, 9, 16, 25]\n```",
+      "choices": [
+        { "id": "m2-q2-a", "text": "$f(x) = x^3$", "is_correct": false },
+        { "id": "m2-q2-b", "text": "$f(x) = x^2$", "is_correct": true },
+        { "id": "m2-q2-c", "text": "$f(x) = 2x$", "is_correct": false },
+        { "id": "m2-q2-d", "text": "$f(x) = \\sqrt{x}$", "is_correct": false }
+      ],
+      "explanation": "Wykres to **parabola** symetryczna względem osi $y$, z wierzchołkiem w $(0, 0)$.\n\nDla $f(x) = x^2$:\n\n| $x$ | $-3$ | $-2$ | $-1$ | $0$ | $1$ | $2$ | $3$ |\n|-----|------|------|------|-----|-----|-----|-----|\n| $f(x)$ | $9$ | $4$ | $1$ | $0$ | $1$ | $4$ | $9$ |\n\nKluczowe właściwości:\n- Zawsze $\\geq 0$ (nigdy ujemna)\n- **Funkcja parzysta**: $f(-x) = f(x)$, symetryczna względem osi $y$\n- Minimum w $x = 0$\n- Rośnie szybciej niż funkcja liniowa dla dużych $|x|$",
+      "tags": ["functions", "quadratic"]
+    },
+    {
+      "id": "m2-q3",
+      "type": "single_choice",
+      "text": "Wykres przedstawia funkcję przechodzącą przez początek układu współrzędnych i posiadającą symetrię obrotową 180°. Jaka to funkcja?\n\n```mermaid\nxychart-beta\n    title \"f(x) = ?\"\n    x-axis [-3, -2.5, -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3]\n    y-axis \"f(x)\" -27 --> 27\n    line [-27, -15.6, -8, -3.4, -1, -0.1, 0, 0.1, 1, 3.4, 8, 15.6, 27]\n```",
+      "choices": [
+        { "id": "m2-q3-a", "text": "$f(x) = x^2$", "is_correct": false },
+        { "id": "m2-q3-b", "text": "$f(x) = x^4$", "is_correct": false },
+        { "id": "m2-q3-c", "text": "$f(x) = x^3$", "is_correct": true },
+        { "id": "m2-q3-d", "text": "$f(x) = 3x$", "is_correct": false }
+      ],
+      "explanation": "Wartości $[-27, -8, -1, 0, 1, 8, 27]$ to dokładnie $(-3)^3, (-2)^3, \\ldots, 3^3$.\n\n$f(x) = x^3$ jest **funkcją nieparzystą**: $f(-x) = -f(x)$. Krzywa ma symetrię obrotową 180° względem początku układu współrzędnych.\n\nW odróżnieniu od $f(x) = x^2$, funkcja sześcienna:\n- Przyjmuje wartości ujemne dla ujemnych $x$\n- Jest **ściśle rosnąca** wszędzie\n- Posiada punkt przegięcia w początku układu (krzywa zmienia wklęsłość)\n- Nie ma minimum ani maksimum",
+      "tags": ["functions", "cubic"]
+    },
+    {
+      "id": "m2-q4",
+      "type": "single_choice",
+      "text": "Pewna funkcja podwaja swoją wartość przy każdym jednostkowym wzroście $x$. Wykres pokazuje jej wartości dla $x = 0$ do $x = 6$. Jaka jest wartość $f(5)$?\n\n```mermaid\nxychart-beta\n    title \"f(x) = 2^x\"\n    x-axis [0, 1, 2, 3, 4, 5, 6, 7, 8]\n    y-axis \"f(x)\" 0 --> 256\n    line [1, 2, 4, 8, 16, 32, 64, 128, 256]\n```",
+      "choices": [
+        { "id": "m2-q4-a", "text": "$16$", "is_correct": false },
+        { "id": "m2-q4-b", "text": "$32$", "is_correct": true },
+        { "id": "m2-q4-c", "text": "$64$", "is_correct": false },
+        { "id": "m2-q4-d", "text": "$25$", "is_correct": false }
+      ],
+      "explanation": "$f(x) = 2^x$, więc $f(5) = 2^5 = 32$.\n\nOdczytując z wykresu, wartość przy $x = 5$ wynosi $32$ (odczytując z wykresu).\n\nWzrost wykładniczy charakteryzuje się **stałym ilorazem** między kolejnymi wartościami:\n$$\\frac{f(x+1)}{f(x)} = \\frac{2^{x+1}}{2^x} = 2$$\n\nCiąg się podwaja: $1, 2, 4, 8, 16, \\mathbf{32}, 64$.",
+      "tags": ["functions", "exponential"]
+    },
+    {
+      "id": "m2-q5",
+      "type": "single_choice",
+      "text": "Wykres przedstawia $f(x) = -x^2 + 4$. Jakie są współrzędne **wierzchołka** (punktu maksymalnego)?\n\n```mermaid\nxychart-beta\n    title \"f(x) = -x^2 + 4\"\n    x-axis [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\n    y-axis \"f(x)\" -21 --> 5\n    line [-21, -12, -5, 0, 3, 4, 3, 0, -5, -12, -21]\n```",
+      "choices": [
+        { "id": "m2-q5-a", "text": "$(-4, 0)$", "is_correct": false },
+        { "id": "m2-q5-b", "text": "$(0, 4)$", "is_correct": true },
+        { "id": "m2-q5-c", "text": "$(4, 0)$", "is_correct": false },
+        { "id": "m2-q5-d", "text": "$(0, -4)$", "is_correct": false }
+      ],
+      "explanation": "Dla $f(x) = -x^2 + 4$, postać wierzchołkowa to $f(x) = -(x-0)^2 + 4$, więc wierzchołek leży w $(0, 4)$.\n\n**Ujemny współczynnik wiodący** ($-1$) oznacza, że parabola jest skierowana **ku dołowi** — wierzchołek jest maksimum.\n\nZ wykresu wynika, że najwyższy punkt jest w $x = 0$:\n$$f(0) = -(0)^2 + 4 = 4$$\n\nFunkcja jest równa zero przy $x = \\pm 2$ (miejsca zerowe, czyli przecięcia z osią $x$).",
+      "tags": ["functions", "quadratic", "vertex"]
+    },
+    {
+      "id": "m2-q6",
+      "type": "multiple_choice",
+      "text": "Patrząc na wykres $f(x) = -x^2 + 4$, które wartości $x$ są **miejscami zerowymi** (gdzie $f(x) = 0$)? Zaznacz wszystkie poprawne.\n\n```mermaid\nxychart-beta\n    title \"f(x) = -x^2 + 4\"\n    x-axis [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]\n    y-axis \"f(x)\" -21 --> 5\n    line [-21, -12, -5, 0, 3, 4, 3, 0, -5, -12, -21]\n```",
+      "choices": [
+        { "id": "m2-q6-a", "text": "$x = -2$", "is_correct": true },
+        { "id": "m2-q6-b", "text": "$x = 0$", "is_correct": false },
+        { "id": "m2-q6-c", "text": "$x = 2$", "is_correct": true },
+        { "id": "m2-q6-d", "text": "$x = 4$", "is_correct": false }
+      ],
+      "explanation": "Miejsca zerowe to punkty, w których krzywa przecina oś $x$, czyli $f(x) = 0$.\n\nRozwiązując $-x^2 + 4 = 0$:\n$$x^2 = 4 \\implies x = \\pm 2$$\n\nZ wykresu:\n- $f(-2) = -(-2)^2 + 4 = -4 + 4 = 0$ ✓\n- $f(2) = -(2)^2 + 4 = -4 + 4 = 0$ ✓\n\nUwaga: $f(0) = 4$ (to **wierzchołek**, a nie miejsce zerowe). $x = 4$ leży poza zakresem wykresu.",
+      "tags": ["functions", "quadratic", "roots"]
+    },
+    {
+      "id": "m2-q7",
+      "type": "single_choice",
+      "text": "Dla dużych wartości $x$, która z tych funkcji rośnie **najszybciej**?\n\n| $x$ | $f(x)=x$ | $g(x)=x^2$ | $h(x)=2^x$ |\n|-----|----------|------------|------------|\n| 5   | 5        | 25         | 32         |\n| 10  | 10       | 100        | 1 024      |\n| 20  | 20       | 400        | 1 048 576  |",
+      "choices": [
+        { "id": "m2-q7-a", "text": "$f(x) = x$ (liniowa)", "is_correct": false },
+        { "id": "m2-q7-b", "text": "$g(x) = x^2$ (kwadratowa)", "is_correct": false },
+        { "id": "m2-q7-c", "text": "$h(x) = 2^x$ (wykładnicza)", "is_correct": true },
+        { "id": "m2-q7-d", "text": "Wszystkie rosną w tym samym tempie", "is_correct": false }
+      ],
+      "explanation": "**Funkcje wykładnicze w końcu przerastają każdy wielomian**, niezależnie od jego stopnia.\n\n**Hierarchia tempa wzrostu** (dla dużych $x$):\n$$\\log x \\ll x \\ll x^k \\ll b^x \\quad (k>0,\\; b>1)$$\n\nFormalnie, dla dowolnego $k > 0$ i podstawy $b > 1$:\n$$\\lim_{x \\to \\infty} \\frac{x^k}{b^x} = 0$$\n\nDla $x = 20$: liniowa daje 20, kwadratowa daje 400, wykładnicza daje **1 048 576** — ponad milion!",
+      "tags": ["functions", "growth-rates", "exponential"]
+    }
+  ]
+}

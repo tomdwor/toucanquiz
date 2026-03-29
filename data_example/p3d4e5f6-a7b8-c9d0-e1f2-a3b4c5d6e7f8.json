@@ -1,0 +1,155 @@
+{
+  "id": "p3d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
+  "name": "Bioinformatyka",
+  "description": "Wprowadzenie do **biologii obliczeniowej** — używania komputerów do analizy danych biologicznych.\n\n> Ten quiz używa `question_limit: 4`, więc każda sesja losowo wybiera 4 z 5 pytań.\n\nOmawiane tematy:\n- Formaty sekwencji (FASTA, FASTQ, BAM)\n- Wyrównywanie sekwencji\n- Składanie genomów\n- Narzędzia takie jak BLAST",
+  "tags": [
+    "bioinformatics",
+    "genomics",
+    "beginner"
+  ],
+  "mode": "practice",
+  "pass_threshold": 65,
+  "question_limit": 4,
+  "questions": [
+    {
+      "id": "q1d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
+      "text": "Co przechowuje format pliku **FASTA**?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "c1d4e5f6-0001-0000-0000-000000000001",
+          "text": "Trójwymiarowe struktury białek i koordynaty atomowe (format PDB)",
+          "is_correct": false
+        },
+        {
+          "id": "c1d4e5f6-0001-0000-0000-000000000002",
+          "text": "Sekwencje biologiczne, takie jak DNA lub białka",
+          "is_correct": true
+        },
+        {
+          "id": "c1d4e5f6-0001-0000-0000-000000000003",
+          "text": "Poziomy ekspresji genów mierzone przez mikromacierze lub RNA-seq",
+          "is_correct": false
+        },
+        {
+          "id": "c1d4e5f6-0001-0000-0000-000000000004",
+          "text": "Obrazy kariotypów chromosomów i wzory prążkowania",
+          "is_correct": false
+        }
+      ],
+      "explanation": "**FASTA** to jeden z najpowszechniejszych formatów przechowywania sekwencji biologicznych.\n\nPlik FASTA wygląda następująco:\n\n```\n>sequence_name description\nATGCATGCATGCATGCATGC\nATGCATGCATGCATGC\n```\n\n- Linie zaczynające się od `>` to **nagłówki** (nazwa/opis sekwencji)\n- Następujące po nich linie to sama **sekwencja** (litery DNA A, T, G, C lub aminokwasy)\n\nFASTA może przechowywać:\n- Sekwencje DNA\n- Sekwencje RNA\n- Sekwencje białkowe (aminokwasowe)",
+      "tags": [
+        "file-formats",
+        "FASTA"
+      ]
+    },
+    {
+      "id": "q2d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
+      "text": "Które narzędzie bioinformatyczne jest powszechnie używane do **przeszukiwania bazy danych sekwencji** w celu znalezienia podobnych sekwencji?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "c2d4e5f6-0002-0000-0000-000000000001",
+          "text": "BLAST",
+          "is_correct": true
+        },
+        {
+          "id": "c2d4e5f6-0002-0000-0000-000000000002",
+          "text": "Python",
+          "is_correct": false
+        },
+        {
+          "id": "c2d4e5f6-0002-0000-0000-000000000003",
+          "text": "Excel",
+          "is_correct": false
+        },
+        {
+          "id": "c2d4e5f6-0002-0000-0000-000000000004",
+          "text": "SAMtools",
+          "is_correct": false
+        }
+      ],
+      "explanation": "**BLAST** (Basic Local Alignment Search Tool) służy do znajdowania w bazach danych sekwencji podobnych do sekwencji zapytania.\n\nJak to działa:\n\n```mermaid\ngraph LR\n    Q[\"Query sequence\"] --> BLAST[\"BLAST search\"]\n    DB[(\"Sequence database\\ne.g. NCBI\")] --> BLAST\n    BLAST --> R[\"Matching sequences + scores\"]\n```\n\nBLAST nadaje każdemu dopasowaniu **E-wartość** — niższa E-wartość oznacza bardziej istotne dopasowanie.\n\n**SAMtools** pracuje z plikami wyrównań (SAM/BAM), a nie z przeszukiwaniem baz danych.",
+      "tags": [
+        "BLAST",
+        "tools"
+      ]
+    },
+    {
+      "id": "q3d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
+      "text": "Które z poniższych są **typowymi formatami plików bioinformatycznych** używanymi do przechowywania danych sekwencjonowania? Zaznacz wszystkie poprawne odpowiedzi.",
+      "type": "multiple_choice",
+      "choices": [
+        {
+          "id": "c3d4e5f6-0003-0000-0000-000000000001",
+          "text": "FASTA (`.fa` / `.fasta`)",
+          "is_correct": true
+        },
+        {
+          "id": "c3d4e5f6-0003-0000-0000-000000000002",
+          "text": "FASTQ (`.fastq` / `.fq`)",
+          "is_correct": true
+        },
+        {
+          "id": "c3d4e5f6-0003-0000-0000-000000000003",
+          "text": "BAM (`.bam`)",
+          "is_correct": true
+        },
+        {
+          "id": "c3d4e5f6-0003-0000-0000-000000000004",
+          "text": "DOCX (`.docx`)",
+          "is_correct": false
+        }
+      ],
+      "explanation": "Typowe formaty bioinformatyczne:\n\n| Format | Zawiera | Zastosowanie |\n|---|---|---|\n| **FASTA** | Tylko sekwencje | Genomy referencyjne, bazy danych białek |\n| **FASTQ** | Sekwencje + wyniki jakości | Surowe odczyty sekwencjonowania |\n| **BAM** | Wyrównane odczyty (binarnie) | Wyrównanie odczytów do referencji |\n| **VCF** | Warianty | SNP-y, indelе |\n\n**DOCX** to format Microsoft Word — nie używany w bioinformatyce!",
+      "tags": [
+        "file-formats"
+      ]
+    },
+    {
+      "id": "q4d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
+      "text": "W **wyrównaniu sekwencji**, co oznacza symbol przerwy (`-`)?\n\nPrzykładowe wyrównanie:\n```\nSequence A:  ATG-CTAGC\nSequence B:  ATGGCTA-C\n```",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "c4d4e5f6-0004-0000-0000-000000000001",
+          "text": "Nieznana zasada",
+          "is_correct": false
+        },
+        {
+          "id": "c4d4e5f6-0004-0000-0000-000000000002",
+          "text": "Insercja lub delecja (indel)",
+          "is_correct": true
+        },
+        {
+          "id": "c4d4e5f6-0004-0000-0000-000000000003",
+          "text": "Mutacja",
+          "is_correct": false
+        },
+        {
+          "id": "c4d4e5f6-0004-0000-0000-000000000004",
+          "text": "Kodon stop",
+          "is_correct": false
+        }
+      ],
+      "explanation": "W wyrównaniu sekwencji `-` to **przerwa** — oznacza **insercję lub delecję (indel)**.\n\nGdy dwie sekwencje są wyrównywane, przerwy są wprowadzane, aby podobne regiony znalazły się naprzeciwko siebie:\n\n```\nSequence A:  ATG-CTAGC   ← przerwa = zasada została usunięta (lub wstawiona w B)\nSequence B:  ATGGCTA-C   ← przerwa = zasada została usunięta (lub wstawiona w A)\n             |||.|||.|\n```\n\n- Przerwa w sekwencji A oznacza, że B ma **insercję** w tej pozycji (lub A ma delecję)\n- Przerwy są konieczne do uzyskania najlepszego możliwego wyrównania",
+      "tags": [
+        "alignment",
+        "indels"
+      ]
+    },
+    {
+      "id": "q5d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8",
+      "text": "Własnymi słowami, czym jest **składanie genomu**? Dlaczego jest potrzebne?",
+      "type": "open",
+      "choices": [],
+      "explanation": "**Składanie genomu** to proces rekonstrukcji pełnej sekwencji genomu z wielu krótkich odczytów sekwencjonowania.\n\nDlaczego jest potrzebne: sekwencery DNA nie mogą odczytać całego genomu za jednym razem — produkują miliony krótkich fragmentów (odczytów). Oprogramowanie do składania łączy je jak puzzle:\n\n```mermaid\ngraph LR\n    Reads[\"Short reads\\n(100-300 bp each)\"] --> Assembler[\"Assembly software\"]\n    Assembler --> Contigs[\"Contigs (longer sequences)\"]\n    Contigs --> Genome[\"Complete genome\"]\n```\n\n**Kluczowe pojęcia:**\n- **Odczyt** — krótki zsekwencjonowany fragment\n- **Kontig** — ciągła złożona sekwencja\n- **Szkielet** — kontigi uporządkowane i zorientowane z użyciem dodatkowych informacji",
+      "tags": [
+        "genome-assembly"
+      ]
+    }
+  ],
+  "created_at": "2025-03-22T00:00:00Z",
+  "modified_at": null,
+  "language": "pl"
+}

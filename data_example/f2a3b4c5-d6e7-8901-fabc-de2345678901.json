@@ -1,7 +1,7 @@
 {
   "id": "f2a3b4c5-d6e7-8901-fabc-de2345678901",
   "name": "Advanced Bioinformatics",
-  "description": "Go deeper into **computational biology** \u2014 sequence alignment algorithms, variant calling, RNA-seq analysis, protein structure prediction, and phylogenetics.\n\nFor bioinformaticians and computational biologists.",
+  "description": "Go deeper into **computational biology** — sequence alignment algorithms, variant calling, RNA-seq analysis, protein structure prediction, and phylogenetics.\n\nFor bioinformaticians and computational biologists.",
   "tags": [
     "bioinformatics",
     "genomics",
@@ -68,7 +68,7 @@
           "is_correct": false
         }
       ],
-      "explanation": "**Variant calling** identifies genomic differences from a reference:\n\n| Variant type | Description | Example |\n|-------------|-------------|--------|\n| **SNP/SNV** | Single nucleotide | A\u2192G at position 12345 |\n| **Indel** | Insertion/deletion | +ATG or -3bp |\n| **CNV** | Copy number variant | 3 copies of chr21 |\n| **SV** | Structural variant | Inversion, translocation |\n\n**Pipeline:** sequencing \u2192 alignment (BWA/STAR) \u2192 preprocessing (GATK) \u2192 variant calling (GATK HaplotypeCaller, DeepVariant) \u2192 annotation (VEP, SnpEff).",
+      "explanation": "**Variant calling** identifies genomic differences from a reference:\n\n| Variant type | Description | Example |\n|-------------|-------------|--------|\n| **SNP/SNV** | Single nucleotide | A→G at position 12345 |\n| **Indel** | Insertion/deletion | +ATG or -3bp |\n| **CNV** | Copy number variant | 3 copies of chr21 |\n| **SV** | Structural variant | Inversion, translocation |\n\n**Pipeline:** sequencing → alignment (BWA/STAR) → preprocessing (GATK) → variant calling (GATK HaplotypeCaller, DeepVariant) → annotation (VEP, SnpEff).",
       "tags": [
         "variant-calling"
       ]
@@ -120,7 +120,7 @@
           "is_correct": true
         }
       ],
-      "explanation": "**Needleman-Wunsch** is a dynamic programming algorithm for global alignment:\n\n- Fills an $(m+1) \\times (n+1)$ scoring matrix\n- Time complexity: $O(mn)$ where $m$ and $n$ are sequence lengths\n- Space complexity: $O(mn)$ (or $O(\\min(m,n))$ with space-efficient variants)\n\nFor large databases (e.g., UniProt: 200M+ sequences), this is too slow \u2014 hence **BLAST** uses heuristics (seed-and-extend) to achieve near-linear runtime.",
+      "explanation": "**Needleman-Wunsch** is a dynamic programming algorithm for global alignment:\n\n- Fills an $(m+1) \\times (n+1)$ scoring matrix\n- Time complexity: $O(mn)$ where $m$ and $n$ are sequence lengths\n- Space complexity: $O(mn)$ (or $O(\\min(m,n))$ with space-efficient variants)\n\nFor large databases (e.g., UniProt: 200M+ sequences), this is too slow — hence **BLAST** uses heuristics (seed-and-extend) to achieve near-linear runtime.",
       "tags": [
         "algorithms"
       ]
@@ -151,7 +151,7 @@
           "is_correct": false
         }
       ],
-      "explanation": "**Maximum likelihood (ML) phylogenetics** selects the tree $T$ that maximises:\n\n$$P(\\text{data} \\mid T, \\theta)$$\n\nwhere $\\theta$ includes branch lengths and substitution model parameters (e.g., GTR+\u0393 for DNA).\n\n**Comparison of methods:**\n| Method | Basis | Speed |\n|--------|-------|-------|\n| UPGMA/NJ | Distance | Fast |\n| Parsimony | Minimum changes | Moderate |\n| **Maximum likelihood** | Statistical model | Slow but principled |\n| Bayesian (MrBayes) | Posterior probability | Slowest |\n\n**Tools**: RAxML, IQ-TREE (ML); BEAST (Bayesian).",
+      "explanation": "**Maximum likelihood (ML) phylogenetics** selects the tree $T$ that maximises:\n\n$$P(\\text{data} \\mid T, \\theta)$$\n\nwhere $\\theta$ includes branch lengths and substitution model parameters (e.g., GTR+Γ for DNA).\n\n**Comparison of methods:**\n| Method | Basis | Speed |\n|--------|-------|-------|\n| UPGMA/NJ | Distance | Fast |\n| Parsimony | Minimum changes | Moderate |\n| **Maximum likelihood** | Statistical model | Slow but principled |\n| Bayesian (MrBayes) | Posterior probability | Slowest |\n\n**Tools**: RAxML, IQ-TREE (ML); BEAST (Bayesian).",
       "tags": [
         "phylogenetics"
       ]
@@ -173,7 +173,7 @@
       "choices": [
         {
           "id": "bi07-c1",
-          "text": "The expected number of random alignments with a score at least as high, given the database size \u2014 lower E-value means more significant",
+          "text": "The expected number of random alignments with a score at least as high, given the database size — lower E-value means more significant",
           "is_correct": true
         },
         {
@@ -192,7 +192,7 @@
           "is_correct": false
         }
       ],
-      "explanation": "The **E-value** (expectation value) in BLAST:\n\n$$E = K \\cdot m \\cdot n \\cdot e^{-\\lambda S}$$\n\nWhere $S$ is the alignment score, $m$ and $n$ are sequence/database lengths, and $K$, $\\lambda$ are statistical parameters.\n\n**Interpretation:**\n- E = 0.001 \u2192 expect 0.001 hits by chance in this database\n- E < 1e-5: typically considered significant\n- E depends on database size \u2014 same alignment has different E-values for different databases\n\nNote: E-value is NOT a p-value, though they're related.",
+      "explanation": "The **E-value** (expectation value) in BLAST:\n\n$$E = K \\cdot m \\cdot n \\cdot e^{-\\lambda S}$$\n\nWhere $S$ is the alignment score, $m$ and $n$ are sequence/database lengths, and $K$, $\\lambda$ are statistical parameters.\n\n**Interpretation:**\n- E = 0.001 → expect 0.001 hits by chance in this database\n- E < 1e-5: typically considered significant\n- E depends on database size — same alignment has different E-values for different databases\n\nNote: E-value is NOT a p-value, though they're related.",
       "tags": [
         "blast"
       ]
@@ -204,7 +204,7 @@
       "choices": [
         {
           "id": "bi08-c1",
-          "text": "Genome assembly from short reads \u2014 representing k-mer overlaps as graph edges to reconstruct the original sequence",
+          "text": "Genome assembly from short reads — representing k-mer overlaps as graph edges to reconstruct the original sequence",
           "is_correct": true
         },
         {
@@ -223,7 +223,7 @@
           "is_correct": false
         }
       ],
-      "explanation": "**de Bruijn graphs** are the data structure underlying modern short-read assemblers:\n\n1. Break all reads into overlapping **k-mers** (k is typically 31\u2013127 bp)\n2. Build a directed graph where:\n   - **Nodes** = (k-1)-mers\n   - **Edges** = k-mers (each edge connects the (k-1)-mer prefix to the (k-1)-mer suffix)\n3. The genome corresponds to an **Eulerian path** through the graph\n\n**Assemblers using de Bruijn graphs**: Velvet, SPAdes, ABySS, SOAPdenovo.\n\nOverlap-layout-consensus (OLC) graphs are used for long reads (PacBio, ONT).",
+      "explanation": "**de Bruijn graphs** are the data structure underlying modern short-read assemblers:\n\n1. Break all reads into overlapping **k-mers** (k is typically 31–127 bp)\n2. Build a directed graph where:\n   - **Nodes** = (k-1)-mers\n   - **Edges** = k-mers (each edge connects the (k-1)-mer prefix to the (k-1)-mer suffix)\n3. The genome corresponds to an **Eulerian path** through the graph\n\n**Assemblers using de Bruijn graphs**: Velvet, SPAdes, ABySS, SOAPdenovo.\n\nOverlap-layout-consensus (OLC) graphs are used for long reads (PacBio, ONT).",
       "tags": [
         "genome-assembly"
       ]
@@ -264,12 +264,13 @@
       "text": "In your own words, explain what **single-cell RNA sequencing (scRNA-seq)** measures and what makes it different from bulk RNA-seq.",
       "type": "open",
       "choices": [],
-      "explanation": "**scRNA-seq** measures gene expression in **individual cells** rather than across a population:\n\n**Key difference from bulk RNA-seq:**\n- **Bulk**: measures the average expression across thousands of cells \u2192 masks heterogeneity\n- **scRNA-seq**: captures transcriptome of each cell \u2192 reveals cell subpopulations, rare cell types, differentiation trajectories\n\n**Workflow:** cell isolation (microfluidics, e.g., 10x Genomics) \u2192 lysis \u2192 reverse transcription with cell-specific barcodes + UMIs \u2192 sequencing \u2192 computational demultiplexing \u2192 clustering \u2192 cell type annotation\n\n**Applications:** tissue atlases (Human Cell Atlas), tumour microenvironment profiling, developmental biology, drug target discovery.",
+      "explanation": "**scRNA-seq** measures gene expression in **individual cells** rather than across a population:\n\n**Key difference from bulk RNA-seq:**\n- **Bulk**: measures the average expression across thousands of cells → masks heterogeneity\n- **scRNA-seq**: captures transcriptome of each cell → reveals cell subpopulations, rare cell types, differentiation trajectories\n\n**Workflow:** cell isolation (microfluidics, e.g., 10x Genomics) → lysis → reverse transcription with cell-specific barcodes + UMIs → sequencing → computational demultiplexing → clustering → cell type annotation\n\n**Applications:** tissue atlases (Human Cell Atlas), tumour microenvironment profiling, developmental biology, drug target discovery.",
       "tags": [
         "rna-seq"
       ]
     }
   ],
   "created_at": "2024-10-05T00:00:00Z",
-  "modified_at": "2025-02-14T00:00:00Z"
+  "modified_at": "2025-02-14T00:00:00Z",
+  "language": "en"
 }

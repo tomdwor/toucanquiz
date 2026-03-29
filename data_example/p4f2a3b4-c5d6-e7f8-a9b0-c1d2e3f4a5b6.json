@@ -1,0 +1,276 @@
+{
+  "id": "p4f2a3b4-c5d6-e7f8-a9b0-c1d2e3f4a5b6",
+  "name": "Zaawansowana Bioinformatyka",
+  "description": "Wejdź głębiej w **biologię obliczeniową** — algorytmy wyrównywania sekwencji, detekcja wariantów, analiza RNA-seq, przewidywanie struktury białek i filogenetyka.\n\nDla bioinformatyków i biologów obliczeniowych.",
+  "tags": [
+    "bioinformatics",
+    "genomics",
+    "intermediate"
+  ],
+  "mode": "practice",
+  "pass_threshold": 65,
+  "question_limit": 6,
+  "questions": [
+    {
+      "id": "bi01-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Jaka jest kluczowa różnica między **globalnym** a **lokalnym** wyrównaniem sekwencji?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "bi01-c1",
+          "text": "Wyrównanie globalne wyrównuje całe sekwencje od końca do końca; wyrównanie lokalne znajduje najlepiej pasujące podsekwencje",
+          "is_correct": true
+        },
+        {
+          "id": "bi01-c2",
+          "text": "Wyrównanie globalne jest obliczeniowo szybsze; wyrównanie lokalne poświęca szybkość na rzecz wyższej dokładności",
+          "is_correct": false
+        },
+        {
+          "id": "bi01-c3",
+          "text": "Wyrównanie lokalne dotyczy tylko sekwencji DNA; wyrównanie globalne obsługuje zarówno DNA, jak i sekwencje białkowe",
+          "is_correct": false
+        },
+        {
+          "id": "bi01-c4",
+          "text": "Wyrównanie globalne zabrania przerw; wyrównanie lokalne swobodnie wstawia przerwy w dowolnym miejscu obu sekwencji",
+          "is_correct": false
+        }
+      ],
+      "explanation": "| Wyrównanie | Algorytm | Najlepsze zastosowanie |\n|-----------|-----------|----------|\n| **Globalne** | Needleman-Wunsch | Sekwencje o podobnej długości i globalnej homologii |\n| **Lokalne** | Smith-Waterman | Znajdowanie konserwowanych domen w sekwencjach o ogólnej rozbieżności |\n\nBLAST używa heurystycznego wyrównania lokalnego do efektywnego przeszukiwania baz danych.\n\n**Punktacja:** Oba używają macierzy podstawień (np. BLOSUM62 dla białek, macierze nukleotydowe dla DNA) z karami za otwarcie/przedłużenie przerw.",
+      "tags": [
+        "alignment"
+      ]
+    },
+    {
+      "id": "bi02-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Czym jest **detekcja wariantów** w genomice?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "bi02-c1",
+          "text": "Identyfikacja pozycji w genomie, w których osobnik różni się od sekwencji referencyjnej",
+          "is_correct": true
+        },
+        {
+          "id": "bi02-c2",
+          "text": "Identyfikacja izoform splicingowych (wariantów mRNA) genu na podstawie wzorców pokrycia odczytami RNA-seq",
+          "is_correct": false
+        },
+        {
+          "id": "bi02-c3",
+          "text": "Testowanie, które warianty algorytmiczne programu do wyrównań działają najlepiej na danym genomie referencyjnym",
+          "is_correct": false
+        },
+        {
+          "id": "bi02-c4",
+          "text": "Klasyfikacja poszczególnych odczytów sekwencjonowania według wyników jakości phred do kontroli jakości",
+          "is_correct": false
+        }
+      ],
+      "explanation": "**Detekcja wariantów** identyfikuje genomowe różnice względem referencji:\n\n| Typ wariantu | Opis | Przykład |\n|-------------|-------------|--------|\n| **SNP/SNV** | Pojedynczy nukleotyd | A→G w pozycji 12345 |\n| **Indel** | Insercja/delecja | +ATG lub -3bp |\n| **CNV** | Wariant liczby kopii | 3 kopie chr21 |\n| **SV** | Wariant strukturalny | Inwersja, translokacja |\n\n**Potok:** sekwencjonowanie → wyrównanie (BWA/STAR) → przetwarzanie wstępne (GATK) → detekcja wariantów (GATK HaplotypeCaller, DeepVariant) → adnotacja (VEP, SnpEff).",
+      "tags": [
+        "variant-calling"
+      ]
+    },
+    {
+      "id": "bi03-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "W **RNA-seq**, co koryguje normalizacja? Zaznacz wszystkie poprawne odpowiedzi.",
+      "type": "multiple_choice",
+      "choices": [
+        {
+          "id": "bi03-c1",
+          "text": "Różnice w głębokości sekwencjonowania (wielkości biblioteki) między próbkami",
+          "is_correct": true
+        },
+        {
+          "id": "bi03-c2",
+          "text": "Błąd związany z długością genu (dłuższe geny generują więcej odczytów)",
+          "is_correct": true
+        },
+        {
+          "id": "bi03-c3",
+          "text": "Efekty partii pochodzące z różnych przebiegów sekwencjonowania",
+          "is_correct": true
+        },
+        {
+          "id": "bi03-c4",
+          "text": "Błędy sekwencjonowania w poszczególnych odczytach, korygowane przez algorytmy korekcji błędów przed wyrównaniem",
+          "is_correct": false
+        }
+      ],
+      "explanation": "Metody normalizacji RNA-seq:\n\n| Metoda | Koryguje |\n|--------|--------------|\n| **RPM/CPM** | Wielkość biblioteki |\n| **RPKM/FPKM** | Wielkość biblioteki + długość genu |\n| **TPM** | Wielkość biblioteki + długość genu (lepsza do porównań między próbkami) |\n| **Normalizacja TMM/DESeq2** | Wielkość biblioteki + błąd składu |\n\nEfekty partii wymagają dedykowanych metod (ComBat, limma removeBatchEffect).\n\nKorekcja błędów sekwencjonowania jest przeprowadzana podczas przetwarzania odczytów, a nie normalizacji.",
+      "tags": [
+        "rna-seq"
+      ]
+    },
+    {
+      "id": "bi04-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Jaka jest złożoność czasowa algorytmu **Needlemana-Wunscha**?",
+      "type": "text",
+      "choices": [
+        {
+          "id": "bi04-c1",
+          "text": "O(mn)",
+          "is_correct": true
+        },
+        {
+          "id": "bi04-c2",
+          "text": "o(mn)",
+          "is_correct": true
+        }
+      ],
+      "explanation": "**Needleman-Wunsch** to algorytm programowania dynamicznego do globalnego wyrównania:\n\n- Wypełnia macierz punktacji $(m+1) \\times (n+1)$\n- Złożoność czasowa: $O(mn)$, gdzie $m$ i $n$ to długości sekwencji\n- Złożoność przestrzenna: $O(mn)$ (lub $O(\\min(m,n))$ w wariantach oszczędzających pamięć)\n\nDla dużych baz danych (np. UniProt: 200M+ sekwencji) jest to zbyt wolne — dlatego **BLAST** używa heurystyk (seed-and-extend) do osiągnięcia prawie liniowego czasu działania.",
+      "tags": [
+        "algorithms"
+      ]
+    },
+    {
+      "id": "bi05-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Czym jest **maksymalne prawdopodobieństwo** w kontekście **filogenetyki**?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "bi05-c1",
+          "text": "Metoda znajdująca drzewo ewolucyjne maksymalizujące prawdopodobieństwo obserwowania danych sekwencji w ramach modelu podstawień",
+          "is_correct": true
+        },
+        {
+          "id": "bi05-c2",
+          "text": "Konstruowanie drzewa przez zachłączne łączenie dwóch najbardziej podobnych sekwencji, aż wszystkie taksony zostaną połączone w jeden korzeń (UPGMA)",
+          "is_correct": false
+        },
+        {
+          "id": "bi05-c3",
+          "text": "Metoda parsymonii minimalizująca całkowitą liczbę ewolucyjnych podstawień potrzebnych do wyjaśnienia obserwowanych różnic w sekwencjach",
+          "is_correct": false
+        },
+        {
+          "id": "bi05-c4",
+          "text": "Wybieranie grupy zewnętrznej z najwyższym a priori wynikiem prawdopodobieństwa, aby zakorzenić w innym razie niezakorzenione drzewo maksymalnej parsymonii",
+          "is_correct": false
+        }
+      ],
+      "explanation": "**Filogenetyka maksymalnego prawdopodobieństwa (ML)** wybiera drzewo $T$ maksymalizujące:\n\n$$P(\\text{data} \\mid T, \\theta)$$\n\ngdzie $\\theta$ obejmuje długości gałęzi i parametry modelu podstawień (np. GTR+Γ dla DNA).\n\n**Porównanie metod:**\n| Metoda | Podstawa | Szybkość |\n|--------|-------|-------|\n| UPGMA/NJ | Dystans | Szybka |\n| Parsymonia | Minimalna liczba zmian | Umiarkowana |\n| **Maksymalne prawdopodobieństwo** | Model statystyczny | Wolna, ale uzasadniona |\n| Bayesowska (MrBayes) | Prawdopodobieństwo a posteriori | Najwolniejsza |\n\n**Narzędzia**: RAxML, IQ-TREE (ML); BEAST (Bayesowska).",
+      "tags": [
+        "phylogenetics"
+      ]
+    },
+    {
+      "id": "bi06-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Własnymi słowami wyjaśnij, co mierzy **ChIP-seq** i jak działa.",
+      "type": "open",
+      "choices": [],
+      "explanation": "**ChIP-seq** (immunoprecypitacja chromatyny + sekwencjonowanie) identyfikuje miejsca wiązania białek wiążących DNA w skali całego genomu:\n\n**Schemat pracy:**\n1. **Sieciowanie**: utrwalenie interakcji białko-DNA w żywych komórkach (formaldehyd)\n2. **Fragmentacja** chromatyny na małe fragmenty (sonikacja lub MNase)\n3. **Immunoprecypitacja**: użycie specyficznego przeciwciała do wyciągnięcia białka docelowego + związanego DNA\n4. **Odwrócenie sieciowania** i oczyszczenie DNA\n5. **Sekwencjonowanie** wzbogaconych fragmentów DNA\n6. **Detekcja pików** (MACS2) w celu identyfikacji wzbogaconych regionów względem kontroli wejściowej\n\n**Zastosowania**: miejsca wiązania czynników transkrypcyjnych, mapy modyfikacji histonów (H3K27ac dla wzmacniaczy, H3K4me3 dla aktywnych promotorów), pozycjonowanie nukleosomów.",
+      "tags": [
+        "epigenomics"
+      ]
+    },
+    {
+      "id": "bi07-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Jaki jest cel **E-wartości** w wynikach BLAST?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "bi07-c1",
+          "text": "Oczekiwana liczba losowych wyrównań z wynikiem co najmniej tak wysokim, biorąc pod uwagę wielkość bazy danych — niższa E-wartość oznacza większą istotność",
+          "is_correct": true
+        },
+        {
+          "id": "bi07-c2",
+          "text": "Odsetek identycznych reszt w wyrównanym regionie między sekwencjami zapytania i docelowymi (% identyczności)",
+          "is_correct": false
+        },
+        {
+          "id": "bi07-c3",
+          "text": "Wynik złożoności sekwencji obliczony z entropii Shannona składu reszt, używany do maskowania regionów o małej złożoności przed przeszukiwaniem",
+          "is_correct": false
+        },
+        {
+          "id": "bi07-c4",
+          "text": "Szacowany dystans ewolucyjny w podstawieniach na miejsce oddzielający sekwencję zapytania od najlepiej pasującego wpisu w bazie danych",
+          "is_correct": false
+        }
+      ],
+      "explanation": "**E-wartość** (wartość oczekiwana) w BLAST:\n\n$$E = K \\cdot m \\cdot n \\cdot e^{-\\lambda S}$$\n\nGdzie $S$ to wynik wyrównania, $m$ i $n$ to długości sekwencji/bazy danych, a $K$, $\\lambda$ to parametry statystyczne.\n\n**Interpretacja:**\n- E = 0,001 → oczekujemy 0,001 trafień przez przypadek w tej bazie danych\n- E < 1e-5: zazwyczaj uważane za istotne\n- E zależy od wielkości bazy danych — to samo wyrównanie ma inne E-wartości dla różnych baz danych\n\nUwaga: E-wartość NIE jest wartością p, choć są ze sobą powiązane.",
+      "tags": [
+        "blast"
+      ]
+    },
+    {
+      "id": "bi08-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Do czego używa się **grafów de Bruijna** w bioinformatyce?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "bi08-c1",
+          "text": "Składanie genomu z krótkich odczytów — reprezentowanie nakładających się k-merów jako krawędzi grafu w celu rekonstrukcji oryginalnej sekwencji",
+          "is_correct": true
+        },
+        {
+          "id": "bi08-c2",
+          "text": "Wizualizacja sieci oddziaływań białko-białko z danych spektrometrii mas z ko-immunoprecypitacją",
+          "is_correct": false
+        },
+        {
+          "id": "bi08-c3",
+          "text": "Konstruowanie drzew filogenetycznych przez kodowanie wspólnych profili k-merów jako ważonych krawędzi grafu",
+          "is_correct": false
+        },
+        {
+          "id": "bi08-c4",
+          "text": "Modelowanie sieci regulacji genów, gdzie węzły reprezentują czynniki transkrypcyjne, a krawędzie pokazują wiązanie",
+          "is_correct": false
+        }
+      ],
+      "explanation": "**Grafy de Bruijna** to struktura danych leżąca u podstaw nowoczesnych składarek krótkich odczytów:\n\n1. Rozbicie wszystkich odczytów na nakładające się **k-mery** (k wynosi zazwyczaj 31–127 bp)\n2. Budowa grafu skierowanego, gdzie:\n   - **Węzły** = (k-1)-mery\n   - **Krawędzie** = k-mery (każda krawędź łączy prefiks (k-1)-merowy z sufiksem (k-1)-merowym)\n3. Genom odpowiada **ścieżce Eulera** przez graf\n\n**Składarki używające grafów de Bruijna**: Velvet, SPAdes, ABySS, SOAPdenovo.\n\nGrafy nakładania-układu-konsensusu (OLC) są używane dla długich odczytów (PacBio, ONT).",
+      "tags": [
+        "genome-assembly"
+      ]
+    },
+    {
+      "id": "bi09-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Jaka jest różnica między **czułością** a **swoistością** w kontekście przeszukiwania bazy danych sekwencji?",
+      "type": "single_choice",
+      "choices": [
+        {
+          "id": "bi09-c1",
+          "text": "Czułość: odsetek wykrytych prawdziwych homologów; Swoistość: odsetek wykrytych trafień będących prawdziwymi homologami",
+          "is_correct": true
+        },
+        {
+          "id": "bi09-c2",
+          "text": "Czułość: odsetek genomu referencyjnego pokrytego wystarczającą głębokością; Swoistość: jednorodność pokrycia",
+          "is_correct": false
+        },
+        {
+          "id": "bi09-c3",
+          "text": "Czułość: próg E-wartości, poniżej którego trafienie jest uznawane za istotne; Swoistość: odcięcie wyniku bitowego",
+          "is_correct": false
+        },
+        {
+          "id": "bi09-c4",
+          "text": "Są to te same metryki obliczane z przeciwnych kierunków macierzy pomyłek",
+          "is_correct": false
+        }
+      ],
+      "explanation": "W przeszukiwaniu baz danych:\n\n| Metryka | Wzór | Znaczenie |\n|--------|---------|--------|\n| **Czułość** (Recall) | TP / (TP + FN) | Ile prawdziwych homologów znaleźliśmy? |\n| **Swoistość** | TN / (TN + FP) | Jak rzadko nie-homolodzy przechodzą próg? |\n| **Precyzja** | TP / (TP + FP) | Jaki odsetek naszych trafień jest prawdziwy? |\n\nBLAST poświęca czułość na rzecz szybkości. Metody profilowe (PSI-BLAST, HMMer oparty na HMM) są bardziej czułe w przypadku odległych homologów.",
+      "tags": [
+        "evaluation"
+      ]
+    },
+    {
+      "id": "bi10-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Własnymi słowami wyjaśnij, co mierzy **sekwencjonowanie RNA pojedynczych komórek (scRNA-seq)** i czym różni się od masowego RNA-seq.",
+      "type": "open",
+      "choices": [],
+      "explanation": "**scRNA-seq** mierzy ekspresję genów w **pojedynczych komórkach**, a nie w całej populacji:\n\n**Kluczowa różnica od masowego RNA-seq:**\n- **Masowy**: mierzy średnią ekspresję w tysiącach komórek → maskuje heterogeniczność\n- **scRNA-seq**: rejestruje transkryptom każdej komórki → ujawnia subpopulacje komórek, rzadkie typy komórek, trajektorie różnicowania\n\n**Schemat pracy:** izolacja komórek (mikroprzepływy, np. 10x Genomics) → liza → odwrotna transkrypcja ze swoistymi dla komórek kodami kreskowymi + UMI → sekwencjonowanie → obliczeniowe demultipleksowanie → klasteryzacja → adnotacja typów komórek\n\n**Zastosowania**: atlasy tkanek (Human Cell Atlas), profilowanie mikrośrodowiska guza, biologia rozwojowa, odkrywanie celów terapeutycznych.",
+      "tags": [
+        "rna-seq"
+      ]
+    }
+  ],
+  "created_at": "2025-03-23T00:00:00Z",
+  "modified_at": null,
+  "language": "pl"
+}
