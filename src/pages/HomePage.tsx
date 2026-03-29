@@ -144,6 +144,9 @@ export function HomePage() {
                 onSortDirChange={setSortDir}
               />
             </div>
+            <div className="-mt-2 mb-4">
+              <Pagination page={page} totalPages={totalPages} onChange={setPage} />
+            </div>
             <QuizList quizzes={paginated} />
             <Pagination page={page} totalPages={totalPages} onChange={setPage} />
           </div>
