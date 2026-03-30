@@ -1,4 +1,5 @@
 @import 'katex/dist/katex.min.css';
+@import 'highlight.js/styles/github.css';
 
 @tailwind base;
 @tailwind components;
@@ -36,7 +37,12 @@
 }
 
 .rich-content pre {
-  @apply bg-gray-100 rounded-lg p-4 overflow-x-auto mb-3 text-sm;
+  @apply bg-gray-100 rounded-lg px-2 py-1 overflow-x-auto mb-3 text-sm;
+}
+
+/* Let the <pre> container provide the background; don't override it from the hljs theme */
+.rich-content .hljs {
+  background: transparent;
 }
 
 .rich-content blockquote {

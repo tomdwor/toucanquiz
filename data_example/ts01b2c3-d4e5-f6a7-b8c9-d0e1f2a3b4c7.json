@@ -1,0 +1,92 @@
+{
+  "id": "ts01b2c3-d4e5-f6a7-b8c9-d0e1f2a3b4c7",
+  "name": "TypeScript Basics",
+  "description": "Test your knowledge of **TypeScript fundamentals** — type annotations, interfaces, unions, generics, and optional chaining.\n\nAll questions use real TypeScript code. Example:\n\n```typescript\nconst greet = (name: string): string => `Hello, ${name}!`;\nconsole.log(greet(\"TypeScript\"));  // Hello, TypeScript!\n```",
+  "tags": ["typescript", "javascript", "programming", "beginner"],
+  "mode": "practice",
+  "pass_threshold": 70,
+  "question_limit": null,
+  "language": "en",
+  "created_at": "2026-03-30T00:00:00Z",
+  "modified_at": null,
+  "questions": [
+    {
+      "id": "ts-q1",
+      "type": "single_choice",
+      "text": "What does the `?` after `age` mean in this interface?\n\n```typescript\ninterface User {\n    name: string;\n    age?: number;\n}\n```",
+      "choices": [
+        { "id": "ts-q1-a", "text": "`age` is a nullable type — it can be `null`", "is_correct": false },
+        { "id": "ts-q1-b", "text": "`age` is an optional property — it may be omitted", "is_correct": true },
+        { "id": "ts-q1-c", "text": "`age` can be any type", "is_correct": false },
+        { "id": "ts-q1-d", "text": "Syntax error — `?` is not valid here", "is_correct": false }
+      ],
+      "explanation": "`?` marks a property as **optional** — the object can be created without providing it. The type of `age` becomes `number | undefined`:\n\n```typescript\ninterface User {\n    name: string;\n    age?: number;  // type is number | undefined\n}\n\nconst u1: User = { name: \"Alice\" };          // OK — age omitted\nconst u2: User = { name: \"Bob\", age: 30 };   // OK — age provided\n\nconsole.log(u1.age);  // undefined\nconsole.log(u2.age);  // 30\n```",
+      "tags": ["interfaces", "optional"]
+    },
+    {
+      "id": "ts-q2",
+      "type": "single_choice",
+      "text": "Which correctly defines a **union type** for a variable that can hold either a `string` or a `number`?",
+      "choices": [
+        { "id": "ts-q2-a", "text": "```typescript\nlet id: string | number;\n```", "is_correct": true },
+        { "id": "ts-q2-b", "text": "```typescript\nlet id: string & number;\n```", "is_correct": false },
+        { "id": "ts-q2-c", "text": "```typescript\nlet id: string || number;\n```", "is_correct": false },
+        { "id": "ts-q2-d", "text": "```typescript\nlet id: Union<string, number>;\n```", "is_correct": false }
+      ],
+      "explanation": "`|` is the **union type operator** — it means the variable can be *either* type:\n\n```typescript\nlet id: string | number;\n\nid = 42;       // OK\nid = \"abc\";    // OK\n// id = true;  // Error: boolean is not string | number\n```\n\n`&` is the **intersection** operator (combines types, both must be satisfied). `||` and `Union<>` are not valid TypeScript type syntax.",
+      "tags": ["types", "union"]
+    },
+    {
+      "id": "ts-q3",
+      "type": "single_choice",
+      "text": "What does this generic function do?\n\n```typescript\nfunction identity<T>(arg: T): T {\n    return arg;\n}\n\nconst result = identity<string>(\"hello\");\n```",
+      "choices": [
+        { "id": "ts-q3-a", "text": "It only accepts `string` arguments", "is_correct": false },
+        { "id": "ts-q3-b", "text": "It returns the argument cast to `any`", "is_correct": false },
+        { "id": "ts-q3-c", "text": "It returns the argument with its exact type preserved", "is_correct": true },
+        { "id": "ts-q3-d", "text": "It converts any argument to a string", "is_correct": false }
+      ],
+      "explanation": "`<T>` is a **type parameter** — a placeholder filled in at call time. The function works for any type while preserving type information:\n\n```typescript\nfunction identity<T>(arg: T): T {\n    return arg;\n}\n\nconst s = identity<string>(\"hello\");  // type: string\nconst n = identity<number>(42);       // type: number\nconst b = identity(true);             // type inferred: boolean\n\n// Unlike `any`, generics keep type safety:\n// identity<string>(42);  // Error: number is not assignable to string\n```",
+      "tags": ["generics", "type-safety"]
+    },
+    {
+      "id": "ts-q4",
+      "type": "single_choice",
+      "text": "What is printed by this code?\n\n```typescript\nconst user = {\n    profile: {\n        city: \"Warsaw\"\n    }\n};\n\nconsole.log(user?.profile?.city);\n```",
+      "choices": [
+        { "id": "ts-q4-a", "text": "`undefined`", "is_correct": false },
+        { "id": "ts-q4-b", "text": "`null`", "is_correct": false },
+        { "id": "ts-q4-c", "text": "`Warsaw`", "is_correct": true },
+        { "id": "ts-q4-d", "text": "`TypeError`", "is_correct": false }
+      ],
+      "explanation": "**Optional chaining** (`?.`) safely accesses nested properties. If any step is `null` or `undefined`, the whole expression short-circuits to `undefined` instead of throwing:\n\n```typescript\nconst user = { profile: { city: \"Warsaw\" } };\n\nconsole.log(user?.profile?.city);   // \"Warsaw\" — all properties exist\n\nconst empty = {};\nconsole.log(empty?.profile?.city);  // undefined — safe, no error\n\n// Without optional chaining:\nconsole.log(empty.profile.city);    // TypeError: Cannot read property 'city'\n```",
+      "tags": ["optional-chaining", "null-safety"]
+    },
+    {
+      "id": "ts-q5",
+      "type": "multiple_choice",
+      "text": "Which of the following are **valid TypeScript type annotations**? (Select all that apply)",
+      "choices": [
+        { "id": "ts-q5-a", "text": "```typescript\nlet x: string = \"hello\";\n```", "is_correct": true },
+        { "id": "ts-q5-b", "text": "```typescript\nlet y: number[] = [1, 2, 3];\n```", "is_correct": true },
+        { "id": "ts-q5-c", "text": "```typescript\nlet z: Array<boolean> = [true, false];\n```", "is_correct": true },
+        { "id": "ts-q5-d", "text": "```typescript\nlet w: int = 5;\n```", "is_correct": false }
+      ],
+      "explanation": "TypeScript has no `int` type — the numeric type is `number`. All other options are valid:\n\n```typescript\nlet x: string = \"hello\";           // string literal\nlet y: number[] = [1, 2, 3];       // array shorthand\nlet z: Array<boolean> = [true];    // generic Array syntax\n\n// let w: int = 5;                 // Error: 'int' is not a type in TS\nlet w: number = 5;                 // correct\n```\n\n`number[]` and `Array<number>` are equivalent — both are valid.",
+      "tags": ["types", "arrays"]
+    },
+    {
+      "id": "ts-q6",
+      "type": "single_choice",
+      "text": "What is the output of this code?\n\n```typescript\ntype Status = \"active\" | \"inactive\" | \"pending\";\n\nfunction describe(s: Status): string {\n    return `Status is: ${s}`;\n}\n\nconsole.log(describe(\"active\"));\n```",
+      "choices": [
+        { "id": "ts-q6-a", "text": "`Status is: active`", "is_correct": true },
+        { "id": "ts-q6-b", "text": "`Status is: Status`", "is_correct": false },
+        { "id": "ts-q6-c", "text": "`TypeError`", "is_correct": false },
+        { "id": "ts-q6-d", "text": "`undefined`", "is_correct": false }
+      ],
+      "explanation": "`type Status = \"active\" | \"inactive\" | \"pending\"` is a **string literal union type** — a union of specific string values. TypeScript enforces at compile time that only these values are accepted:\n\n```typescript\ntype Status = \"active\" | \"inactive\" | \"pending\";\n\ndescribe(\"active\");    // OK → \"Status is: active\"\ndescribe(\"inactive\");  // OK\n// describe(\"deleted\"); // Error: not assignable to type Status\n```\n\nLiteral types are a powerful way to model state machines and enumerations with full type safety.",
+      "tags": ["literal-types", "type-alias"]
+    }
+  ]
+}

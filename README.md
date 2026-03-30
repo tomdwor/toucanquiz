@@ -143,7 +143,12 @@ Full quiz file:
 - `text` — free-text input matched against a list of accepted answers (case-insensitive)
 - `open` — essay/short answer; shown explanation only, not graded
 
-All text fields (`description`, `question.text`, `choice.text`, `explanation`) support **Markdown**, **KaTeX math** (`$inline$`, `$$block$$`), and **Mermaid diagrams** (fenced code block with ` ```mermaid `).
+All text fields (`description`, `question.text`, `choice.text`, `explanation`) support:
+
+- **Markdown** — bold, italics, tables, lists, links
+- **KaTeX math** — inline (`$x^2$`) and block (`$$\sum_{i=0}^n i$$`)
+- **Syntax-highlighted code** — inline (`` `let x = 1` ``) and fenced blocks with a language tag (e.g. ` ```python `, ` ```cpp `, ` ```typescript `) — rendered via [highlight.js](https://highlightjs.org/) (github theme)
+- **Mermaid diagrams** — fenced code block with ` ```mermaid `
 
 ---
 
@@ -277,4 +282,5 @@ npm run lint      # ESLint
 - [TailwindCSS 3](https://tailwindcss.com/)
 - [React Router 6](https://reactrouter.com/)
 - [react-markdown](https://github.com/remarkjs/react-markdown) + [remark-math](https://github.com/remarkjs/remark-math) + [rehype-katex](https://github.com/remarkjs/remark-math/tree/main/packages/rehype-katex) for Markdown + math
+- [highlight.js](https://highlightjs.org/) (via [rehype-highlight](https://github.com/rehypejs/rehype-highlight)) for syntax-highlighted code blocks
 - [Mermaid](https://mermaid.js.org/) for diagrams (lazy-loaded)

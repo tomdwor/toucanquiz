@@ -1,0 +1,92 @@
+{
+  "id": "cpp1b2c3-d4e5-f6a7-b8c9-d0e1f2a3b4c6",
+  "name": "C++ Basics",
+  "description": "Test your knowledge of **C++ fundamentals** — types, references, pointers, vectors, and classes.\n\nAll questions use real C++ code. Example:\n\n```cpp\n#include <iostream>\n\nint main() {\n    std::cout << \"Hello, C++!\" << std::endl;\n    return 0;\n}\n```",
+  "tags": ["cpp", "c++", "programming", "beginner"],
+  "mode": "practice",
+  "pass_threshold": 70,
+  "question_limit": null,
+  "language": "en",
+  "created_at": "2026-03-30T00:00:00Z",
+  "modified_at": null,
+  "questions": [
+    {
+      "id": "cpp-q1",
+      "type": "single_choice",
+      "text": "What is the output of this code?\n\n```cpp\n#include <iostream>\n\nint main() {\n    int x = 10;\n    int y = 3;\n    std::cout << x / y << std::endl;\n    return 0;\n}\n```",
+      "choices": [
+        { "id": "cpp-q1-a", "text": "`3.333...`", "is_correct": false },
+        { "id": "cpp-q1-b", "text": "`3`", "is_correct": true },
+        { "id": "cpp-q1-c", "text": "`3.3`", "is_correct": false },
+        { "id": "cpp-q1-d", "text": "`Compilation error`", "is_correct": false }
+      ],
+      "explanation": "When both operands are `int`, C++ performs **integer division** — the fractional part is discarded (truncated toward zero):\n\n```cpp\nint x = 10, y = 3;\nstd::cout << x / y;         // 3  (integer division)\nstd::cout << 10.0 / 3;      // 3.333...  (floating-point division)\nstd::cout << (double)x / y; // 3.333...  (explicit cast)\n```",
+      "tags": ["arithmetic", "types"]
+    },
+    {
+      "id": "cpp-q2",
+      "type": "single_choice",
+      "text": "What does the `&` in this function signature mean?\n\n```cpp\nvoid increment(int& value) {\n    value++;\n}\n\nint main() {\n    int n = 5;\n    increment(n);\n    std::cout << n;  // ???\n}\n```",
+      "choices": [
+        { "id": "cpp-q2-a", "text": "Bitwise AND — combines bits of two operands", "is_correct": false },
+        { "id": "cpp-q2-b", "text": "Pass by reference — `value` is an alias for the caller's variable", "is_correct": true },
+        { "id": "cpp-q2-c", "text": "Address-of — returns the memory address of the argument", "is_correct": false },
+        { "id": "cpp-q2-d", "text": "Pass by pointer — the function receives a pointer to `n`", "is_correct": false }
+      ],
+      "explanation": "In a **parameter type**, `&` declares a **reference** — an alias for the caller's variable. Changes through the reference modify the original:\n\n```cpp\nvoid increment(int& value) {\n    value++;  // modifies the caller's variable directly\n}\n\nint n = 5;\nincrement(n);\nstd::cout << n;  // 6\n```\n\nWithout `&`, the function would receive a copy and `n` would remain `5`.",
+      "tags": ["references", "functions"]
+    },
+    {
+      "id": "cpp-q3",
+      "type": "single_choice",
+      "text": "What is the output?\n\n```cpp\n#include <iostream>\n#include <vector>\n\nint main() {\n    std::vector<int> v = {10, 20, 30};\n    v.push_back(40);\n    std::cout << v.size() << std::endl;\n    return 0;\n}\n```",
+      "choices": [
+        { "id": "cpp-q3-a", "text": "`3`", "is_correct": false },
+        { "id": "cpp-q3-b", "text": "`4`", "is_correct": true },
+        { "id": "cpp-q3-c", "text": "`40`", "is_correct": false },
+        { "id": "cpp-q3-d", "text": "`Compilation error`", "is_correct": false }
+      ],
+      "explanation": "`push_back()` appends an element to the end of the vector, growing its size by 1:\n\n```cpp\nstd::vector<int> v = {10, 20, 30};  // size = 3\nv.push_back(40);                     // size = 4\nstd::cout << v.size();               // 4\n// v is now {10, 20, 30, 40}\n```",
+      "tags": ["vectors", "stl"]
+    },
+    {
+      "id": "cpp-q4",
+      "type": "single_choice",
+      "text": "Which of the following correctly declares a **pointer** and assigns it the address of `x`?",
+      "choices": [
+        { "id": "cpp-q4-a", "text": "```cpp\nint x = 42;\nint* ptr = &x;\n```", "is_correct": true },
+        { "id": "cpp-q4-b", "text": "```cpp\nint x = 42;\nint ptr = *x;\n```", "is_correct": false },
+        { "id": "cpp-q4-c", "text": "```cpp\nint x = 42;\nint& ptr = *x;\n```", "is_correct": false },
+        { "id": "cpp-q4-d", "text": "```cpp\nint x = 42;\npointer<int> ptr = x;\n```", "is_correct": false }
+      ],
+      "explanation": "`int* ptr` declares a pointer to `int`. `&x` takes the **address** of `x`. `*ptr` later **dereferences** the pointer to access the value:\n\n```cpp\nint x = 42;\nint* ptr = &x;        // ptr holds the address of x\n\nstd::cout << ptr;     // memory address, e.g. 0x7ffd...\nstd::cout << *ptr;    // 42  (dereference)\n\n*ptr = 100;           // changes x through the pointer\nstd::cout << x;       // 100\n```",
+      "tags": ["pointers", "memory"]
+    },
+    {
+      "id": "cpp-q5",
+      "type": "single_choice",
+      "text": "What does `const` guarantee in this declaration?\n\n```cpp\nconst int MAX_SIZE = 100;\n```",
+      "choices": [
+        { "id": "cpp-q5-a", "text": "The variable is stored in read-only memory (ROM)", "is_correct": false },
+        { "id": "cpp-q5-b", "text": "The variable's value cannot be changed after initialisation", "is_correct": true },
+        { "id": "cpp-q5-c", "text": "The variable is only visible within the current function", "is_correct": false },
+        { "id": "cpp-q5-d", "text": "The variable can be changed exactly once", "is_correct": false }
+      ],
+      "explanation": "`const` is a compile-time promise that the variable **will not be modified** after its initial value is set. Attempting to reassign is a compile error:\n\n```cpp\nconst int MAX_SIZE = 100;\n// MAX_SIZE = 200;  // error: assignment of read-only variable\n\n// Common uses:\nconst double PI = 3.14159;\nconst std::string APP_NAME = \"MyApp\";\n\nvoid print(const std::string& s) {  // s cannot be modified inside\n    std::cout << s;\n}\n```",
+      "tags": ["const", "variables"]
+    },
+    {
+      "id": "cpp-q6",
+      "type": "multiple_choice",
+      "text": "Which of the following are **valid ways to initialise** a variable in modern C++? (Select all that apply)\n\n```cpp\nint a = 5;    // A\nint b(5);     // B\nint c{5};     // C\nauto d = 5;   // D\n```",
+      "choices": [
+        { "id": "cpp-q6-a", "text": "A — copy initialisation (`= 5`)", "is_correct": true },
+        { "id": "cpp-q6-b", "text": "B — direct initialisation (`(5)`)", "is_correct": true },
+        { "id": "cpp-q6-c", "text": "C — brace (uniform) initialisation (`{5}`)", "is_correct": true },
+        { "id": "cpp-q6-d", "text": "D — `auto` type deduction (C++11+)", "is_correct": true }
+      ],
+      "explanation": "All four are valid in modern C++:\n\n```cpp\nint a = 5;    // copy initialisation (C++98)\nint b(5);     // direct initialisation (C++98)\nint c{5};     // brace initialisation (C++11) — prevents narrowing\nauto d = 5;   // type deduced as int (C++11)\n\n// Brace initialisation prevents accidental narrowing:\nint x{3.14};  // error: narrowing from double to int\nint y = 3.14; // compiles but silently truncates to 3\n```\n\nPrefer `{}` (brace initialisation) in modern C++ — it catches type narrowing at compile time.",
+      "tags": ["initialisation", "syntax", "modern-cpp"]
+    }
+  ]
+}

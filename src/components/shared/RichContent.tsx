@@ -31,7 +31,7 @@ function CodeBlock({ node, className, children, ...props }: CodeProps) {
 
   if (isBlock) {
     return (
-      <pre className="my-3 overflow-x-auto rounded-lg bg-gray-100 p-4 text-sm">
+      <pre className="my-3 overflow-x-auto rounded-lg bg-gray-100 px-2 py-1 text-sm">
         <code className={className} {...props}>
           {children}
         </code>

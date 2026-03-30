@@ -1,0 +1,93 @@
+{
+  "id": "py01b2c3-d4e5-f6a7-b8c9-d0e1f2a3b4c5",
+  "name": "Python Basics",
+  "description": "Test your knowledge of **Python fundamentals** — syntax, data types, functions, and built-in operations.\n\nAll questions use real Python code. Example:\n\n```python\nprint(\"Hello, Python!\")\n# Output: Hello, Python!\n```",
+  "tags": ["python", "programming", "beginner"],
+  "mode": "practice",
+  "pass_threshold": 70,
+  "question_limit": null,
+  "language": "en",
+  "created_at": "2026-03-30T00:00:00Z",
+  "modified_at": null,
+  "questions": [
+    {
+      "id": "py-q1",
+      "type": "single_choice",
+      "text": "What is the output of this code?\n\n```python\nprint(\"Hello\", \"World\")\n```",
+      "choices": [
+        { "id": "py-q1-a", "text": "`Hello World`", "is_correct": true },
+        { "id": "py-q1-b", "text": "`Hello,World`", "is_correct": false },
+        { "id": "py-q1-c", "text": "`HelloWorld`", "is_correct": false },
+        { "id": "py-q1-d", "text": "`('Hello', 'World')`", "is_correct": false }
+      ],
+      "explanation": "`print()` separates multiple arguments with a **space** by default. Use the `sep` parameter to change the separator:\n\n```python\nprint(\"Hello\", \"World\")           # Hello World\nprint(\"Hello\", \"World\", sep=\",\")  # Hello,World\nprint(\"Hello\", \"World\", sep=\"\")   # HelloWorld\n```",
+      "tags": ["functions", "output"]
+    },
+    {
+      "id": "py-q2",
+      "type": "single_choice",
+      "text": "What will this code print?\n\n```python\nx = [1, 2, 3]\nx.append(4)\nprint(len(x))\n```",
+      "choices": [
+        { "id": "py-q2-a", "text": "`3`", "is_correct": false },
+        { "id": "py-q2-b", "text": "`4`", "is_correct": true },
+        { "id": "py-q2-c", "text": "`[1, 2, 3, 4]`", "is_correct": false },
+        { "id": "py-q2-d", "text": "`Error`", "is_correct": false }
+      ],
+      "explanation": "`list.append()` adds one element to the end **in-place**, increasing the length by 1:\n\n```python\nx = [1, 2, 3]   # len = 3\nx.append(4)      # modifies x → [1, 2, 3, 4]\nprint(len(x))    # 4\n```",
+      "tags": ["lists", "built-ins"]
+    },
+    {
+      "id": "py-q3",
+      "type": "single_choice",
+      "text": "Which of the following **correctly defines a Python function**?",
+      "choices": [
+        { "id": "py-q3-a", "text": "```python\ndef greet(name):\n    return \"Hello, \" + name\n```", "is_correct": true },
+        { "id": "py-q3-b", "text": "```javascript\nfunction greet(name) {\n    return \"Hello, \" + name;\n}\n```", "is_correct": false },
+        { "id": "py-q3-c", "text": "```python\nfunc greet(name) = \"Hello, \" + name\n```", "is_correct": false },
+        { "id": "py-q3-d", "text": "```python\ndefine greet(name): \"Hello, \" + name\n```", "is_correct": false }
+      ],
+      "explanation": "Python uses the `def` keyword, a colon after the parameter list, and an indented body:\n\n```python\ndef greet(name):\n    return \"Hello, \" + name\n\nprint(greet(\"Alice\"))   # Hello, Alice\n```\n\nThe other options use JavaScript syntax (`function`), a made-up `func` keyword, or the wrong keyword `define`.",
+      "tags": ["functions", "syntax"]
+    },
+    {
+      "id": "py-q4",
+      "type": "multiple_choice",
+      "text": "Which of the following types are **immutable** in Python? (Select all that apply)",
+      "choices": [
+        { "id": "py-q4-a", "text": "`int`", "is_correct": true },
+        { "id": "py-q4-b", "text": "`str`", "is_correct": true },
+        { "id": "py-q4-c", "text": "`tuple`", "is_correct": true },
+        { "id": "py-q4-d", "text": "`list`", "is_correct": false },
+        { "id": "py-q4-e", "text": "`dict`", "is_correct": false }
+      ],
+      "explanation": "**Immutable** objects cannot be changed after creation — operations produce new objects:\n\n```python\n# Immutable\ns = \"hello\"\ns.upper()        # returns \"HELLO\"; s is still \"hello\"\n\nt = (1, 2, 3)\n# t[0] = 9      # TypeError: tuple does not support item assignment\n\n# Mutable — modified in-place\nlst = [1, 2, 3]\nlst[0] = 9       # OK → lst is now [9, 2, 3]\n\nd = {\"a\": 1}\nd[\"b\"] = 2       # OK → d is now {\"a\": 1, \"b\": 2}\n```\n\nImmutable types: `int`, `float`, `bool`, `str`, `tuple`, `frozenset`, `bytes`.",
+      "tags": ["types", "immutability"]
+    },
+    {
+      "id": "py-q5",
+      "type": "single_choice",
+      "text": "What does this list comprehension produce?\n\n```python\nresult = [x ** 2 for x in range(4)]\n```",
+      "choices": [
+        { "id": "py-q5-a", "text": "`[0, 1, 4, 9]`", "is_correct": true },
+        { "id": "py-q5-b", "text": "`[1, 4, 9, 16]`", "is_correct": false },
+        { "id": "py-q5-c", "text": "`[0, 1, 2, 3]`", "is_correct": false },
+        { "id": "py-q5-d", "text": "`[0, 2, 6, 12]`", "is_correct": false }
+      ],
+      "explanation": "`range(4)` yields `0, 1, 2, 3`. The comprehension squares each value:\n\n```python\nresult = [x ** 2 for x in range(4)]\n# x=0 → 0**2 = 0\n# x=1 → 1**2 = 1\n# x=2 → 2**2 = 4\n# x=3 → 3**2 = 9\nprint(result)   # [0, 1, 4, 9]\n```",
+      "tags": ["comprehensions", "loops"]
+    },
+    {
+      "id": "py-q6",
+      "type": "single_choice",
+      "text": "What is the output of this code?\n\n```python\nd = {\"a\": 1, \"b\": 2}\nprint(d.get(\"c\", 0))\n```",
+      "choices": [
+        { "id": "py-q6-a", "text": "`None`", "is_correct": false },
+        { "id": "py-q6-b", "text": "`0`", "is_correct": true },
+        { "id": "py-q6-c", "text": "`KeyError`", "is_correct": false },
+        { "id": "py-q6-d", "text": "`{}`", "is_correct": false }
+      ],
+      "explanation": "`dict.get(key, default)` returns the value for `key` if present, otherwise `default`. Unlike `d[key]`, it never raises `KeyError`:\n\n```python\nd = {\"a\": 1, \"b\": 2}\n\nprint(d.get(\"a\"))       # 1       (key exists)\nprint(d.get(\"c\"))       # None    (missing, no default given)\nprint(d.get(\"c\", 0))   # 0       (missing, returns default)\n# d[\"c\"]              # KeyError!\n```",
+      "tags": ["dicts", "built-ins"]
+    }
+  ]
+}

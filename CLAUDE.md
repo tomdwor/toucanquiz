@@ -39,6 +39,12 @@ The active mode determines which `IDataService` implementation is used. The fact
 
 `src/components/shared/RichContent.tsx` — single component used everywhere content is displayed (quiz description, questions, choices, explanations, review). Pipeline: `react-markdown` → `remark-math` → `rehype-katex` → `rehype-highlight`. Mermaid diagrams rendered by `MermaidChart.tsx` (lazy-loaded via dynamic import to keep initial bundle small).
 
+Supported content features (usable in all text fields):
+- **Markdown** — bold, italics, tables, lists, links (via `remark-gfm`)
+- **Math** — `$inline$` and `$$block$$` LaTeX (via `remark-math` + `rehype-katex`)
+- **Code** — inline `` `code` `` and fenced blocks ` ```python ` with syntax highlighting (via `rehype-highlight` + highlight.js github theme imported in `src/styles/index.css`)
+- **Mermaid diagrams** — fenced ` ```mermaid ` blocks (lazy-loaded)
+
 ### Keyboard navigation
 
 `src/hooks/useKeyboardNav.ts` — window-level keydown listener attached in `QuizSessionPage`. Arrow keys move focus between choices (tracked as index, not DOM focus). `Space` selects, `Enter` confirms/advances. Suspended for `text` question type.
