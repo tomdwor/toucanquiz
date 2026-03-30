@@ -15,12 +15,11 @@
       "type": "single_choice",
       "text": "¿Cuál es la función principal del **sistema digestivo**?",
       "choices": [
-        { "id": "s3-q1-a", "text": "Transportar oxígeno a todas las células del cuerpo" },
-        { "id": "s3-q1-b", "text": "Descomponer los alimentos y absorber los nutrientes" },
-        { "id": "s3-q1-c", "text": "Filtrar la sangre y eliminar toxinas" },
-        { "id": "s3-q1-d", "text": "Coordinar los movimientos voluntarios del cuerpo" }
+        { "id": "s3-q1-a", "text": "Transportar oxígeno a todas las células del cuerpo", "is_correct": false },
+        { "id": "s3-q1-b", "text": "Descomponer los alimentos y absorber los nutrientes", "is_correct": true },
+        { "id": "s3-q1-c", "text": "Filtrar la sangre y eliminar toxinas", "is_correct": false },
+        { "id": "s3-q1-d", "text": "Coordinar los movimientos voluntarios del cuerpo", "is_correct": false }
       ],
-      "correct_choices": ["s3-q1-b"],
       "explanation": "El **sistema digestivo** tiene la función de **descomponer los alimentos** en moléculas más pequeñas (nutrientes) que el cuerpo puede absorber y usar. El proceso comienza en la boca (con la masticación y la saliva), continúa en el estómago y el intestino delgado, donde los nutrientes se absorben al torrente sanguíneo, y termina en el intestino grueso, donde se forma y elimina el material de desecho."
     },
     {
@@ -28,12 +27,11 @@
       "type": "single_choice",
       "text": "¿Dónde ocurre el intercambio de gases (oxígeno y dióxido de carbono) en el cuerpo humano?",
       "choices": [
-        { "id": "s3-q2-a", "text": "En los bronquios" },
-        { "id": "s3-q2-b", "text": "En la tráquea" },
-        { "id": "s3-q2-c", "text": "En los alvéolos pulmonares" },
-        { "id": "s3-q2-d", "text": "En el diafragma" }
+        { "id": "s3-q2-a", "text": "En los bronquios", "is_correct": false },
+        { "id": "s3-q2-b", "text": "En la tráquea", "is_correct": false },
+        { "id": "s3-q2-c", "text": "En los alvéolos pulmonares", "is_correct": true },
+        { "id": "s3-q2-d", "text": "En el diafragma", "is_correct": false }
       ],
-      "correct_choices": ["s3-q2-c"],
       "explanation": "Los **alvéolos pulmonares** son pequeños sacos de aire al final de los bronquiolos en los pulmones. Tienen paredes muy delgadas (de una sola capa de células) y están rodeados de capilares sanguíneos. Gracias a su enorme superficie total (similar a una cancha de tenis), el **oxígeno** del aire inspirado pasa a la sangre, y el **dióxido de carbono** de la sangre pasa al aire para ser exhalado."
     },
     {
@@ -41,12 +39,11 @@
       "type": "single_choice",
       "text": "¿Cuál es la función principal del **corazón**?",
       "choices": [
-        { "id": "s3-q3-a", "text": "Producir células sanguíneas" },
-        { "id": "s3-q3-b", "text": "Filtrar las toxinas de la sangre" },
-        { "id": "s3-q3-c", "text": "Bombear sangre por todo el cuerpo" },
-        { "id": "s3-q3-d", "text": "Almacenar oxígeno para las células" }
+        { "id": "s3-q3-a", "text": "Producir células sanguíneas", "is_correct": false },
+        { "id": "s3-q3-b", "text": "Filtrar las toxinas de la sangre", "is_correct": false },
+        { "id": "s3-q3-c", "text": "Bombear sangre por todo el cuerpo", "is_correct": true },
+        { "id": "s3-q3-d", "text": "Almacenar oxígeno para las células", "is_correct": false }
       ],
-      "correct_choices": ["s3-q3-c"],
       "explanation": "El **corazón** es la bomba muscular del **sistema circulatorio**. Contrae y relaja sus cuatro cámaras (dos aurículas y dos ventrículos) de forma rítmica para **impulsar la sangre** por dos circuitos: la circulación pulmonar (hacia los pulmones para oxigenarse) y la circulación sistémica (hacia el resto del cuerpo para entregar oxígeno y nutrientes). En un adulto, el corazón late unas 60–100 veces por minuto."
     },
     {
@@ -54,12 +51,11 @@
       "type": "single_choice",
       "text": "¿Qué sistema del cuerpo controla las respuestas rápidas como los **reflejos**?",
       "choices": [
-        { "id": "s3-q4-a", "text": "El sistema endocrino" },
-        { "id": "s3-q4-b", "text": "El sistema muscular" },
-        { "id": "s3-q4-c", "text": "El sistema linfático" },
-        { "id": "s3-q4-d", "text": "El sistema nervioso" }
+        { "id": "s3-q4-a", "text": "El sistema endocrino", "is_correct": false },
+        { "id": "s3-q4-b", "text": "El sistema muscular", "is_correct": false },
+        { "id": "s3-q4-c", "text": "El sistema linfático", "is_correct": false },
+        { "id": "s3-q4-d", "text": "El sistema nervioso", "is_correct": true }
       ],
-      "correct_choices": ["s3-q4-d"],
       "explanation": "El **sistema nervioso** controla las respuestas rápidas, como los reflejos, a través de la médula espinal (sin necesidad de que la señal llegue al cerebro). Está compuesto por el **encéfalo** (cerebro, cerebelo, tronco encefálico), la **médula espinal** y los **nervios periféricos**. Las neuronas transmiten señales eléctricas a velocidades muy altas, lo que permite reaccionar casi de forma instantánea ante estímulos."
     },
     {
@@ -67,12 +63,11 @@
       "type": "single_choice",
       "text": "¿Cuál es la función principal de los **riñones**?",
       "choices": [
-        { "id": "s3-q5-a", "text": "Producir hormonas para regular el crecimiento" },
-        { "id": "s3-q5-b", "text": "Filtrar la sangre y eliminar desechos a través de la orina" },
-        { "id": "s3-q5-c", "text": "Absorber los nutrientes de los alimentos digeridos" },
-        { "id": "s3-q5-d", "text": "Almacenar la bilis para la digestión de las grasas" }
+        { "id": "s3-q5-a", "text": "Producir hormonas para regular el crecimiento", "is_correct": false },
+        { "id": "s3-q5-b", "text": "Filtrar la sangre y eliminar desechos a través de la orina", "is_correct": true },
+        { "id": "s3-q5-c", "text": "Absorber los nutrientes de los alimentos digeridos", "is_correct": false },
+        { "id": "s3-q5-d", "text": "Almacenar la bilis para la digestión de las grasas", "is_correct": false }
       ],
-      "correct_choices": ["s3-q5-b"],
       "explanation": "Los **riñones** son los órganos principales del **sistema excretor** (o urinario). Cada riñón contiene aproximadamente un millón de pequeñas unidades llamadas **nefronas**, que filtran continuamente la sangre para eliminar productos de desecho como la urea (procedente del metabolismo de las proteínas), el exceso de sales y agua. Los desechos se concentran en forma de **orina**, que se almacena en la vejiga y se elimina del cuerpo."
     },
     {
@@ -80,12 +75,11 @@
       "type": "multiple_choice",
       "text": "¿Cuáles de los siguientes son funciones del **sistema circulatorio**? (Selecciona todas las correctas)",
       "choices": [
-        { "id": "s3-q6-a", "text": "Transportar oxígeno a las células" },
-        { "id": "s3-q6-b", "text": "Eliminar el dióxido de carbono de los tejidos" },
-        { "id": "s3-q6-c", "text": "Distribuir nutrientes a todo el cuerpo" },
-        { "id": "s3-q6-d", "text": "Descomponer los alimentos en el estómago" }
+        { "id": "s3-q6-a", "text": "Transportar oxígeno a las células", "is_correct": true },
+        { "id": "s3-q6-b", "text": "Eliminar el dióxido de carbono de los tejidos", "is_correct": true },
+        { "id": "s3-q6-c", "text": "Distribuir nutrientes a todo el cuerpo", "is_correct": true },
+        { "id": "s3-q6-d", "text": "Descomponer los alimentos en el estómago", "is_correct": false }
       ],
-      "correct_choices": ["s3-q6-a", "s3-q6-b", "s3-q6-c"],
       "explanation": "El **sistema circulatorio** realiza múltiples funciones de transporte:\n- **Oxígeno**: lo lleva desde los pulmones a todas las células del cuerpo.\n- **Dióxido de carbono**: lo recoge de los tejidos y lo transporta a los pulmones para ser exhalado.\n- **Nutrientes**: los distribuye desde el intestino delgado a todas las células.\n- También transporta hormonas, células inmunitarias y ayuda a regular la temperatura corporal.\n\n**Descomponer los alimentos** es función del sistema **digestivo**, no del circulatorio."
     }
   ]

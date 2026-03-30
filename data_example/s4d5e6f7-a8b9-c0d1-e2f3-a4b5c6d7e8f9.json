@@ -15,12 +15,11 @@
       "type": "single_choice",
       "text": "¿Qué es un **gen**?",
       "choices": [
-        { "id": "s4-q1-a", "text": "Una proteína que controla el crecimiento celular" },
-        { "id": "s4-q1-b", "text": "Un segmento de ADN que contiene instrucciones para una característica" },
-        { "id": "s4-q1-c", "text": "Una célula especializada en la reproducción" },
-        { "id": "s4-q1-d", "text": "Un cromosoma completo dentro del núcleo" }
+        { "id": "s4-q1-a", "text": "Una proteína que controla el crecimiento celular", "is_correct": false },
+        { "id": "s4-q1-b", "text": "Un segmento de ADN que contiene instrucciones para una característica", "is_correct": true },
+        { "id": "s4-q1-c", "text": "Una célula especializada en la reproducción", "is_correct": false },
+        { "id": "s4-q1-d", "text": "Un cromosoma completo dentro del núcleo", "is_correct": false }
       ],
-      "correct_choices": ["s4-q1-b"],
       "explanation": "Un **gen** es un segmento específico de **ADN** (ácido desoxirribonucleico) que contiene las instrucciones para producir una proteína o para controlar una característica del organismo. Los genes se encuentran en los **cromosomas**, dentro del núcleo celular. Los humanos tenemos aproximadamente 20 000–25 000 genes distribuidos en 23 pares de cromosomas. Cada gen puede tener diferentes versiones llamadas **alelos**."
     },
     {
@@ -28,12 +27,11 @@
       "type": "single_choice",
       "text": "Si un alelo **dominante** (A) está presente junto a un alelo recesivo (a), ¿cuál fenotipo se expresa?",
       "choices": [
-        { "id": "s4-q2-a", "text": "El fenotipo recesivo (del alelo a)" },
-        { "id": "s4-q2-b", "text": "Una mezcla de ambos fenotipos" },
-        { "id": "s4-q2-c", "text": "El fenotipo dominante (del alelo A)" },
-        { "id": "s4-q2-d", "text": "Ningún fenotipo; se cancelan entre sí" }
+        { "id": "s4-q2-a", "text": "El fenotipo recesivo (del alelo a)", "is_correct": false },
+        { "id": "s4-q2-b", "text": "Una mezcla de ambos fenotipos", "is_correct": false },
+        { "id": "s4-q2-c", "text": "El fenotipo dominante (del alelo A)", "is_correct": true },
+        { "id": "s4-q2-d", "text": "Ningún fenotipo; se cancelan entre sí", "is_correct": false }
       ],
-      "correct_choices": ["s4-q2-c"],
       "explanation": "Cuando un organismo es **heterocigoto** (Aa), tiene un alelo dominante y uno recesivo. El **alelo dominante** (A) siempre se expresa en el fenotipo, enmascarando al alelo recesivo (a). Por eso, tanto los individuos AA (homocigoto dominante) como los Aa (heterocigoto) muestran el mismo fenotipo dominante. El fenotipo recesivo solo se expresa cuando el individuo es homocigoto recesivo (aa)."
     },
     {
@@ -41,12 +39,11 @@
       "type": "single_choice",
       "text": "¿Qué establece la **Ley de la Segregación** de Mendel?",
       "choices": [
-        { "id": "s4-q3-a", "text": "Los genes de diferentes cromosomas se heredan juntos" },
-        { "id": "s4-q3-b", "text": "Los dos alelos de un gen se separan durante la formación de gametos, y cada gameto recibe solo uno" },
-        { "id": "s4-q3-c", "text": "Los rasgos adquiridos durante la vida se transmiten a los hijos" },
-        { "id": "s4-q3-d", "text": "Los alelos dominantes siempre se heredan de la madre" }
+        { "id": "s4-q3-a", "text": "Los genes de diferentes cromosomas se heredan juntos", "is_correct": false },
+        { "id": "s4-q3-b", "text": "Los dos alelos de un gen se separan durante la formación de gametos, y cada gameto recibe solo uno", "is_correct": true },
+        { "id": "s4-q3-c", "text": "Los rasgos adquiridos durante la vida se transmiten a los hijos", "is_correct": false },
+        { "id": "s4-q3-d", "text": "Los alelos dominantes siempre se heredan de la madre", "is_correct": false }
       ],
-      "correct_choices": ["s4-q3-b"],
       "explanation": "La **Primera Ley de Mendel** (Ley de la Segregación) establece que cada individuo tiene dos alelos para cada gen, y esos alelos **se separan** durante la meiosis (formación de gametos: óvulos y espermatozoides). Cada gameto recibe solo **un alelo** de cada par. Al unirse dos gametos en la fertilización, el nuevo individuo vuelve a tener dos alelos. Mendel dedujo esta ley a partir de sus experimentos con plantas de guisante."
     },
     {
@@ -54,12 +51,11 @@
       "type": "single_choice",
       "text": "¿Cuál es la diferencia entre **genotipo** y **fenotipo**?",
       "choices": [
-        { "id": "s4-q4-a", "text": "El genotipo es la característica observable; el fenotipo es la composición genética" },
-        { "id": "s4-q4-b", "text": "Son sinónimos; ambos describen las características visibles del organismo" },
-        { "id": "s4-q4-c", "text": "El genotipo es la composición genética; el fenotipo es la característica observable" },
-        { "id": "s4-q4-d", "text": "El genotipo solo aplica a organismos diploides; el fenotipo aplica a todos" }
+        { "id": "s4-q4-a", "text": "El genotipo es la característica observable; el fenotipo es la composición genética", "is_correct": false },
+        { "id": "s4-q4-b", "text": "Son sinónimos; ambos describen las características visibles del organismo", "is_correct": false },
+        { "id": "s4-q4-c", "text": "El genotipo es la composición genética; el fenotipo es la característica observable", "is_correct": true },
+        { "id": "s4-q4-d", "text": "El genotipo solo aplica a organismos diploides; el fenotipo aplica a todos", "is_correct": false }
       ],
-      "correct_choices": ["s4-q4-c"],
       "explanation": "- **Genotipo**: la combinación de alelos que posee un organismo para un rasgo determinado (ej. AA, Aa, aa). Es la información genética \"interna\", no siempre visible.\n- **Fenotipo**: la característica observable o medible que resulta del genotipo y de la influencia del ambiente (ej. ojos marrones, pelo rizado, grupo sanguíneo A).\n\nDos organismos pueden tener el mismo fenotipo pero diferente genotipo (AA y Aa ambos muestran el fenotipo dominante)."
     },
     {
@@ -67,12 +63,11 @@
       "type": "single_choice",
       "text": "Si dos progenitores heterocigotos (Aa × Aa) se cruzan, ¿qué proporción de descendencia mostrará el **fenotipo recesivo** (aa)?",
       "choices": [
-        { "id": "s4-q5-a", "text": "0% (ninguno)" },
-        { "id": "s4-q5-b", "text": "25% (1 de cada 4)" },
-        { "id": "s4-q5-c", "text": "50% (1 de cada 2)" },
-        { "id": "s4-q5-d", "text": "75% (3 de cada 4)" }
+        { "id": "s4-q5-a", "text": "0% (ninguno)", "is_correct": false },
+        { "id": "s4-q5-b", "text": "25% (1 de cada 4)", "is_correct": true },
+        { "id": "s4-q5-c", "text": "50% (1 de cada 2)", "is_correct": false },
+        { "id": "s4-q5-d", "text": "75% (3 de cada 4)", "is_correct": false }
       ],
-      "correct_choices": ["s4-q5-b"],
       "explanation": "El **cuadro de Punnett** para el cruce Aa × Aa muestra las cuatro combinaciones posibles:\n\n|   | **A** | **a** |\n|---|-------|-------|\n| **A** | AA | Aa |\n| **a** | Aa | aa |\n\nResultado: **1 AA : 2 Aa : 1 aa**\n- Fenotipo dominante (AA + Aa): 3/4 = **75%**\n- Fenotipo recesivo (aa): 1/4 = **25%**\n\nEsta proporción clásica 3:1 fue uno de los hallazgos fundamentales de Mendel."
     },
     {
@@ -80,12 +75,11 @@
       "type": "multiple_choice",
       "text": "¿Cuáles de los siguientes son ejemplos de **alelos** que determinan rasgos genéticos? (Selecciona todas las correctas)",
       "choices": [
-        { "id": "s4-q6-a", "text": "Color de ojos marrón (B) vs. azul (b)" },
-        { "id": "s4-q6-b", "text": "Ser zurdo o diestro" },
-        { "id": "s4-q6-c", "text": "Grupo sanguíneo A (I^A)" },
-        { "id": "s4-q6-d", "text": "Comer muchas verduras" }
+        { "id": "s4-q6-a", "text": "Color de ojos marrón (B) vs. azul (b)", "is_correct": true },
+        { "id": "s4-q6-b", "text": "Ser zurdo o diestro", "is_correct": true },
+        { "id": "s4-q6-c", "text": "Grupo sanguíneo A (I^A)", "is_correct": true },
+        { "id": "s4-q6-d", "text": "Comer muchas verduras", "is_correct": false }
       ],
-      "correct_choices": ["s4-q6-a", "s4-q6-b", "s4-q6-c"],
       "explanation": "Los **alelos** son variantes de un gen que determinan un rasgo hereditario:\n- El **color de ojos** está determinado por varios genes, con alelos como B (marrón, dominante) y b (azul, recesivo).\n- La **dominancia manual** (zurdo/diestro) tiene una base genética, aunque también influyen factores ambientales.\n- El **grupo sanguíneo** está controlado por el gen ABO, con alelos $I^A$, $I^B$ e $i$.\n\n**Comer muchas verduras** es un comportamiento ambiental y no está determinado por alelos genéticos."
     }
   ]

@@ -15,12 +15,11 @@
       "type": "single_choice",
       "text": "¿Cuál es el producto principal de la **fotosíntesis**?",
       "choices": [
-        { "id": "s2-q1-a", "text": "Glucosa" },
-        { "id": "s2-q1-b", "text": "Dióxido de carbono" },
-        { "id": "s2-q1-c", "text": "Agua" },
-        { "id": "s2-q1-d", "text": "Nitrógeno" }
+        { "id": "s2-q1-a", "text": "Glucosa", "is_correct": true },
+        { "id": "s2-q1-b", "text": "Dióxido de carbono", "is_correct": false },
+        { "id": "s2-q1-c", "text": "Agua", "is_correct": false },
+        { "id": "s2-q1-d", "text": "Nitrógeno", "is_correct": false }
       ],
-      "correct_choices": ["s2-q1-a"],
       "explanation": "La **glucosa** ($C_6H_{12}O_6$) es el producto principal de la fotosíntesis — es el azúcar que la planta usa como fuente de energía y como materia prima para crecer. El **oxígeno** ($O_2$) también se produce y se libera al ambiente. Los ingredientes (materias primas) son el dióxido de carbono ($CO_2$), el agua ($H_2O$) y la energía lumínica."
     },
     {
@@ -28,12 +27,11 @@
       "type": "single_choice",
       "text": "¿Qué pigmento captura la energía luminosa en la fotosíntesis?",
       "choices": [
-        { "id": "s2-q2-a", "text": "La melanina" },
-        { "id": "s2-q2-b", "text": "La clorofila" },
-        { "id": "s2-q2-c", "text": "El caroteno" },
-        { "id": "s2-q2-d", "text": "La hemoglobina" }
+        { "id": "s2-q2-a", "text": "La melanina", "is_correct": false },
+        { "id": "s2-q2-b", "text": "La clorofila", "is_correct": true },
+        { "id": "s2-q2-c", "text": "El caroteno", "is_correct": false },
+        { "id": "s2-q2-d", "text": "La hemoglobina", "is_correct": false }
       ],
-      "correct_choices": ["s2-q2-b"],
       "explanation": "La **clorofila** es el pigmento verde presente en los cloroplastos de las plantas y algas. Absorbe principalmente la luz **roja** y **azul** del espectro visible, y refleja la luz **verde**, razón por la cual las plantas nos parecen verdes. Esta energía lumínica absorbida impulsa las reacciones químicas de la fotosíntesis para producir glucosa."
     },
     {
@@ -41,12 +39,11 @@
       "type": "single_choice",
       "text": "¿En qué parte de la célula vegetal ocurre la fotosíntesis?",
       "choices": [
-        { "id": "s2-q3-a", "text": "En el núcleo" },
-        { "id": "s2-q3-b", "text": "En la mitocondria" },
-        { "id": "s2-q3-c", "text": "En el cloroplasto" },
-        { "id": "s2-q3-d", "text": "En el ribosoma" }
+        { "id": "s2-q3-a", "text": "En el núcleo", "is_correct": false },
+        { "id": "s2-q3-b", "text": "En la mitocondria", "is_correct": false },
+        { "id": "s2-q3-c", "text": "En el cloroplasto", "is_correct": true },
+        { "id": "s2-q3-d", "text": "En el ribosoma", "is_correct": false }
       ],
-      "correct_choices": ["s2-q3-c"],
       "explanation": "La fotosíntesis ocurre en el **cloroplasto**, un organelo exclusivo de las células vegetales y de las algas. El cloroplasto tiene dos compartimentos principales:\n- **Tilacoides**: membranas internas apiladas donde ocurren las **reacciones luminosas** (se captura la energía de la luz).\n- **Estroma**: el líquido que rodea los tilacoides, donde ocurre el **ciclo de Calvin** (se fabrica la glucosa)."
     },
     {
@@ -54,12 +51,11 @@
       "type": "multiple_choice",
       "text": "¿Cuáles son las **materias primas** necesarias para la fotosíntesis? (Selecciona todas las correctas)",
       "choices": [
-        { "id": "s2-q4-a", "text": "Luz solar" },
-        { "id": "s2-q4-b", "text": "Agua ($H_2O$)" },
-        { "id": "s2-q4-c", "text": "Dióxido de carbono ($CO_2$)" },
-        { "id": "s2-q4-d", "text": "Oxígeno ($O_2$)" }
+        { "id": "s2-q4-a", "text": "Luz solar", "is_correct": true },
+        { "id": "s2-q4-b", "text": "Agua ($H_2O$)", "is_correct": true },
+        { "id": "s2-q4-c", "text": "Dióxido de carbono ($CO_2$)", "is_correct": true },
+        { "id": "s2-q4-d", "text": "Oxígeno ($O_2$)", "is_correct": false }
       ],
-      "correct_choices": ["s2-q4-a", "s2-q4-b", "s2-q4-c"],
       "explanation": "Las tres materias primas de la fotosíntesis son:\n- **Luz solar**: fuente de energía que impulsa el proceso.\n- **Agua ($H_2O$)**: absorbida por las raíces desde el suelo; los átomos de hidrógeno se usan para construir glucosa.\n- **Dióxido de carbono ($CO_2$)**: entra a la planta a través de los estomas (pequeños poros en las hojas).\n\nEl **oxígeno** es un *producto* de la fotosíntesis, no una materia prima."
     },
     {
@@ -67,12 +63,11 @@
       "type": "single_choice",
       "text": "¿Por qué la mayoría de las hojas son **verdes**?",
       "choices": [
-        { "id": "s2-q5-a", "text": "Porque absorben toda la luz verde y la convierten en energía" },
-        { "id": "s2-q5-b", "text": "Porque la clorofila absorbe la luz roja y azul, y refleja la luz verde" },
-        { "id": "s2-q5-c", "text": "Porque contienen grandes cantidades de agua, que es verde" },
-        { "id": "s2-q5-d", "text": "Porque el cloroplasto emite luz verde como subproducto" }
+        { "id": "s2-q5-a", "text": "Porque absorben toda la luz verde y la convierten en energía", "is_correct": false },
+        { "id": "s2-q5-b", "text": "Porque la clorofila absorbe la luz roja y azul, y refleja la luz verde", "is_correct": true },
+        { "id": "s2-q5-c", "text": "Porque contienen grandes cantidades de agua, que es verde", "is_correct": false },
+        { "id": "s2-q5-d", "text": "Porque el cloroplasto emite luz verde como subproducto", "is_correct": false }
       ],
-      "correct_choices": ["s2-q5-b"],
       "explanation": "El color que vemos en un objeto es la luz que ese objeto **refleja**, no la que absorbe. La **clorofila** absorbe eficientemente los longitudes de onda roja (~680 nm) y azul (~430 nm), pero **no absorbe bien la luz verde** (~550 nm) — la refleja hacia nuestros ojos. Por eso percibimos las hojas como verdes. En otoño, cuando la clorofila se degrada, otros pigmentos (carotenos, antocianinas) revelan colores amarillos, naranjas y rojos."
     },
     {
@@ -80,12 +75,11 @@
       "type": "single_choice",
       "text": "Además de la glucosa, ¿qué otro producto se genera en la fotosíntesis?",
       "choices": [
-        { "id": "s2-q6-a", "text": "Dióxido de carbono ($CO_2$)" },
-        { "id": "s2-q6-b", "text": "Nitrógeno ($N_2$)" },
-        { "id": "s2-q6-c", "text": "Oxígeno ($O_2$)" },
-        { "id": "s2-q6-d", "text": "Hidrógeno ($H_2$)" }
+        { "id": "s2-q6-a", "text": "Dióxido de carbono ($CO_2$)", "is_correct": false },
+        { "id": "s2-q6-b", "text": "Nitrógeno ($N_2$)", "is_correct": false },
+        { "id": "s2-q6-c", "text": "Oxígeno ($O_2$)", "is_correct": true },
+        { "id": "s2-q6-d", "text": "Hidrógeno ($H_2$)", "is_correct": false }
       ],
-      "correct_choices": ["s2-q6-c"],
       "explanation": "El **oxígeno ($O_2$)** es el subproducto de la fotosíntesis. Se genera cuando las moléculas de agua son divididas durante las reacciones luminosas (fotólisis del agua). Este oxígeno es liberado a la atmósfera a través de los estomas. La gran parte del oxígeno que respiramos hoy en día proviene de la fotosíntesis realizada por plantas terrestres y algas marinas a lo largo de miles de millones de años."
     }
   ]
