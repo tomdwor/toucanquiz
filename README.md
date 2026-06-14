@@ -2,7 +2,7 @@
 
 <img src="public/logo.png" alt="Toucan Quiz" width="96" />
 
-A React quiz app with Markdown, math ($\LaTeX$ via KaTeX), and Mermaid diagram support. Supports two modes: static JSON files or a REST API backend.
+A React quiz app with Markdown, math ($\LaTeX$ via KaTeX), chemical notation (mhchem), SMILES molecular diagrams, and Mermaid diagram support. Supports two modes: static JSON files or a REST API backend.
 
 ---
 
@@ -170,6 +170,8 @@ All text fields (`description`, `question.text`, `choice.text`, `explanation`) s
 
 - **Markdown** — bold, italics, tables, lists, links
 - **KaTeX math** — inline (`$x^2$`) and block (`$$\sum_{i=0}^n i$$`)
+- **Chemical notation** — `$\ce{H2O}$`, `$\ce{2H2 + O2 -> 2H2O}$` via the [mhchem](https://mhchem.github.io/MathJax-mhchem/) KaTeX extension (formulas, ions, isotopes, reaction arrows)
+- **SMILES molecular diagrams** — fenced code block with ` ```smiles ` renders a 2D molecular structure (via [smiles-drawer](https://github.com/reymond-group/smilesDrawer))
 - **Syntax-highlighted code** — inline (`` `let x = 1` ``) and fenced blocks with a language tag (e.g. ` ```python `, ` ```cpp `, ` ```typescript `) — rendered via [highlight.js](https://highlightjs.org/) (github theme)
 - **Mermaid diagrams** — fenced code block with ` ```mermaid `
 
@@ -197,6 +199,8 @@ Documents are Markdown files and support the same rich content features as quiz 
 
 - **Markdown** — headings, bold, tables, lists, links
 - **KaTeX math** — `$inline$` and `$$block$$`
+- **Chemical notation** — `$\ce{H2O}$`, `$\ce{2H2 + O2 -> 2H2O}$` (mhchem extension)
+- **SMILES molecular diagrams** — ` ```smiles ` blocks
 - **Syntax-highlighted code** — fenced blocks (` ```python `, ` ```cpp `, etc.)
 - **Mermaid diagrams** — ` ```mermaid ` blocks
 
@@ -341,5 +345,7 @@ npm run lint      # ESLint
 - [TailwindCSS 3](https://tailwindcss.com/)
 - [React Router 6](https://reactrouter.com/)
 - [react-markdown](https://github.com/remarkjs/react-markdown) + [remark-math](https://github.com/remarkjs/remark-math) + [rehype-katex](https://github.com/remarkjs/remark-math/tree/main/packages/rehype-katex) for Markdown + math
+- [mhchem](https://mhchem.github.io/MathJax-mhchem/) (KaTeX extension) for chemical formulas and reaction equations
+- [smiles-drawer](https://github.com/reymond-group/smilesDrawer) for 2D molecular structure diagrams (lazy-loaded)
 - [highlight.js](https://highlightjs.org/) (via [rehype-highlight](https://github.com/rehypejs/rehype-highlight)) for syntax-highlighted code blocks
 - [Mermaid](https://mermaid.js.org/) for diagrams (lazy-loaded)

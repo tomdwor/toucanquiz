@@ -1,0 +1,110 @@
+{
+  "id": "chem0002-p000-0000-0000-000000000002",
+  "name": "Chemia Organiczna",
+  "description": "Poznaj **podstawy chemii organicznej** — węglowodory, grupy funkcyjne, reakcje kwas-zasada i struktury cząsteczkowe. Quiz używa notacji $\\ce{mhchem}$ oraz interaktywnych diagramów 2D w notacji SMILES.",
+  "tags": ["chemia", "chemia-organiczna", "cząsteczki", "początkujący"],
+  "mode": "practice",
+  "pass_threshold": 70,
+  "question_limit": null,
+  "language": "pl",
+  "created_at": "2026-06-14T00:00:00Z",
+  "modified_at": null,
+  "documents": ["chemia-podstawy.md"],
+  "questions": [
+    {
+      "id": "chem-pl-q01",
+      "text": "Na poniższym diagramie przedstawiono cząsteczkę w notacji SMILES:\n\n```smiles\nC\n```\n\nJaka to cząsteczka?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "chem-pl-q01-c1", "text": "Metan ($\\ce{CH4}$)", "is_correct": true },
+        { "id": "chem-pl-q01-c2", "text": "Etan ($\\ce{C2H6}$)", "is_correct": false },
+        { "id": "chem-pl-q01-c3", "text": "Propan ($\\ce{C3H8}$)", "is_correct": false },
+        { "id": "chem-pl-q01-c4", "text": "Butan ($\\ce{C4H10}$)", "is_correct": false }
+      ],
+      "explanation": "To jest **metan** ($\\ce{CH4}$) — najprostszy węglowodór i główny składnik gazu ziemnego.\n\nW notacji SMILES litera `C` oznacza atom węgla z czterema niejawnymi atomami wodoru (uzupełniającymi wolne wiązania). Metan ma wzór ogólny alkanów $\\ce{C_nH_{2n+2}}$ dla $n=1$.\n\n$$\\ce{CH4}$$",
+      "tags": ["alkany", "SMILES", "węglowodory"]
+    },
+    {
+      "id": "chem-pl-q02",
+      "text": "Poniższy diagram przedstawia cząsteczkę etanolu:\n\n```smiles\nCCO\n```\n\nJaki jest wzór sumaryczny etanolu?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "chem-pl-q02-c1", "text": "$\\ce{C2H5OH}$", "is_correct": true },
+        { "id": "chem-pl-q02-c2", "text": "$\\ce{CH3OH}$", "is_correct": false },
+        { "id": "chem-pl-q02-c3", "text": "$\\ce{C3H7OH}$", "is_correct": false },
+        { "id": "chem-pl-q02-c4", "text": "$\\ce{C2H4O2}$", "is_correct": false }
+      ],
+      "explanation": "**Etanol** ma wzór sumaryczny $\\ce{C2H5OH}$ (lub równoważnie $\\ce{CH3CH2OH}$).\n\nW notacji SMILES `CCO` oznacza:\n- `C` — pierwszy węgiel ($\\ce{CH3-}$)\n- `C` — drugi węgiel ($\\ce{-CH2-}$)\n- `O` — tlen z jednym niejawnym wodorem ($\\ce{-OH}$)\n\nEtanol jest alkoholem zawartym w napojach alkoholowych i stosowanym jako rozpuszczalnik oraz paliwo.",
+      "tags": ["alkohole", "SMILES", "wzory-sumaryczne"]
+    },
+    {
+      "id": "chem-pl-q03",
+      "text": "Które z poniższych związków chemicznych są **alkoholami**?",
+      "type": "multiple_choice",
+      "choices": [
+        { "id": "chem-pl-q03-c1", "text": "Etanol ($\\ce{C2H5OH}$)", "is_correct": true },
+        { "id": "chem-pl-q03-c2", "text": "Metanol ($\\ce{CH3OH}$)", "is_correct": true },
+        { "id": "chem-pl-q03-c3", "text": "Heksan ($\\ce{C6H14}$)", "is_correct": false },
+        { "id": "chem-pl-q03-c4", "text": "Kwas octowy ($\\ce{CH3COOH}$)", "is_correct": false }
+      ],
+      "explanation": "**Alkohole** to związki organiczne zawierające grupę hydroksylową ($\\ce{-OH}$) przyłączoną do atomu węgla.\n\n- $\\ce{C2H5OH}$ (etanol) ✓ — ma grupę $\\ce{-OH}$\n- $\\ce{CH3OH}$ (metanol) ✓ — ma grupę $\\ce{-OH}$\n- $\\ce{C6H14}$ (heksan) ✗ — alkan, brak grupy funkcyjnej\n- $\\ce{CH3COOH}$ (kwas octowy) ✗ — kwas karboksylowy (ma grupę $\\ce{-COOH}$, nie $\\ce{-OH}$)",
+      "tags": ["alkohole", "grupy-funkcyjne"]
+    },
+    {
+      "id": "chem-pl-q04",
+      "text": "Poniższy diagram przedstawia cząsteczkę aromatyczną:\n\n```smiles\nc1ccccc1\n```\n\nJaka to cząsteczka?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "chem-pl-q04-c1", "text": "Benzen ($\\ce{C6H6}$)", "is_correct": true },
+        { "id": "chem-pl-q04-c2", "text": "Cykloheksan ($\\ce{C6H12}$)", "is_correct": false },
+        { "id": "chem-pl-q04-c3", "text": "Heksen ($\\ce{C6H12}$)", "is_correct": false },
+        { "id": "chem-pl-q04-c4", "text": "Toluen ($\\ce{C7H8}$)", "is_correct": false }
+      ],
+      "explanation": "To jest **benzen** ($\\ce{C6H6}$) — najprostszy węglowodór aromatyczny.\n\nW notacji SMILES małe litery `c` oznaczają **aromatyczne atomy węgla**, a liczba `1` na początku i końcu domyka pierścień. Benzen posiada sześć elektronów $\\pi$ zdelokalizowanych w pierścieniu, co nadaje mu wyjątkową trwałość.\n\n$$\\ce{C6H6}$$",
+      "tags": ["aromatyczne", "benzen", "SMILES"]
+    },
+    {
+      "id": "chem-pl-q05",
+      "text": "Ile atomów węgla zawiera cząsteczka propanu?\n\n$$\\ce{C3H8}$$",
+      "type": "single_choice",
+      "choices": [
+        { "id": "chem-pl-q05-c1", "text": "3", "is_correct": true },
+        { "id": "chem-pl-q05-c2", "text": "8", "is_correct": false },
+        { "id": "chem-pl-q05-c3", "text": "2", "is_correct": false },
+        { "id": "chem-pl-q05-c4", "text": "4", "is_correct": false }
+      ],
+      "explanation": "Wzór sumaryczny $\\ce{C3H8}$ mówi wprost:\n- **3 atomy węgla** (indeks przy C)\n- 8 atomów wodoru (indeks przy H)\n\nPropan należy do alkanów o wzorze ogólnym $\\ce{C_nH_{2n+2}}$. Dla $n=3$: $\\ce{C3H_{2 \\cdot 3+2}} = \\ce{C3H8}$.\n\nW notacji SMILES propan to `CCC` (trzy węgle w łańcuchu).",
+      "tags": ["alkany", "wzory-sumaryczne", "propan"]
+    },
+    {
+      "id": "chem-pl-q06",
+      "text": "Jaki produkt nieorganiczny (sól) powstaje w reakcji neutralizacji kwasu chlorowodorowego z wodorotlenkiem sodu?\n\n$$\\ce{HCl + NaOH -> ? + H2O}$$",
+      "type": "single_choice",
+      "choices": [
+        { "id": "chem-pl-q06-c1", "text": "$\\ce{NaCl}$", "is_correct": true },
+        { "id": "chem-pl-q06-c2", "text": "$\\ce{Na2Cl}$", "is_correct": false },
+        { "id": "chem-pl-q06-c3", "text": "$\\ce{NaH + Cl2}$", "is_correct": false },
+        { "id": "chem-pl-q06-c4", "text": "$\\ce{NaClO}$", "is_correct": false }
+      ],
+      "explanation": "Reakcja neutralizacji przebiega według schematu:\n\n$$\\ce{HCl + NaOH -> NaCl + H2O}$$\n\nKwas ($\\ce{HCl}$) reaguje z zasadą ($\\ce{NaOH}$), tworząc **sól** ($\\ce{NaCl}$, chlorek sodu) i **wodę** ($\\ce{H2O}$).\n\nChloran sodu ($\\ce{NaClO}$) to inny związek — środek dezynfekujący, który nie powstaje w tej reakcji.",
+      "tags": ["kwasy", "zasady", "neutralizacja", "sole"]
+    },
+    {
+      "id": "chem-pl-q07",
+      "text": "Podaj wzór sumaryczny wody.",
+      "type": "text",
+      "choices": [],
+      "accepted_answers": ["H2O", "h2o"],
+      "explanation": "Wzór sumaryczny wody to $\\ce{H2O}$.\n\nCząsteczka wody składa się z:\n- 2 atomów wodoru ($\\ce{H}$)\n- 1 atomu tlenu ($\\ce{O}$)\n\nAtomy te są połączone **wiązaniami kowalencyjnymi spolaryzowanymi**. Kąt $\\ce{H-O-H}$ wynosi około $104{,}5°$, co nadaje cząsteczce dipolarny charakter.\n\n$$\\ce{2H2 + O2 -> 2H2O}$$",
+      "tags": ["woda", "wzory-sumaryczne"]
+    },
+    {
+      "id": "chem-pl-q08",
+      "text": "Poniższy diagram przedstawia dobrze znany związek organiczny:\n\n```smiles\nCC(=O)O\n```\n\nOpisz, jakie grupy funkcyjne zawiera ta cząsteczka i do jakiej klasy związków należy.",
+      "type": "open",
+      "choices": [],
+      "explanation": "To jest **kwas octowy** (kwas etanowy), $\\ce{CH3COOH}$ lub $\\ce{CH3-C(=O)-OH}$.\n\nGrupy funkcyjne:\n- **Grupa karboksylowa** ($\\ce{-COOH}$) — charakterystyczna dla kwasów karboksylowych\n- Składa się z grupy karbonylowej ($\\ce{C=O}$) i hydroksylowej ($\\ce{-OH}$)\n\nKwas octowy należy do klasy **kwasów karboksylowych**. Jest głównym składnikiem octu (stężenie ~5–8%). Jego wzór można też zapisać jako:\n\n$$\\ce{CH3COOH}$$\n\nW notacji SMILES `CC(=O)O`:\n- `C` — metyl ($\\ce{CH3-}$)\n- `C(=O)` — węgiel z podwójnym wiązaniem do tlenu (karbonyl)\n- `O` — tlen z jednym niejawnym wodorem ($\\ce{-OH}$)",
+      "tags": ["kwasy-karboksylowe", "grupy-funkcyjne", "SMILES"]
+    }
+  ]
+}

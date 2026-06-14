@@ -1,3 +1,4 @@
+import 'katex/contrib/mhchem'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
@@ -7,6 +8,7 @@ import type { Components } from 'react-markdown'
 import type { ExtraProps } from 'react-markdown'
 import type { Element } from 'hast'
 import { MermaidChart } from './MermaidChart'
+import { SmilesChart } from './SmilesChart'
 
 interface RichContentProps {
   content: string
@@ -23,6 +25,10 @@ function CodeBlock({ node, className, children, ...props }: CodeProps) {
 
   if (lang === 'mermaid') {
     return <MermaidChart source={source} />
+  }
+
+  if (lang === 'smiles') {
+    return <SmilesChart source={source} />
   }
 
   const isBlock = (node as Element | undefined)?.position?.start.line !==
@@ -58,7 +64,7 @@ export function RichContent({ content, className = '' }: RichContentProps) {
     <div className={`rich-content ${className}`}>
       <ReactMarkdown
         remarkPlugins={[remarkMath, remarkGfm]}
-        rehypePlugins={[rehypeKatex, [rehypeHighlight, { plainText: ['mermaid'] }]]}
+        rehypePlugins={[rehypeKatex, [rehypeHighlight, { plainText: ['mermaid', 'smiles'] }]]}
         components={components}
       >
         {content}

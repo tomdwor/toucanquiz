@@ -416,6 +416,34 @@
       "modified_at": null,
       "language": "en",
       "documents": ["typescript-type-system.md"]
+    },
+    {
+      "id": "chem0001-e000-0000-0000-000000000001",
+      "name": "Chemistry Fundamentals",
+      "description": "Explore **core chemistry concepts** — molecular structures, chemical formulas, bonding, and reactions. Features $\\ce{mhchem}$ notation and interactive 2D molecular diagrams.",
+      "tags": ["chemistry", "molecules", "reactions", "beginner"],
+      "mode": "practice",
+      "pass_threshold": 70,
+      "question_limit": null,
+      "question_count": 8,
+      "created_at": "2026-06-14T00:00:00Z",
+      "modified_at": null,
+      "language": "en",
+      "documents": ["chemistry-basics.md"]
+    },
+    {
+      "id": "chem0002-p000-0000-0000-000000000002",
+      "name": "Chemia Organiczna",
+      "description": "Poznaj **podstawy chemii organicznej** — węglowodory, grupy funkcyjne, reakcje kwas-zasada i struktury cząsteczkowe z notacją $\\ce{mhchem}$ i diagramami SMILES.",
+      "tags": ["chemia", "chemia-organiczna", "cząsteczki", "początkujący"],
+      "mode": "practice",
+      "pass_threshold": 70,
+      "question_limit": null,
+      "question_count": 8,
+      "created_at": "2026-06-14T00:00:00Z",
+      "modified_at": null,
+      "language": "pl",
+      "documents": ["chemia-podstawy.md"]
     }
   ]
 }

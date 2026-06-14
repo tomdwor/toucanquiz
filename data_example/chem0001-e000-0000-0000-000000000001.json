@@ -1,0 +1,110 @@
+{
+  "id": "chem0001-e000-0000-0000-000000000001",
+  "name": "Chemistry Fundamentals",
+  "description": "Explore **core chemistry concepts** — molecular structures, chemical formulas, bonding, and reactions. This quiz uses $\\ce{mhchem}$ notation for chemical formulas and interactive 2D molecular diagrams.",
+  "tags": ["chemistry", "molecules", "reactions", "beginner"],
+  "mode": "practice",
+  "pass_threshold": 70,
+  "question_limit": null,
+  "language": "en",
+  "created_at": "2026-06-14T00:00:00Z",
+  "modified_at": null,
+  "documents": ["chemistry-basics.md"],
+  "questions": [
+    {
+      "id": "chem-en-q01",
+      "text": "The diagram below shows a molecule rendered from its SMILES notation:\n\n```smiles\nc1ccccc1\n```\n\nWhat is this molecule?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "chem-en-q01-c1", "text": "Benzene", "is_correct": true },
+        { "id": "chem-en-q01-c2", "text": "Cyclohexane", "is_correct": false },
+        { "id": "chem-en-q01-c3", "text": "Hexane", "is_correct": false },
+        { "id": "chem-en-q01-c4", "text": "Toluene", "is_correct": false }
+      ],
+      "explanation": "This is **benzene** ($\\ce{C6H6}$), an aromatic hydrocarbon consisting of six carbon atoms arranged in a hexagonal ring with alternating double bonds.\n\nIn SMILES notation, lowercase letters like `c` denote **aromatic atoms**. The string `c1ccccc1` describes the ring by numbering the opening atom (1) and closing it at the end.\n\nBenzene is a fundamental building block in organic chemistry and is notable for its delocalized $\\pi$-electron system.\n\n$$\\ce{C6H6}$$",
+      "tags": ["organic", "aromatic", "SMILES"]
+    },
+    {
+      "id": "chem-en-q02",
+      "text": "Which of the following correctly balances the combustion of hydrogen?\n\n$$\\ce{H2 + O2 -> H2O}$$",
+      "type": "single_choice",
+      "choices": [
+        { "id": "chem-en-q02-c1", "text": "$\\ce{2H2 + O2 -> 2H2O}$", "is_correct": true },
+        { "id": "chem-en-q02-c2", "text": "$\\ce{H2 + O2 -> 2H2O}$", "is_correct": false },
+        { "id": "chem-en-q02-c3", "text": "$\\ce{H2 + 2O2 -> H2O}$", "is_correct": false },
+        { "id": "chem-en-q02-c4", "text": "$\\ce{2H2 + 2O2 -> 2H2O}$", "is_correct": false }
+      ],
+      "explanation": "The balanced equation is:\n\n$$\\ce{2H2 + O2 -> 2H2O}$$\n\nTo balance it, count atoms on each side:\n\n| Atom | Left | Right |\n|------|------|-------|\n| H | 4 | 4 |\n| O | 2 | 2 |\n\nUsing coefficients 2, 1, and 2 balances both hydrogen and oxygen atoms.",
+      "tags": ["balancing", "combustion", "stoichiometry"]
+    },
+    {
+      "id": "chem-en-q03",
+      "text": "Which type of chemical bond forms when electrons are **transferred** from one atom to another?\n\nExample: $\\ce{Na + Cl -> Na+ + Cl- -> NaCl}$",
+      "type": "single_choice",
+      "choices": [
+        { "id": "chem-en-q03-c1", "text": "Ionic bond", "is_correct": true },
+        { "id": "chem-en-q03-c2", "text": "Covalent bond", "is_correct": false },
+        { "id": "chem-en-q03-c3", "text": "Hydrogen bond", "is_correct": false },
+        { "id": "chem-en-q03-c4", "text": "Metallic bond", "is_correct": false }
+      ],
+      "explanation": "An **ionic bond** forms through the complete transfer of one or more electrons from a metal to a non-metal.\n\n- $\\ce{Na}$ loses one electron → $\\ce{Na+}$\n- $\\ce{Cl}$ gains one electron → $\\ce{Cl-}$\n- The opposite charges attract, forming $\\ce{NaCl}$\n\nA **covalent bond**, by contrast, involves *sharing* electrons between atoms (e.g. $\\ce{H-H}$ in $\\ce{H2}$).",
+      "tags": ["bonding", "ionic", "covalent"]
+    },
+    {
+      "id": "chem-en-q04",
+      "text": "Which of the following elements are **noble gases**?",
+      "type": "multiple_choice",
+      "choices": [
+        { "id": "chem-en-q04-c1", "text": "$\\ce{He}$ — Helium", "is_correct": true },
+        { "id": "chem-en-q04-c2", "text": "$\\ce{Ne}$ — Neon", "is_correct": true },
+        { "id": "chem-en-q04-c3", "text": "$\\ce{Ar}$ — Argon", "is_correct": true },
+        { "id": "chem-en-q04-c4", "text": "$\\ce{N2}$ — Nitrogen gas", "is_correct": false }
+      ],
+      "explanation": "Noble gases (Group 18) have a completely filled outer electron shell, making them chemically inert under normal conditions:\n\n$\\ce{He}$, $\\ce{Ne}$, $\\ce{Ar}$, $\\ce{Kr}$, $\\ce{Xe}$, $\\ce{Rn}$\n\n**Nitrogen** ($\\ce{N2}$) is not a noble gas — it is a diatomic molecule that can react under the right conditions (e.g. $\\ce{N2 + 3H2 -> 2NH3}$ in the Haber process).",
+      "tags": ["periodic-table", "noble-gases", "elements"]
+    },
+    {
+      "id": "chem-en-q05",
+      "text": "The diagram below shows a molecule:\n\n```smiles\nCCO\n```\n\nWhat **functional group** does this molecule contain?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "chem-en-q05-c1", "text": "Hydroxyl group ($\\ce{-OH}$)", "is_correct": true },
+        { "id": "chem-en-q05-c2", "text": "Carboxyl group ($\\ce{-COOH}$)", "is_correct": false },
+        { "id": "chem-en-q05-c3", "text": "Amino group ($\\ce{-NH2}$)", "is_correct": false },
+        { "id": "chem-en-q05-c4", "text": "Aldehyde group ($\\ce{-CHO}$)", "is_correct": false }
+      ],
+      "explanation": "This is **ethanol** ($\\ce{C2H5OH}$), which contains a **hydroxyl group** ($\\ce{-OH}$). Ethanol is the alcohol found in beverages.\n\nThe SMILES string `CCO` represents:\n- `C` — first carbon (with 3 implicit H)\n- `C` — second carbon (with 2 implicit H)\n- `O` — oxygen (with 1 implicit H)\n\nTogether: $\\ce{CH3-CH2-OH}$, i.e. $\\ce{C2H5OH}$.",
+      "tags": ["organic", "functional-groups", "alcohols", "SMILES"]
+    },
+    {
+      "id": "chem-en-q06",
+      "text": "What is the chemical formula of **table salt**?",
+      "type": "text",
+      "choices": [],
+      "accepted_answers": ["NaCl", "nacl"],
+      "explanation": "Table salt is **sodium chloride** ($\\ce{NaCl}$). It consists of $\\ce{Na+}$ (sodium) and $\\ce{Cl-}$ (chloride) ions in a 1:1 ratio held together by ionic bonds.\n\n$$\\ce{Na+ + Cl- -> NaCl}$$",
+      "tags": ["formulas", "ionic-compounds", "everyday-chemistry"]
+    },
+    {
+      "id": "chem-en-q07",
+      "text": "What is the pH of **pure water** at 25°C?",
+      "type": "single_choice",
+      "choices": [
+        { "id": "chem-en-q07-c1", "text": "7 (neutral)", "is_correct": true },
+        { "id": "chem-en-q07-c2", "text": "0 (strongly acidic)", "is_correct": false },
+        { "id": "chem-en-q07-c3", "text": "14 (strongly basic)", "is_correct": false },
+        { "id": "chem-en-q07-c4", "text": "1 (weakly acidic)", "is_correct": false }
+      ],
+      "explanation": "Pure water has a pH of **7**, meaning it is perfectly neutral — neither acidic nor basic.\n\nWater undergoes autoionization:\n\n$$\\ce{H2O <=> H+ + OH-}$$\n\nAt 25°C, the concentrations of $\\ce{H+}$ and $\\ce{OH-}$ are equal ($10^{-7}$ mol/L each), giving $\\text{pH} = -\\log(10^{-7}) = 7$.\n\n| pH range | Classification |\n|----------|----------------|\n| 0–6 | Acidic |\n| 7 | Neutral |\n| 8–14 | Basic |",
+      "tags": ["acids-bases", "pH"]
+    },
+    {
+      "id": "chem-en-q08",
+      "text": "The diagram below shows a well-known pharmaceutical compound:\n\n```smiles\nCC(=O)Oc1ccccc1C(=O)O\n```\n\nDescribe what type of compound this is and identify any functional groups you can spot.",
+      "type": "open",
+      "choices": [],
+      "explanation": "This is **aspirin** (acetylsalicylic acid), with molecular formula $\\ce{C9H8O4}$.\n\nKey structural features:\n- A **benzene ring** (the hexagonal aromatic ring)\n- An **ester group** ($\\ce{-OC(=O)CH3}$) — the acetyl modification\n- A **carboxylic acid group** ($\\ce{-COOH}$)\n\nAspirin was first synthesized in 1897 by Felix Hoffmann. It is an analgesic (pain reliever), anti-inflammatory, and antipyretic (fever reducer).\n\n$$\\ce{C9H8O4}$$",
+      "tags": ["organic", "pharmaceuticals", "functional-groups", "SMILES"]
+    }
+  ]
+}
