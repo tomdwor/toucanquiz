@@ -5,6 +5,7 @@ import { QuizDetailPage } from './pages/QuizDetailPage'
 import { QuizSessionPage } from './pages/QuizSessionPage'
 import { ReviewPage } from './pages/ReviewPage'
 import { ExamSubmittedPage } from './pages/ExamSubmittedPage'
+import { DocumentPage } from './pages/DocumentPage'
 import { NotFoundPage } from './pages/NotFoundPage'
 
 export function App() {
@@ -17,6 +18,7 @@ export function App() {
           <Route path="/quiz/:quizId/session" element={<QuizSessionPage />} />
           <Route path="/quiz/:quizId/review" element={<ReviewPage />} />
           <Route path="/quiz/:quizId/submitted" element={<ExamSubmittedPage />} />
+          <Route path="/quiz/:quizId/documents/:filename" element={<DocumentPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </AppShell>

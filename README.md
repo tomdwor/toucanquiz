@@ -85,7 +85,8 @@ List of quiz summaries (used for the home page):
       "question_count": 10,
       "language": "en",
       "created_at": "2024-01-01T00:00:00Z",
-      "modified_at": null
+      "modified_at": null,
+      "documents": ["intro.md", "advanced-topics.md"]
     }
   ]
 }
@@ -107,6 +108,7 @@ Full quiz file:
   "language": "en",
   "created_at": "2024-01-01T00:00:00Z",
   "modified_at": null,
+  "documents": ["intro.md", "advanced-topics.md"],
   "questions": [
     {
       "id": "uuid",
@@ -134,6 +136,7 @@ Full quiz file:
 | `language` | `string` | BCP 47 language code, e.g. `"en"`, `"pl"`, `"es"` |
 | `created_at` | ISO 8601 string | Creation timestamp |
 | `modified_at` | ISO 8601 string \| `null` | Last modification timestamp, or `null` if never modified |
+| `documents` | `string[]` \| omitted | Optional list of document filenames (see [Documents](#documents)) |
 | `question.type` | `"single_choice"` \| `"multiple_choice"` \| `"text"` \| `"open"` | Answer type |
 | `question.explanation` | `string` | Shown after answering in practice mode (supports rich content) |
 
@@ -149,6 +152,35 @@ All text fields (`description`, `question.text`, `choice.text`, `explanation`) s
 - **KaTeX math** — inline (`$x^2$`) and block (`$$\sum_{i=0}^n i$$`)
 - **Syntax-highlighted code** — inline (`` `let x = 1` ``) and fenced blocks with a language tag (e.g. ` ```python `, ` ```cpp `, ` ```typescript `) — rendered via [highlight.js](https://highlightjs.org/) (github theme)
 - **Mermaid diagrams** — fenced code block with ` ```mermaid `
+
+---
+
+## Documents
+
+Quizzes can optionally include theory/reference documents for learners to read before or during a quiz session. Documents are listed on the quiz detail page and linked individually.
+
+### File layout
+
+```
+public/data/
+  quiz_documents/
+    {quiz-uuid}/
+      intro.md
+      advanced-topics.md
+```
+
+The filenames in the `public/data/quiz_documents/{uuid}/` directory must match the strings listed in the quiz's `"documents"` array. For `data_example`, the same layout is used under `data_example/quiz_documents/`.
+
+### Document format
+
+Documents are Markdown files and support the same rich content features as quiz fields:
+
+- **Markdown** — headings, bold, tables, lists, links
+- **KaTeX math** — `$inline$` and `$$block$$`
+- **Syntax-highlighted code** — fenced blocks (` ```python `, ` ```cpp `, etc.)
+- **Mermaid diagrams** — ` ```mermaid ` blocks
+
+The first `# Heading` in a document is used as its display title on the viewer page. The filename (stripped of `.md`, with hyphens/underscores replaced by spaces) is shown in the document list on the quiz detail page.
 
 ---
 
@@ -261,6 +293,13 @@ Submits exam answers.
 Retrieves a previously submitted result (e.g., after page reload).
 
 **Response:** `ExamResult` (same shape as submit response)
+
+#### `GET /quizzes/:id/documents/:filename`
+Returns the raw Markdown content of a quiz document.
+
+**Response:** `text/plain` — Markdown string
+
+> Documents are referenced by filename (e.g. `intro.md`) as listed in the quiz's `documents` array.
 
 ---
 

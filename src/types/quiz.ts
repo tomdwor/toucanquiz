@@ -28,6 +28,7 @@ export interface Quiz {
   created_at: string
   modified_at: string | null
   language: string
+  documents?: string[]
 }
 
 export interface QuizSummary {
@@ -42,4 +43,5 @@ export interface QuizSummary {
   created_at: string
   modified_at: string | null
   language: string
+  documents?: string[]
 }

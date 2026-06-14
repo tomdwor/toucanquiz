@@ -39,6 +39,26 @@ export class ApiDataService implements IDataService {
     return res.json() as Promise<T>
   }
 
+  private async requestText(path: string): Promise<string> {
+    const res = await fetch(`${this.baseUrl}${path}`)
+
+    if (res.status === 401) {
+      const returnUrl = encodeURIComponent(window.location.href)
+      const target = this.signinPageUrl
+        ? `${this.signinPageUrl}?returnUrl=${returnUrl}`
+        : `/signin?returnUrl=${returnUrl}`
+      window.location.href = target
+      return new Promise<never>(() => undefined)
+    }
+
+    if (!res.ok) {
+      const text = await res.text().catch(() => '')
+      throw new Error(`API error ${res.status}: ${text || res.statusText}`)
+    }
+
+    return res.text()
+  }
+
   listQuizzes(): Promise<QuizSummary[]> {
     return this.request<QuizSummary[]>('/quizzes')
   }
@@ -53,5 +73,9 @@ export class ApiDataService implements IDataService {
       method: 'POST',
       body: JSON.stringify({ answers }),
     })
+  }
+
+  getQuizDocument(quizId: string, filename: string): Promise<string> {
+    return this.requestText(`/quizzes/${quizId}/documents/${filename}`)
   }
 }

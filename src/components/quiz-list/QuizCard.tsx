@@ -36,6 +36,14 @@ export function QuizCard({ quiz }: QuizCardProps) {
         </div>
       </div>
 
+      {quiz.documents && quiz.documents.length > 0 && (
+        <div className="mb-2">
+          <span className="rounded bg-sky-100 px-2 py-0.5 text-xs font-medium text-sky-700">
+            {quiz.documents.length} doc{quiz.documents.length !== 1 ? 's' : ''}
+          </span>
+        </div>
+      )}
+
       {quiz.description && (
         <div className="mb-3 line-clamp-2 text-sm text-gray-600">
           <RichContent content={quiz.description} />

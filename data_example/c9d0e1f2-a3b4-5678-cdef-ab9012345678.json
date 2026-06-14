@@ -355,5 +355,9 @@
   ],
   "created_at": "2024-08-02T00:00:00Z",
   "modified_at": "2024-12-20T00:00:00Z",
-  "language": "en"
+  "language": "en",
+  "documents": [
+    "common-vulnerabilities.md",
+    "cryptography-basics.md"
+  ]
 }

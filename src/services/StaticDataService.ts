@@ -33,4 +33,10 @@ export class StaticDataService implements IDataService {
       new Error('Exam mode requires API backend. Set mode to "api" in config.json.')
     )
   }
+
+  async getQuizDocument(quizId: string, filename: string): Promise<string> {
+    const res = await fetch(`/data/quiz_documents/${quizId}/${filename}`)
+    if (!res.ok) throw new Error(`Document not found: ${filename}`)
+    return res.text()
+  }
 }

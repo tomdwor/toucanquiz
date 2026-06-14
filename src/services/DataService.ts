@@ -6,4 +6,5 @@ export interface IDataService {
   listQuizzes(): Promise<QuizSummary[]>
   getQuiz(quizId: string): Promise<Quiz>
   submitExamSession(session: QuizSession): Promise<ExamResult>
+  getQuizDocument(quizId: string, filename: string): Promise<string>
 }
