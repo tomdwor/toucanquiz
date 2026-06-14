@@ -10,11 +10,16 @@ interface ExplanationPanelProps {
 export function ExplanationPanel({ sessionQuestion, selectedChoiceIds, isCorrect }: ExplanationPanelProps) {
   const { question, shuffled_choices } = sessionQuestion
   const isText = question.type === 'text'
+  const isSort = question.type === 'sort'
 
   const correctChoices = shuffled_choices.filter((c) => c.is_correct)
   const incorrectSelected = selectedChoiceIds.filter(
     (id) => !shuffled_choices.find((c) => c.id === id)?.is_correct
   )
+
+  const correctOrder = isSort
+    ? [...shuffled_choices].sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+    : []
 
   const resultColor =
     isCorrect === true
@@ -36,6 +41,49 @@ export function ExplanationPanel({ sessionQuestion, selectedChoiceIds, isCorrect
         <span>{resultLabel}</span>
       </div>
 
+      {isSort && (
+        <div className="mb-3">
+          <p className="mb-1.5 text-sm font-medium text-gray-700">Your order:</p>
+          <ol className="space-y-1">
+            {selectedChoiceIds.map((id, idx) => {
+              const choice = shuffled_choices.find((c) => c.id === id)
+              const positionCorrect = correctOrder[idx]?.id === id
+              return choice ? (
+                <li key={id} className="flex items-start gap-2 text-sm">
+                  <span className={`mt-0.5 shrink-0 ${positionCorrect ? 'text-green-600' : 'text-red-600'}`}>
+                    {positionCorrect ? '✓' : '✗'}
+                  </span>
+                  <span className={positionCorrect ? 'text-gray-800' : 'text-red-700'}>
+                    {idx + 1}.{' '}
+                    <RichContent content={choice.text} />
+                    {!positionCorrect && correctOrder[idx] && (
+                      <span className="ml-1 text-xs text-gray-500">
+                        (correct: {correctOrder[idx].text})
+                      </span>
+                    )}
+                  </span>
+                </li>
+              ) : null
+            })}
+          </ol>
+          {isCorrect === false && (
+            <div className="mt-3">
+              <p className="mb-1.5 text-sm font-medium text-gray-700">Correct order:</p>
+              <ol className="space-y-1">
+                {correctOrder.map((choice, idx) => (
+                  <li key={choice.id} className="flex items-start gap-2 text-sm">
+                    <span className="mt-0.5 shrink-0 text-green-600">✓</span>
+                    <span className="text-gray-800">
+                      {idx + 1}. <RichContent content={choice.text} />
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+        </div>
+      )}
+
       {isText && correctChoices.length > 0 && (
         <div className="mb-3">
           <p className="mb-1.5 text-sm font-medium text-gray-700">
@@ -52,7 +100,7 @@ export function ExplanationPanel({ sessionQuestion, selectedChoiceIds, isCorrect
         </div>
       )}
 
-      {!isText && correctChoices.length > 0 && (
+      {!isText && !isSort && correctChoices.length > 0 && (
         <div className="mb-3">
           <p className="mb-1.5 text-sm font-medium text-gray-700">
             {correctChoices.length === 1 ? 'Correct answer:' : 'Correct answers:'}

@@ -344,10 +344,27 @@
       "tags": [
         "complexity"
       ]
+    },
+    {
+      "id": "al13-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Sort the following steps of **Dijkstra's shortest path algorithm** in execution order:",
+      "type": "sort",
+      "choices": [
+        {"id": "al13-c1", "text": "Initialize all distances to infinity except the source (set to 0)", "is_correct": true, "order": 1},
+        {"id": "al13-c2", "text": "Add all nodes to an unvisited set (priority queue)", "is_correct": true, "order": 2},
+        {"id": "al13-c3", "text": "Select the unvisited node with the smallest tentative distance", "is_correct": true, "order": 3},
+        {"id": "al13-c4", "text": "Update distances of neighboring nodes through the current node", "is_correct": true, "order": 4},
+        {"id": "al13-c5", "text": "Mark the current node as visited and remove it from the unvisited set", "is_correct": true, "order": 5}
+      ],
+      "explanation": "Dijkstra's algorithm executes as follows:\n\n1. **Initialize distances** — set source distance to 0 and all others to ∞\n2. **Add all nodes to the priority queue** — min-heap ordered by tentative distance\n3. **Extract the minimum** — pop the unvisited node $u$ with the smallest distance\n4. **Relax neighbors** — for each neighbor $v$ of $u$: if $dist[u] + weight(u,v) < dist[v]$, update $dist[v]$\n5. **Mark $u$ as visited** — remove it from the unvisited set; repeat from step 3 until all reachable nodes are visited\n\nComplexity: $O((V + E) \\log V)$ with a binary heap.",
+      "tags": [
+        "graphs",
+        "algorithms"
+      ]
     }
   ],
   "created_at": "2024-12-01T00:00:00Z",
-  "modified_at": "2025-03-10T00:00:00Z",
+  "modified_at": "2026-01-15T00:00:00Z",
   "language": "en",
   "documents": [
     "complexity-analysis.md",

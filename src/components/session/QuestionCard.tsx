@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react'
 import type { SessionQuestion } from '../../types/session'
 import { RichContent } from '../shared/RichContent'
 import { ChoiceOption } from './ChoiceOption'
+import { SortableList } from './SortableList'
 
 interface QuestionCardProps {
   sessionQuestion: SessionQuestion
@@ -12,6 +13,7 @@ interface QuestionCardProps {
   answered: boolean
   onChoiceToggle: (choiceId: string) => void
   onTextChange: (text: string) => void
+  onReorder: (newIds: string[]) => void
 }
 
 export function QuestionCard({
@@ -23,10 +25,12 @@ export function QuestionCard({
   answered,
   onChoiceToggle,
   onTextChange,
+  onReorder,
 }: QuestionCardProps) {
   const { question, shuffled_choices } = sessionQuestion
   const isOpen = question.type === 'open'
   const isText = question.type === 'text'
+  const isSort = question.type === 'sort'
   const isFreeResponse = isOpen || isText
 
   const textareaRef = useRef<HTMLTextAreaElement>(null)
@@ -44,7 +48,17 @@ export function QuestionCard({
         <RichContent content={question.text} />
       </div>
 
-      {isOpen ? (
+      {isSort ? (
+        <SortableList
+          items={
+            selectedChoiceIds.length > 0
+              ? selectedChoiceIds.map((id) => shuffled_choices.find((c) => c.id === id)!).filter(Boolean)
+              : shuffled_choices
+          }
+          disabled={answered}
+          onReorder={onReorder}
+        />
+      ) : isOpen ? (
         <div>
           <div className="mb-2 flex items-center gap-2">
             <span className="inline-flex items-center gap-1 rounded bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-600">

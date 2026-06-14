@@ -33,12 +33,15 @@ export function QuizSessionPage() {
 
   // Reset local state on question change
   useEffect(() => {
-    setSelectedChoiceIds([])
+    if (!session) return
+    const sq = session.questions[session.current_index]
+    const isSort = sq?.question.type === 'sort'
+    setSelectedChoiceIds(isSort ? sq.shuffled_choices.map((c) => c.id) : [])
     setTextResponse('')
     setAnswered(false)
     setFocusedChoiceIndex(0)
     setUsingKeyboard(false)
-  }, [session?.current_index])
+  }, [session?.current_index]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Escape key to open quit confirmation
   useEffect(() => {
@@ -64,6 +67,7 @@ export function QuizSessionPage() {
   const question = currentSQ.question
   const isOpen = question.type === 'open'
   const isText = question.type === 'text'
+  const isSort = question.type === 'sort'
   const isFreeResponse = isOpen || isText
   const isLast = session.current_index === session.questions.length - 1
   const isPractice = session.mode === 'practice'
@@ -85,7 +89,7 @@ export function QuizSessionPage() {
       return
     }
 
-    if (!isFreeResponse && selectedChoiceIds.length === 0) return
+    if (!isFreeResponse && !isSort && selectedChoiceIds.length === 0) return
     if (isFreeResponse && !textResponse.trim()) return
 
     // Evaluate correctness
@@ -96,6 +100,11 @@ export function QuizSessionPage() {
       isCorrect = currentSQ.shuffled_choices.some(
         (c) => c.is_correct && c.text.trim().toLowerCase() === normalized
       )
+    } else if (isSort) {
+      const correctOrder = [...currentSQ.shuffled_choices].sort(
+        (a, b) => (a.order ?? 0) - (b.order ?? 0)
+      )
+      isCorrect = selectedChoiceIds.every((id, i) => id === correctOrder[i].id)
     } else if (!isFreeResponse && currentSQ.shuffled_choices.length > 0) {
       const correctIds = new Set(
         currentSQ.shuffled_choices.filter((c) => c.is_correct).map((c) => c.id)
@@ -161,13 +170,13 @@ export function QuizSessionPage() {
   }, [])
 
   useKeyboardNav({
-    choiceCount: isFreeResponse ? 0 : currentSQ.shuffled_choices.length,
+    choiceCount: isFreeResponse || isSort ? 0 : currentSQ.shuffled_choices.length,
     focusedIndex: focusedChoiceIndex,
     setFocusedIndex: setFocusedChoiceIndex,
     onSelect: handleKeyboardSelect,
     onConfirm: handleKeyboardConfirm,
     onInputModeChange: handleInputModeChange,
-    disabled: isFreeResponse,
+    disabled: isFreeResponse || isSort,
   })
 
   const handleQuit = () => {
@@ -238,6 +247,7 @@ export function QuizSessionPage() {
           answered={answered}
           onChoiceToggle={toggleChoice}
           onTextChange={setTextResponse}
+          onReorder={setSelectedChoiceIds}
         />
 
         {answered && isPractice && (
@@ -251,13 +261,13 @@ export function QuizSessionPage() {
         <SessionControls
           answered={answered}
           isLast={isLast}
-          hasSelection={selectedChoiceIds.length > 0}
+          hasSelection={isSort || selectedChoiceIds.length > 0}
           isTextType={isFreeResponse}
           onConfirm={handleConfirm}
           onNext={handleNext}
         />
 
-        {!isFreeResponse && (
+        {!isFreeResponse && !isSort && (
           <p className="text-center text-xs text-gray-400">
             Keyboard: ↑↓ navigate · Space select · Enter confirm/next · Esc quit
           </p>

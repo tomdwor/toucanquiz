@@ -351,10 +351,27 @@
       "tags": [
         "principles"
       ]
+    },
+    {
+      "id": "cs13-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Sort the steps of a typical **SQL injection attack** in the correct order:",
+      "type": "sort",
+      "choices": [
+        {"id": "cs13-c1", "text": "Attacker identifies a web form or URL parameter that queries a database", "is_correct": true, "order": 1},
+        {"id": "cs13-c2", "text": "Attacker crafts malicious SQL code as input (e.g., `' OR 1=1 --`)", "is_correct": true, "order": 2},
+        {"id": "cs13-c3", "text": "The application concatenates user input directly into an SQL query", "is_correct": true, "order": 3},
+        {"id": "cs13-c4", "text": "The database executes the injected query", "is_correct": true, "order": 4},
+        {"id": "cs13-c5", "text": "Attacker retrieves, modifies, or deletes unauthorized data", "is_correct": true, "order": 5}
+      ],
+      "explanation": "A SQL injection attack unfolds in these stages:\n\n1. **Reconnaissance** — the attacker finds an input field (login form, search box, URL parameter) that interacts with a database\n2. **Crafting the payload** — the attacker designs malicious SQL (e.g., `' OR '1'='1` or `'; DROP TABLE users; --`) to manipulate the query\n3. **Injection** — the vulnerable application embeds unsanitised input directly into an SQL string instead of using parameterised queries\n4. **Execution** — the database server receives and runs the attacker-modified SQL statement\n5. **Exploitation** — the attacker reads sensitive data, bypasses authentication, modifies records, or destroys data\n\n**Prevention**: use prepared statements / parameterised queries — never concatenate user input into SQL.",
+      "tags": [
+        "injection",
+        "attacks"
+      ]
     }
   ],
   "created_at": "2024-08-02T00:00:00Z",
-  "modified_at": "2024-12-20T00:00:00Z",
+  "modified_at": "2026-01-15T00:00:00Z",
   "language": "en",
   "documents": [
     "common-vulnerabilities.md",

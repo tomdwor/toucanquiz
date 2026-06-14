@@ -1,0 +1,150 @@
+{
+  "id": "sort0001-e000-0000-0000-000000000001",
+  "name": "Molecular Biology — Sorting",
+  "description": "Test your knowledge of the **correct order of molecular biology processes** — from DNA replication and transcription to translation and beyond.",
+  "tags": ["biology", "molecular-biology", "sort"],
+  "mode": "practice",
+  "pass_threshold": 70,
+  "question_limit": null,
+  "questions": [
+    {
+      "id": "sort-en-q01",
+      "text": "Sort the stages of the **cell cycle** in the correct order:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-en-q01-c1", "text": "G1 phase — cell growth and preparation", "is_correct": true, "order": 1},
+        {"id": "sort-en-q01-c2", "text": "S phase — DNA synthesis/replication", "is_correct": true, "order": 2},
+        {"id": "sort-en-q01-c3", "text": "G2 phase — growth and preparation for division", "is_correct": true, "order": 3},
+        {"id": "sort-en-q01-c4", "text": "M phase / Mitosis — nuclear division", "is_correct": true, "order": 4},
+        {"id": "sort-en-q01-c5", "text": "Cytokinesis — cytoplasm division", "is_correct": true, "order": 5}
+      ],
+      "explanation": "The cell cycle has four main phases followed by cytokinesis:\n\n1. **G1 (Gap 1)** — the cell grows in size, synthesises proteins, and prepares for DNA replication; checkpoint ensures conditions are favourable\n2. **S (Synthesis)** — DNA replication occurs; each chromosome is duplicated to form two sister chromatids\n3. **G2 (Gap 2)** — further growth and protein synthesis; the cell checks for DNA replication errors before entering mitosis\n4. **M phase (Mitosis)** — the nucleus divides; chromosomes are separated into two identical nuclei (prophase → metaphase → anaphase → telophase)\n5. **Cytokinesis** — the cytoplasm divides, producing two genetically identical daughter cells\n\nG1, S, and G2 together form **interphase**, which occupies ~90% of the cell cycle.",
+      "tags": ["cell-cycle"]
+    },
+    {
+      "id": "sort-en-q02",
+      "text": "Sort the phases of **mitosis** in the correct order:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-en-q02-c1", "text": "Prophase — chromosomes condense, spindle forms", "is_correct": true, "order": 1},
+        {"id": "sort-en-q02-c2", "text": "Metaphase — chromosomes align at the cell equator", "is_correct": true, "order": 2},
+        {"id": "sort-en-q02-c3", "text": "Anaphase — sister chromatids are pulled to opposite poles", "is_correct": true, "order": 3},
+        {"id": "sort-en-q02-c4", "text": "Telophase — nuclear envelopes reform around each set of chromosomes", "is_correct": true, "order": 4}
+      ],
+      "explanation": "Mitosis is divided into four sequential phases:\n\n1. **Prophase** — chromatin condenses into visible chromosomes; the mitotic spindle begins to form from centrosomes\n2. **Metaphase** — chromosomes are fully condensed and align along the metaphase plate (cell equator); spindle fibres attach to kinetochores\n3. **Anaphase** — sister chromatids are separated and pulled to opposite poles of the cell by shortening spindle fibres\n4. **Telophase** — chromosomes arrive at the poles and begin to decondense; nuclear envelopes reform around each set, producing two nuclei\n\nMnemonic: **PMAT** — **P**ro → **M**eta → **A**na → **T**elo",
+      "tags": ["mitosis", "cell-division"]
+    },
+    {
+      "id": "sort-en-q03",
+      "text": "Sort the steps of **DNA replication** in the correct order:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-en-q03-c1", "text": "Helicase unwinds and separates the double helix at the origin of replication", "is_correct": true, "order": 1},
+        {"id": "sort-en-q03-c2", "text": "Primase synthesizes a short RNA primer complementary to the template strand", "is_correct": true, "order": 2},
+        {"id": "sort-en-q03-c3", "text": "DNA polymerase extends the new strand by adding deoxyribonucleotides (5'→3')", "is_correct": true, "order": 3},
+        {"id": "sort-en-q03-c4", "text": "DNA ligase joins the Okazaki fragments on the lagging strand", "is_correct": true, "order": 4},
+        {"id": "sort-en-q03-c5", "text": "Exonuclease removes RNA primers and DNA polymerase fills the gaps", "is_correct": true, "order": 5}
+      ],
+      "explanation": "DNA replication is semi-conservative and proceeds as follows:\n\n1. **Helicase** — breaks hydrogen bonds and unwinds the double helix at the origin of replication, creating a replication fork\n2. **Primase** — synthesises a short RNA primer (~10 nucleotides) to provide a free 3'-OH group for DNA polymerase\n3. **DNA polymerase III** — extends the new strand by adding complementary deoxyribonucleotides in the 5'→3' direction (leading strand continuously; lagging strand in Okazaki fragments)\n4. **DNA ligase** — seals the nicks between Okazaki fragments on the lagging strand, forming a continuous strand\n5. **Exonuclease / DNA polymerase I** — removes the RNA primers and fills the resulting gaps with DNA\n\nThe result is two identical double-stranded DNA molecules, each with one original and one new strand.",
+      "tags": ["DNA-replication"]
+    },
+    {
+      "id": "sort-en-q04",
+      "text": "Sort the steps of **transcription in eukaryotes** in the correct order:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-en-q04-c1", "text": "Transcription factors bind to the promoter and recruit RNA polymerase II", "is_correct": true, "order": 1},
+        {"id": "sort-en-q04-c2", "text": "RNA polymerase unwinds the DNA double helix at the transcription start site", "is_correct": true, "order": 2},
+        {"id": "sort-en-q04-c3", "text": "RNA polymerase synthesizes the pre-mRNA strand (5'→3')", "is_correct": true, "order": 3},
+        {"id": "sort-en-q04-c4", "text": "The 5' cap and poly-A tail are added to the pre-mRNA", "is_correct": true, "order": 4},
+        {"id": "sort-en-q04-c5", "text": "Introns are removed by the spliceosome and exons are joined (splicing)", "is_correct": true, "order": 5}
+      ],
+      "explanation": "Eukaryotic transcription and pre-mRNA processing:\n\n1. **Initiation** — general transcription factors assemble at the promoter (TATA box) and recruit RNA polymerase II to form the pre-initiation complex\n2. **Unwinding** — RNA polymerase opens the DNA double helix (~10–15 bp), exposing the template strand\n3. **Elongation** — RNA polymerase reads the template strand (3'→5') and synthesises pre-mRNA (5'→3') by adding ribonucleotides\n4. **Capping & polyadenylation** — a 7-methylguanosine cap is added co-transcriptionally to the 5' end; a poly-A tail (~200 As) is added at the 3' end after cleavage of the transcript\n5. **Splicing** — the spliceosome (snRNPs + proteins) removes introns and ligates exons, producing mature mRNA ready for export to the cytoplasm",
+      "tags": ["transcription", "gene-expression"]
+    },
+    {
+      "id": "sort-en-q05",
+      "text": "Sort the steps of **translation** (protein synthesis) in the correct order:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-en-q05-c1", "text": "The small ribosomal subunit binds to the mRNA at the 5' cap", "is_correct": true, "order": 1},
+        {"id": "sort-en-q05-c2", "text": "The initiator tRNA (carrying Met) pairs with the AUG start codon", "is_correct": true, "order": 2},
+        {"id": "sort-en-q05-c3", "text": "The large ribosomal subunit joins to form the complete initiation complex", "is_correct": true, "order": 3},
+        {"id": "sort-en-q05-c4", "text": "Aminoacyl-tRNA enters the A site and forms a peptide bond (elongation)", "is_correct": true, "order": 4},
+        {"id": "sort-en-q05-c5", "text": "The ribosome encounters a stop codon and the polypeptide is released (termination)", "is_correct": true, "order": 5}
+      ],
+      "explanation": "Translation is the process of decoding mRNA into a polypeptide:\n\n1. **Small subunit recruitment** — the 40S ribosomal subunit binds at the 5' cap and scans the mRNA in the 5'→3' direction\n2. **Start codon recognition** — the initiator Met-tRNA (carrying methionine) base-pairs with the AUG start codon in the P site\n3. **Large subunit joining** — the 60S subunit docks, completing the 80S ribosome; translation is ready to begin\n4. **Elongation** — each elongation cycle: (a) aminoacyl-tRNA enters the A site, (b) peptidyl transferase forms a peptide bond, (c) ribosome translocates one codon\n5. **Termination** — a stop codon (UAA, UAG, UGA) in the A site recruits release factors; the polypeptide is hydrolysed and released; the ribosome dissociates",
+      "tags": ["translation", "gene-expression"]
+    },
+    {
+      "id": "sort-en-q06",
+      "text": "Sort the steps of **PCR (Polymerase Chain Reaction)** in the correct order:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-en-q06-c1", "text": "Denaturation — the mixture is heated to ~95°C to separate the DNA strands", "is_correct": true, "order": 1},
+        {"id": "sort-en-q06-c2", "text": "Annealing — the temperature drops to ~55–65°C so primers bind to the template", "is_correct": true, "order": 2},
+        {"id": "sort-en-q06-c3", "text": "Extension — DNA polymerase (Taq) extends the primers at ~72°C", "is_correct": true, "order": 3},
+        {"id": "sort-en-q06-c4", "text": "Repetition — the cycle is repeated 25–40 times to amplify the target sequence", "is_correct": true, "order": 4}
+      ],
+      "explanation": "Each PCR cycle consists of three temperature-controlled steps:\n\n1. **Denaturation (~95°C)** — high heat breaks the hydrogen bonds between complementary bases, separating the double-stranded DNA into two single-stranded templates\n2. **Annealing (~55–65°C)** — the temperature is lowered to allow short synthetic oligonucleotides (primers) to hybridise to their complementary sequences flanking the target region\n3. **Extension (~72°C)** — Taq polymerase (a heat-stable DNA polymerase from *Thermus aquaticus*) synthesises new DNA strands from the primers in the 5'→3' direction\n4. **Repetition** — the three steps are cycled 25–40 times; each cycle doubles the number of target copies, producing up to ~10⁹ copies from a single molecule\n\nAfter PCR, the amplified product can be visualised on a gel, sequenced, or used for cloning.",
+      "tags": ["PCR", "techniques"]
+    },
+    {
+      "id": "sort-en-q07",
+      "text": "Sort the following events in the order they occur during **mRNA processing in eukaryotes**:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-en-q07-c1", "text": "Addition of the 7-methylguanosine (m7G) cap at the 5' end", "is_correct": true, "order": 1},
+        {"id": "sort-en-q07-c2", "text": "Polyadenylation — addition of a poly-A tail at the 3' end", "is_correct": true, "order": 2},
+        {"id": "sort-en-q07-c3", "text": "Splicing — removal of introns by the spliceosome", "is_correct": true, "order": 3},
+        {"id": "sort-en-q07-c4", "text": "Export of the mature mRNA from the nucleus to the cytoplasm", "is_correct": true, "order": 4}
+      ],
+      "explanation": "Pre-mRNA processing in eukaryotes converts the primary transcript into a mature, export-ready mRNA:\n\n1. **5' capping** — occurs co-transcriptionally, very soon after transcription starts; a 7-methylguanosine (m7G) cap is added to the 5' end; it protects mRNA from degradation, aids nuclear export, and is required for ribosome binding\n2. **3' polyadenylation** — after the transcript is cleaved ~10–30 nt downstream of the AAUAAA signal, poly(A) polymerase adds ~200 adenine residues; this occurs before splicing is complete\n3. **Splicing** — the spliceosome assembles at splice sites and removes introns through two transesterification reactions; the exons are joined to form the continuous coding sequence\n4. **Nuclear export** — the mature mRNA (with cap, poly-A tail, and exons only) is exported through nuclear pore complexes into the cytoplasm, where translation occurs\n\nNote: capping and polyadenylation can occur while the pre-mRNA is still being synthesised (co-transcriptionally).",
+      "tags": ["mRNA-processing", "gene-expression"]
+    },
+    {
+      "id": "sort-en-q08",
+      "text": "Sort the steps of the **signal transduction pathway (GPCR example)** in the correct order:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-en-q08-c1", "text": "A ligand (hormone or neurotransmitter) binds to the GPCR on the cell surface", "is_correct": true, "order": 1},
+        {"id": "sort-en-q08-c2", "text": "The receptor changes conformation and activates the bound G-protein (GDP → GTP)", "is_correct": true, "order": 2},
+        {"id": "sort-en-q08-c3", "text": "The G-protein activates adenylyl cyclase, producing cAMP from ATP", "is_correct": true, "order": 3},
+        {"id": "sort-en-q08-c4", "text": "cAMP activates protein kinase A (PKA)", "is_correct": true, "order": 4},
+        {"id": "sort-en-q08-c5", "text": "PKA phosphorylates target proteins, producing a cellular response", "is_correct": true, "order": 5}
+      ],
+      "explanation": "G protein-coupled receptor (GPCR) signalling is a major pathway for cells to respond to extracellular signals:\n\n1. **Ligand binding** — a hormone, neurotransmitter, or other signalling molecule binds to the extracellular domain of the GPCR\n2. **G-protein activation** — the receptor changes conformation and acts as a guanine nucleotide exchange factor (GEF): the Gα subunit exchanges GDP for GTP and dissociates from Gβγ\n3. **Second messenger production** — the activated Gα-GTP subunit stimulates adenylyl cyclase to convert ATP into cyclic AMP (cAMP), amplifying the signal\n4. **PKA activation** — cAMP binds to the regulatory subunits of protein kinase A (PKA), releasing and activating the catalytic subunits\n5. **Cellular response** — activated PKA phosphorylates serine/threonine residues on target proteins (enzymes, transcription factors, ion channels), producing the final physiological response\n\nThe signal is terminated by phosphodiesterase (degrades cAMP) and GTPase activity (Gα hydrolyses GTP to GDP).",
+      "tags": ["signal-transduction", "cell-biology"]
+    },
+    {
+      "id": "sort-en-q09",
+      "text": "Sort the levels of **protein structure** from simplest to most complex:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-en-q09-c1", "text": "Primary structure — the linear sequence of amino acids", "is_correct": true, "order": 1},
+        {"id": "sort-en-q09-c2", "text": "Secondary structure — local folding into α-helices and β-sheets", "is_correct": true, "order": 2},
+        {"id": "sort-en-q09-c3", "text": "Tertiary structure — the overall 3D fold of a single polypeptide chain", "is_correct": true, "order": 3},
+        {"id": "sort-en-q09-c4", "text": "Quaternary structure — assembly of multiple polypeptide subunits", "is_correct": true, "order": 4}
+      ],
+      "explanation": "Proteins are organised at four levels of structural complexity:\n\n1. **Primary structure** — the unique sequence of amino acids joined by peptide bonds; determined by the gene sequence; dictates all higher levels of structure\n2. **Secondary structure** — regular, local folding patterns stabilised by backbone hydrogen bonds: α-helices (coiled) and β-sheets (pleated); no side-chain interactions\n3. **Tertiary structure** — the complete three-dimensional shape of a single polypeptide, stabilised by hydrophobic interactions, disulfide bridges, hydrogen bonds, and ionic interactions between R-groups\n4. **Quaternary structure** — applies only to proteins made of two or more polypeptide chains (subunits); the spatial arrangement of subunits; e.g., haemoglobin (2α + 2β subunits)\n\nProtein function depends critically on its three-dimensional shape — misfolding leads to diseases such as Alzheimer's and Parkinson's.",
+      "tags": ["protein-structure"]
+    },
+    {
+      "id": "sort-en-q10",
+      "text": "Sort these events in the order they occur during **apoptosis (intrinsic pathway)**:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-en-q10-c1", "text": "DNA damage or cellular stress triggers release of cytochrome c from mitochondria", "is_correct": true, "order": 1},
+        {"id": "sort-en-q10-c2", "text": "Cytochrome c forms the apoptosome complex with Apaf-1 and procaspase-9", "is_correct": true, "order": 2},
+        {"id": "sort-en-q10-c3", "text": "Caspase-9 is activated and cleaves downstream executioner caspases (caspase-3, -6, -7)", "is_correct": true, "order": 3},
+        {"id": "sort-en-q10-c4", "text": "Executioner caspases degrade cellular proteins and DNA", "is_correct": true, "order": 4},
+        {"id": "sort-en-q10-c5", "text": "The cell undergoes membrane blebbing and is packaged into apoptotic bodies", "is_correct": true, "order": 5}
+      ],
+      "explanation": "The intrinsic (mitochondrial) pathway of apoptosis is activated by internal stress signals:\n\n1. **Trigger** — DNA damage, oxidative stress, or growth factor withdrawal activates pro-apoptotic proteins (Bax, Bak) that permeabilise the outer mitochondrial membrane\n2. **Cytochrome c release** — cytochrome c leaks from the mitochondrial intermembrane space into the cytoplasm; it is the key signal for apoptosome assembly\n3. **Apoptosome formation** — cytochrome c binds Apaf-1, which recruits and activates procaspase-9; together they form the ~700 kDa wheel-shaped apoptosome\n4. **Caspase cascade** — activated caspase-9 (initiator) cleaves and activates executioner caspases (caspase-3, -6, -7), which then cleave hundreds of cellular substrates including ICAD (releasing CAD nuclease to fragment DNA), cytoskeletal proteins, and repair enzymes\n5. **Cell dismantling** — the cell shrinks, chromatin condenses, the nucleus fragments, and the plasma membrane blebs; the cell is packaged into apoptotic bodies that are recognised and phagocytosed by neighbouring cells or macrophages — no inflammation\n\nApoptosis is essential for development (e.g., digit separation), immune cell selection, and tumour suppression.",
+      "tags": ["apoptosis", "cell-biology"]
+    }
+  ],
+  "created_at": "2026-01-15T00:00:00Z",
+  "modified_at": null,
+  "language": "en"
+}

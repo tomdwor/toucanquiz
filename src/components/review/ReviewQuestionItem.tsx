@@ -11,6 +11,11 @@ export function ReviewQuestionItem({ index, sessionQuestion, answer }: ReviewQue
   const { question, shuffled_choices } = sessionQuestion
   const isOpen = question.type === 'open'
   const isText = question.type === 'text'
+  const isSort = question.type === 'sort'
+
+  const correctOrder = isSort
+    ? [...shuffled_choices].sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+    : []
 
   const isCorrect = answer?.is_correct
   // 'open' questions are always neutral (null)
@@ -33,7 +38,50 @@ export function ReviewQuestionItem({ index, sessionQuestion, answer }: ReviewQue
       </div>
 
       <div className="p-4 text-sm">
-        {isOpen ? (
+        {isSort ? (
+          <div className="space-y-1">
+            <p className="mb-2 font-medium text-gray-600">Your order:</p>
+            {(answer?.selected_choice_ids ?? []).map((id, idx) => {
+              const choice = shuffled_choices.find((c) => c.id === id)
+              const positionCorrect = correctOrder[idx]?.id === id
+              if (!choice) return null
+              return (
+                <div
+                  key={id}
+                  className={`flex items-start gap-2 rounded-lg px-3 py-2 ${
+                    positionCorrect ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'
+                  }`}
+                >
+                  <span className="mt-0.5 shrink-0">{positionCorrect ? '✓' : '✗'}</span>
+                  <span>
+                    {idx + 1}. <RichContent content={choice.text} />
+                    {!positionCorrect && correctOrder[idx] && (
+                      <span className="ml-1 text-xs opacity-75">
+                        (correct: {correctOrder[idx].text})
+                      </span>
+                    )}
+                  </span>
+                </div>
+              )
+            })}
+            {isCorrect === false && (
+              <div className="mt-3">
+                <p className="mb-2 font-medium text-gray-600">Correct order:</p>
+                {correctOrder.map((choice, idx) => (
+                  <div
+                    key={choice.id}
+                    className="flex items-start gap-2 rounded-lg px-3 py-2 bg-green-50 text-green-800"
+                  >
+                    <span className="mt-0.5 shrink-0">✓</span>
+                    <span>
+                      {idx + 1}. <RichContent content={choice.text} />
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ) : isOpen ? (
           <div>
             <p className="mb-1 font-medium text-gray-600">Your answer:</p>
             <p className="text-gray-800">

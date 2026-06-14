@@ -1,0 +1,150 @@
+{
+  "id": "sort0002-p000-0000-0000-000000000002",
+  "name": "Biologia molekularna — Kolejność",
+  "description": "Sprawdź znajomość **kolejności procesów biologii molekularnej** — od replikacji DNA przez transkrypcję po translację i nie tylko.",
+  "tags": ["biology", "molecular-biology", "sort"],
+  "mode": "practice",
+  "pass_threshold": 70,
+  "question_limit": null,
+  "questions": [
+    {
+      "id": "sort-pl-q01",
+      "text": "Uszereguj etapy **cyklu komórkowego** we właściwej kolejności:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-pl-q01-c1", "text": "Faza G1 — wzrost komórki i przygotowanie do replikacji", "is_correct": true, "order": 1},
+        {"id": "sort-pl-q01-c2", "text": "Faza S — synteza/replikacja DNA", "is_correct": true, "order": 2},
+        {"id": "sort-pl-q01-c3", "text": "Faza G2 — wzrost i przygotowanie do podziału", "is_correct": true, "order": 3},
+        {"id": "sort-pl-q01-c4", "text": "Faza M / Mitoza — podział jądra komórkowego", "is_correct": true, "order": 4},
+        {"id": "sort-pl-q01-c5", "text": "Cytokineza — podział cytoplazmy", "is_correct": true, "order": 5}
+      ],
+      "explanation": "Cykl komórkowy składa się z czterech głównych faz oraz cytokinezy:\n\n1. **G1 (przerwa pierwsza)** — komórka rośnie, syntetyzuje białka i przygotowuje się do replikacji DNA; punkt kontrolny sprawdza, czy warunki są sprzyjające\n2. **S (synteza)** — zachodzi replikacja DNA; każdy chromosom jest powielany, tworząc dwie siostrzane chromatydy\n3. **G2 (przerwa druga)** — dalszy wzrost i synteza białek; komórka sprawdza poprawność replikacji przed wejściem w mitozę\n4. **Faza M (mitoza)** — podział jądra; chromosomy są rozdzielane do dwóch identycznych jąder (profaza → metafaza → anafaza → telofaza)\n5. **Cytokineza** — podział cytoplazmy, w wyniku którego powstają dwie genetycznie identyczne komórki potomne\n\nFazy G1, S i G2 tworzą **interfazę**, która zajmuje ok. 90% czasu trwania cyklu komórkowego.",
+      "tags": ["cykl-komorkowy"]
+    },
+    {
+      "id": "sort-pl-q02",
+      "text": "Uszereguj fazy **mitozy** we właściwej kolejności:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-pl-q02-c1", "text": "Profaza — kondensacja chromosomów, tworzenie wrzeciona podziałowego", "is_correct": true, "order": 1},
+        {"id": "sort-pl-q02-c2", "text": "Metafaza — ustawienie chromosomów w płaszczyźnie równikowej komórki", "is_correct": true, "order": 2},
+        {"id": "sort-pl-q02-c3", "text": "Anafaza — siostrzane chromatydy wędrują do przeciwnych biegunów", "is_correct": true, "order": 3},
+        {"id": "sort-pl-q02-c4", "text": "Telofaza — odbudowa otoczek jądrowych wokół każdego zestawu chromosomów", "is_correct": true, "order": 4}
+      ],
+      "explanation": "Mitoza przebiega przez cztery kolejne fazy:\n\n1. **Profaza** — chromatyna kondensuje się w widoczne chromosomy; wrzeciono podziałowe zaczyna się formować z centrosomów; jąderko zanika\n2. **Metafaza** — chromosomy są w pełni skondensowane i ustawiają się wzdłuż płyty metafazowej (równika komórki); włókna wrzeciona przyczepiają się do kinetochorów\n3. **Anafaza** — siostrzane chromatydy są rozdzielane i wędrują do przeciwnych biegunów komórki wskutek skracania włókien wrzeciona\n4. **Telofaza** — chromosomy docierają do biegunów i zaczynają się dekondensować; otoczki jądrowe odradzają się wokół każdego zestawu chromosomów, tworząc dwa nowe jądra\n\nMnemotechnika: **PMAT** — **P**rofaza → **M**etafaza → **A**nafaza → **T**elofaza",
+      "tags": ["mitoza", "podzial-komorki"]
+    },
+    {
+      "id": "sort-pl-q03",
+      "text": "Uszereguj etapy **replikacji DNA** we właściwej kolejności:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-pl-q03-c1", "text": "Helikaza rozwija i rozdziela podwójną helisę w miejscu początku replikacji", "is_correct": true, "order": 1},
+        {"id": "sort-pl-q03-c2", "text": "Primiaza syntetyzuje krótki starter RNA komplementarny do nici matrycowej", "is_correct": true, "order": 2},
+        {"id": "sort-pl-q03-c3", "text": "Polimeraza DNA wydłuża nową nić, dodając deoksyrybonukleotydy (kierunek 5'→3')", "is_correct": true, "order": 3},
+        {"id": "sort-pl-q03-c4", "text": "Ligaza DNA łączy fragmenty Okazaki na nici opóźnionej", "is_correct": true, "order": 4},
+        {"id": "sort-pl-q03-c5", "text": "Egzonukleaza usuwa startery RNA, a polimeraza DNA wypełnia luki", "is_correct": true, "order": 5}
+      ],
+      "explanation": "Replikacja DNA jest semikonserwatywna i przebiega następująco:\n\n1. **Helikaza** — rozbija wiązania wodorowe i rozplata podwójną helisę w miejscu początku replikacji (ori), tworząc widełki replikacyjne\n2. **Primiaza** — syntetyzuje krótki starter RNA (~10 nukleotydów), dostarczając wolną grupę 3'-OH niezbędną dla polimerazy DNA\n3. **Polimeraza DNA III** — wydłuża nową nić, dodając komplementarne deoksyrybonukleotydy w kierunku 5'→3' (nić wiodąca – ciągliwie; nić opóźniona – we fragmentach Okazaki)\n4. **Ligaza DNA** — uszczelnia przerwy między fragmentami Okazaki na nici opóźnionej, tworząc ciągłą nić\n5. **Egzonukleaza / polimeraza DNA I** — usuwa startery RNA i wypełnia powstałe luki sekwencją DNA\n\nW wyniku replikacji powstają dwie identyczne cząsteczki dwuniciowego DNA — każda z jedną nicią oryginalną i jedną nową.",
+      "tags": ["replikacja-DNA"]
+    },
+    {
+      "id": "sort-pl-q04",
+      "text": "Uszereguj etapy **transkrypcji u eukariontów** we właściwej kolejności:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-pl-q04-c1", "text": "Czynniki transkrypcyjne wiążą się z promotorem i rekrutują polimerazę RNA II", "is_correct": true, "order": 1},
+        {"id": "sort-pl-q04-c2", "text": "Polimeraza RNA rozplata podwójną helisę DNA w miejscu startu transkrypcji", "is_correct": true, "order": 2},
+        {"id": "sort-pl-q04-c3", "text": "Polimeraza RNA syntetyzuje nić pre-mRNA (kierunek 5'→3')", "is_correct": true, "order": 3},
+        {"id": "sort-pl-q04-c4", "text": "Do pre-mRNA są dodawane czapeczka 5' oraz ogon poli-A", "is_correct": true, "order": 4},
+        {"id": "sort-pl-q04-c5", "text": "Introny są usuwane przez spliceosom, a eksony są łączone (splicng)", "is_correct": true, "order": 5}
+      ],
+      "explanation": "Transkrypcja eukariotyczna i obróbka pre-mRNA:\n\n1. **Inicjacja** — ogólne czynniki transkrypcyjne wiążą się z promotorem (sekwencja TATA box) i rekrutują polimerazę RNA II, tworząc kompleks preinicjacyjny\n2. **Rozplecenie DNA** — polimeraza RNA otwiera podwójną helisę (~10–15 par zasad), odsłaniając nić matrycową\n3. **Elongacja** — polimeraza RNA czyta nić matrycową (kierunek 3'→5') i syntetyzuje pre-mRNA (kierunek 5'→3'), dodając rybonukleotydy\n4. **Kapowanie i poliadenylacja** — czapeczka 7-metylguanozynowa (m7G) jest dodawana ko-transkrypcyjnie do końca 5'; ogon poli-A (~200 adenin) jest dodawany do końca 3' po cięciu transkryptu\n5. **Splicng** — spliceosom (snRNP + białka) usuwa introny i łączy eksony, tworząc dojrzałe mRNA gotowe do eksportu do cytoplazmy",
+      "tags": ["transkrypcja", "ekspresja-genow"]
+    },
+    {
+      "id": "sort-pl-q05",
+      "text": "Uszereguj etapy **translacji** (syntezy białka) we właściwej kolejności:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-pl-q05-c1", "text": "Mała podjednostka rybosomu wiąże się z mRNA przy czapeczce 5'", "is_correct": true, "order": 1},
+        {"id": "sort-pl-q05-c2", "text": "Inicjatorowy tRNA (niosący Met) paruje się z kodonem startowym AUG", "is_correct": true, "order": 2},
+        {"id": "sort-pl-q05-c3", "text": "Duża podjednostka rybosomu dołącza, tworząc kompletny kompleks inicjacyjny", "is_correct": true, "order": 3},
+        {"id": "sort-pl-q05-c4", "text": "Aminoacylo-tRNA wchodzi do miejsca A i tworzy wiązanie peptydowe (elongacja)", "is_correct": true, "order": 4},
+        {"id": "sort-pl-q05-c5", "text": "Rybosom natrafia na kodon stop i łańcuch polipeptydowy jest uwalniany (terminacja)", "is_correct": true, "order": 5}
+      ],
+      "explanation": "Translacja to proces dekodowania mRNA i syntezy białka:\n\n1. **Rekrutacja małej podjednostki** — podjednostka 40S wiąże się przy czapeczce 5' i skanuje mRNA w kierunku 5'→3' w poszukiwaniu kodonu startowego\n2. **Rozpoznanie kodonu startowego** — inicjatorowy Met-tRNA paruje się z kodonem AUG w miejscu P rybosomu\n3. **Przyłączenie dużej podjednostki** — podjednostka 60S dołącza, tworząc rybosom 80S; translacja może się rozpocząć\n4. **Elongacja** — każdy cykl elongacji: (a) aminoacylo-tRNA wchodzi do miejsca A, (b) transferaza peptydylowa tworzy wiązanie peptydowe, (c) rybosom przesuwa się o jeden kodon\n5. **Terminacja** — kodon stop (UAA, UAG lub UGA) w miejscu A rekrutuje czynniki uwalniające; łańcuch polipeptydowy jest hydrolizowany i uwalniany; rybosom dysocjuje",
+      "tags": ["translacja", "ekspresja-genow"]
+    },
+    {
+      "id": "sort-pl-q06",
+      "text": "Uszereguj etapy **reakcji PCR** (łańcuchowej reakcji polimerazy) we właściwej kolejności:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-pl-q06-c1", "text": "Denaturacja — mieszaninę ogrzewa się do ~95°C, rozdzielając nici DNA", "is_correct": true, "order": 1},
+        {"id": "sort-pl-q06-c2", "text": "Przyłączanie starterów — temperatura spada do ~55–65°C, startery wiążą się z matrycą", "is_correct": true, "order": 2},
+        {"id": "sort-pl-q06-c3", "text": "Elongacja — polimeraza DNA (Taq) wydłuża startery w temperaturze ~72°C", "is_correct": true, "order": 3},
+        {"id": "sort-pl-q06-c4", "text": "Powtórzenie — cykl jest powtarzany 25–40 razy w celu amplifikacji docelowej sekwencji", "is_correct": true, "order": 4}
+      ],
+      "explanation": "Każdy cykl PCR składa się z trzech etapów kontrolowanych temperaturą:\n\n1. **Denaturacja (~95°C)** — wysoka temperatura zrywa wiązania wodorowe między komplementarnymi zasadami, rozdzielając dwuniciowe DNA na dwie jednoniciowe matryce\n2. **Przyłączanie starterów (~55–65°C)** — temperatura jest obniżana, aby krótkie syntetyczne oligonukleotydy (startery) hybrydyzowały z komplementarnymi sekwencjami flankującymi docelowy region\n3. **Elongacja (~72°C)** — polimeraza Taq (termostabilna polimeraza DNA z *Thermus aquaticus*) syntetyzuje nowe nici DNA od starterów w kierunku 5'→3'\n4. **Powtórzenie** — trzy etapy są cyklicznie powtarzane 25–40 razy; każdy cykl podwaja liczbę kopii docelowego fragmentu, umożliwiając uzyskanie do ~10⁹ kopii z jednej cząsteczki\n\nProdukty PCR można wizualizować w żelu agarozowym, sekwencjonować lub klonować.",
+      "tags": ["PCR", "techniki"]
+    },
+    {
+      "id": "sort-pl-q07",
+      "text": "Uszereguj etapy **obróbki mRNA u eukariontów** w kolejności, w jakiej zachodzą:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-pl-q07-c1", "text": "Dodanie czapeczki 7-metylguanozynowej (m7G) do końca 5'", "is_correct": true, "order": 1},
+        {"id": "sort-pl-q07-c2", "text": "Poliadenylacja — dodanie ogona poli-A do końca 3'", "is_correct": true, "order": 2},
+        {"id": "sort-pl-q07-c3", "text": "Splicng — usunięcie intronów przez spliceosom", "is_correct": true, "order": 3},
+        {"id": "sort-pl-q07-c4", "text": "Eksport dojrzałego mRNA z jądra do cytoplazmy", "is_correct": true, "order": 4}
+      ],
+      "explanation": "Obróbka pre-mRNA u eukariontów przekształca pierwotny transkrypt w dojrzałe, gotowe do eksportu mRNA:\n\n1. **Kapowanie 5'** — zachodzi ko-transkrypcyjnie, wkrótce po rozpoczęciu transkrypcji; czapeczka m7G chroni mRNA przed degradacją, ułatwia eksport z jądra i jest wymagana do wiązania rybosomu\n2. **Poliadenylacja 3'** — po cięciu transkryptu ok. 10–30 nukleotydów za sygnałem AAUAAA polimeraza poli(A) dodaje ~200 reszt adeninowych; zachodzi jeszcze przed zakończeniem splicngu\n3. **Splicng** — spliceosom montuje się w miejscach splicngu i usuwa introny w dwóch reakcjach transestryfikacji; eksony są łączone, tworząc ciągłą sekwencję kodującą\n4. **Eksport jądrowy** — dojrzałe mRNA (z czapeczką, ogonem poli-A i samymi eksonami) jest eksportowane przez kompleksy porów jądrowych do cytoplazmy, gdzie zachodzi translacja\n\nUwaga: kapowanie i poliadenylacja mogą zachodzić ko-transkrypcyjnie, jeszcze podczas syntezy pre-mRNA.",
+      "tags": ["obrobka-mRNA", "ekspresja-genow"]
+    },
+    {
+      "id": "sort-pl-q08",
+      "text": "Uszereguj etapy **transdukcji sygnału przez receptor GPCR** we właściwej kolejności:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-pl-q08-c1", "text": "Ligand (hormon lub neuroprzekaźnik) wiąże się z receptorem GPCR na powierzchni komórki", "is_correct": true, "order": 1},
+        {"id": "sort-pl-q08-c2", "text": "Receptor zmienia konformację i aktywuje związane białko G (GDP → GTP)", "is_correct": true, "order": 2},
+        {"id": "sort-pl-q08-c3", "text": "Białko G aktywuje cyklazę adenylanową, która przekształca ATP w cAMP", "is_correct": true, "order": 3},
+        {"id": "sort-pl-q08-c4", "text": "cAMP aktywuje kinazę białkową A (PKA)", "is_correct": true, "order": 4},
+        {"id": "sort-pl-q08-c5", "text": "PKA fosforyluje białka docelowe, wywołując odpowiedź komórkową", "is_correct": true, "order": 5}
+      ],
+      "explanation": "Szlak sygnałowy z udziałem receptora sprzężonego z białkiem G (GPCR) jest jedną z głównych ścieżek odpowiedzi komórki na sygnały zewnątrzkomórkowe:\n\n1. **Wiązanie liganda** — hormon, neuroprzekaźnik lub inna cząsteczka sygnałowa wiąże się z domeną zewnątrzkomórkową receptora GPCR\n2. **Aktywacja białka G** — receptor zmienia konformację i działa jako czynnik wymiany nukleotydów guaninowych (GEF): podjednostka Gα wymienia GDP na GTP i odłącza się od Gβγ\n3. **Wytwarzanie wtórnego przekaźnika** — aktywowana podjednostka Gα-GTP stymuluje cyklazę adenylanową do przekształcenia ATP w cykliczny AMP (cAMP), amplifikując sygnał\n4. **Aktywacja PKA** — cAMP wiąże się z podjednostkami regulatorowymi kinazy białkowej A (PKA), uwalniając i aktywując podjednostki katalityczne\n5. **Odpowiedź komórkowa** — aktywna PKA fosforyluje reszty serynowe/treoninowe białek docelowych (enzymy, czynniki transkrypcyjne, kanały jonowe), wywołując końcową odpowiedź fizjologiczną\n\nSygnał jest wyłączany przez fosfodiesterazy (degradacja cAMP) oraz aktywność GTPazy podjednostki Gα (hydroliza GTP do GDP).",
+      "tags": ["transdukcja-sygnalu", "biologia-komorki"]
+    },
+    {
+      "id": "sort-pl-q09",
+      "text": "Uszereguj poziomy **struktury białka** od najprostszego do najbardziej złożonego:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-pl-q09-c1", "text": "Struktura pierwszorzędowa — liniowa sekwencja aminokwasów", "is_correct": true, "order": 1},
+        {"id": "sort-pl-q09-c2", "text": "Struktura drugorzędowa — lokalne sfałdowania w helisy α i harmonijki β", "is_correct": true, "order": 2},
+        {"id": "sort-pl-q09-c3", "text": "Struktura trzeciorzędowa — przestrzenny kształt pojedynczego łańcucha polipeptydowego", "is_correct": true, "order": 3},
+        {"id": "sort-pl-q09-c4", "text": "Struktura czwartorzędowa — zgrupowanie wielu podjednostek polipeptydowych", "is_correct": true, "order": 4}
+      ],
+      "explanation": "Białka są zorganizowane na czterech poziomach strukturalnej złożoności:\n\n1. **Struktura pierwszorzędowa** — unikalna sekwencja aminokwasów połączonych wiązaniami peptydowymi; determinowana przez sekwencję genu; warunkuje wszystkie wyższe poziomy struktury\n2. **Struktura drugorzędowa** — regularne, lokalne wzory sfałdowania stabilizowane wiązaniami wodorowymi szkieletu peptydowego: helisy α (zwinięte) i harmonijki β (pofałdowane); brak oddziaływań łańcuchów bocznych\n3. **Struktura trzeciorzędowa** — pełny trójwymiarowy kształt pojedynczego łańcucha polipeptydowego, stabilizowany oddziaływaniami hydrofobowymi, mostkami dwusiarczkowymi, wiązaniami wodorowymi i jonowymi między grupami R\n4. **Struktura czwartorzędowa** — dotyczy wyłącznie białek zbudowanych z dwóch lub więcej łańcuchów polipeptydowych (podjednostek); przestrzenne ułożenie podjednostek; np. hemoglobina (2 podjednostki α + 2 podjednostki β)\n\nFunkcja białka zależy w krytyczny sposób od jego trójwymiarowego kształtu — błędne sfałdowanie prowadzi do chorób, takich jak choroba Alzheimera czy Parkinsona.",
+      "tags": ["struktura-bialka"]
+    },
+    {
+      "id": "sort-pl-q10",
+      "text": "Uszereguj etapy **apoptozy (szlak wewnętrzny)** we właściwej kolejności:",
+      "type": "sort",
+      "choices": [
+        {"id": "sort-pl-q10-c1", "text": "Uszkodzenie DNA lub stres komórkowy wywołuje uwolnienie cytochromu c z mitochondriów", "is_correct": true, "order": 1},
+        {"id": "sort-pl-q10-c2", "text": "Cytochrom c tworzy kompleks apoptosomowy z Apaf-1 i prokaspazą-9", "is_correct": true, "order": 2},
+        {"id": "sort-pl-q10-c3", "text": "Aktywowana kaspaza-9 aktywuje wykonawcze kaspazy efektorowe (kaspazy-3, -6, -7)", "is_correct": true, "order": 3},
+        {"id": "sort-pl-q10-c4", "text": "Kaspazy efektorowe degradują białka komórkowe i DNA", "is_correct": true, "order": 4},
+        {"id": "sort-pl-q10-c5", "text": "Komórka ulega blebingowi błony i jest pakowana w ciałka apoptotyczne", "is_correct": true, "order": 5}
+      ],
+      "explanation": "Wewnętrzny (mitochondrialny) szlak apoptozy jest aktywowany przez wewnętrzne sygnały stresowe:\n\n1. **Sygnał wyzwalający** — uszkodzenie DNA, stres oksydacyjny lub brak czynników wzrostu aktywuje proapoptotyczne białka (Bax, Bak), które przepuszczają zewnętrzną błonę mitochondrialną\n2. **Uwolnienie cytochromu c** — cytochrom c wydostaje się z przestrzeni międzybłonowej mitochondrium do cytoplazmy; jest kluczowym sygnałem do montażu apoptosomu\n3. **Formowanie apoptosomu** — cytochrom c wiąże się z Apaf-1, który rekrutuje i aktywuje prokaspazę-9; razem tworzą apoptosom (~700 kDa)\n4. **Kaskada kaspaz** — aktywowana kaspaza-9 (inicjatorowa) aktywuje przez cięcie kaspazy efektorowe (kaspazy-3, -6, -7), które następnie tną setki substratów komórkowych, w tym ICAD (uwalniając nukleazę CAD fragmentującą DNA), białka cytoszkieletu i enzymy naprawcze\n5. **Rozpad komórki** — komórka kurczy się, chromatyna kondensuje się, jądro ulega fragmentacji, a błona plazmatyczna tworzy pęcherzyki (blebing); komórka jest pakowana w ciałka apoptotyczne, które są rozpoznawane i fagocytowane przez sąsiednie komórki lub makrofagi — bez reakcji zapalnej\n\nApoptoza jest niezbędna w rozwoju (np. formowanie palców), selekcji limfocytów układu odpornościowego i supresji nowotworowej.",
+      "tags": ["apoptoza", "biologia-komorki"]
+    }
+  ],
+  "created_at": "2026-01-15T00:00:00Z",
+  "modified_at": null,
+  "language": "pl"
+}

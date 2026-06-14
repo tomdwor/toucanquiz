@@ -137,14 +137,34 @@ Full quiz file:
 | `created_at` | ISO 8601 string | Creation timestamp |
 | `modified_at` | ISO 8601 string \| `null` | Last modification timestamp, or `null` if never modified |
 | `documents` | `string[]` \| omitted | Optional list of document filenames (see [Documents](#documents)) |
-| `question.type` | `"single_choice"` \| `"multiple_choice"` \| `"text"` \| `"open"` | Answer type |
+| `question.type` | `"single_choice"` \| `"multiple_choice"` \| `"text"` \| `"open"` \| `"sort"` | Answer type |
 | `question.explanation` | `string` | Shown after answering in practice mode (supports rich content) |
+| `choice.order` | `number` | For `sort` questions only — 1-based integer indicating the correct position of this item |
 
 **Question types:**
 - `single_choice` — one correct answer (radio)
 - `multiple_choice` — one or more correct answers (checkboxes)
 - `text` — free-text input matched against a list of accepted answers (case-insensitive)
 - `open` — essay/short answer; shown explanation only, not graded
+- `sort` — user arranges shuffled items into the correct order using ↑/↓ buttons; each choice must have `"is_correct": true` and an `"order"` field (1-based integer); graded as correct only when every item is in the exact right position
+
+**Sort question example:**
+
+```json
+{
+  "id": "uuid",
+  "text": "Sort the phases of mitosis in the correct order:",
+  "type": "sort",
+  "choices": [
+    { "id": "c1", "text": "Prophase",  "is_correct": true, "order": 1 },
+    { "id": "c2", "text": "Metaphase", "is_correct": true, "order": 2 },
+    { "id": "c3", "text": "Anaphase",  "is_correct": true, "order": 3 },
+    { "id": "c4", "text": "Telophase", "is_correct": true, "order": 4 }
+  ],
+  "explanation": "Mitosis proceeds: Prophase → Metaphase → Anaphase → Telophase.",
+  "tags": ["mitosis"]
+}
+```
 
 All text fields (`description`, `question.text`, `choice.text`, `explanation`) support:
 
@@ -207,7 +227,7 @@ The first `# Heading` in a document is used as its display title on the viewer p
 | `Space` | Select / toggle focused choice |
 | `Enter` | Confirm answer / advance to next question |
 
-For free-text questions (`type: "text"`), keyboard navigation is suspended so you can type normally.
+For free-text questions (`type: "text"`) and sort questions (`type: "sort"`), keyboard navigation is suspended — use the ↑/↓ buttons in the sort list to reorder items.
 
 ---
 

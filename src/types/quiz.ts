@@ -1,10 +1,11 @@
-export type QuestionType = 'open' | 'text' | 'single_choice' | 'multiple_choice'
+export type QuestionType = 'open' | 'text' | 'single_choice' | 'multiple_choice' | 'sort'
 export type QuizMode = 'practice' | 'exam'
 
 export interface Choice {
   id: string
   text: string
   is_correct: boolean
+  order?: number
 }
 
 export interface Question {

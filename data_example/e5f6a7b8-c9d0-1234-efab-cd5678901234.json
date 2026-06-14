@@ -361,10 +361,27 @@
       "tags": [
         "preprocessing"
       ]
+    },
+    {
+      "id": "ml13-aaaa-bbbb-cccc-dddddddddddd",
+      "text": "Sort the typical steps of a **supervised ML pipeline** in the correct order:",
+      "type": "sort",
+      "choices": [
+        {"id": "ml13-c1", "text": "Define the problem and collect data", "is_correct": true, "order": 1},
+        {"id": "ml13-c2", "text": "Preprocess and clean the data", "is_correct": true, "order": 2},
+        {"id": "ml13-c3", "text": "Select and train a model", "is_correct": true, "order": 3},
+        {"id": "ml13-c4", "text": "Evaluate on validation/test set", "is_correct": true, "order": 4},
+        {"id": "ml13-c5", "text": "Deploy and monitor the model", "is_correct": true, "order": 5}
+      ],
+      "explanation": "A supervised ML pipeline follows these stages in order:\n\n1. **Define the problem and collect data** — clarify the task (classification, regression, etc.) and gather labeled examples\n2. **Preprocess and clean the data** — handle missing values, encode categoricals, scale features, split into train/val/test sets\n3. **Select and train a model** — choose an appropriate algorithm, tune hyperparameters, fit on training data\n4. **Evaluate on validation/test set** — measure performance with appropriate metrics; iterate if results are insufficient\n5. **Deploy and monitor** — serve the model in production and watch for data drift, degradation, or failures over time",
+      "tags": [
+        "pipeline",
+        "fundamentals"
+      ]
     }
   ],
   "created_at": "2024-05-15T00:00:00Z",
-  "modified_at": "2024-11-03T00:00:00Z",
+  "modified_at": "2026-01-15T00:00:00Z",
   "language": "en",
   "documents": [
     "supervised-learning.md",
